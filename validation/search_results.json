@@ -1,0 +1,334 @@
+{
+  "date": "2026-10-09",
+  "synthetic_comparison": {
+    "grid": {
+      "status": "completed",
+      "method": "grid",
+      "evaluations": 405,
+      "grid_combinations": 405,
+      "exhaustive": true,
+      "heuristic": false,
+      "global_optimum_verified": true,
+      "baseline": {
+        "config": {
+          "weights": {
+            "quality": 0.4,
+            "value": 0.25,
+            "growth": 0.2,
+            "balance": 0.15
+          },
+          "min_peer_count": 5,
+          "max_filing_age_days": 550,
+          "max_valuation_age_days": 7,
+          "max_fx_age_days": 7,
+          "min_f_score": null,
+          "expected_latest_period": null,
+          "candidate_score": 65.0,
+          "min_roe": 0.08,
+          "min_cash_conversion": 0.8,
+          "max_net_debt_to_cfo": 4.0,
+          "excluded_sectors": [
+            "Banks",
+            "Insurance",
+            "Financials",
+            "REITs",
+            "银行",
+            "保险",
+            "金融",
+            "房地产信托"
+          ]
+        },
+        "candidate_count": 5,
+        "candidates": [
+          "DEMO-A-C09",
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13"
+        ],
+        "eligible_count": 14,
+        "eligible_tickers": [
+          "DEMO-A-C00",
+          "DEMO-A-C01",
+          "DEMO-A-C02",
+          "DEMO-A-C03",
+          "DEMO-A-C04",
+          "DEMO-A-C05",
+          "DEMO-A-C06",
+          "DEMO-A-C07",
+          "DEMO-A-C08",
+          "DEMO-A-C09",
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13"
+        ],
+        "cohort_status_counts": {
+          "candidate": 5,
+          "watchlist": 9,
+          "excluded": 1,
+          "data_review": 4
+        }
+      },
+      "best": {
+        "config": {
+          "weights": {
+            "quality": 0.4,
+            "value": 0.25,
+            "growth": 0.2,
+            "balance": 0.15
+          },
+          "min_peer_count": 5,
+          "max_filing_age_days": 550,
+          "max_valuation_age_days": 7,
+          "max_fx_age_days": 7,
+          "min_f_score": null,
+          "expected_latest_period": null,
+          "candidate_score": 75.0,
+          "min_roe": 0.08,
+          "min_cash_conversion": 0.8,
+          "max_net_debt_to_cfo": 4.0,
+          "excluded_sectors": [
+            "Banks",
+            "Insurance",
+            "Financials",
+            "REITs",
+            "银行",
+            "保险",
+            "金融",
+            "房地产信托"
+          ]
+        },
+        "candidate_count": 4,
+        "candidates": [
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13"
+        ],
+        "target_met": false,
+        "objective": {
+          "target_distance": 1,
+          "configuration_distance": 0.15384615384615385,
+          "mean_baseline_score": 90.24925595238095
+        },
+        "overlap_with_baseline": 0.8,
+        "suppressed_candidates": []
+      }
+    },
+    "beam": {
+      "status": "completed",
+      "method": "beam",
+      "evaluations": 45,
+      "grid_combinations": 405,
+      "exhaustive": false,
+      "heuristic": true,
+      "global_optimum_verified": false,
+      "baseline": {
+        "config": {
+          "weights": {
+            "quality": 0.4,
+            "value": 0.25,
+            "growth": 0.2,
+            "balance": 0.15
+          },
+          "min_peer_count": 5,
+          "max_filing_age_days": 550,
+          "max_valuation_age_days": 7,
+          "max_fx_age_days": 7,
+          "min_f_score": null,
+          "expected_latest_period": null,
+          "candidate_score": 65.0,
+          "min_roe": 0.08,
+          "min_cash_conversion": 0.8,
+          "max_net_debt_to_cfo": 4.0,
+          "excluded_sectors": [
+            "Banks",
+            "Insurance",
+            "Financials",
+            "REITs",
+            "银行",
+            "保险",
+            "金融",
+            "房地产信托"
+          ]
+        },
+        "candidate_count": 5,
+        "candidates": [
+          "DEMO-A-C09",
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13"
+        ],
+        "eligible_count": 14,
+        "eligible_tickers": [
+          "DEMO-A-C00",
+          "DEMO-A-C01",
+          "DEMO-A-C02",
+          "DEMO-A-C03",
+          "DEMO-A-C04",
+          "DEMO-A-C05",
+          "DEMO-A-C06",
+          "DEMO-A-C07",
+          "DEMO-A-C08",
+          "DEMO-A-C09",
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13"
+        ],
+        "cohort_status_counts": {
+          "candidate": 5,
+          "watchlist": 9,
+          "excluded": 1,
+          "data_review": 4
+        }
+      },
+      "best": {
+        "config": {
+          "weights": {
+            "quality": 0.4,
+            "value": 0.25,
+            "growth": 0.2,
+            "balance": 0.15
+          },
+          "min_peer_count": 5,
+          "max_filing_age_days": 550,
+          "max_valuation_age_days": 7,
+          "max_fx_age_days": 7,
+          "min_f_score": null,
+          "expected_latest_period": null,
+          "candidate_score": 75.0,
+          "min_roe": 0.08,
+          "min_cash_conversion": 0.8,
+          "max_net_debt_to_cfo": 4.0,
+          "excluded_sectors": [
+            "Banks",
+            "Insurance",
+            "Financials",
+            "REITs",
+            "银行",
+            "保险",
+            "金融",
+            "房地产信托"
+          ]
+        },
+        "candidate_count": 4,
+        "candidates": [
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13"
+        ],
+        "target_met": false,
+        "objective": {
+          "target_distance": 1,
+          "configuration_distance": 0.15384615384615385,
+          "mean_baseline_score": 90.24925595238095
+        },
+        "overlap_with_baseline": 0.8,
+        "suppressed_candidates": []
+      }
+    }
+  },
+  "real_current_version_block": {
+    "status": "insufficient_verified_data",
+    "method": "grid",
+    "evaluations": 1,
+    "grid_combinations": 405,
+    "exhaustive": false,
+    "heuristic": false,
+    "global_optimum_verified": false,
+    "baseline": {
+      "config": {
+        "weights": {
+          "quality": 0.4,
+          "value": 0.25,
+          "growth": 0.2,
+          "balance": 0.15
+        },
+        "min_peer_count": 5,
+        "max_filing_age_days": 550,
+        "max_valuation_age_days": 7,
+        "max_fx_age_days": 7,
+        "min_f_score": null,
+        "expected_latest_period": null,
+        "candidate_score": 65.0,
+        "min_roe": 0.08,
+        "min_cash_conversion": 0.8,
+        "max_net_debt_to_cfo": 4.0,
+        "excluded_sectors": [
+          "Banks",
+          "Insurance",
+          "Financials",
+          "REITs",
+          "银行",
+          "保险",
+          "金融",
+          "房地产信托"
+        ]
+      },
+      "candidate_count": 0,
+      "candidates": [],
+      "eligible_count": 0,
+      "eligible_tickers": [],
+      "cohort_status_counts": {
+        "data_review": 6
+      }
+    },
+    "best": null
+  },
+  "real_unverified_notice_reconstruction_block": {
+    "status": "insufficient_verified_data",
+    "method": "grid",
+    "evaluations": 1,
+    "grid_combinations": 405,
+    "exhaustive": false,
+    "heuristic": false,
+    "global_optimum_verified": false,
+    "baseline": {
+      "config": {
+        "weights": {
+          "quality": 0.4,
+          "value": 0.25,
+          "growth": 0.2,
+          "balance": 0.15
+        },
+        "min_peer_count": 5,
+        "max_filing_age_days": 550,
+        "max_valuation_age_days": 7,
+        "max_fx_age_days": 7,
+        "min_f_score": null,
+        "expected_latest_period": null,
+        "candidate_score": 65.0,
+        "min_roe": 0.08,
+        "min_cash_conversion": 0.8,
+        "max_net_debt_to_cfo": 4.0,
+        "excluded_sectors": [
+          "Banks",
+          "Insurance",
+          "Financials",
+          "REITs",
+          "银行",
+          "保险",
+          "金融",
+          "房地产信托"
+        ]
+      },
+      "candidate_count": 0,
+      "candidates": [],
+      "eligible_count": 0,
+      "eligible_tickers": [],
+      "cohort_status_counts": {
+        "data_review": 6
+      }
+    },
+    "best": null
+  },
+  "code_sha256": {
+    "engine.py": "55a5cc70766be7c7b08b5f7d2bf6b96c84a4b2000996994aaeec1a13349b78ab",
+    "search.py": "448beecde5583df18223d099aa08f91596d3e6c8960a9399907d085dcb984264"
+  },
+  "note": "Algorithmic search comparison on synthetic data; real incomplete data remains blocked. No investment efficacy test."
+}

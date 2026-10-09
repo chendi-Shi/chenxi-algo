@@ -7,6 +7,7 @@ import hashlib
 import html
 import importlib.metadata
 import json
+import math
 import sqlite3
 import sys
 from collections import Counter
@@ -24,6 +25,24 @@ BLOCK_CN = {'quality': '盈利质量', 'value': '相对估值', 'growth': '增�
 
 def dump_json(value):
     return json.dumps(value, ensure_ascii=False, sort_keys=True, allow_nan=False, indent=2)
+
+
+def load_search_space(path):
+    """Read a finite JSON object without accepting nonstandard numeric constants."""
+    def reject_constant(value):
+        raise ValueError(f'search space contains non-finite JSON number: {value}')
+
+    def finite_float(value):
+        parsed = float(value)
+        if not math.isfinite(parsed):
+            raise ValueError(f'search space contains non-finite JSON number: {value}')
+        return parsed
+
+    space = json.loads(path.read_text(encoding='utf-8-sig'),
+                       parse_constant=reject_constant, parse_float=finite_float)
+    if not isinstance(space, dict):
+        raise ValueError('--search-space must contain a JSON object')
+    return space
 
 
 def display(value, percentage=False):
@@ -116,6 +135,24 @@ def report_html(results, synthetic=False):
         intro += f'<div class="chip">{STATUS_CN[status]} <b>{counts[status]}</b></div>'
     weight_text = ' · '.join(f'{BLOCK_CN[key]} {weight:.0%}' for key, weight in results['config']['weights'].items())
     intro += f'</div><p class="muted">{escape(weight_text)}。这是可修改的研究偏好，详见本次 JSON 配置。未知值保留为空；银行、保险及 REIT 使用行业专用分析。</p>'
+    search = results.get('configuration_search')
+    if search is not None:
+        intro += '<h2>筛选参数搜索</h2>'
+        intro += f'<p>{escape(search.get("market"))} / {escape(search.get("sector"))} · 方法 {escape(search.get("method"))} · 目标名单规模 {escape(search.get("target_count"))} · 状态 {escape(search.get("status"))} · 已评价配置 {escape(search.get("evaluations"))}</p>'
+        intro += '<p class="muted">搜索寻找符合研究偏好和目标名单规模的门槛组合，不验证投资效果。本页主筛选结果仍使用原始配置；替代配置和候选名单见 search.json。</p>'
+        best = search.get('best')
+        if best:
+            target_met = best.get('target_met', best.get('candidate_count') == search.get('target_count'))
+            intro += '<p><b>最佳已评价配置：</b>' + ('达到目标规模' if target_met else '尚未达到目标规模') + ' · 候选数量 ' + escape(best.get('candidate_count')) + '</p>'
+            intro += '<pre><code>' + escape(dump_json(best.get('config', {}))) + '</code></pre>'
+            candidates = best.get('candidates', [])
+            labels = [f'{item.get("ticker", "")} {item.get("name", "")}'.strip()
+                      if isinstance(item, dict) else str(item) for item in candidates]
+            intro += '<p><b>对应候选名单：</b>' + (escape('、'.join(labels)) if labels else '无') + '</p>'
+        else:
+            intro += '<p>当前搜索没有可展示的配置，详见 search.json 的限制与原因。</p>'
+        if search.get('limitations'):
+            intro += '<ul>' + ''.join(f'<li>{escape(item)}</li>' for item in search['limitations']) + '</ul>'
     intro += '<table><tr><th>公司</th><th>市场 / 行业</th><th>状态</th><th>研究分数</th><th>F-score</th><th>ROE</th><th>现金 / 利润</th><th>扣非盈利收益率</th></tr>'
     for c in results['companies']:
         m = c['metrics']
@@ -169,10 +206,36 @@ def main(argv=None):
     parser.add_argument('--output', type=Path, default=ROOT / 'output' / 'demo')
     parser.add_argument('--query', help='optional lexical retrieval over evidence excerpts')
     parser.add_argument('--ml-cleaning', action='store_true', help='optional NumPy PCA review hints')
+    parser.add_argument('--search-method', choices=('grid', 'beam'),
+                        help='optional search for a research shortlist size; does not optimize returns')
+    parser.add_argument('--search-market', choices=('A', 'HK'), help='explicit market for parameter search')
+    parser.add_argument('--search-sector', help='explicit industry cohort for parameter search')
+    parser.add_argument('--search-target-size', type=int, help='target candidate count (default: 5)')
+    parser.add_argument('--search-beam-width', type=int, help='retained branches per layer (default: 5)')
+    parser.add_argument('--search-max-evaluations', type=int, help='hard evaluation budget (default: 1000)')
+    parser.add_argument('--search-top-k', type=int, help='number of alternatives to retain (default: 5)')
+    parser.add_argument('--search-space', type=Path, help='optional JSON search-space object')
     args = parser.parse_args(argv)
     try:
         cutoff = iso(args.as_of)
         config = config_from(args.config)
+        if args.search_method and (args.search_market is None or not args.search_sector or not args.search_sector.strip()):
+            raise ValueError('--search-method requires explicit --search-market and --search-sector')
+        if not args.search_method and any(value is not None for value in (
+                args.search_market, args.search_sector, args.search_space, args.search_target_size,
+                args.search_beam_width, args.search_max_evaluations, args.search_top_k)):
+            raise ValueError('search options require --search-method')
+        search_space = load_search_space(args.search_space) if args.search_space else None
+        search_request = None
+        if args.search_method:
+            search_request = {
+                'method': args.search_method, 'market': args.search_market,
+                'sector': args.search_sector.strip(),
+                'target_size': 5 if args.search_target_size is None else args.search_target_size,
+                'beam_width': 5 if args.search_beam_width is None else args.search_beam_width,
+                'max_evaluations': 1000 if args.search_max_evaluations is None else args.search_max_evaluations,
+                'top_k': 5 if args.search_top_k is None else args.search_top_k, 'space': search_space,
+            }
         if args.demo:
             if args.statements or args.valuations or args.documents:
                 raise ValueError('--demo cannot be mixed with supplied input files')
@@ -198,6 +261,14 @@ def main(argv=None):
                 c['ml_data_review'] = ml['annotations'].get(c['ticker'])
         if args.query:
             results['document_search'] = search_evidence(results['documents']['evidence'], args.query)
+        if search_request:
+            from search import search_configs
+            results['configuration_search'] = search_configs(
+                inputs['statements'], inputs['valuations'], cutoff, config,
+                market=search_request['market'], sector=search_request['sector'],
+                target_count=search_request['target_size'], method=search_request['method'],
+                beam_width=search_request['beam_width'], max_evaluations=search_request['max_evaluations'],
+                top_k=search_request['top_k'], space=search_request['space'])
         input_paths = {'statements': args.statements, 'valuations': args.valuations, 'documents': args.documents}
         hashes = {key: hashlib.sha256(path.read_bytes()).hexdigest() for key, path in input_paths.items() if path}
         code_hashes = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in ROOT.glob('*.py')}
@@ -211,7 +282,8 @@ def main(argv=None):
                        'numpy_available': results['ml_cleaning'].get('numpy_available')}
         identity = {'as_of': cutoff.isoformat(), 'config': config, 'inputs': hashes, 'code': code_hashes,
                     'environment': environment,
-                    'synthetic_demo': args.demo, 'ml_cleaning_requested': args.ml_cleaning, 'query': args.query}
+                    'synthetic_demo': args.demo, 'ml_cleaning_requested': args.ml_cleaning, 'query': args.query,
+                    'configuration_search_request': search_request}
         run_id = hashlib.sha256(dump_json(identity).encode('utf-8')).hexdigest()[:20]
         manifest = {'run_id': run_id, **identity, 'input_paths': {k: str(v.resolve()) for k, v in input_paths.items() if v},
                     'python_version': sys.version.split()[0]}
@@ -219,6 +291,10 @@ def main(argv=None):
         args.output.mkdir(parents=True, exist_ok=True)
         (args.output / 'results.json').write_text(dump_json(results), encoding='utf-8')
         (args.output / 'manifest.json').write_text(dump_json(manifest), encoding='utf-8')
+        # Explicitly overwrite this generated artifact when search is disabled,
+        # so reusing an output directory cannot display a previous run's proposal.
+        (args.output / 'search.json').write_text(dump_json(results.get('configuration_search',
+            {'status': 'not_requested', 'run_id': run_id})), encoding='utf-8')
         (args.output / 'audit.json').write_text(dump_json({
             'statements': results['audit'], 'valuations': results['valuation_audit'],
             'documents': results['documents']['rejected']}), encoding='utf-8')

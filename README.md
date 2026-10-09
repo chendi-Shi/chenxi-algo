@@ -2,7 +2,7 @@
 
 一个面向 A 股、港股非金融公司的 Python 投研工具。输入标准化年度财务数据与估值快照，输出可解释的研究候选池、来源记录和复核问题。适合 Data Analyst Intern 展示数据治理、财务理解、算法实现和投资团队交付能力。
 
-已完成可运行原型：财务清洗 → 披露日期与版本选择 → 指标计算 → 同市场同行业比较 → 基本面筛选 → 文本证据整理 → SQLite 数据库与报告。`examples/` 为合成演示；另已对六家 A 股白酒公司和李宁做公开财报可行性测试，详见 [VALIDATION.md](VALIDATION.md)。73 项软件测试通过，11 个真实财报关键数值与原年报匹配。它目前适合数据整理和研究初筛，选股有效性尚未得到证明。
+已完成可运行原型：财务清洗 → 披露日期与版本选择 → 指标计算 → 同市场同行业比较 → 基本面筛选 → 文本证据整理 → SQLite 数据库与报告。`examples/` 为合成演示；另已对六家 A 股白酒公司和李宁做公开财报可行性测试，详见 [VALIDATION.md](VALIDATION.md)。基础版本通过 73 项软件测试，搜索功能新增 21 项回归测试；11 个真实财报关键数值与原年报匹配。它目前适合数据整理和研究初筛，选股有效性尚未得到证明。
 
 ## 一键运行
 
@@ -24,6 +24,17 @@ python validation/verify_hk_coverage.py
 ```
 
 运行后打开 `output/demo/report.html` 查看结果。`--demo` 每次确定性生成 `examples/` 下的虚构公司和财报，不下载真实股票数据。演示估值日期为 2026-10-08；修改截止日期可能按设计触发陈旧数据或未披露检查。
+
+## 搜索筛选组合
+
+项目现支持**网格搜索和束搜索**，比较更严格的门槛与不同模块权重，寻找接近指定规模的同业研究名单。搜索保留原始数据核验门槛，详细算法、约束和自定义空间见 [SEARCH.md](SEARCH.md)。
+
+```sh
+python run.py --demo --as-of 2026-10-09 --search-method grid --search-market A --search-sector Consumer --search-target-size 3 --output output/search-grid
+python run.py --demo --as-of 2026-10-09 --search-method beam --search-market A --search-sector Consumer --search-target-size 3 --search-beam-width 5 --output output/search-beam
+```
+
+结果另存为 `search.json`；主筛选仍按原始配置输出。搜索优化研究名单规模和配置变化，投资有效性需独立验证。
 
 ## 接入真实数据
 
@@ -60,6 +71,7 @@ CFO/利润和扣非/归母的质量评分贡献分别在 2 和 1 封顶，原始
 |---|---|
 | `run.py` | CLI、数据落库、结果导出 |
 | `engine.py` | 财务口径、九项信号、基本面初筛、同业评分 |
+| `search.py` / `SEARCH.md` | 受约束的网格与束搜索、研究名单规模目标及配置对照 |
 | `evidence.py` | 文本清洗、去重、可追溯证据、TF-IDF 检索 |
 | `anomaly.py` | 可选 PCA 数据复核提示 |
 | `config.json` | 阈值、权重和专用行业配置 |
@@ -69,7 +81,7 @@ CFO/利润和扣非/归母的质量评分贡献分别在 2 和 1 封顶，原始
 | `RESEARCH.md` | GitHub 项目对比、源码缺陷及公式来源 |
 | `VALIDATION.md` / `validation/` | 真实财报对账、经济边界测试、权重敏感性、公开数据及可复现结果 |
 
-每次运行导出 `screen.csv`、`results.json`、`report.html`、`audit.json`、`manifest.json` 和 `research.sqlite`。CSV 可查看，完整缺失状态、组成分数与引用在 JSON / 数据库中。
+每次运行导出 `screen.csv`、`results.json`、`report.html`、`audit.json`、`manifest.json`、`search.json` 和 `research.sqlite`。未启用搜索时，`search.json` 明确记录 `not_requested`，避免复用输出目录时残留旧方案。CSV 可查看，完整缺失状态、组成分数与引用在 JSON / 数据库中。
 
 SQLite 包含 `runs`、`raw_records`、`statements`、`companies`、`evidence`。原始输入与清洗后记录并存，可按 `run_id`、公司、截止日期复核。运行标识包含输入文件哈希、代码哈希、配置、截止日、Python / 可选 NumPy 环境和查询参数，便于复现；重复同一运行会更新同一标识。
 
