@@ -33,13 +33,18 @@ BLOCK_FIELDS = {
     'growth': {'revenue_cagr_2y': True, 'core_profit_cagr_2y': True},
     'balance': {'net_debt_to_cfo': False, 'interest_cover': True},
 }
+# Research preference safeguards, not empirically calibrated efficacy parameters.
+# Preserve raw ratios while avoiding a quality bonus for extreme cash conversion
+# or unusually large adjustments relative to reported profit.
+QUALITY_SCORE_CAPS = {'cash_conversion': 2.0, 'core_profit_share': 1.0}
 DEFAULT_CONFIG = {
     'weights': {'quality': .40, 'value': .25, 'growth': .20, 'balance': .15},
     'min_peer_count': 5,
     'max_filing_age_days': 550,
     'max_valuation_age_days': 7,
     'max_fx_age_days': 7,
-    'min_f_score': 6,
+    'min_f_score': None,
+    'expected_latest_period': None,
     'candidate_score': 65,
     'min_roe': .08,
     'min_cash_conversion': .8,
@@ -147,6 +152,8 @@ def parse_statement(raw: dict) -> dict:
                   'total_debt', 'cash', 'cogs', 'capex', 'interest_expense'):
         if r[field] is not None and r[field] < 0:
             raise ValueError(f'{field} must be nonnegative; verify sign convention')
+    if r['long_term_debt'] is not None and r['total_debt'] is not None and r['long_term_debt'] > r['total_debt']:
+        raise ValueError('long_term_debt exceeds total_debt; reconcile debt scope before screening')
     issued = str(r.get('equity_issued', '')).strip()
     if issued not in ('', '0', '1'):
         raise ValueError('equity_issued must be 0, 1, or blank')
@@ -217,7 +224,12 @@ def compute_metrics(old: dict, prior: dict, current: dict, valuation: dict | Non
     fcf = difference(c['operating_cash_flow'], c['capex'])
     cap = None if valuation is None else valuation['market_cap_reporting']
     metrics = {
-        'roa': roa, 'roe': divide(c['net_income_parent'], average(c['equity_parent'], p['equity_parent'])),
+        'roa': roa,
+        # Crossing negative equity makes the average denominator economically
+        # unsuitable for comparable ROE, even if that average is positive.
+        'roe': (divide(c['net_income_parent'], average(c['equity_parent'], p['equity_parent']))
+                if c['equity_parent'] is not None and p['equity_parent'] is not None
+                and c['equity_parent'] > 0 and p['equity_parent'] > 0 else None),
         'gross_margin': gm,
         'cash_conversion': divide(c['operating_cash_flow'], c['net_income']),
         'core_profit_share': divide(c['core_income_parent'], c['net_income_parent']),
@@ -245,6 +257,25 @@ def percentile(value: float, values: list[float], higher=True):
     return rank if higher else 100 - rank
 
 
+def scoring_value(metric, value):
+    """Only the quality rank is capped; reported financial ratios stay intact."""
+    if value is None:
+        return None
+    return min(value, QUALITY_SCORE_CAPS[metric]) if metric in QUALITY_SCORE_CAPS else value
+
+
+def interest_order(company):
+    """Known debt-free issuers sort above finite cover without inventing infinity.
+
+    Unknown interest, or zero interest while debt exists, stays unrankable.
+    Equal debt-free cohorts still use the ordinary neutral tied midrank.
+    """
+    if company.get('balance_flags', {}).get('confirmed_debt_free_zero_interest'):
+        return (1, 0.0)
+    cover = company['metrics']['interest_cover']
+    return None if cover is None else (0, cover)
+
+
 def config_from(path: str | None):
     config = copy.deepcopy(DEFAULT_CONFIG)
     if path:
@@ -259,11 +290,16 @@ def config_from(path: str | None):
     for key in ('min_peer_count', 'max_filing_age_days', 'max_valuation_age_days', 'max_fx_age_days'):
         if not isinstance(config[key], int) or config[key] < (2 if key == 'min_peer_count' else 0):
             raise ValueError(f'invalid {key}')
-    for key in ('min_f_score', 'candidate_score', 'min_roe', 'min_cash_conversion', 'max_net_debt_to_cfo'):
+    for key in ('candidate_score', 'min_roe', 'min_cash_conversion', 'max_net_debt_to_cfo'):
         if not isinstance(config[key], (int, float)) or not math.isfinite(config[key]):
             raise ValueError(f'invalid {key}')
-    if not 0 <= config['min_f_score'] <= 9 or not 0 <= config['candidate_score'] <= 100:
+    if config['min_f_score'] is not None and (not isinstance(config['min_f_score'], (int, float))
+            or not math.isfinite(config['min_f_score']) or not 0 <= config['min_f_score'] <= 9):
+        raise ValueError('min_f_score must be null for diagnostic use or a score from 0 to 9')
+    if not 0 <= config['candidate_score'] <= 100:
         raise ValueError('score threshold is outside its range')
+    if config['expected_latest_period'] is not None:
+        iso(config['expected_latest_period'])
     if not isinstance(config['excluded_sectors'], list) or not all(isinstance(x, str) for x in config['excluded_sectors']):
         raise ValueError('excluded_sectors must be a list of strings')
     return config
@@ -276,6 +312,10 @@ def load_csv(path):
 
 def screen(statement_rows, valuation_rows, as_of: date, config=None):
     config = config or config_from(None)
+    active_blocks = tuple(b for b, weight in config['weights'].items() if weight > 0)
+    expected_latest = iso(config['expected_latest_period']) if config.get('expected_latest_period') else None
+    if expected_latest is not None and expected_latest > as_of:
+        raise ValueError('expected_latest_period cannot be after the screening cutoff')
     visible, audit = visible_versions(statement_rows, as_of, 'period_end')
     valuations, value_audit = visible_versions(valuation_rows, as_of, 'snapshot_date')
     history = defaultdict(list)
@@ -307,6 +347,7 @@ def screen(statement_rows, valuation_rows, as_of: date, config=None):
             o, p, c = parsed
             r.update({key: c[key] for key in ('name', 'market', 'sector')})
             r['period_end'], r['currency'] = c['period_end'], c['currency']
+            r['financial_age_days'] = (as_of - iso(c['period_end'])).days
             r['sources'] = [{'period_end': x['period_end'], 'available_at': x['available_at'], 'filing_id': x['filing_id'], 'source_url': x['source_url']} for x in parsed]
             if len({x['currency'] for x in parsed}) != 1:
                 raise ValueError('reporting currency changed; needs restated comparable history')
@@ -317,6 +358,10 @@ def screen(statement_rows, valuation_rows, as_of: date, config=None):
                     raise ValueError('annual periods are not consecutive; no quarterly-as-YoY comparison')
             if (as_of - iso(c['period_end'])).days > config['max_filing_age_days']:
                 raise ValueError('annual financial data is stale')
+            if expected_latest is not None and iso(c['period_end']) < expected_latest:
+                raise ValueError(f'annual financial data is stale: expected latest period {expected_latest.isoformat()} is missing; verify filing schedule')
+            if r['financial_age_days'] > 365:
+                r['warnings'].append('annual data is over one year old; verify the latest annual/interim filing schedule (expected_latest_period can enforce a known due period)')
             if c['sector'].casefold() in {x.casefold() for x in config['excluded_sectors']}:
                 r['status'] = 'specialist_review'
                 r['reasons'].append('bank/insurance/financial/REIT requires sector-specific model')
@@ -355,11 +400,29 @@ def screen(statement_rows, valuation_rows, as_of: date, config=None):
                 r['warnings'].append(str(exc))
             metrics, signals = compute_metrics(o, p, c, valuation)
             r['metrics'], r['signals'] = metrics, signals
+            r['balance_flags'] = {'confirmed_debt_free_zero_interest':
+                                  c['interest_expense'] == 0 and c['total_debt'] == 0}
             known = sum(x is not None for x in signals.values())
             passes = sum(x is True for x in signals.values())
             r['f_score_known'], r['f_score_lower_bound'] = known, passes
             r['f_score'] = passes if known == 9 else None
-            r['metric_coverage'] = sum(metrics[k] is not None for fields in BLOCK_FIELDS.values() for k in fields) / sum(len(fields) for fields in BLOCK_FIELDS.values())
+            active_fields = [k for b in active_blocks for k in BLOCK_FIELDS[b]]
+            r['metric_coverage'] = sum(metrics[k] is not None or
+                                      (k == 'interest_cover' and r['balance_flags']['confirmed_debt_free_zero_interest'])
+                                      for k in active_fields) / len(active_fields)
+            r['quality_score_caps'] = dict(QUALITY_SCORE_CAPS)
+            if known < 9:
+                r['warnings'].append('F-score is incomplete; known signals are diagnostic, not a complete health score')
+            if config['min_f_score'] is None and passes < 6:
+                r['warnings'].append('F-score has few improvement signals; inspect business maturity and deterioration separately')
+            if c['interest_expense'] == 0 and c['total_debt'] is not None and c['total_debt'] > 0:
+                r['warnings'].append('zero interest expense with positive debt; verify finance costs and capitalization before interest-cover scoring')
+            if p['equity_parent'] is not None and p['equity_parent'] <= 0:
+                r['warnings'].append('opening parent equity is nonpositive; ROE is not comparable and requires manual review')
+            if metrics['cash_conversion'] is not None and metrics['cash_conversion'] > 3:
+                r['warnings'].append('extreme cash conversion; reconcile working capital, profit denominator and cash-flow classification; quality rank is capped at 2')
+            if metrics['core_profit_share'] is not None and metrics['core_profit_share'] > 1.5:
+                r['warnings'].append('core profit materially exceeds reported profit; reconcile non-recurring losses and adjustment definitions; quality rank is capped at 1')
             if c.get('audit_opinion') != 'unqualified':
                 r['warnings'].append('audit opinion is missing or not unqualified; manual review required')
             if metrics['core_profit_share'] is not None and metrics['core_profit_share'] < .7:
@@ -370,9 +433,14 @@ def screen(statement_rows, valuation_rows, as_of: date, config=None):
                 r['warnings'].append('extreme revenue growth; verify acquisitions and consolidation scope')
             # Missing or weak critical facts are never filled with zero.
             critical = ('roe', 'cash_conversion', 'net_debt_to_cfo')
-            required_positive = ('net_income', 'net_income_parent', 'core_income_parent', 'operating_cash_flow', 'equity_parent')
-            if any(c[k] is None for k in required_positive) or known < 9 or valuation is None or c.get('audit_opinion') != 'unqualified':
-                r['reasons'].append('critical data, complete F-score, valuation or audit review is required')
+            required_positive = ['net_income', 'net_income_parent', 'operating_cash_flow', 'equity_parent']
+            if set(active_blocks) & {'quality', 'value', 'growth'}:
+                required_positive.append('core_income_parent')
+            if (any(c[k] is None for k in required_positive)
+                    or (config['min_f_score'] is not None and known < 9)
+                    or ('value' in active_blocks and valuation is None)
+                    or c.get('audit_opinion') != 'unqualified'):
+                r['reasons'].append('critical data, enabled scoring fields, configured F-score gate, valuation or audit review is required')
                 continue
             failures = []
             for field in required_positive:
@@ -387,7 +455,7 @@ def screen(statement_rows, valuation_rows, as_of: date, config=None):
                 failures.append('cash conversion below research threshold')
             if metrics['net_debt_to_cfo'] is not None and metrics['net_debt_to_cfo'] > config['max_net_debt_to_cfo']:
                 failures.append('net debt / operating cash flow above research threshold')
-            if passes < config['min_f_score']:
+            if config['min_f_score'] is not None and passes < config['min_f_score']:
                 failures.append('financial health F-score below research threshold')
             r['status'] = 'excluded' if failures else 'watchlist'
             r['reasons'].extend(failures)
@@ -403,15 +471,19 @@ def screen(statement_rows, valuation_rows, as_of: date, config=None):
             r['peer_count'] = len(group)
             for block, fields in BLOCK_FIELDS.items():
                 components = {}
+                if block not in active_blocks:
+                    r['blocks'][block] = {'score': None, 'components': {}, 'enabled': False}
+                    continue
                 for metric, higher in fields.items():
-                    value = r['metrics'][metric]
-                    peers = [x['metrics'][metric] for x in group if x['metrics'][metric] is not None]
+                    value = interest_order(r) if metric == 'interest_cover' else scoring_value(metric, r['metrics'][metric])
+                    peer_values = [interest_order(x) if metric == 'interest_cover' else scoring_value(metric, x['metrics'][metric]) for x in group]
+                    peers = [x for x in peer_values if x is not None]
                     if value is not None and len(peers) >= config['min_peer_count']:
                         components[metric] = percentile(value, peers, higher)
                 complete = len(components) == len(fields)
-                r['blocks'][block] = {'score': statistics.mean(components.values()) if complete else None, 'components': components}
-            if all(b['score'] is not None for b in r['blocks'].values()):
-                r['score'] = sum(config['weights'][b] * r['blocks'][b]['score'] for b in BLOCK_FIELDS)
+                r['blocks'][block] = {'score': statistics.mean(components.values()) if complete else None, 'components': components, 'enabled': True}
+            if all(r['blocks'][b]['score'] is not None for b in active_blocks):
+                r['score'] = sum(config['weights'][b] * r['blocks'][b]['score'] for b in active_blocks)
             else:
                 r['warnings'].append('incomplete metrics or too few same-market/sector peers; no composite score')
             if r['status'] == 'watchlist':

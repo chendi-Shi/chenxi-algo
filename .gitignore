@@ -5,3 +5,7 @@ output/
 *.sqlite
 *.sqlite-journal
 package_delivery.py
+validation/raw/
+validation/output/
+validation/public_field_checks.json
+validation/public_fetch_errors.json

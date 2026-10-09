@@ -149,7 +149,7 @@ class AccountingMetricTests(unittest.TestCase):
         self.assertEqual(set(signals), set(engine.SIGNALS))
         self.assertTrue(all(signal is True for signal in signals.values()))
 
-    def test_missing_f_score_input_is_unknown_and_requires_review(self):
+    def test_missing_f_score_input_is_unknown_and_diagnostic_by_default(self):
         rows = annual_history()
         rows[-1]["equity_issued"] = ""
         _, companies = result(rows)
@@ -158,7 +158,8 @@ class AccountingMetricTests(unittest.TestCase):
         self.assertIsNone(company["f_score"])
         self.assertEqual(company["f_score_known"], 8)
         self.assertEqual(company["f_score_lower_bound"], 8)
-        self.assertEqual(company["status"], "data_review")
+        self.assertEqual(company["status"], "watchlist")
+        self.assertTrue(any("F-score is incomplete" in warning for warning in company["warnings"]))
 
     def test_missing_financial_item_is_not_zero(self):
         rows = annual_history()
@@ -358,6 +359,7 @@ class RankingAndConfigurationTests(unittest.TestCase):
         self.assertEqual(set(config["weights"]), set(engine.BLOCK_FIELDS))
         self.assertAlmostEqual(sum(config["weights"].values()), 1)
         self.assertGreaterEqual(config["min_peer_count"], 5)
+        self.assertIsNone(config["min_f_score"])
 
     def test_default_configuration_returns_independent_nested_values(self):
         # Preserve defaults even if an older implementation exposes shared objects.
@@ -372,6 +374,160 @@ class RankingAndConfigurationTests(unittest.TestCase):
         finally:
             engine.DEFAULT_CONFIG.clear()
             engine.DEFAULT_CONFIG.update(original)
+
+
+class EconomicBoundaryRegressionTests(unittest.TestCase):
+    """Financial situations that differ from missing or bad source data."""
+
+    def peers(self, change=None, config=None, count=5, with_values=True):
+        rows, values = [], []
+        for index in range(count):
+            ticker = f"ECON-{index}"
+            annual = annual_history(ticker)
+            if change:
+                change(annual, index)
+            rows.extend(annual)
+            values.append(valuation(ticker))
+        report = engine.screen(rows, values if with_values else [], AS_OF, config)
+        return {c["ticker"]: c for c in report["companies"]}
+
+    def test_stable_profitable_net_cash_company_is_not_default_fscore_exclusion(self):
+        def stable(rows, index):
+            constant = dict(rows[-1], total_debt=0, long_term_debt=0, cash=30)
+            for row in rows:
+                for field in engine.MONEY_FIELDS:
+                    row[field] = constant[field]
+        companies = self.peers(stable)
+        for company in companies.values():
+            self.assertEqual(company["f_score"], 4)
+            self.assertGreater(company["metrics"]["roe"], .25)
+            self.assertLess(company["metrics"]["net_debt_to_cfo"], 0)
+            self.assertEqual(company["status"], "watchlist")
+        config = engine.config_from(None)
+        config["min_f_score"] = 6
+        strict = self.peers(stable, config)
+        self.assertTrue(all(c["status"] == "excluded" for c in strict.values()))
+
+    def test_explicit_fscore_gate_requires_complete_signals(self):
+        def unknown(rows, index):
+            rows[-1]["equity_issued"] = ""
+        config = engine.config_from(None)
+        config["min_f_score"] = 6
+        companies = self.peers(unknown, config)
+        self.assertTrue(all(c["status"] == "data_review" for c in companies.values()))
+
+    def test_known_debt_free_zero_interest_cohort_is_finite_and_neutral(self):
+        def free(rows, index):
+            for row in rows:
+                row.update(total_debt=0, long_term_debt=0, interest_expense=0)
+        companies = self.peers(free)
+        for company in companies.values():
+            self.assertIsNone(company["metrics"]["interest_cover"])
+            self.assertTrue(company["balance_flags"]["confirmed_debt_free_zero_interest"])
+            self.assertEqual(company["blocks"]["balance"]["components"]["interest_cover"], 50)
+            self.assertEqual(company["score"], 50)
+            self.assertEqual(company["status"], "watchlist")
+
+    def test_conflicting_debt_scopes_cannot_create_debt_free_scoring(self):
+        def contradictory(rows, index):
+            rows[-1].update(total_debt=0, interest_expense=0)
+        companies = self.peers(contradictory)
+        for company in companies.values():
+            self.assertEqual(company["status"], "data_review")
+            self.assertIsNone(company["score"])
+            self.assertTrue(any("long_term_debt exceeds total_debt" in reason for reason in company["reasons"]))
+
+    def test_one_known_debt_free_company_does_not_remove_other_peer_scores(self):
+        def one_free(rows, index):
+            if index == 0:
+                for row in rows:
+                    row.update(total_debt=0, long_term_debt=0, interest_expense=0)
+        companies = self.peers(one_free)
+        self.assertTrue(all(c["score"] is not None for c in companies.values()))
+        self.assertGreater(companies["ECON-0"]["blocks"]["balance"]["components"]["interest_cover"],
+                           companies["ECON-1"]["blocks"]["balance"]["components"]["interest_cover"])
+
+    def test_unknown_interest_or_zero_interest_with_debt_is_not_debt_free(self):
+        for interest in ("", 0):
+            with self.subTest(interest=interest):
+                def unknown(rows, index):
+                    if index == 0:
+                        rows[-1]["interest_expense"] = interest
+                companies = self.peers(unknown, count=6)
+                company = companies["ECON-0"]
+                self.assertFalse(company["balance_flags"]["confirmed_debt_free_zero_interest"])
+                self.assertIsNone(company["score"])
+                self.assertTrue(all(companies[f"ECON-{i}"]["score"] is not None for i in range(1, 6)))
+
+    def test_disabled_balance_module_needs_no_interest_cover_but_keeps_debt_gate(self):
+        def no_interest(rows, index):
+            rows[-1]["interest_expense"] = ""
+            if index == 0:
+                rows[-1]["total_debt"] = 200
+        config = engine.config_from(None)
+        config["weights"] = {"quality": .5, "value": .3, "growth": .2, "balance": 0}
+        companies = self.peers(no_interest, config)
+        self.assertTrue(all(c["score"] is not None for c in companies.values()))
+        self.assertFalse(companies["ECON-0"]["blocks"]["balance"]["enabled"])
+        self.assertEqual(companies["ECON-0"]["status"], "excluded")
+        self.assertTrue(any("net debt" in reason for reason in companies["ECON-0"]["reasons"]))
+
+    def test_balance_only_does_not_require_unused_core_profit_or_valuation(self):
+        def no_core(rows, index):
+            for row in rows:
+                row["core_income_parent"] = ""
+        config = engine.config_from(None)
+        config["weights"] = {"quality": 0, "value": 0, "growth": 0, "balance": 1}
+        companies = self.peers(no_core, config, with_values=False)
+        self.assertTrue(all(c["score"] == 50 and c["status"] == "watchlist" for c in companies.values()))
+
+    def test_equity_crossing_zero_does_not_generate_extreme_comparable_roe(self):
+        def negative_opening(rows, index):
+            rows[-2]["equity_parent"] = -60
+        companies = self.peers(negative_opening)
+        for company in companies.values():
+            self.assertIsNone(company["metrics"]["roe"])
+            self.assertEqual(company["status"], "data_review")
+            self.assertTrue(any("opening parent equity" in warning for warning in company["warnings"]))
+
+    def test_extreme_cash_conversion_raw_preserved_without_extra_quality_reward(self):
+        def extreme(rows, index):
+            rows[-1]["operating_cash_flow"] = rows[-1]["net_income"] * (100 if index == 0 else 2)
+        companies = self.peers(extreme)
+        extreme_company = companies["ECON-0"]
+        self.assertEqual(extreme_company["metrics"]["cash_conversion"], 100)
+        self.assertTrue(any("extreme cash conversion" in warning for warning in extreme_company["warnings"]))
+        for company in companies.values():
+            self.assertEqual(company["blocks"]["quality"]["components"]["cash_conversion"], 50)
+
+    def test_large_core_adjustments_warn_and_quality_rank_is_capped(self):
+        def extreme(rows, index):
+            rows[-1]["core_income_parent"] = rows[-1]["net_income_parent"] * (5 if index == 0 else 1)
+        companies = self.peers(extreme)
+        self.assertEqual(companies["ECON-0"]["metrics"]["core_profit_share"], 5)
+        self.assertTrue(any("core profit materially" in warning for warning in companies["ECON-0"]["warnings"]))
+        for company in companies.values():
+            self.assertEqual(company["blocks"]["quality"]["components"]["core_profit_share"], 50)
+        def small_adjustment(rows, index):
+            rows[-1]["core_income_parent"] = rows[-1]["net_income_parent"] * 1.00015
+        small = self.peers(small_adjustment)
+        self.assertFalse(any("core profit materially" in warning for c in small.values() for warning in c["warnings"]))
+
+    def test_explicit_expected_annual_period_enforces_known_due_filing(self):
+        def older(rows, index):
+            for row in rows:
+                for field in ("period_start", "period_end", "available_at"):
+                    row[field] = str(int(row[field][:4]) - 1) + row[field][4:]
+        ordinary = self.peers(older)
+        self.assertTrue(all(any("over one year old" in warning for warning in c["warnings"]) for c in ordinary.values()))
+        config = engine.config_from(None)
+        config["expected_latest_period"] = "2025-12-31"
+        checked = self.peers(older, config)
+        self.assertTrue(all(c["status"] == "data_review" and c["score"] is None for c in checked.values()))
+        self.assertTrue(all(any("expected latest period" in reason for reason in c["reasons"]) for c in checked.values()))
+        config["expected_latest_period"] = "2026-12-31"
+        with self.assertRaisesRegex(ValueError, "after the screening cutoff"):
+            self.peers(older, config)
 
 
 if __name__ == "__main__":

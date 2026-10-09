@@ -30,7 +30,7 @@
 | cash | 可动用现金及现金等价物；受限现金应剔除或另外人工核验 |
 | revenue / cogs | 营业收入 / 对应销售成本；收入已知时必须正，成本非负；不是净利润或期间费用 |
 | capex | 现金资本开支正数，程序计算 `CFO - capex`；现金流表负号需先映射，不使用固定资产余额变动代替 |
-| ebit / interest_expense | 同口径 EBIT / 利息费用正数；零利息费用显示未知，避免无限值 |
+| ebit / interest_expense | 同口径 EBIT / 利息费用正数；零利息覆盖率为未知。只有已核验 total_debt=0 且 interest_expense=0 才以明确无债标记参与排序；期末无银行贷款不等于全年无利息，也不等于没有租赁债务 |
 | equity_issued | `1`=本年度发行普通股，`0`=核验无发行，空白=未知；应记录发行事件而非净股数差或发行减回购的净现金流 |
 | audit_opinion | `unqualified`=已核验无保留意见；其他或空白转人工复核。持续经营强调事项、治理风险还需阅读原文 |
 
@@ -51,7 +51,9 @@ ROA=`当年合并净利润 / 上年末总资产`；CFO/资产使用相同分母�
 | fx_to_reporting | 若币种不同，1 单位总市值币种兑换为多少报表币种。例如 HKD → CNY 输入 CNY/HKD |
 | fx_date / fx_source_url | 跨币种时必须提供不晚于截止日的近期 FX 日期及来源；同币种可空 |
 
-转换：`market_cap_reporting = market_cap × unit_scale × fx_to_reporting`。默认估值和 FX 距截止日不得超过 7 天，期间财报不得早于截止日 550 天以上。估值比率使用年度数据；尚未实施最新中报/TTM，实际研究前必须核对最近披露。
+转换：`market_cap_reporting = market_cap × unit_scale × fx_to_reporting`。默认估值和 FX 距截止日不得超过 7 天，期间财报不得早于截止日 550 天以上。超过一年提示复核；可通过 `expected_latest_period` 指定已确认应当可用的年度期末，缺少该年度则进入复核。估值比率使用年度数据；尚未实施最新中报/TTM。
+
+F-score 默认诊断（`min_f_score: null`）；显式设置数字才启用完整九项门槛。CFO/利润与扣非/归母在质量排名中分别封顶 2 和 1，原值保留；这是未经效果校准的研究规则。ROE 要求期初和期末归母权益均正。总有息债务不得小于包含一年内到期部分的长期有息债务。关闭评分模块不关闭净债务基础门槛。
 
 ## documents.jsonl
 

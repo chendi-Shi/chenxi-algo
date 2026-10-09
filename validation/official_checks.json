@@ -1,0 +1,136 @@
+{
+  "validation_date": "2026-10-09",
+  "scope": "Independent check of headline financial facts in the original 2024 annual reports. This checks ingestion semantics, not screening returns or point-in-time backtest validity.",
+  "unit": "RMB yuan",
+  "companies": {
+    "600519": {
+      "company": "贵州茅台",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+      "source_local_path": "validation/raw/moutai_2024.pdf",
+      "source_sha256": "5299f4940e2ce4e91084b73dc457d558b9d335fa76fbfee6227e4254eb7f4a30",
+      "source_publication_date": "2025-04-03",
+      "source_publication_date_basis": "CNINFO official document URL date; report approved for submission on 2025-04-01 (report p143).",
+      "report_page_offset": 0,
+      "values": {
+        "2024": {
+          "revenue": 170899152276.34,
+          "net_profit": 86228146421.62,
+          "net_profit_core": 86240905977.42,
+          "operating_cash_flow": 92463692168.43,
+          "total_assets": 298944579918.70,
+          "total_equity": 233105984399.47,
+          "cost_of_goods_sold": 13789482367.98,
+          "total_operating_revenue": 174144069958.25,
+          "financial_subsidiary_interest_revenue": 3244917681.91,
+          "financial_expense_interest_cost": 14474584.09,
+          "financial_subsidiary_interest_cost": 105127802.03,
+          "nonrecurring_profit_effect_after_tax_and_nci": -12759555.80
+        },
+        "2023": {
+          "revenue": 147693604994.14,
+          "net_profit": 74734071550.75,
+          "net_profit_core": 74752564425.52,
+          "operating_cash_flow": 66593247721.09,
+          "total_assets": 272699660092.25,
+          "total_equity": 215668571607.43,
+          "cost_of_goods_sold": 11867273851.78,
+          "total_operating_revenue": 150560330316.45,
+          "financial_subsidiary_interest_revenue": 2866725322.31,
+          "financial_expense_interest_cost": 12624628.35,
+          "financial_subsidiary_interest_cost": 113500129.93,
+          "nonrecurring_profit_effect_after_tax_and_nci": -18492874.77
+        }
+      },
+      "field_sources": {
+        "revenue": {"source_label": "营业收入", "report_page": 5, "pdf_page": 5, "table": "近三年主要会计数据", "additional_report_page": 63},
+        "net_profit": {"source_label": "归属于上市公司股东的净利润", "report_page": 5, "pdf_page": 5, "table": "近三年主要会计数据"},
+        "net_profit_core": {"source_label": "归属于上市公司股东的扣除非经常性损益的净利润", "report_page": 5, "pdf_page": 5, "table": "近三年主要会计数据"},
+        "operating_cash_flow": {"source_label": "经营活动产生的现金流量净额", "report_page": 5, "pdf_page": 5, "table": "近三年主要会计数据", "additional_report_page": 67},
+        "total_assets": {"source_label": "总资产", "report_page": 5, "pdf_page": 5, "table": "近三年主要会计数据"},
+        "total_equity": {"source_label": "归属于上市公司股东的净资产", "report_page": 5, "pdf_page": 5, "table": "近三年主要会计数据", "basis": "parent owners' equity, not consolidated equity including minority interests"},
+        "cost_of_goods_sold": {"source_label": "营业成本", "report_page": 63, "pdf_page": 63, "table": "合并利润表"},
+        "total_operating_revenue": {"source_label": "营业总收入", "report_page": 63, "pdf_page": 63, "table": "合并利润表"},
+        "financial_subsidiary_interest_revenue": {"source_label": "利息收入（营业总收入组成部分）", "report_page": 63, "pdf_page": 63, "table": "合并利润表"},
+        "financial_expense_interest_cost": {"source_label": "财务费用其中：利息费用", "report_page": 63, "pdf_page": 63, "table": "合并利润表"},
+        "financial_subsidiary_interest_cost": {"source_label": "利息支出（营业总成本组成部分）", "report_page": 63, "pdf_page": 63, "table": "合并利润表"},
+        "nonrecurring_profit_effect_after_tax_and_nci": {"source_label": "非经常性损益合计", "report_page": 7, "pdf_page": 7, "table": "非经常性损益项目和金额"}
+      },
+      "warnings": [
+        {"code": "REVENUE_BASIS", "report_page": 63, "message": "Use 营业收入 170899152276.34 with 营业成本 for the nonfinancial business margin. Do not silently substitute 营业总收入 174144069958.25, which additionally includes the financial subsidiary's 3244917681.91 interest revenue. The alcohol 主营业务收入 is a third basis: 170611838052.02 (report p9/p108)."},
+        {"code": "FINANCIAL_SUBSIDIARY_CFO", "report_page": 9, "message": "Management attributes CFO growth partly to the finance subsidiary collecting more funds from other group members. Consolidated CFO is not pure liquor-business customer cash conversion. Report p12 also shows 客户存款和同业存放款项净增加额 11060205782.10 in 2024 versus -810223002.76 in 2023. Do not create an adjusted CFO by subtracting only one line; finance-company cash-flow structure needs a separate reconciliation."},
+        {"code": "INTEREST_EXPENSE_BASIS", "report_page": 63, "message": "There are separate financial-subsidiary interest costs and interest expense within 财务费用. A generic screener cannot treat negative net 财务费用 as gross interest expense; require explicit interest_cost definition before computing interest coverage."}
+      ],
+      "visually_checked_pdf_pages": [5, 7, 9, 63]
+    },
+    "02331": {
+      "company": "李宁",
+      "source_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "source_local_path": "validation/raw/lining_2024.pdf",
+      "source_sha256": "ca55a1bd0a67ec38b52f0ab92f6b9df587e3e9e0ae15864ddaa788c8b59c1a0d",
+      "source_publication_date": "2025-04-29",
+      "source_publication_date_basis": "Conservative annual-report document date from the official HKEX PDF URL; do not confuse it with board approval date 2025-03-27. Headline audited data was already in the 2025-03-28 results announcement.",
+      "earlier_results_announcement_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0328/2025032800019.pdf",
+      "earlier_results_announcement_date": "2025-03-28",
+      "board_approval_date": "2025-03-27",
+      "report_page_offset": 2,
+      "values": {
+        "2024": {
+          "revenue": 28675643000,
+          "net_profit": 3012918000,
+          "net_profit_core": null,
+          "operating_cash_flow": 5267935000,
+          "total_assets": 35708406000,
+          "total_equity": 26103689000,
+          "cost_of_goods_sold": 14519540000,
+          "gross_profit": 14156103000,
+          "bank_borrowings_at_year_end": 0,
+          "borrowing_interest_cost": 28176000,
+          "gross_finance_expense": 254421000,
+          "paid_interest_in_financing_cash_flow": 28176000,
+          "bank_borrowings_received_during_year": 5006216000,
+          "bank_borrowings_repaid_during_year": 5006216000
+        },
+        "2023": {
+          "revenue": 27598491000,
+          "net_profit": 3186910000,
+          "net_profit_core": null,
+          "operating_cash_flow": 4687936000,
+          "total_assets": 34207803000,
+          "total_equity": 24406641000,
+          "cost_of_goods_sold": 14246436000,
+          "gross_profit": 13352055000,
+          "bank_borrowings_at_year_end": 0,
+          "borrowing_interest_cost": 16006000,
+          "gross_finance_expense": 181446000,
+          "company_disclosed_profit_ex_oneoff_equity_method_gain": 3046453000,
+          "paid_interest_in_financing_cash_flow": 16006000,
+          "bank_borrowings_received_during_year": 2500000000,
+          "bank_borrowings_repaid_during_year": 2500000000
+        }
+      },
+      "field_sources": {
+        "revenue": {"source_label": "收入", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 173, "pdf_page": 175, "table": "综合收益表"},
+        "net_profit": {"source_label": "本公司权益持有人应占溢利", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 173, "pdf_page": 175, "table": "综合收益表"},
+        "net_profit_core": {"source_label": "No A-share-style 扣除非经常性损益归母净利润 disclosed in this source", "report_page": 19, "pdf_page": 21, "basis": "unknown; preserve missing value; do not equal reported NI"},
+        "operating_cash_flow": {"source_label": "经营活动产生之现金净额", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 177, "pdf_page": 179, "table": "综合现金流量表"},
+        "total_assets": {"source_label": "资产总额", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 171, "pdf_page": 173, "table": "综合资产负债表"},
+        "total_equity": {"source_label": "本公司权益持有人应占股本及储备 / 权益总额", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 171, "pdf_page": 173, "table": "综合资产负债表"},
+        "cost_of_goods_sold": {"source_label": "销售成本", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 173, "pdf_page": 175, "table": "综合收益表"},
+        "gross_profit": {"source_label": "毛利", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 173, "pdf_page": 175, "table": "综合收益表"},
+        "bank_borrowings_at_year_end": {"source_label": "无银行借贷", "report_page": 146, "pdf_page": 148, "table": "董事会报告", "additional_report_page": 21},
+        "borrowing_interest_cost": {"source_label": "借款利息", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 240, "pdf_page": 242, "table": "附注27 融资收入及开支"},
+        "gross_finance_expense": {"source_label": "融资开支", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 173, "pdf_page": 175, "table": "综合收益表"},
+        "company_disclosed_profit_ex_oneoff_equity_method_gain": {"source_label": "2023年权益持有人应占溢利剔除与经营无关的一次性权益法投资收益", "source_unit": "RMB yuan", "report_page": 19, "pdf_page": 21, "table": "管理层讨论与分析 综合盈利指标", "basis": "Company's narrow adjustment to the 2023 comparator only; not PRC statutory 扣非 and not a unified core-profit definition."},
+        "paid_interest_in_financing_cash_flow": {"source_label": "已付利息", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 177, "pdf_page": 179, "table": "综合现金流量表"},
+        "bank_borrowings_received_during_year": {"source_label": "银行借贷所得款项", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 177, "pdf_page": 179, "table": "综合现金流量表"},
+        "bank_borrowings_repaid_during_year": {"source_label": "偿还银行借贷", "source_unit": "RMB thousand", "scale_to_yuan": 1000, "report_page": 177, "pdf_page": 179, "table": "综合现金流量表"}
+      },
+      "warnings": [
+        {"code": "CORE_PROFIT_UNAVAILABLE", "report_page": 19, "message": "Keep net_profit_core missing for both years. The 2023 comparator adjustment removes one specific equity-method non-operating gain; the report does not disclose a comparable 2024 A-share statutory core profit. Do not set net_profit_core equal to reported net_profit."},
+        {"code": "ZERO_YEAR_END_DEBT_NONZERO_INTEREST", "report_page": 177, "message": "Zero year-end bank borrowings does not imply zero annual interest cost. The cash-flow statement shows RMB5.006216 billion of bank borrowing and equal repayments in 2024 and RMB28.176 million interest paid. Lease liabilities are also separate obligations; do not equate bank debt with all interest-bearing debt."},
+        {"code": "PIT_SOURCE_DATE", "report_page": 172, "message": "The financial statements were approved on 2025-03-27, audited results announced via HKEX on 2025-03-28, and the annual-report PDF source carries 2025-04-29. A future PIT dataset must distinguish these timestamps and retain the original version seen then."}
+      ],
+      "visually_checked_pdf_pages": [21, 148, 173, 175, 179, 242]
+    }
+  }
+}

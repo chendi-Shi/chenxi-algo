@@ -1,0 +1,782 @@
+{
+  "data": "synthetic boundary probes and existing synthetic demo; no investment efficacy claim",
+  "engine_sha256": "01ae391d4be605bfd7a9a7fda552e58a9e9c60941a51eba74e1a277ab1759c8f",
+  "fixture_revision": "Debt-consistent conflicting-factor fixture; top_two requires a valid score.",
+  "legacy_config_adapter": "Legacy engine does not accept null min_f_score. In complete-signal tradeoff/control fixtures null is mapped to 0 to disable only the numerical score threshold.",
+  "audit_script_sha256": "740dc24d29e0d127f27165f07da5d52854ad098a936dfc194f8c797e0ad74631",
+  "economic_probes": {
+    "healthy_baseline": {
+      "counts": {
+        "watchlist": 5
+      },
+      "scored_count": 5,
+      "fscore_distribution": {
+        "9": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "watchlist",
+          "score": 50.0,
+          "f_score": 9,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 0.3076923076923077,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": 0.9,
+            "fcf": 20.0,
+            "core_earnings_yield": 0.09,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": 0.4142135623730948,
+            "net_debt_to_cfo": 0.8,
+            "interest_cover": 15.0,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": 0.6363636363636365
+          },
+          "reasons": [
+            "health/quality gates passed; lower priority or insufficient peer comparison"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    "mature_stable_net_cash": {
+      "counts": {
+        "excluded": 5
+      },
+      "scored_count": 5,
+      "fscore_distribution": {
+        "4": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "excluded",
+          "score": 50.0,
+          "f_score": 4,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.16666666666666666,
+            "roe": 0.2857142857142857,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": 0.9,
+            "fcf": 20.0,
+            "core_earnings_yield": 0.09,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.0,
+            "core_profit_cagr_2y": 0.0,
+            "net_debt_to_cfo": -1.2,
+            "interest_cover": 15.0,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.0,
+            "core_profit_growth_yoy": 0.0
+          },
+          "reasons": [
+            "financial health F-score below research threshold"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    "all_debt_free_zero_interest": {
+      "counts": {
+        "watchlist": 5
+      },
+      "scored_count": 0,
+      "fscore_distribution": {
+        "8": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "watchlist",
+          "score": null,
+          "f_score": 8,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 0.3076923076923077,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": 0.9,
+            "fcf": 20.0,
+            "core_earnings_yield": 0.09,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": 0.4142135623730948,
+            "net_debt_to_cfo": -0.4,
+            "interest_cover": null,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": 0.6363636363636365
+          },
+          "reasons": [
+            "health/quality gates passed; lower priority or insufficient peer comparison"
+          ],
+          "warnings": [
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ]
+        }
+      ]
+    },
+    "one_zero_interest_in_five_peers": {
+      "counts": {
+        "watchlist": 5
+      },
+      "scored_count": 0,
+      "fscore_distribution": {
+        "9": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "watchlist",
+          "score": null,
+          "f_score": 9,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 0.3076923076923077,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": 0.9,
+            "fcf": 20.0,
+            "core_earnings_yield": 0.09,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": 0.4142135623730948,
+            "net_debt_to_cfo": 0.8,
+            "interest_cover": null,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": 0.6363636363636365
+          },
+          "reasons": [
+            "health/quality gates passed; lower priority or insufficient peer comparison"
+          ],
+          "warnings": [
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ]
+        }
+      ]
+    },
+    "zero_current_liabilities": {
+      "counts": {
+        "data_review": 5
+      },
+      "scored_count": 5,
+      "fscore_distribution": {
+        "None": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "data_review",
+          "score": 50.0,
+          "f_score": null,
+          "f_score_known": 8,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 0.3076923076923077,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": 0.9,
+            "fcf": 20.0,
+            "core_earnings_yield": 0.09,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": 0.4142135623730948,
+            "net_debt_to_cfo": 0.8,
+            "interest_cover": 15.0,
+            "current_ratio": null,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": 0.6363636363636365
+          },
+          "reasons": [
+            "critical data, complete F-score, valuation or audit review is required"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    "negative_opening_equity_positive_current": {
+      "counts": {
+        "watchlist": 5
+      },
+      "scored_count": 5,
+      "fscore_distribution": {
+        "9": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "watchlist",
+          "score": 50.0,
+          "f_score": 9,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 4.0,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": 0.9,
+            "fcf": 20.0,
+            "core_earnings_yield": 0.09,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": 0.4142135623730948,
+            "net_debt_to_cfo": 0.8,
+            "interest_cover": 15.0,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": 0.6363636363636365
+          },
+          "reasons": [
+            "health/quality gates passed; lower priority or insufficient peer comparison"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    "extreme_cash_conversion": {
+      "counts": {
+        "watchlist": 5
+      },
+      "scored_count": 5,
+      "fscore_distribution": {
+        "9": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "watchlist",
+          "score": 50.0,
+          "f_score": 9,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 0.3076923076923077,
+            "gross_margin": 0.46875,
+            "cash_conversion": 100.0,
+            "core_profit_share": 0.9,
+            "fcf": 1995.0,
+            "core_earnings_yield": 0.09,
+            "fcf_yield": 9.975,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": 0.4142135623730948,
+            "net_debt_to_cfo": 0.01,
+            "interest_cover": 15.0,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": 0.6363636363636365
+          },
+          "reasons": [
+            "health/quality gates passed; lower priority or insufficient peer comparison"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    "core_profit_five_times_total": {
+      "counts": {
+        "watchlist": 5
+      },
+      "scored_count": 5,
+      "fscore_distribution": {
+        "9": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "watchlist",
+          "score": 50.0,
+          "f_score": 9,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 0.3076923076923077,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": 5.0,
+            "fcf": 20.0,
+            "core_earnings_yield": 0.5,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": 2.333333333333334,
+            "net_debt_to_cfo": 0.8,
+            "interest_cover": 15.0,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": 8.090909090909092
+          },
+          "reasons": [
+            "health/quality gates passed; lower priority or insufficient peer comparison"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    "latest_annual_missing_after_filing_window": {
+      "counts": {
+        "watchlist": 5
+      },
+      "scored_count": 5,
+      "fscore_distribution": {
+        "9": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "watchlist",
+          "score": 50.0,
+          "f_score": 9,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 0.3076923076923077,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": 0.9,
+            "fcf": 20.0,
+            "core_earnings_yield": 0.09,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": 0.4142135623730948,
+            "net_debt_to_cfo": 0.8,
+            "interest_cover": 15.0,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": 0.6363636363636365
+          },
+          "reasons": [
+            "health/quality gates passed; lower priority or insufficient peer comparison"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    "zero_interest_despite_disabled_balance_weight": {
+      "counts": {
+        "watchlist": 5
+      },
+      "scored_count": 0,
+      "fscore_distribution": {
+        "8": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "watchlist",
+          "score": null,
+          "f_score": 8,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 0.3076923076923077,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": 0.9,
+            "fcf": 20.0,
+            "core_earnings_yield": 0.09,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": 0.4142135623730948,
+            "net_debt_to_cfo": -0.4,
+            "interest_cover": null,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": 0.6363636363636365
+          },
+          "reasons": [
+            "health/quality gates passed; lower priority or insufficient peer comparison"
+          ],
+          "warnings": [
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ]
+        }
+      ]
+    },
+    "hong_kong_no_harmonized_core_profit": {
+      "counts": {
+        "data_review": 5
+      },
+      "scored_count": 0,
+      "fscore_distribution": {
+        "9": 5
+      },
+      "companies": [
+        {
+          "ticker": "PROBE-0",
+          "status": "data_review",
+          "score": null,
+          "f_score": 9,
+          "f_score_known": 9,
+          "peer_count": 5,
+          "metrics": {
+            "roa": 0.18181818181818182,
+            "roe": 0.3076923076923077,
+            "gross_margin": 0.46875,
+            "cash_conversion": 1.25,
+            "core_profit_share": null,
+            "fcf": 20.0,
+            "core_earnings_yield": null,
+            "fcf_yield": 0.1,
+            "revenue_cagr_2y": 0.2649110640673512,
+            "core_profit_cagr_2y": null,
+            "net_debt_to_cfo": 0.8,
+            "interest_cover": 15.0,
+            "current_ratio": 2.2,
+            "revenue_growth_yoy": 0.28,
+            "core_profit_growth_yoy": null
+          },
+          "reasons": [
+            "critical data, complete F-score, valuation or audit review is required"
+          ],
+          "warnings": [
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ]
+        }
+      ]
+    }
+  },
+  "preference_sensitivity": {
+    "synthetic_demo_weights": {
+      "default": {
+        "weights": {
+          "quality": 0.4,
+          "value": 0.25,
+          "growth": 0.2,
+          "balance": 0.15
+        },
+        "counts": {
+          "specialist_review": 1,
+          "candidate": 20,
+          "watchlist": 36,
+          "excluded": 1,
+          "data_review": 4
+        },
+        "candidates": [
+          "DEMO-A-C09",
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13",
+          "DEMO-A-I09",
+          "DEMO-A-I10",
+          "DEMO-A-I11",
+          "DEMO-A-I12",
+          "DEMO-A-I13",
+          "DEMO-HK-C09",
+          "DEMO-HK-C10",
+          "DEMO-HK-C11",
+          "DEMO-HK-C12",
+          "DEMO-HK-C13",
+          "DEMO-HK-I09",
+          "DEMO-HK-I10",
+          "DEMO-HK-I11",
+          "DEMO-HK-I12",
+          "DEMO-HK-I13"
+        ],
+        "candidate_jaccard_vs_default": 1.0
+      },
+      "equal": {
+        "weights": {
+          "quality": 0.25,
+          "value": 0.25,
+          "growth": 0.25,
+          "balance": 0.25
+        },
+        "counts": {
+          "specialist_review": 1,
+          "candidate": 20,
+          "watchlist": 36,
+          "excluded": 1,
+          "data_review": 4
+        },
+        "candidates": [
+          "DEMO-A-C09",
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13",
+          "DEMO-A-I09",
+          "DEMO-A-I10",
+          "DEMO-A-I11",
+          "DEMO-A-I12",
+          "DEMO-A-I13",
+          "DEMO-HK-C09",
+          "DEMO-HK-C10",
+          "DEMO-HK-C11",
+          "DEMO-HK-C12",
+          "DEMO-HK-C13",
+          "DEMO-HK-I09",
+          "DEMO-HK-I10",
+          "DEMO-HK-I11",
+          "DEMO-HK-I12",
+          "DEMO-HK-I13"
+        ],
+        "candidate_jaccard_vs_default": 1.0
+      },
+      "quality": {
+        "weights": {
+          "quality": 0.6,
+          "value": 0.15,
+          "growth": 0.1,
+          "balance": 0.15
+        },
+        "counts": {
+          "specialist_review": 1,
+          "candidate": 20,
+          "watchlist": 36,
+          "excluded": 1,
+          "data_review": 4
+        },
+        "candidates": [
+          "DEMO-A-C09",
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13",
+          "DEMO-A-I09",
+          "DEMO-A-I10",
+          "DEMO-A-I11",
+          "DEMO-A-I12",
+          "DEMO-A-I13",
+          "DEMO-HK-C09",
+          "DEMO-HK-C10",
+          "DEMO-HK-C11",
+          "DEMO-HK-C12",
+          "DEMO-HK-C13",
+          "DEMO-HK-I09",
+          "DEMO-HK-I10",
+          "DEMO-HK-I11",
+          "DEMO-HK-I12",
+          "DEMO-HK-I13"
+        ],
+        "candidate_jaccard_vs_default": 1.0
+      },
+      "value": {
+        "weights": {
+          "quality": 0.2,
+          "value": 0.5,
+          "growth": 0.15,
+          "balance": 0.15
+        },
+        "counts": {
+          "specialist_review": 1,
+          "candidate": 20,
+          "watchlist": 36,
+          "excluded": 1,
+          "data_review": 4
+        },
+        "candidates": [
+          "DEMO-A-C09",
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13",
+          "DEMO-A-I09",
+          "DEMO-A-I10",
+          "DEMO-A-I11",
+          "DEMO-A-I12",
+          "DEMO-A-I13",
+          "DEMO-HK-C09",
+          "DEMO-HK-C10",
+          "DEMO-HK-C11",
+          "DEMO-HK-C12",
+          "DEMO-HK-C13",
+          "DEMO-HK-I09",
+          "DEMO-HK-I10",
+          "DEMO-HK-I11",
+          "DEMO-HK-I12",
+          "DEMO-HK-I13"
+        ],
+        "candidate_jaccard_vs_default": 1.0
+      },
+      "growth": {
+        "weights": {
+          "quality": 0.2,
+          "value": 0.15,
+          "growth": 0.5,
+          "balance": 0.15
+        },
+        "counts": {
+          "specialist_review": 1,
+          "candidate": 20,
+          "watchlist": 36,
+          "excluded": 1,
+          "data_review": 4
+        },
+        "candidates": [
+          "DEMO-A-C09",
+          "DEMO-A-C10",
+          "DEMO-A-C11",
+          "DEMO-A-C12",
+          "DEMO-A-C13",
+          "DEMO-A-I09",
+          "DEMO-A-I10",
+          "DEMO-A-I11",
+          "DEMO-A-I12",
+          "DEMO-A-I13",
+          "DEMO-HK-C09",
+          "DEMO-HK-C10",
+          "DEMO-HK-C11",
+          "DEMO-HK-C12",
+          "DEMO-HK-C13",
+          "DEMO-HK-I09",
+          "DEMO-HK-I10",
+          "DEMO-HK-I11",
+          "DEMO-HK-I12",
+          "DEMO-HK-I13"
+        ],
+        "candidate_jaccard_vs_default": 1.0
+      }
+    },
+    "synthetic_demo_fscore_gate": {
+      "0": {
+        "specialist_review": 1,
+        "candidate": 20,
+        "watchlist": 36,
+        "excluded": 1,
+        "data_review": 4
+      },
+      "4": {
+        "specialist_review": 1,
+        "candidate": 20,
+        "watchlist": 36,
+        "excluded": 1,
+        "data_review": 4
+      },
+      "6": {
+        "specialist_review": 1,
+        "candidate": 20,
+        "watchlist": 36,
+        "excluded": 1,
+        "data_review": 4
+      },
+      "8": {
+        "specialist_review": 1,
+        "candidate": 20,
+        "watchlist": 20,
+        "excluded": 17,
+        "data_review": 4
+      }
+    },
+    "synthetic_conflicting_factors": {
+      "note": "quality rises while valuation yields and growth fall; F-score gate disabled to isolate preference sensitivity",
+      "profiles": {
+        "default": {
+          "scored_count": 6,
+          "top_two": [
+            "TRADEOFF-1",
+            "TRADEOFF-2"
+          ],
+          "scores": {
+            "TRADEOFF-1": 54.0,
+            "TRADEOFF-2": 50.5,
+            "TRADEOFF-0": 50.0,
+            "TRADEOFF-3": 49.5,
+            "TRADEOFF-4": 48.5,
+            "TRADEOFF-5": 47.5
+          },
+          "candidates": []
+        },
+        "equal": {
+          "scored_count": 6,
+          "top_two": [
+            "TRADEOFF-0",
+            "TRADEOFF-1"
+          ],
+          "scores": {
+            "TRADEOFF-0": 60.0,
+            "TRADEOFF-1": 60.0,
+            "TRADEOFF-2": 52.5,
+            "TRADEOFF-3": 47.5,
+            "TRADEOFF-4": 42.5,
+            "TRADEOFF-5": 37.5
+          },
+          "candidates": []
+        },
+        "quality": {
+          "scored_count": 6,
+          "top_two": [
+            "TRADEOFF-5",
+            "TRADEOFF-4"
+          ],
+          "scores": {
+            "TRADEOFF-5": 67.5,
+            "TRADEOFF-4": 60.5,
+            "TRADEOFF-3": 53.5,
+            "TRADEOFF-2": 46.5,
+            "TRADEOFF-1": 41.0,
+            "TRADEOFF-0": 31.0
+          },
+          "candidates": [
+            "TRADEOFF-5"
+          ]
+        },
+        "value": {
+          "scored_count": 6,
+          "top_two": [
+            "TRADEOFF-1",
+            "TRADEOFF-0"
+          ],
+          "scores": {
+            "TRADEOFF-1": 68.5,
+            "TRADEOFF-0": 67.5,
+            "TRADEOFF-2": 54.5,
+            "TRADEOFF-3": 45.5,
+            "TRADEOFF-4": 36.5,
+            "TRADEOFF-5": 27.5
+          },
+          "candidates": [
+            "TRADEOFF-1",
+            "TRADEOFF-0"
+          ]
+        },
+        "growth": {
+          "scored_count": 6,
+          "top_two": [
+            "TRADEOFF-0",
+            "TRADEOFF-1"
+          ],
+          "scores": {
+            "TRADEOFF-0": 71.0,
+            "TRADEOFF-1": 65.0,
+            "TRADEOFF-2": 54.5,
+            "TRADEOFF-3": 45.5,
+            "TRADEOFF-4": 36.5,
+            "TRADEOFF-5": 27.5
+          },
+          "candidates": [
+            "TRADEOFF-0",
+            "TRADEOFF-1"
+          ]
+        }
+      },
+      "insufficient_peer_control": {
+        "scored_count": 0,
+        "top_two": [],
+        "scores": {
+          "TRADEOFF-0": null
+        },
+        "candidates": []
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "ticker": "02331.HK",
+  "name": "Li Ning Company Limited",
+  "generated_at_utc": "2026-10-09T08:33:33.862226+00:00",
+  "official_check_source": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+  "official_check_scope": "Five 2024 consolidated financial values only, converted from report RMB thousands to yuan. Historical raw values remain latest aggregator versions.",
+  "currency": "CNY",
+  "raw_amount_unit_scale": 1,
+  "unit_check_method": "Compare AMOUNT directly with five independent annual-report RMB'000 values multiplied by 1000; no scaling factor fitted to ranking results.",
+  "sources": {
+    "balance": {
+      "url": "https://datacenter.eastmoney.com/securities/api/data/v1/get?reportName=RPT_HKF10_FN_BALANCE_PC&columns=ALL&quoteColumns=&filter=%28SECUCODE%3D%2202331.HK%22%29%28REPORT_DATE+in+%28%272022-12-31%27%2C%272023-12-31%27%2C%272024-12-31%27%29%29&pageNumber=1&pageSize=500&source=F10&client=PC",
+      "cache_path": "raw/02331_hk_balance.json",
+      "cache_sha256": "e9be44b6885d6a358961855568bd3302403a8832bd58a3062535e9e7d6c3a484",
+      "fetched_at_utc": "2026-10-09T08:28:58.459425+00:00",
+      "response_body_sha256": "efcbbc0ca2bfad7a05a00cddc8f6ff5fa9b318c393618dd80ab933b6a282cdc3",
+      "canonical_response_sha256": "10e30efa9a9c0b54fc5bcf738e0f75c94037dc1e34f3bc7750766d6fb7a9b998",
+      "response_body_file": "02331_hk_balance.response.json",
+      "cache_reused": false,
+      "source_kind": "public_aggregator_latest_reconstructed_history"
+    },
+    "income": {
+      "url": "https://datacenter.eastmoney.com/securities/api/data/v1/get?reportName=RPT_HKF10_FN_INCOME_PC&columns=ALL&quoteColumns=&filter=%28SECUCODE%3D%2202331.HK%22%29%28REPORT_DATE+in+%28%272022-12-31%27%2C%272023-12-31%27%2C%272024-12-31%27%29%29&pageNumber=1&pageSize=500&source=F10&client=PC",
+      "cache_path": "raw/02331_hk_income.json",
+      "cache_sha256": "b69bdf4425a32304387eae7ab6075eea552874d6aac96b200b5c4787f3b32fd6",
+      "fetched_at_utc": "2026-10-09T08:28:58.856542+00:00",
+      "response_body_sha256": "1bf1377d59d647edb5c8cfa6cc1cbf5fe9cf63c8a06767f4927c1487d733e187",
+      "canonical_response_sha256": "81bbe4ee45249b942e4dcdea0cf59a201e33de2f12b57fdab450c74c4b79b8c8",
+      "response_body_file": "02331_hk_income.response.json",
+      "cache_reused": false,
+      "source_kind": "public_aggregator_latest_reconstructed_history"
+    },
+    "cashflow": {
+      "url": "https://datacenter.eastmoney.com/securities/api/data/v1/get?reportName=RPT_HKF10_FN_CASHFLOW_PC&columns=ALL&quoteColumns=&filter=%28SECUCODE%3D%2202331.HK%22%29%28REPORT_DATE+in+%28%272022-12-31%27%2C%272023-12-31%27%2C%272024-12-31%27%29%29&pageNumber=1&pageSize=500&source=F10&client=PC",
+      "cache_path": "raw/02331_hk_cashflow.json",
+      "cache_sha256": "bf570748e8f6d46e15d44ca147ad077d800f2c9f22275642d11851e1eb77784f",
+      "fetched_at_utc": "2026-10-09T08:28:59.266590+00:00",
+      "response_body_sha256": "cd898dcd9d86ef0244842648970d7955dc5a4079ced1768852a223e1c8e42f44",
+      "canonical_response_sha256": "268f12b973c0ec57b22de839f0784147ffb2adf70c78f277e74aa3ff2d15d1ef",
+      "response_body_file": "02331_hk_cashflow.response.json",
+      "cache_reused": false,
+      "source_kind": "public_aggregator_latest_reconstructed_history"
+    },
+    "summary": {
+      "url": "https://datacenter.eastmoney.com/securities/api/data/v1/get?reportName=RPT_CUSTOM_HKSK_APPFN_CASHFLOW_SUMMARY&columns=SECUCODE%2CSECURITY_CODE%2CSECURITY_NAME_ABBR%2CSTART_DATE%2CREPORT_DATE%2CFISCAL_YEAR%2CCURRENCY%2CACCOUNT_STANDARD%2CREPORT_TYPE&quoteColumns=&filter=%28SECUCODE%3D%2202331.HK%22%29&pageNumber=1&pageSize=500&source=F10&client=PC",
+      "cache_path": "raw/02331_hk_summary.json",
+      "cache_sha256": "0f5a2efa18e12538c18658a2e9f7eac367e01f586a890cf25f14516d883d8a40",
+      "fetched_at_utc": "2026-10-09T08:30:44.923994+00:00",
+      "response_body_sha256": "d90944598a8ae5c4944555f4d11ebe25c6acf40a8167186265df8b1d25a28486",
+      "canonical_response_sha256": "75408cb496673ab8ecf9dc6dfda679145955a52b9f1f5339f964192ffa8cc8ea",
+      "response_body_file": "02331_hk_summary.response.json",
+      "cache_reused": false,
+      "source_kind": "public_aggregator_latest_reconstructed_history"
+    }
+  },
+  "years": {
+    "2022": {
+      "revenue": {
+        "value": 25803383000,
+        "STD_ITEM_CODE": "004001001",
+        "STD_ITEM_NAME": "营业额",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": "2022-01-01 00:00:00",
+        "raw_kind": "income"
+      },
+      "net_income_parent": {
+        "value": 4063834000,
+        "STD_ITEM_CODE": "004025002",
+        "STD_ITEM_NAME": "股东应占溢利",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": "2022-01-01 00:00:00",
+        "raw_kind": "income"
+      },
+      "total_assets": {
+        "value": 33646519000,
+        "STD_ITEM_CODE": "004009999",
+        "STD_ITEM_NAME": "总资产",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": null,
+        "raw_kind": "balance"
+      },
+      "equity_parent": {
+        "value": 24329430000,
+        "STD_ITEM_CODE": "004030999",
+        "STD_ITEM_NAME": "股东权益",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": null,
+        "raw_kind": "balance"
+      },
+      "operating_cash_flow": {
+        "value": 3913604000,
+        "STD_ITEM_CODE": "003999",
+        "STD_ITEM_NAME": "经营业务现金净额",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": "2022-01-01 00:00:00",
+        "raw_kind": "cashflow"
+      },
+      "core_income_parent": {
+        "value": null,
+        "reason": "No consistent A-share-style non-recurring-adjusted parent-profit mapping established; remains null."
+      }
+    },
+    "2023": {
+      "revenue": {
+        "value": 27598491000,
+        "STD_ITEM_CODE": "004001001",
+        "STD_ITEM_NAME": "营业额",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": "2023-01-01 00:00:00",
+        "raw_kind": "income"
+      },
+      "net_income_parent": {
+        "value": 3186910000,
+        "STD_ITEM_CODE": "004025002",
+        "STD_ITEM_NAME": "股东应占溢利",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": "2023-01-01 00:00:00",
+        "raw_kind": "income"
+      },
+      "total_assets": {
+        "value": 34207803000,
+        "STD_ITEM_CODE": "004009999",
+        "STD_ITEM_NAME": "总资产",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": null,
+        "raw_kind": "balance"
+      },
+      "equity_parent": {
+        "value": 24406641000,
+        "STD_ITEM_CODE": "004030999",
+        "STD_ITEM_NAME": "股东权益",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": null,
+        "raw_kind": "balance"
+      },
+      "operating_cash_flow": {
+        "value": 4687936000,
+        "STD_ITEM_CODE": "003999",
+        "STD_ITEM_NAME": "经营业务现金净额",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": "2023-01-01 00:00:00",
+        "raw_kind": "cashflow"
+      },
+      "core_income_parent": {
+        "value": null,
+        "reason": "No consistent A-share-style non-recurring-adjusted parent-profit mapping established; remains null."
+      }
+    },
+    "2024": {
+      "revenue": {
+        "value": 28675643000,
+        "STD_ITEM_CODE": "004001001",
+        "STD_ITEM_NAME": "营业额",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": "2024-01-01 00:00:00",
+        "raw_kind": "income"
+      },
+      "net_income_parent": {
+        "value": 3012918000,
+        "STD_ITEM_CODE": "004025002",
+        "STD_ITEM_NAME": "股东应占溢利",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": "2024-01-01 00:00:00",
+        "raw_kind": "income"
+      },
+      "total_assets": {
+        "value": 35708406000,
+        "STD_ITEM_CODE": "004009999",
+        "STD_ITEM_NAME": "总资产",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": null,
+        "raw_kind": "balance"
+      },
+      "equity_parent": {
+        "value": 26103689000,
+        "STD_ITEM_CODE": "004030999",
+        "STD_ITEM_NAME": "股东权益",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": null,
+        "raw_kind": "balance"
+      },
+      "operating_cash_flow": {
+        "value": 5267935000,
+        "STD_ITEM_CODE": "003999",
+        "STD_ITEM_NAME": "经营业务现金净额",
+        "DATE_TYPE_CODE": "001",
+        "START_DATE": "2024-01-01 00:00:00",
+        "raw_kind": "cashflow"
+      },
+      "core_income_parent": {
+        "value": null,
+        "reason": "No consistent A-share-style non-recurring-adjusted parent-profit mapping established; remains null."
+      }
+    }
+  },
+  "checks_2024": {
+    "revenue": {
+      "raw_yuan": 28675643000,
+      "annual_report_yuan": 28675643000,
+      "matched": true,
+      "difference_yuan": 0
+    },
+    "net_income_parent": {
+      "raw_yuan": 3012918000,
+      "annual_report_yuan": 3012918000,
+      "matched": true,
+      "difference_yuan": 0
+    },
+    "total_assets": {
+      "raw_yuan": 35708406000,
+      "annual_report_yuan": 35708406000,
+      "matched": true,
+      "difference_yuan": 0
+    },
+    "equity_parent": {
+      "raw_yuan": 26103689000,
+      "annual_report_yuan": 26103689000,
+      "matched": true,
+      "difference_yuan": 0
+    },
+    "operating_cash_flow": {
+      "raw_yuan": 5267935000,
+      "annual_report_yuan": 5267935000,
+      "matched": true,
+      "difference_yuan": 0
+    }
+  },
+  "unverified_engine_fields": {
+    "core_income_parent": "No consistent A-share-style non-recurring-adjusted parent-profit mapping established; remains null.",
+    "equity_issued": "Issuance events not reviewed for all years.",
+    "audit_opinion": "Audit report opinion not mapped in this lightweight raw-field check.",
+    "total_company_market_cap": "No verified 2025-06-30 all-share-classes HKD market capitalization plus contemporaneous CNY FX input in this sample.",
+    "debt_and_interest_semantics": "Raw line items require lease/debt/finance-cost accounting reconciliation; not inferred or null-filled here.",
+    "available_at": "The HK raw long-table cache does not establish original publication and restatement availability dates."
+  },
+  "all_five_2024_values_match": true
+}

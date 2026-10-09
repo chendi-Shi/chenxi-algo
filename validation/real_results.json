@@ -1,0 +1,1271 @@
+{
+  "as_of_for_exploration": "2025-06-30",
+  "retrieval_date": "2026-10-09",
+  "engine_sha256": "55a5cc70766be7c7b08b5f7d2bf6b96c84a4b2000996994aaeec1a13349b78ab",
+  "sample": {
+    "A_share_issuers": 6,
+    "annual_company_years": 24,
+    "industry": "Liquor",
+    "selection": "purposive, no survivorship-complete historical universe"
+  },
+  "official_reconciliation": {
+    "matched": 6,
+    "total": 6,
+    "comparisons": [
+      {
+        "ticker": "600519.SH",
+        "year": 2024,
+        "field": "revenue",
+        "official": 170899152276.34,
+        "provider": 170899152276.34,
+        "match": true
+      },
+      {
+        "ticker": "600519.SH",
+        "year": 2024,
+        "field": "net_income_parent",
+        "official": 86228146421.62,
+        "provider": 86228146421.62,
+        "match": true
+      },
+      {
+        "ticker": "600519.SH",
+        "year": 2024,
+        "field": "core_income_parent",
+        "official": 86240905977.42,
+        "provider": 86240905977.42,
+        "match": true
+      },
+      {
+        "ticker": "600519.SH",
+        "year": 2024,
+        "field": "operating_cash_flow",
+        "official": 92463692168.43,
+        "provider": 92463692168.43,
+        "match": true
+      },
+      {
+        "ticker": "600519.SH",
+        "year": 2024,
+        "field": "equity_parent",
+        "official": 233105984399.47,
+        "provider": 233105984399.47,
+        "match": true
+      },
+      {
+        "ticker": "600519.SH",
+        "year": 2024,
+        "field": "total_assets",
+        "official": 298944579918.7,
+        "provider": 298944579918.7,
+        "match": true
+      }
+    ],
+    "source": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+    "independent_checks_file_sha256": "21f8358953fc646d1a00b2de6bac8cedea2089d8d945dde73e2617f7f8a6ef03"
+  },
+  "evaluation": {
+    "strict_provider_update_date": {
+      "counts": {
+        "data_review": 6
+      },
+      "scored": 0,
+      "companies": [
+        {
+          "ticker": "000568.SZ",
+          "name": "泸州老窖",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 0,
+          "metric_coverage": null,
+          "metrics": {},
+          "blocks": {},
+          "warnings": [],
+          "reasons": [
+            "requires three visible consecutive annual statements"
+          ]
+        },
+        {
+          "ticker": "000858.SZ",
+          "name": "五粮液",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 0,
+          "metric_coverage": null,
+          "metrics": {},
+          "blocks": {},
+          "warnings": [],
+          "reasons": [
+            "requires three visible consecutive annual statements"
+          ]
+        },
+        {
+          "ticker": "002304.SZ",
+          "name": "洋河股份",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 0,
+          "metric_coverage": null,
+          "metrics": {},
+          "blocks": {},
+          "warnings": [],
+          "reasons": [
+            "requires three visible consecutive annual statements"
+          ]
+        },
+        {
+          "ticker": "600519.SH",
+          "name": "贵州茅台",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 0,
+          "metric_coverage": null,
+          "metrics": {},
+          "blocks": {},
+          "warnings": [],
+          "reasons": [
+            "requires three visible consecutive annual statements"
+          ]
+        },
+        {
+          "ticker": "600809.SH",
+          "name": "山西汾酒",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 0,
+          "metric_coverage": null,
+          "metrics": {},
+          "blocks": {},
+          "warnings": [],
+          "reasons": [
+            "requires three visible consecutive annual statements"
+          ]
+        },
+        {
+          "ticker": "603369.SH",
+          "name": "今世缘",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 0,
+          "metric_coverage": null,
+          "metrics": {},
+          "blocks": {},
+          "warnings": [],
+          "reasons": [
+            "requires three visible consecutive annual statements"
+          ]
+        }
+      ],
+      "audit": [
+        {
+          "line": 4,
+          "ticker": "600519.SH",
+          "reason": "not_yet_available"
+        },
+        {
+          "line": 7,
+          "ticker": "000858.SZ",
+          "reason": "not_yet_available"
+        },
+        {
+          "line": 10,
+          "ticker": "000568.SZ",
+          "reason": "not_yet_available"
+        },
+        {
+          "line": 13,
+          "ticker": "600809.SH",
+          "reason": "not_yet_available"
+        },
+        {
+          "line": 16,
+          "ticker": "002304.SZ",
+          "reason": "not_yet_available"
+        },
+        {
+          "line": 19,
+          "ticker": "603369.SH",
+          "reason": "not_yet_available"
+        }
+      ]
+    },
+    "unverified_original_notice_reconstruction": {
+      "counts": {
+        "data_review": 6
+      },
+      "scored": 0,
+      "companies": [
+        {
+          "ticker": "000568.SZ",
+          "name": "泸州老窖",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 0.7777777777777778,
+          "metrics": {
+            "roa": 0.213253728591202,
+            "roe": 0.3035143044617952,
+            "gross_margin": 0.8753659043239758,
+            "cash_conversion": 1.4211055739955896,
+            "core_profit_share": 0.9945467319624477,
+            "fcf": 17993397497.010002,
+            "core_earnings_yield": 0.08027540634398038,
+            "fcf_yield": 0.1077969860259285,
+            "revenue_cagr_2y": 0.11432164336215633,
+            "core_profit_cagr_2y": 0.13939293062244795,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 3.562096403794424,
+            "revenue_growth_yoy": 0.03185053486894196,
+            "core_profit_growth_yoy": 0.018944062470439782
+          },
+          "blocks": {
+            "quality": {
+              "score": 60.0,
+              "components": {
+                "roe": 60.0,
+                "cash_conversion": 100.0,
+                "core_profit_share": 20.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 100.0,
+              "components": {
+                "core_earnings_yield": 100.0,
+                "fcf_yield": 100.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 40.0,
+              "components": {
+                "revenue_cagr_2y": 40.0,
+                "core_profit_cagr_2y": 40.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": true
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately",
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "000858.SZ",
+          "name": "五粮液",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 0.7777777777777778,
+          "metrics": {
+            "roa": 0.20064596639848783,
+            "roe": 0.24237365382699858,
+            "gross_margin": 0.7705479992459803,
+            "cash_conversion": 1.0224831848674691,
+            "core_profit_share": 0.9965085657451747,
+            "fcf": 31273444412.55,
+            "core_earnings_yield": 0.06877652053161301,
+            "fcf_yield": 0.0677613714079074,
+            "revenue_cagr_2y": 0.09798946783612103,
+            "core_profit_cagr_2y": 0.09111373525518839,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 3.2489643066249685,
+            "revenue_growth_yoy": 0.07088944943596243,
+            "core_profit_growth_yoy": 0.0539734711361739
+          },
+          "blocks": {
+            "quality": {
+              "score": 46.666666666666664,
+              "components": {
+                "roe": 40.0,
+                "cash_conversion": 60.0,
+                "core_profit_share": 40.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 60.0,
+              "components": {
+                "core_earnings_yield": 40.0,
+                "fcf_yield": 80.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 20.0,
+              "components": {
+                "revenue_cagr_2y": 20.0,
+                "core_profit_cagr_2y": 20.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": true
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately",
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "002304.SZ",
+          "name": "洋河股份",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 0.7777777777777778,
+          "metrics": {
+            "roa": 0.09551851734579428,
+            "roe": 0.12892103839618704,
+            "gross_margin": 0.7315715945715381,
+            "cash_conversion": 0.6943286451282255,
+            "core_profit_share": 1.0242526025201926,
+            "fcf": 3174691425.71,
+            "core_earnings_yield": 0.07029168321868921,
+            "fcf_yield": 0.03264765337391155,
+            "revenue_cagr_2y": -0.0206178531972168,
+            "core_profit_cagr_2y": -0.14161818712053773,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 3.2981479718898874,
+            "revenue_growth_yoy": -0.12829635178119403,
+            "core_profit_growth_yoy": -0.3055630097905162
+          },
+          "blocks": {
+            "quality": {
+              "score": 26.666666666666668,
+              "components": {
+                "roe": 0.0,
+                "cash_conversion": 0.0,
+                "core_profit_share": 80.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 50.0,
+              "components": {
+                "core_earnings_yield": 80.0,
+                "fcf_yield": 20.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 0.0,
+              "components": {
+                "revenue_cagr_2y": 0.0,
+                "core_profit_cagr_2y": 0.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": true
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately",
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "600519.SH",
+          "name": "贵州茅台",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 0.7777777777777778,
+          "metrics": {
+            "roa": 0.32759383710151846,
+            "roe": 0.38428268834516643,
+            "gross_margin": 0.9193121663606456,
+            "cash_conversion": 1.0350251711923593,
+            "core_profit_share": 1.0001479743718207,
+            "fcf": 87784980114.87,
+            "core_earnings_yield": 0.0487061766083306,
+            "fcf_yield": 0.04957822157101554,
+            "revenue_cagr_2y": 0.17350335845652634,
+            "core_profit_cagr_2y": 0.17192925484300772,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 4.454078781593729,
+            "revenue_growth_yoy": 0.15711951294790794,
+            "core_profit_growth_yoy": 0.1536849155636184
+          },
+          "blocks": {
+            "quality": {
+              "score": 80.0,
+              "components": {
+                "roe": 80.0,
+                "cash_conversion": 80.0,
+                "core_profit_share": 80.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 20.0,
+              "components": {
+                "core_earnings_yield": 0.0,
+                "fcf_yield": 40.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 80.0,
+              "components": {
+                "revenue_cagr_2y": 80.0,
+                "core_profit_cagr_2y": 80.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": true
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately",
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "600809.SH",
+          "name": "山西汾酒",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 0.7777777777777778,
+          "metrics": {
+            "roa": 0.277874175496485,
+            "roe": 0.39120434270940124,
+            "gross_margin": 0.7620260817593999,
+            "cash_conversion": 0.9934080906907937,
+            "core_profit_share": 1.000223245561889,
+            "fcf": 11534638731.9,
+            "core_earnings_yield": 0.05690620644864333,
+            "fcf_yield": 0.053602240421435486,
+            "revenue_cagr_2y": 0.1720659537383326,
+            "core_profit_cagr_2y": 0.230518330241074,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 2.451332183199236,
+            "revenue_growth_yoy": 0.12786417884409906,
+            "core_profit_growth_yoy": 0.1724154249985983
+          },
+          "blocks": {
+            "quality": {
+              "score": 73.33333333333333,
+              "components": {
+                "roe": 100.0,
+                "cash_conversion": 40.0,
+                "core_profit_share": 80.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 40.0,
+              "components": {
+                "core_earnings_yield": 20.0,
+                "fcf_yield": 60.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 80.0,
+              "components": {
+                "revenue_cagr_2y": 60.0,
+                "core_profit_cagr_2y": 100.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": true
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately",
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "603369.SH",
+          "name": "今世缘",
+          "score": null,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 0.7777777777777778,
+          "metrics": {
+            "roa": 0.15773569571263693,
+            "roe": 0.2374300398320116,
+            "gross_margin": 0.7474450568125478,
+            "cash_conversion": 0.8402046540714195,
+            "core_profit_share": 0.9906698644800713,
+            "fcf": 1050120506.4600003,
+            "core_earnings_yield": 0.06963815434633146,
+            "fcf_yield": 0.021635051290958714,
+            "revenue_cagr_2y": 0.21002673447598635,
+            "core_profit_cagr_2y": 0.16344482488948164,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 1.6633030579826253,
+            "revenue_growth_yoy": 0.1432370162668819,
+            "core_profit_growth_yoy": 0.07798528716491004
+          },
+          "blocks": {
+            "quality": {
+              "score": 13.333333333333334,
+              "components": {
+                "roe": 20.0,
+                "cash_conversion": 20.0,
+                "core_profit_share": 0.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 30.0,
+              "components": {
+                "core_earnings_yield": 60.0,
+                "fcf_yield": 0.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 80.0,
+              "components": {
+                "revenue_cagr_2y": 100.0,
+                "core_profit_cagr_2y": 60.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": true
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately",
+            "incomplete metrics or too few same-market/sector peers; no composite score"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        }
+      ],
+      "audit": []
+    },
+    "three_block_diagnostic_reconstruction": {
+      "counts": {
+        "data_review": 6
+      },
+      "scored": 6,
+      "companies": [
+        {
+          "ticker": "000568.SZ",
+          "name": "泸州老窖",
+          "score": 68.0,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 1.0,
+          "metrics": {
+            "roa": 0.213253728591202,
+            "roe": 0.3035143044617952,
+            "gross_margin": 0.8753659043239758,
+            "cash_conversion": 1.4211055739955896,
+            "core_profit_share": 0.9945467319624477,
+            "fcf": 17993397497.010002,
+            "core_earnings_yield": 0.08027540634398038,
+            "fcf_yield": 0.1077969860259285,
+            "revenue_cagr_2y": 0.11432164336215633,
+            "core_profit_cagr_2y": 0.13939293062244795,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 3.562096403794424,
+            "revenue_growth_yoy": 0.03185053486894196,
+            "core_profit_growth_yoy": 0.018944062470439782
+          },
+          "blocks": {
+            "quality": {
+              "score": 60.0,
+              "components": {
+                "roe": 60.0,
+                "cash_conversion": 100.0,
+                "core_profit_share": 20.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 100.0,
+              "components": {
+                "core_earnings_yield": 100.0,
+                "fcf_yield": 100.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 40.0,
+              "components": {
+                "revenue_cagr_2y": 40.0,
+                "core_profit_cagr_2y": 40.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": false
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "600809.SH",
+          "name": "山西汾酒",
+          "score": 64.66666666666666,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 1.0,
+          "metrics": {
+            "roa": 0.277874175496485,
+            "roe": 0.39120434270940124,
+            "gross_margin": 0.7620260817593999,
+            "cash_conversion": 0.9934080906907937,
+            "core_profit_share": 1.000223245561889,
+            "fcf": 11534638731.9,
+            "core_earnings_yield": 0.05690620644864333,
+            "fcf_yield": 0.053602240421435486,
+            "revenue_cagr_2y": 0.1720659537383326,
+            "core_profit_cagr_2y": 0.230518330241074,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 2.451332183199236,
+            "revenue_growth_yoy": 0.12786417884409906,
+            "core_profit_growth_yoy": 0.1724154249985983
+          },
+          "blocks": {
+            "quality": {
+              "score": 73.33333333333333,
+              "components": {
+                "roe": 100.0,
+                "cash_conversion": 40.0,
+                "core_profit_share": 80.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 40.0,
+              "components": {
+                "core_earnings_yield": 20.0,
+                "fcf_yield": 60.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 80.0,
+              "components": {
+                "revenue_cagr_2y": 60.0,
+                "core_profit_cagr_2y": 100.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": false
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "600519.SH",
+          "name": "贵州茅台",
+          "score": 62.0,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 1.0,
+          "metrics": {
+            "roa": 0.32759383710151846,
+            "roe": 0.38428268834516643,
+            "gross_margin": 0.9193121663606456,
+            "cash_conversion": 1.0350251711923593,
+            "core_profit_share": 1.0001479743718207,
+            "fcf": 87784980114.87,
+            "core_earnings_yield": 0.0487061766083306,
+            "fcf_yield": 0.04957822157101554,
+            "revenue_cagr_2y": 0.17350335845652634,
+            "core_profit_cagr_2y": 0.17192925484300772,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 4.454078781593729,
+            "revenue_growth_yoy": 0.15711951294790794,
+            "core_profit_growth_yoy": 0.1536849155636184
+          },
+          "blocks": {
+            "quality": {
+              "score": 80.0,
+              "components": {
+                "roe": 80.0,
+                "cash_conversion": 80.0,
+                "core_profit_share": 80.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 20.0,
+              "components": {
+                "core_earnings_yield": 0.0,
+                "fcf_yield": 40.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 80.0,
+              "components": {
+                "revenue_cagr_2y": 80.0,
+                "core_profit_cagr_2y": 80.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": false
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "000858.SZ",
+          "name": "五粮液",
+          "score": 45.33333333333333,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 1.0,
+          "metrics": {
+            "roa": 0.20064596639848783,
+            "roe": 0.24237365382699858,
+            "gross_margin": 0.7705479992459803,
+            "cash_conversion": 1.0224831848674691,
+            "core_profit_share": 0.9965085657451747,
+            "fcf": 31273444412.55,
+            "core_earnings_yield": 0.06877652053161301,
+            "fcf_yield": 0.0677613714079074,
+            "revenue_cagr_2y": 0.09798946783612103,
+            "core_profit_cagr_2y": 0.09111373525518839,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 3.2489643066249685,
+            "revenue_growth_yoy": 0.07088944943596243,
+            "core_profit_growth_yoy": 0.0539734711361739
+          },
+          "blocks": {
+            "quality": {
+              "score": 46.666666666666664,
+              "components": {
+                "roe": 40.0,
+                "cash_conversion": 60.0,
+                "core_profit_share": 40.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 60.0,
+              "components": {
+                "core_earnings_yield": 40.0,
+                "fcf_yield": 80.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 20.0,
+              "components": {
+                "revenue_cagr_2y": 20.0,
+                "core_profit_cagr_2y": 20.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": false
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "603369.SH",
+          "name": "今世缘",
+          "score": 31.666666666666668,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 1.0,
+          "metrics": {
+            "roa": 0.15773569571263693,
+            "roe": 0.2374300398320116,
+            "gross_margin": 0.7474450568125478,
+            "cash_conversion": 0.8402046540714195,
+            "core_profit_share": 0.9906698644800713,
+            "fcf": 1050120506.4600003,
+            "core_earnings_yield": 0.06963815434633146,
+            "fcf_yield": 0.021635051290958714,
+            "revenue_cagr_2y": 0.21002673447598635,
+            "core_profit_cagr_2y": 0.16344482488948164,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 1.6633030579826253,
+            "revenue_growth_yoy": 0.1432370162668819,
+            "core_profit_growth_yoy": 0.07798528716491004
+          },
+          "blocks": {
+            "quality": {
+              "score": 13.333333333333334,
+              "components": {
+                "roe": 20.0,
+                "cash_conversion": 20.0,
+                "core_profit_share": 0.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 30.0,
+              "components": {
+                "core_earnings_yield": 60.0,
+                "fcf_yield": 0.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 80.0,
+              "components": {
+                "revenue_cagr_2y": 100.0,
+                "core_profit_cagr_2y": 60.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": false
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        },
+        {
+          "ticker": "002304.SZ",
+          "name": "洋河股份",
+          "score": 28.333333333333336,
+          "status": "data_review",
+          "f_score": null,
+          "f_score_known": 7,
+          "metric_coverage": 1.0,
+          "metrics": {
+            "roa": 0.09551851734579428,
+            "roe": 0.12892103839618704,
+            "gross_margin": 0.7315715945715381,
+            "cash_conversion": 0.6943286451282255,
+            "core_profit_share": 1.0242526025201926,
+            "fcf": 3174691425.71,
+            "core_earnings_yield": 0.07029168321868921,
+            "fcf_yield": 0.03264765337391155,
+            "revenue_cagr_2y": -0.0206178531972168,
+            "core_profit_cagr_2y": -0.14161818712053773,
+            "net_debt_to_cfo": null,
+            "interest_cover": null,
+            "current_ratio": 3.2981479718898874,
+            "revenue_growth_yoy": -0.12829635178119403,
+            "core_profit_growth_yoy": -0.3055630097905162
+          },
+          "blocks": {
+            "quality": {
+              "score": 26.666666666666668,
+              "components": {
+                "roe": 0.0,
+                "cash_conversion": 0.0,
+                "core_profit_share": 80.0
+              },
+              "enabled": true
+            },
+            "value": {
+              "score": 50.0,
+              "components": {
+                "core_earnings_yield": 80.0,
+                "fcf_yield": 20.0
+              },
+              "enabled": true
+            },
+            "growth": {
+              "score": 0.0,
+              "components": {
+                "revenue_cagr_2y": 0.0,
+                "core_profit_cagr_2y": 0.0
+              },
+              "enabled": true
+            },
+            "balance": {
+              "score": null,
+              "components": {},
+              "enabled": false
+            }
+          },
+          "warnings": [
+            "F-score is incomplete; known signals are diagnostic, not a complete health score",
+            "F-score has few improvement signals; inspect business maturity and deterioration separately"
+          ],
+          "reasons": [
+            "critical derived ratio is undefined; manual data review required"
+          ]
+        }
+      ],
+      "audit": []
+    },
+    "preference_sensitivity": {
+      "balanced": {
+        "weights": {
+          "quality": 0.5,
+          "value": 0.3,
+          "growth": 0.2,
+          "balance": 0
+        },
+        "scored": 6,
+        "top_two": [
+          "000568.SZ",
+          "600809.SH"
+        ],
+        "scores": {
+          "000568.SZ": 68.0,
+          "600809.SH": 64.66666666666666,
+          "600519.SH": 62.0,
+          "000858.SZ": 45.33333333333333,
+          "603369.SH": 31.666666666666668,
+          "002304.SZ": 28.333333333333336
+        },
+        "top_two_jaccard_vs_balanced": 1.0
+      },
+      "equal": {
+        "weights": {
+          "quality": 0.3333333333333333,
+          "value": 0.3333333333333333,
+          "growth": 0.3333333333333333,
+          "balance": 0
+        },
+        "scored": 6,
+        "top_two": [
+          "000568.SZ",
+          "600809.SH"
+        ],
+        "scores": {
+          "000568.SZ": 66.66666666666666,
+          "600809.SH": 64.44444444444444,
+          "600519.SH": 59.99999999999999,
+          "000858.SZ": 42.22222222222222,
+          "603369.SH": 41.11111111111111,
+          "002304.SZ": 25.555555555555554
+        },
+        "top_two_jaccard_vs_balanced": 1.0
+      },
+      "quality": {
+        "weights": {
+          "quality": 0.7,
+          "value": 0.2,
+          "growth": 0.1,
+          "balance": 0
+        },
+        "scored": 6,
+        "top_two": [
+          "600519.SH",
+          "600809.SH"
+        ],
+        "scores": {
+          "600519.SH": 68.0,
+          "600809.SH": 67.33333333333333,
+          "000568.SZ": 66.0,
+          "000858.SZ": 46.666666666666664,
+          "002304.SZ": 28.666666666666668,
+          "603369.SH": 23.333333333333336
+        },
+        "top_two_jaccard_vs_balanced": 0.3333333333333333
+      },
+      "value": {
+        "weights": {
+          "quality": 0.2,
+          "value": 0.6,
+          "growth": 0.2,
+          "balance": 0
+        },
+        "scored": 6,
+        "top_two": [
+          "000568.SZ",
+          "600809.SH"
+        ],
+        "scores": {
+          "000568.SZ": 80.0,
+          "600809.SH": 54.666666666666664,
+          "000858.SZ": 49.333333333333336,
+          "600519.SH": 44.0,
+          "603369.SH": 36.666666666666664,
+          "002304.SZ": 35.333333333333336
+        },
+        "top_two_jaccard_vs_balanced": 1.0
+      },
+      "growth": {
+        "weights": {
+          "quality": 0.2,
+          "value": 0.2,
+          "growth": 0.6,
+          "balance": 0
+        },
+        "scored": 6,
+        "top_two": [
+          "600809.SH",
+          "600519.SH"
+        ],
+        "scores": {
+          "600809.SH": 70.66666666666667,
+          "600519.SH": 68.0,
+          "603369.SH": 56.666666666666664,
+          "000568.SZ": 56.0,
+          "000858.SZ": 33.333333333333336,
+          "002304.SZ": 15.333333333333334
+        },
+        "top_two_jaccard_vs_balanced": 0.3333333333333333
+      }
+    },
+    "leave_one_peer_out": {
+      "000568.SZ": {
+        "scored": 5,
+        "top_two": [
+          "600809.SH",
+          "600519.SH"
+        ]
+      },
+      "600809.SH": {
+        "scored": 5,
+        "top_two": [
+          "000568.SZ",
+          "600519.SH"
+        ]
+      },
+      "600519.SH": {
+        "scored": 5,
+        "top_two": [
+          "000568.SZ",
+          "600809.SH"
+        ]
+      },
+      "000858.SZ": {
+        "scored": 5,
+        "top_two": [
+          "600809.SH",
+          "000568.SZ"
+        ]
+      },
+      "603369.SH": {
+        "scored": 5,
+        "top_two": [
+          "000568.SZ",
+          "600809.SH"
+        ]
+      },
+      "002304.SZ": {
+        "scored": 5,
+        "top_two": [
+          "000568.SZ",
+          "600809.SH"
+        ]
+      }
+    },
+    "2025_descriptive_outcomes": [
+      {
+        "ticker": "000568.SZ",
+        "name": "泸州老窖",
+        "diagnostic_score_2024": 68.0,
+        "roe_2024": 0.3035143044617952,
+        "revenue_growth_2025": -0.17518893696808957,
+        "core_profit_growth_2025": -0.19698294653461956,
+        "cash_conversion_2025": 0.655918716798184
+      },
+      {
+        "ticker": "600809.SH",
+        "name": "山西汾酒",
+        "diagnostic_score_2024": 64.66666666666666,
+        "roe_2024": 0.39120434270940124,
+        "revenue_growth_2025": 0.07517885961355919,
+        "core_profit_growth_2025": 0.0006060673970931241,
+        "cash_conversion_2025": 0.7330892831105535
+      },
+      {
+        "ticker": "600519.SH",
+        "name": "贵州茅台",
+        "diagnostic_score_2024": 62.0,
+        "roe_2024": 0.38428268834516643,
+        "revenue_growth_2025": -0.012060035021222992,
+        "core_profit_growth_2025": -0.045776401319388205,
+        "cash_conversion_2025": 0.7211577861097138
+      },
+      {
+        "ticker": "000858.SZ",
+        "name": "五粮液",
+        "diagnostic_score_2024": 45.33333333333333,
+        "roe_2024": 0.24237365382699858,
+        "revenue_growth_2025": -0.5455180406416607,
+        "core_profit_growth_2025": -0.7222718400416924,
+        "cash_conversion_2025": 3.1883545182187536
+      },
+      {
+        "ticker": "603369.SH",
+        "name": "今世缘",
+        "diagnostic_score_2024": 31.666666666666668,
+        "roe_2024": 0.2374300398320116,
+        "revenue_growth_2025": -0.11812587352630133,
+        "core_profit_growth_2025": -0.2322149596351506,
+        "cash_conversion_2025": 0.5792387820779783
+      },
+      {
+        "ticker": "002304.SZ",
+        "name": "洋河股份",
+        "diagnostic_score_2024": 28.333333333333336,
+        "roe_2024": 0.12892103839618704,
+        "revenue_growth_2025": -0.3347118705236183,
+        "core_profit_growth_2025": -0.6876875174922641,
+        "cash_conversion_2025": -0.3482632260758539
+      }
+    ],
+    "descriptive_spearman_n6": {
+      "revenue_growth_2025": {
+        "diagnostic_score": 0.42857142857142855,
+        "roe_only_baseline": 0.7142857142857143
+      },
+      "core_profit_growth_2025": {
+        "diagnostic_score": 0.6571428571428571,
+        "roe_only_baseline": 0.8285714285714286
+      },
+      "cash_conversion_2025": {
+        "diagnostic_score": 0.4857142857142857,
+        "roe_only_baseline": 0.6571428571428571
+      }
+    },
+    "limitations": [
+      "Current-vintage history is not verified point-in-time data; these are not backtest results.",
+      "Six purposefully selected liquor peers and one outcome year cannot establish generalization or investment efficacy.",
+      "Missing borrowing/lease/current-debt notes and issuance events remain unknown; no automated candidate approval.",
+      "Moutai consolidated CFO includes a finance subsidiary; require an operating-business cash-flow reconciliation.",
+      "Hong Kong core/adjusted earnings need separate accounting harmonization; no universal A/H profit definition.",
+      "Three-block diagnostic intentionally disables balance scoring, while critical debt checks remain active.",
+      "No return, alpha, win-rate, or trading recommendation is calculated."
+    ]
+  },
+  "hk_reconciliation": {
+    "ticker": "02331.HK",
+    "matched": 5,
+    "comparisons": {
+      "revenue": {
+        "provider_yuan": 28675643000,
+        "official_yuan": 28675643000,
+        "matched": true
+      },
+      "net_income_parent": {
+        "provider_yuan": 3012918000,
+        "official_yuan": 3012918000,
+        "matched": true
+      },
+      "total_assets": {
+        "provider_yuan": 35708406000,
+        "official_yuan": 35708406000,
+        "matched": true
+      },
+      "equity_parent": {
+        "provider_yuan": 26103689000,
+        "official_yuan": 26103689000,
+        "matched": true
+      },
+      "operating_cash_flow": {
+        "provider_yuan": 5267935000,
+        "official_yuan": 5267935000,
+        "matched": true
+      }
+    },
+    "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+    "screening_status": "coverage study only; no harmonized core-profit input or complete valuation/debt lineage"
+  }
+}
