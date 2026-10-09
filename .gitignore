@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+output/
+*.sqlite
+*.sqlite-journal
+package_delivery.py

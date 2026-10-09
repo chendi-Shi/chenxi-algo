@@ -1,0 +1,13 @@
+{
+  "weights": {"quality": 0.40, "value": 0.25, "growth": 0.20, "balance": 0.15},
+  "min_peer_count": 5,
+  "max_filing_age_days": 550,
+  "max_valuation_age_days": 7,
+  "max_fx_age_days": 7,
+  "min_f_score": 6,
+  "candidate_score": 65,
+  "min_roe": 0.08,
+  "min_cash_conversion": 0.8,
+  "max_net_debt_to_cfo": 4,
+  "excluded_sectors": ["Banks", "Insurance", "Financials", "REITs", "银行", "保险", "金融", "房地产信托"]
+}

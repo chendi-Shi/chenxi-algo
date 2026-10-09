@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/ayondey47/piotroski-f-score",
+  "commit": "d97f9d8612ef6f7c96989ecea2300dcd6a5c81dd",
+  "path": "piotroski/model.py",
+  "blob_sha": "eb3da2a25bef99e1c38645ff48ce52f49d63a750",
+  "retrieved_on": "2026-10-09",
+  "license": "MIT",
+  "usage": "Reference snapshot, not imported by the screening engine. Adapted signal structure; formulas and data governance extended."
+}
