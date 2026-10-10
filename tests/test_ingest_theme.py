@@ -546,12 +546,16 @@ class IngestionTests(unittest.TestCase):
                 'except ValueError:\n sys.exit(23)\n')
         repo = Path(ingest.__file__).parent
         with ingest.output_lock(self.output) as lock_path:
-            self.assertEqual(lock_path, Path(str(self.output) + '.lock'))
+            # Windows TEMP may use an 8.3 alias while resolve() returns its long name.
+            self.assertTrue(lock_path.samefile(Path(str(self.output) + '.lock')))
             same = subprocess.run([sys.executable, '-c', code, str(self.output)],
                                   cwd=repo, capture_output=True, timeout=20)
+            canonical = subprocess.run([sys.executable, '-c', code, str(ingest.filesystem_path(self.output))],
+                                       cwd=repo, capture_output=True, timeout=20)
             other = subprocess.run([sys.executable, '-c', code, str(self.directory / 'other.jsonl')],
                                    cwd=repo, capture_output=True, timeout=20)
         self.assertEqual(same.returncode, 23, same.stderr.decode())
+        self.assertEqual(canonical.returncode, 23, canonical.stderr.decode())
         self.assertEqual(other.returncode, 0, other.stderr.decode())
         self.assertTrue(lock_path.exists())
         with ingest.output_lock(self.output):

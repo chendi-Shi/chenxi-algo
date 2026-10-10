@@ -171,11 +171,11 @@
       "statement_rows": 3000,
       "repetitions": 3,
       "seconds": [
-        1.8887534999958007,
-        2.0095954999997048,
-        2.3457262000010815
+        1.6878996999876108,
+        1.7708775000064634,
+        1.7438326999981655
       ],
-      "median_seconds": 2.0095954999997048
+      "median_seconds": 1.7438326999981655
     }
   },
   "failures": [],
@@ -201,7 +201,7 @@
     "tests/test_enterprise_engine.py": "93ceb3a0beaef9381f2ff5ce6afa769c8b28f98dcd0db3c62aa20b29a2982ae1",
     "tests/test_enterprise_exports.py": "de2ce2f72b89fd943918626b6d4ef752e3a80179ffa1b0f4c95af62fc85170b6",
     "tests/test_evidence.py": "747f90ff4de1a7c08716e5c825c48478c1eb35ee523a23664725228eb90bf30d",
-    "tests/test_ingest_theme.py": "e3702da346ba6a24b26eacc719464545a3c36f242c1eccceee37d4b39bc521b0",
+    "tests/test_ingest_theme.py": "1664ae2bb7485e90f82de2812e3f34d19fbe3a69fa220034443816cd8f3f0775",
     "tests/test_numerical_stability.py": "0b114af33c2028e54766d46b81d4d437a8a3db42983fb8d3f5c2990bbe5cd9e2",
     "tests/test_readiness.py": "3f993ccbbdbf3d8adcaaeb30b881b2ef9c6ec2a4024a1d2db43b8650fc550cb7",
     "tests/test_research_job.py": "7c4710b9025d85f8a44ac740996ed6ade68a955bb0d61c0e4e0f936e6634ff5f",
