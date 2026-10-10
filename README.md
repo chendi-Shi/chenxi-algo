@@ -4,6 +4,8 @@
 
 主流程是公司名录与披露更新 → 主题检索 → 业务状态核验 → 优质成长、相对价值、经营改善及亏损观察名单。运行与数据准入规则见 **[PRODUCTION.md](PRODUCTION.md)**。自动测试通过表示已检查相应程序行为，不表示全市场数据齐备或研究判断已获认可。
 
+新增可运行的**语义检索算法实验链**：固定分块 BM25 → multilingual E5 向量召回 → RRF 融合 → mMARCO Cross-Encoder 重排。模型在本机通过 ONNX Runtime CPU 推理，模型版本、权重校验值、原文偏移和输出清单可追溯。模块、公式、安装命令、冻结标签及五种方法的对照实验见 **[ALGORITHM_EXPERIMENTS.md](ALGORITHM_EXPERIMENTS.md)**。新入口是 `semantic_discover.py`；每日主流程继续使用既有检索，待真实研究标签验收后再决定是否接入。
+
 本机真实来源试跑入口：`python daily_update.py --config config/daily_local.example.json --download`。这份配置仅验证两家深市公司的年报链路；没有配套财务与估值，预期会明确阻断正式发布。它不是全 A/H 生产配置。
 
 项目覆盖公开资料导入、非结构化文本清洗、主题检索、结构化财务计算、数据审计和研究名单交付。仓库附带 9 家真实公司的公开证据样例，以及 6 份完整公开 PDF 的可下载清单。以下命令显式选择开发样例；正式运行必须指定公司库和文档库。
@@ -83,6 +85,8 @@ CFO/利润和扣非/归母的质量评分贡献分别在 2 和 1 封顶，原始
 | 文件 | 用途 |
 |---|---|
 | `discover.py` / `theme_search.py` | 新主入口；主题扩展、BM25 检索、来源及业务阶段 |
+| `semantic_discover.py` / `semantic_retrieval.py` / `neural_models.py` | 显式语义实验入口；向量、融合、重排及固定模型推理 |
+| `validation/semantic_dataset.json` / `semantic_eval.py` | 冻结开发标签、未知相关性的指标区间和意图组宏平均 |
 | `theme_financials.py` / `theme_config.json` | 三类基本面研究风格、亏损观察、逐项门槛解释 |
 | `ingest_theme.py` / `data/` | 公开 PDF/TXT 导入、真实证据与来源清单 |
 | `universe_sources.py` / `readiness.py` | 官方证券名录快照、声明研究池的数据覆盖与时效门槛 |

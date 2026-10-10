@@ -442,7 +442,13 @@ def _passages(documents, patterns, maximum, audit, companies, query, qualifiers)
                 normalized_excerpt, _ = _matching_text(excerpt)
                 if local_hits and not all(_pattern(term).search(normalized_excerpt) for term in qualifiers):
                     audit["qualifier_filtered_passages"] += 1
-                    local_hits = []
+                    # A denial of the issuer's entire product business also
+                    # applies to a requested model (e.g. 800G). Keep that proof
+                    # even when the broad withdrawal does not repeat the model.
+                    # A different model's denial fails _company_level_denial.
+                    local_hits = [(a, b, term) for a, b, term in local_hits
+                                  if _claim_status(sentence, a, b, issuer_patterns) == "negated"
+                                  and _company_level_denial(sentence, a, b, term, query, issuer_patterns)]
                 claims = sorted({(term, _claim_status(sentence, a, b, issuer_patterns)) for a, b, term in local_hits})
                 issuer_denial = any(_claim_status(sentence, a, b, issuer_patterns) == "negated" and
                                     _company_level_denial(sentence, a, b, term, query, issuer_patterns)

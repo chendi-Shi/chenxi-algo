@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "checks": {
+    "rebuilt_matches_frozen_sha": true,
+    "original_matches_frozen_sha": true,
+    "byte_for_byte_equal": true,
+    "pages_669": true,
+    "six_sources_accepted": true,
+    "no_network": true,
+    "pypdf_6_10_0": true,
+    "completion_marker_verified": true
+  },
+  "rebuilt_path": "output/semantic_rebuild_check.jsonl",
+  "frozen_sha256": "8ef04dec0f6c993e8bdaf36fd6ac6e9b008d92704e35009373c4b2c85bf837a5",
+  "rebuilt_sha256": "8ef04dec0f6c993e8bdaf36fd6ac6e9b008d92704e35009373c4b2c85bf837a5",
+  "original_sha256": "8ef04dec0f6c993e8bdaf36fd6ac6e9b008d92704e35009373c4b2c85bf837a5",
+  "documents": 669,
+  "pages_by_ticker": {
+    "000977.SZ": 196,
+    "002747.SZ": 218,
+    "00992.HK": 59,
+    "300502.SZ": 184,
+    "603730.SH": 4,
+    "688585.SH": 8
+  },
+  "python_version": "3.12.14",
+  "parser_version": "6.10.0",
+  "network_requests": 0,
+  "extraction_warnings": [
+    {
+      "ticker": "300502.SZ",
+      "warnings": [
+        {
+          "level": "WARNING",
+          "message": "Multiple definitions in dictionary at byte 0x3e3 for key /Subtype",
+          "count": 149
+        },
+        {
+          "level": "WARNING",
+          "message": "Multiple definitions in dictionary at byte 0x3e6 for key /Subtype",
+          "count": 35
+        },
+        {
+          "level": "WARNING",
+          "message": "Multiple definitions in dictionary at byte 0x7a for key /Subtype",
+          "count": 184
+        }
+      ]
+    }
+  ],
+  "differences": []
+}

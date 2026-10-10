@@ -1,0 +1,68 @@
+{
+  "query": "AI 数据中心的算力服务器",
+  "cache": "verified_cache_hit",
+  "runtime": {
+    "index_build_seconds": 2.050143400003435,
+    "model_statistics": {
+      "embedding": {
+        "batches": 1,
+        "calls": 1,
+        "inputs": 1,
+        "last_truncated_indices": [],
+        "tokens_after_truncation": 13,
+        "truncated_inputs": 0
+      },
+      "reranker": {
+        "batches": 7,
+        "calls": 1,
+        "inputs": 50,
+        "last_truncated_indices": [],
+        "tokens_after_truncation": 14051,
+        "truncated_inputs": 0
+      }
+    },
+    "seconds": 21.685516800003825
+  },
+  "companies": [
+    {
+      "ticker": "000977.SZ",
+      "name": "浪潮信息",
+      "business_status": "uncertain",
+      "semantic_only": true,
+      "styles": [
+        "unclassified"
+      ]
+    },
+    {
+      "ticker": "300502.SZ",
+      "name": "新易盛",
+      "business_status": "uncertain",
+      "semantic_only": true,
+      "styles": [
+        "unclassified"
+      ]
+    },
+    {
+      "ticker": "002747.SZ",
+      "name": "埃斯顿",
+      "business_status": "uncertain",
+      "semantic_only": true,
+      "styles": [
+        "unclassified"
+      ]
+    },
+    {
+      "ticker": "688585.SH",
+      "name": "上纬新材",
+      "business_status": "uncertain",
+      "semantic_only": true,
+      "styles": [
+        "unclassified"
+      ]
+    }
+  ],
+  "production_approved": false,
+  "run_id": "c958c5a0aac744fae3f8a042",
+  "source": "local_full_corpus_real_models",
+  "verification": "semantic_discover.verify_output passed"
+}

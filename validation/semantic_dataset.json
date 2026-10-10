@@ -1,0 +1,1276 @@
+{
+  "schema_version": 1,
+  "dataset_id": "chenxi_semantic_development_v1",
+  "annotation_status": "assistant_annotated",
+  "acceptance_status": "development_not_human_accepted",
+  "frozen_before_new_model_runs": true,
+  "blind_holdout": false,
+  "freeze_date": "2026-10-10",
+  "as_of": "2026-10-10",
+  "scope": {
+    "purpose": "来源支持的公司发现与约束理解开发评测；不是投资收益检验或生产验收。",
+    "candidate_universe": "仅本地已有 9 家公司、6 份 PDF 的 669 页及 3 家公司网页摘录，不代表全市场。",
+    "historical_assertions": "标签只描述所引文件披露或观察时的业务证据；混合日期资料不是同一历史时点的完整公司真相，不推断 2026 年最新经营状态。",
+    "prior_exposure": "复用已有开发语料；旧开发检索结果在定位语料时可见。本集由助手阅读原文制定，未对新模型输出调标签，不是独立盲测。",
+    "unknown_policy": "没有足够证据的公司没有标签，必须保持 unjudged；未出现产品或仅列示较低速率均不证明业务不存在。",
+    "quote_policy": "只重复仓库已有短摘录；其他证据给页级 document_id 和释义。PDF 全文留在 ignored 文件中。",
+    "unit": "证券级相关性；同意图三种表述共享标签，先按意图组内平均，再按意图组宏平均。",
+    "limitations": [
+      "人工投研审核尚未完成。",
+      "候选池和语料有主题选择偏差。",
+      "有限明确反例不能证明全市场误报率。",
+      "产品披露只能证明业务关系，不能推断订单、市场份额或投资价值。"
+    ]
+  },
+  "relevance_scale": {
+    "0": "来源明确与本查询的限定相矛盾；不是缺少关键词。",
+    "1": "明确相关但仅早期开发/规划，未满足成熟产品证据强度。",
+    "2": "来源直接支持查询意图及产品限定。"
+  },
+  "positive_grade_threshold": 1,
+  "maximum_grade": 2,
+  "expected_methods": [
+    "legacy_bm25",
+    "fixed_bm25",
+    "dense",
+    "hybrid",
+    "hybrid_rerank"
+  ],
+  "corpus_inputs": [
+    {
+      "path": "data/theme_documents.jsonl",
+      "sha256": "73c62c3a826b01535bf6c5fa02d079c7a5f8156034394089f96e8629d84422f7"
+    },
+    {
+      "path": "data/theme_sources.json",
+      "sha256": "d2d725371ae1d1fef4a1859f4139e8914586573e9daaa67243fe7c72074f1941"
+    },
+    {
+      "path": "output/theme_full_documents.jsonl",
+      "sha256": "8ef04dec0f6c993e8bdaf36fd6ac6e9b008d92704e35009373c4b2c85bf837a5"
+    }
+  ],
+  "corpus_counts": {
+    "pdf_files": 6,
+    "pdf_pages": 669,
+    "website_excerpts": 3,
+    "candidate_securities": 9
+  },
+  "candidate_tickers": [
+    "000977.SZ",
+    "002281.SZ",
+    "002747.SZ",
+    "00992.HK",
+    "09880.HK",
+    "300308.SZ",
+    "300502.SZ",
+    "603730.SH",
+    "688585.SH"
+  ],
+  "source_documents": [
+    {
+      "document_id": "theme-innolight",
+      "ticker": "300308.SZ",
+      "available_at": "2026-10-10",
+      "source_url": "https://www.zj-innolight.com/en/cloud_ai_infrastructure.html",
+      "source_type": "company_website",
+      "page": "Cloud & AI Infrastructure",
+      "source_sha256": "e7af71eb70e61b3ac5c1463175cc8a218895eefeafbdef1207e95e924988e026",
+      "date_basis": "observed_at",
+      "existing_repository_excerpt": "The Company offers a comprehensive portfolio of optical transceivers from 10G to 1.6T"
+    },
+    {
+      "document_id": "theme-eoptolink",
+      "ticker": "300502.SZ",
+      "available_at": "2025-04-23",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-23/1223219348.PDF",
+      "source_type": "annual_report",
+      "page": 11,
+      "source_sha256": "148155f6d95c86f8f77c6aa5ec7e486e97cea2e9f73c9aaa235079df94140aec",
+      "date_basis": "official_release",
+      "existing_repository_excerpt": "公司一直致力于高性能光模块的研发、生产和销售"
+    },
+    {
+      "document_id": "theme-accelink",
+      "ticker": "002281.SZ",
+      "available_at": "2026-10-10",
+      "source_url": "https://www.accelink.com/lighting_your_dreams/CloudandEnterprise.html",
+      "source_type": "company_website",
+      "page": "Cloud and Enterprise",
+      "source_sha256": "827afa16c018ba6d88e668b0fa864928c6a7c23d013d68499ef28da5eb6e13fb",
+      "date_basis": "observed_at",
+      "existing_repository_excerpt": "Accelink has developed a series of high-speed optical module products with the product rate ranging from 10G to 800G"
+    },
+    {
+      "document_id": "theme-estun",
+      "ticker": "002747.SZ",
+      "available_at": "2025-04-29",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223370517.PDF",
+      "source_type": "annual_report",
+      "page": 13,
+      "source_sha256": "ccebb48578e1fe9b1a28e185d7fe8d3b61b0e7019a4ba903000724ce13753f35",
+      "date_basis": "official_release",
+      "existing_repository_excerpt": "公司拥有覆盖3kg到700kg负载的87款工业机器人产品"
+    },
+    {
+      "document_id": "theme-ubtech",
+      "ticker": "09880.HK",
+      "available_at": "2026-10-10",
+      "source_url": "https://www.ubtrobot.com/cn",
+      "source_type": "company_website",
+      "page": "消费级智能硬件",
+      "source_sha256": "032b6d397a70a676ff2a076c966f061011bde2e1685865bf5d09851b37d56f4b",
+      "date_basis": "observed_at",
+      "existing_repository_excerpt": "优必选科技推出一系列适合家庭使用的用户友好型产品，并配备优必选AI赋能的机器人技术，使其在家庭环境中安全易用"
+    },
+    {
+      "document_id": "theme-lenovo",
+      "ticker": "00992.HK",
+      "available_at": "2026-10-10",
+      "source_url": "https://lenovopress.lenovo.com/lp1553.pdf",
+      "source_type": "company_website",
+      "page": 10,
+      "source_sha256": "f338cde035f7168d69ac615f8fe116413411f37d369dca42ad5a692d424dbdb1",
+      "date_basis": "observed_at",
+      "existing_repository_excerpt": "Lenovo AI servers are set to power the new era of generative AI."
+    },
+    {
+      "document_id": "theme-inspur",
+      "ticker": "000977.SZ",
+      "available_at": "2025-03-29",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-03-29/1222950880.PDF",
+      "source_type": "annual_report",
+      "page": 11,
+      "source_sha256": "c2f5bfe90b96425989a62dadf565b1286b7f6befb36d3e47dcb1df1e38b95429",
+      "date_basis": "official_release",
+      "existing_repository_excerpt": "2024年，公司发布了业界首个仅靠4颗CPU运行千亿参数大模型的AI通用服务器NF8260G7"
+    },
+    {
+      "document_id": "theme-swancor",
+      "ticker": "688585.SH",
+      "available_at": "2025-12-06",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-06/1224855156.PDF",
+      "source_type": "announcement",
+      "page": 1,
+      "source_sha256": "6a2a380509f8cbbf9c24a0e6e5973af34ba1ebe8c2d940424dab7be32882d880",
+      "date_basis": "official_release",
+      "existing_repository_excerpt": "公司的具身智能机器人业务当前仍处于开发阶段，尚未实现量产及规模化销售，相关业务尚未形成营收及利润"
+    },
+    {
+      "document_id": "theme-daimay",
+      "ticker": "603730.SH",
+      "available_at": "2025-11-18",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-11-18/1224808933.PDF",
+      "source_type": "announcement",
+      "page": 4,
+      "source_sha256": "b17b494a44d85d5194fbc25aaef0a50ba8295dd57f7cded3de48ded080928dfc",
+      "date_basis": "official_release",
+      "existing_repository_excerpt": "公司目前机器人相关业务尚处于初期技术开发准备阶段，存在开发不成功的风险"
+    },
+    {
+      "document_id": "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5",
+      "ticker": "300502.SZ",
+      "available_at": "2025-04-23",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-23/1223219348.PDF",
+      "source_type": "annual_report",
+      "page": 11,
+      "source_sha256": "148155f6d95c86f8f77c6aa5ec7e486e97cea2e9f73c9aaa235079df94140aec",
+      "date_basis": "official_release",
+      "corpus_path": "output/theme_full_documents.jsonl"
+    },
+    {
+      "document_id": "theme-estun-p13-d3017770a16647509204807343d9bd751e0ffb1527d7ad373df8f9d84e77cb4b",
+      "ticker": "002747.SZ",
+      "available_at": "2025-04-29",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223370517.PDF",
+      "source_type": "annual_report",
+      "page": 13,
+      "source_sha256": "ccebb48578e1fe9b1a28e185d7fe8d3b61b0e7019a4ba903000724ce13753f35",
+      "date_basis": "official_release",
+      "corpus_path": "output/theme_full_documents.jsonl"
+    },
+    {
+      "document_id": "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+      "ticker": "002747.SZ",
+      "available_at": "2025-04-29",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223370517.PDF",
+      "source_type": "annual_report",
+      "page": 14,
+      "source_sha256": "ccebb48578e1fe9b1a28e185d7fe8d3b61b0e7019a4ba903000724ce13753f35",
+      "date_basis": "official_release",
+      "corpus_path": "output/theme_full_documents.jsonl"
+    },
+    {
+      "document_id": "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2",
+      "ticker": "002747.SZ",
+      "available_at": "2025-04-29",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223370517.PDF",
+      "source_type": "annual_report",
+      "page": 15,
+      "source_sha256": "ccebb48578e1fe9b1a28e185d7fe8d3b61b0e7019a4ba903000724ce13753f35",
+      "date_basis": "official_release",
+      "corpus_path": "output/theme_full_documents.jsonl"
+    },
+    {
+      "document_id": "theme-inspur-p11-acd155396acacfc27cfa774be23db79764bdf7c747c3606bbfb2f64faf6758ad",
+      "ticker": "000977.SZ",
+      "available_at": "2025-03-29",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-03-29/1222950880.PDF",
+      "source_type": "annual_report",
+      "page": 11,
+      "source_sha256": "c2f5bfe90b96425989a62dadf565b1286b7f6befb36d3e47dcb1df1e38b95429",
+      "date_basis": "official_release",
+      "corpus_path": "output/theme_full_documents.jsonl"
+    },
+    {
+      "document_id": "theme-lenovo-p10-11c0282677754349116a14c65f456e38caf4ad060cc74bebdee79cbd90e0e016",
+      "ticker": "00992.HK",
+      "available_at": "2026-10-10",
+      "source_url": "https://lenovopress.lenovo.com/lp1553.pdf",
+      "source_type": "company_website",
+      "page": 10,
+      "source_sha256": "f338cde035f7168d69ac615f8fe116413411f37d369dca42ad5a692d424dbdb1",
+      "date_basis": "observed_at",
+      "corpus_path": "output/theme_full_documents.jsonl"
+    },
+    {
+      "document_id": "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e",
+      "ticker": "688585.SH",
+      "available_at": "2025-12-06",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-06/1224855156.PDF",
+      "source_type": "announcement",
+      "page": 1,
+      "source_sha256": "6a2a380509f8cbbf9c24a0e6e5973af34ba1ebe8c2d940424dab7be32882d880",
+      "date_basis": "official_release",
+      "corpus_path": "output/theme_full_documents.jsonl"
+    },
+    {
+      "document_id": "theme-swancor-p3-0acb894f8793e9e9809c1a05158124bf100e4b7325c007b07554b6f6536d5a28",
+      "ticker": "688585.SH",
+      "available_at": "2025-12-06",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-06/1224855156.PDF",
+      "source_type": "announcement",
+      "page": 3,
+      "source_sha256": "6a2a380509f8cbbf9c24a0e6e5973af34ba1ebe8c2d940424dab7be32882d880",
+      "date_basis": "official_release",
+      "corpus_path": "output/theme_full_documents.jsonl"
+    },
+    {
+      "document_id": "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf",
+      "ticker": "603730.SH",
+      "available_at": "2025-11-18",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-11-18/1224808933.PDF",
+      "source_type": "announcement",
+      "page": 4,
+      "source_sha256": "b17b494a44d85d5194fbc25aaef0a50ba8295dd57f7cded3de48ded080928dfc",
+      "date_basis": "official_release",
+      "corpus_path": "output/theme_full_documents.jsonl"
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "optical_modules",
+      "intent": "寻找明确提供数据中心高速光模块的公司。",
+      "query_ids": [
+        "optical_modules_1",
+        "optical_modules_2",
+        "optical_modules_3"
+      ]
+    },
+    {
+      "group_id": "optical_800g",
+      "intent": "寻找已披露 800G 光模块产品的公司；没有明确 800G 证据的公司保持未评。",
+      "query_ids": [
+        "optical_800g_1",
+        "optical_800g_2",
+        "optical_800g_3"
+      ]
+    },
+    {
+      "group_id": "optical_1600g",
+      "intent": "寻找已披露 1.6T 光模块产品的公司；公开范围只到 800G 不等于公司没有 1.6T。",
+      "query_ids": [
+        "optical_1600g_1",
+        "optical_1600g_2",
+        "optical_1600g_3"
+      ]
+    },
+    {
+      "group_id": "robotics_broad",
+      "intent": "寻找机器人业务相关公司；已有产品直接相关，明确早期开发属于弱相关。",
+      "query_ids": [
+        "robotics_broad_1",
+        "robotics_broad_2",
+        "robotics_broad_3"
+      ]
+    },
+    {
+      "group_id": "industrial_robot_commercial",
+      "intent": "寻找已有工业机器人生产销售或批量应用的公司，排除仅规划及早期开发。",
+      "query_ids": [
+        "industrial_robot_commercial_1",
+        "industrial_robot_commercial_2",
+        "industrial_robot_commercial_3"
+      ]
+    },
+    {
+      "group_id": "robotics_precommercial",
+      "intent": "寻找整体机器人业务仍处开发准备阶段、尚未商业化的观察对象；排除已建立机器人销售业务的公司。",
+      "query_ids": [
+        "robotics_precommercial_1",
+        "robotics_precommercial_2",
+        "robotics_precommercial_3"
+      ]
+    },
+    {
+      "group_id": "home_robotics",
+      "intent": "寻找针对家庭或个人场景的机器人产品或研发；只有计划属于弱相关。",
+      "query_ids": [
+        "home_robotics_1",
+        "home_robotics_2",
+        "home_robotics_3"
+      ]
+    },
+    {
+      "group_id": "robot_motion_control",
+      "intent": "寻找明确提供机器人运动控制器和伺服系统的供应商。",
+      "query_ids": [
+        "robot_motion_control_1",
+        "robot_motion_control_2",
+        "robot_motion_control_3"
+      ]
+    },
+    {
+      "group_id": "ai_server_systems",
+      "intent": "寻找明确提供 AI 计算服务器整机的公司，不把上游行业背景介绍当作整机产品证据。",
+      "query_ids": [
+        "ai_server_systems_1",
+        "ai_server_systems_2",
+        "ai_server_systems_3"
+      ]
+    },
+    {
+      "group_id": "cpu_only_llm_server",
+      "intent": "寻找已披露只用四颗 CPU 运行千亿参数大模型的服务器产品；只介绍 GPU 产品不足以形成反例。",
+      "query_ids": [
+        "cpu_only_llm_server_1",
+        "cpu_only_llm_server_2",
+        "cpu_only_llm_server_3"
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "optical_modules_1",
+      "group_id": "optical_modules",
+      "text": "光模块",
+      "variant": "exact",
+      "judgments": [
+        {
+          "ticker": "300308.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-innolight"
+          ],
+          "reason": "公开产品页面明确提供光收发模块，速率覆盖至 1.6T。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "300502.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-eoptolink",
+            "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5"
+          ],
+          "reason": "年报明确主营高性能光模块研发、生产与销售，列出面向云数据中心的产品。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "002281.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-accelink"
+          ],
+          "reason": "公开产品页面明确开发高速光模块系列，范围为 10G 至 800G。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "optical_modules_2",
+      "group_id": "optical_modules",
+      "text": "给数据中心提供高速光电信号收发器的企业",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "300308.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-innolight"
+          ],
+          "reason": "公开产品页面明确提供光收发模块，速率覆盖至 1.6T。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "300502.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-eoptolink",
+            "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5"
+          ],
+          "reason": "年报明确主营高性能光模块研发、生产与销售，列出面向云数据中心的产品。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "002281.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-accelink"
+          ],
+          "reason": "公开产品页面明确开发高速光模块系列，范围为 10G 至 800G。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "optical_modules_3",
+      "group_id": "optical_modules",
+      "text": "Suppliers of high-speed optical transceivers for data centers",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "300308.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-innolight"
+          ],
+          "reason": "公开产品页面明确提供光收发模块，速率覆盖至 1.6T。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "300502.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-eoptolink",
+            "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5"
+          ],
+          "reason": "年报明确主营高性能光模块研发、生产与销售，列出面向云数据中心的产品。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "002281.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-accelink"
+          ],
+          "reason": "公开产品页面明确开发高速光模块系列，范围为 10G 至 800G。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "optical_800g_1",
+      "group_id": "optical_800g",
+      "text": "800G 光模块产品供应商",
+      "variant": "product_constraint",
+      "judgments": [
+        {
+          "ticker": "300502.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-eoptolink",
+            "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5"
+          ],
+          "reason": "年报明确主营高性能光模块研发、生产与销售，列出面向云数据中心的产品。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "002281.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-accelink"
+          ],
+          "reason": "公开产品页面明确开发高速光模块系列，范围为 10G 至 800G。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "optical_800g_2",
+      "group_id": "optical_800g",
+      "text": "每秒八百吉比特的数据中心光收发器，哪些公司有产品",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "300502.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-eoptolink",
+            "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5"
+          ],
+          "reason": "年报明确主营高性能光模块研发、生产与销售，列出面向云数据中心的产品。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "002281.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-accelink"
+          ],
+          "reason": "公开产品页面明确开发高速光模块系列，范围为 10G 至 800G。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "optical_800g_3",
+      "group_id": "optical_800g",
+      "text": "Companies offering 800-gigabit optical transceiver modules",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "300502.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-eoptolink",
+            "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5"
+          ],
+          "reason": "年报明确主营高性能光模块研发、生产与销售，列出面向云数据中心的产品。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "002281.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-accelink"
+          ],
+          "reason": "公开产品页面明确开发高速光模块系列，范围为 10G 至 800G。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "optical_1600g_1",
+      "group_id": "optical_1600g",
+      "text": "1.6T 光模块",
+      "variant": "product_constraint",
+      "judgments": [
+        {
+          "ticker": "300308.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-innolight"
+          ],
+          "reason": "公开产品页面明确提供光收发模块，速率覆盖至 1.6T。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "300502.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5"
+          ],
+          "reason": "年报产品表明确列示 OSFP-XD 1.6T 光模块。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "optical_1600g_2",
+      "group_id": "optical_1600g",
+      "text": "已经披露每秒一点六太比特光收发模块的企业",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "300308.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-innolight"
+          ],
+          "reason": "公开产品页面明确提供光收发模块，速率覆盖至 1.6T。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "300502.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5"
+          ],
+          "reason": "年报产品表明确列示 OSFP-XD 1.6T 光模块。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "optical_1600g_3",
+      "group_id": "optical_1600g",
+      "text": "Vendors with a disclosed 1.6-terabit optical transceiver portfolio",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "300308.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-innolight"
+          ],
+          "reason": "公开产品页面明确提供光收发模块，速率覆盖至 1.6T。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "300502.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-eoptolink-p11-42b624a9e1ee9945e2f7c4ab751825d09f8e5770fda4d0c105f88845e76736b5"
+          ],
+          "reason": "年报产品表明确列示 OSFP-XD 1.6T 光模块。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "robotics_broad_1",
+      "group_id": "robotics_broad",
+      "text": "机器人相关业务",
+      "variant": "exact",
+      "judgments": [
+        {
+          "ticker": "002747.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-estun",
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+            "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2"
+          ],
+          "reason": "年报列示工业机器人产品、订单生产与销售模式，并说明六轴机器人已批量应用于汽车工厂产线。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "09880.HK",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-ubtech"
+          ],
+          "reason": "公司页面明确推出适合家庭使用、应用机器人技术的消费产品；不据此推断工业人形机器人的订单或收入。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "688585.SH",
+          "grade": 1,
+          "source_document_ids": [
+            "theme-swancor",
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告确认公司开展具身机器人研发，但尚无量产、规模销售、收入或利润；只有早期业务关联。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "603730.SH",
+          "grade": 1,
+          "source_document_ids": [
+            "theme-daimay",
+            "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf"
+          ],
+          "reason": "公告披露机器人相关业务仍处于初期技术开发准备阶段，不能当作成熟销售业务。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "robotics_broad_2",
+      "group_id": "robotics_broad",
+      "text": "做自动执行动作的智能机器或正在研发这类产品的公司",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "002747.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-estun",
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+            "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2"
+          ],
+          "reason": "年报列示工业机器人产品、订单生产与销售模式，并说明六轴机器人已批量应用于汽车工厂产线。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "09880.HK",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-ubtech"
+          ],
+          "reason": "公司页面明确推出适合家庭使用、应用机器人技术的消费产品；不据此推断工业人形机器人的订单或收入。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "688585.SH",
+          "grade": 1,
+          "source_document_ids": [
+            "theme-swancor",
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告确认公司开展具身机器人研发，但尚无量产、规模销售、收入或利润；只有早期业务关联。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "603730.SH",
+          "grade": 1,
+          "source_document_ids": [
+            "theme-daimay",
+            "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf"
+          ],
+          "reason": "公告披露机器人相关业务仍处于初期技术开发准备阶段，不能当作成熟销售业务。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "robotics_broad_3",
+      "group_id": "robotics_broad",
+      "text": "Businesses making robotic products or explicitly developing them",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "002747.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-estun",
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+            "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2"
+          ],
+          "reason": "年报列示工业机器人产品、订单生产与销售模式，并说明六轴机器人已批量应用于汽车工厂产线。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "09880.HK",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-ubtech"
+          ],
+          "reason": "公司页面明确推出适合家庭使用、应用机器人技术的消费产品；不据此推断工业人形机器人的订单或收入。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "688585.SH",
+          "grade": 1,
+          "source_document_ids": [
+            "theme-swancor",
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告确认公司开展具身机器人研发，但尚无量产、规模销售、收入或利润；只有早期业务关联。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "603730.SH",
+          "grade": 1,
+          "source_document_ids": [
+            "theme-daimay",
+            "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf"
+          ],
+          "reason": "公告披露机器人相关业务仍处于初期技术开发准备阶段，不能当作成熟销售业务。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "industrial_robot_commercial_1",
+      "group_id": "industrial_robot_commercial",
+      "text": "已商业化的工业机器人供应商，不要只有研发规划的公司",
+      "variant": "negation_constraint",
+      "judgments": [
+        {
+          "ticker": "002747.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-estun",
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+            "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2"
+          ],
+          "reason": "年报列示工业机器人产品、订单生产与销售模式，并说明六轴机器人已批量应用于汽车工厂产线。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "688585.SH",
+          "grade": 0,
+          "source_document_ids": [
+            "theme-swancor",
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告明确尚未量产或规模销售，且自身研发针对个人与家庭，不能满足已商业化工业机器人供应商条件。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "603730.SH",
+          "grade": 0,
+          "source_document_ids": [
+            "theme-daimay",
+            "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf"
+          ],
+          "reason": "公告明确处于初期开发准备阶段，不满足已形成工业机器人商业化生产销售的条件。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "industrial_robot_commercial_2",
+      "group_id": "industrial_robot_commercial",
+      "text": "工厂用机械臂已经投入生产销售或批量落地，排除尚未量产的概念布局",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "002747.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-estun",
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+            "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2"
+          ],
+          "reason": "年报列示工业机器人产品、订单生产与销售模式，并说明六轴机器人已批量应用于汽车工厂产线。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "688585.SH",
+          "grade": 0,
+          "source_document_ids": [
+            "theme-swancor",
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告明确尚未量产或规模销售，且自身研发针对个人与家庭，不能满足已商业化工业机器人供应商条件。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "603730.SH",
+          "grade": 0,
+          "source_document_ids": [
+            "theme-daimay",
+            "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf"
+          ],
+          "reason": "公告明确处于初期开发准备阶段，不满足已形成工业机器人商业化生产销售的条件。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "industrial_robot_commercial_3",
+      "group_id": "industrial_robot_commercial",
+      "text": "Established industrial robot businesses with production or deployed products, excluding development-only plans",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "002747.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-estun",
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+            "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2"
+          ],
+          "reason": "年报列示工业机器人产品、订单生产与销售模式，并说明六轴机器人已批量应用于汽车工厂产线。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "688585.SH",
+          "grade": 0,
+          "source_document_ids": [
+            "theme-swancor",
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告明确尚未量产或规模销售，且自身研发针对个人与家庭，不能满足已商业化工业机器人供应商条件。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "603730.SH",
+          "grade": 0,
+          "source_document_ids": [
+            "theme-daimay",
+            "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf"
+          ],
+          "reason": "公告明确处于初期开发准备阶段，不满足已形成工业机器人商业化生产销售的条件。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "robotics_precommercial_1",
+      "group_id": "robotics_precommercial",
+      "text": "机器人业务仍在开发准备阶段，尚未商业化的公司",
+      "variant": "planning_constraint",
+      "judgments": [
+        {
+          "ticker": "688585.SH",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-swancor",
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告直接确认具身机器人尚处开发阶段、尚未量产及形成营收，符合早期观察意图。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "603730.SH",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-daimay",
+            "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf"
+          ],
+          "reason": "公告直接确认机器人业务处于初期技术开发准备阶段并提示开发失败风险。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "002747.SZ",
+          "grade": 0,
+          "source_document_ids": [
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+            "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2"
+          ],
+          "reason": "年报披露现有机器人生产销售与批量应用，不能将其整体机器人业务描述为仅在准备阶段、尚未商业化。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "robotics_precommercial_2",
+      "group_id": "robotics_precommercial",
+      "text": "只处在机器人研发筹备期、还没有形成成熟生产销售业务的观察名单",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "688585.SH",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-swancor",
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告直接确认具身机器人尚处开发阶段、尚未量产及形成营收，符合早期观察意图。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "603730.SH",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-daimay",
+            "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf"
+          ],
+          "reason": "公告直接确认机器人业务处于初期技术开发准备阶段并提示开发失败风险。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "002747.SZ",
+          "grade": 0,
+          "source_document_ids": [
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+            "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2"
+          ],
+          "reason": "年报披露现有机器人生产销售与批量应用，不能将其整体机器人业务描述为仅在准备阶段、尚未商业化。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "robotics_precommercial_3",
+      "group_id": "robotics_precommercial",
+      "text": "Watchlist of pre-commercial robotics businesses still in early development, excluding established robot vendors",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "688585.SH",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-swancor",
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告直接确认具身机器人尚处开发阶段、尚未量产及形成营收，符合早期观察意图。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "603730.SH",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-daimay",
+            "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf"
+          ],
+          "reason": "公告直接确认机器人业务处于初期技术开发准备阶段并提示开发失败风险。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "002747.SZ",
+          "grade": 0,
+          "source_document_ids": [
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014",
+            "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2"
+          ],
+          "reason": "年报披露现有机器人生产销售与批量应用，不能将其整体机器人业务描述为仅在准备阶段、尚未商业化。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "home_robotics_1",
+      "group_id": "home_robotics",
+      "text": "家庭个人机器人产品或研发业务",
+      "variant": "product_constraint",
+      "judgments": [
+        {
+          "ticker": "09880.HK",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-ubtech"
+          ],
+          "reason": "公司页面明确推出适合家庭使用、应用机器人技术的消费产品；不据此推断工业人形机器人的订单或收入。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "688585.SH",
+          "grade": 1,
+          "source_document_ids": [
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告明确自身具身机器人研发针对个人与家庭，但仍在开发、没有量产，因此只作弱相关研究线索。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "home_robotics_2",
+      "group_id": "home_robotics",
+      "text": "面向家中生活场景的智能机器人企业，也保留仍在研发的线索",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "09880.HK",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-ubtech"
+          ],
+          "reason": "公司页面明确推出适合家庭使用、应用机器人技术的消费产品；不据此推断工业人形机器人的订单或收入。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "688585.SH",
+          "grade": 1,
+          "source_document_ids": [
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告明确自身具身机器人研发针对个人与家庭，但仍在开发、没有量产，因此只作弱相关研究线索。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "home_robotics_3",
+      "group_id": "home_robotics",
+      "text": "Robotics products or development programs intended for households and personal use",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "09880.HK",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-ubtech"
+          ],
+          "reason": "公司页面明确推出适合家庭使用、应用机器人技术的消费产品；不据此推断工业人形机器人的订单或收入。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "688585.SH",
+          "grade": 1,
+          "source_document_ids": [
+            "theme-swancor-p1-5be8d365abc93c793457995a07fae7f69aeea21162d36a8087ed791220bf262e"
+          ],
+          "reason": "公告明确自身具身机器人研发针对个人与家庭，但仍在开发、没有量产，因此只作弱相关研究线索。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "robot_motion_control_1",
+      "group_id": "robot_motion_control",
+      "text": "机器人运动控制器和伺服系统供应商",
+      "variant": "exact",
+      "judgments": [
+        {
+          "ticker": "002747.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-estun-p13-d3017770a16647509204807343d9bd751e0ffb1527d7ad373df8f9d84e77cb4b",
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014"
+          ],
+          "reason": "年报明确列示运动控制器、Motion PLC、交流/直流伺服，以及机器人专用控制器和伺服系统。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "robot_motion_control_2",
+      "group_id": "robot_motion_control",
+      "text": "为机械臂提供动作控制及精密电机驱动部件的企业",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "002747.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-estun-p13-d3017770a16647509204807343d9bd751e0ffb1527d7ad373df8f9d84e77cb4b",
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014"
+          ],
+          "reason": "年报明确列示运动控制器、Motion PLC、交流/直流伺服，以及机器人专用控制器和伺服系统。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "robot_motion_control_3",
+      "group_id": "robot_motion_control",
+      "text": "Suppliers of motion controllers and servo drives for industrial robots",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "002747.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-estun-p13-d3017770a16647509204807343d9bd751e0ffb1527d7ad373df8f9d84e77cb4b",
+            "theme-estun-p14-8b74035af4a679d2ba404b8e5c45ac1c966c6e400194f8570f7401870916a014"
+          ],
+          "reason": "年报明确列示运动控制器、Motion PLC、交流/直流伺服，以及机器人专用控制器和伺服系统。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "ai_server_systems_1",
+      "group_id": "ai_server_systems",
+      "text": "AI 服务器整机厂商",
+      "variant": "exact",
+      "judgments": [
+        {
+          "ticker": "000977.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-inspur",
+            "theme-inspur-p11-acd155396acacfc27cfa774be23db79764bdf7c747c3606bbfb2f64faf6758ad"
+          ],
+          "reason": "年报说明已发布 AI 通用服务器，给出 NF8260G7 及大模型运行能力。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "00992.HK",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-lenovo",
+            "theme-lenovo-p10-11c0282677754349116a14c65f456e38caf4ad060cc74bebdee79cbd90e0e016"
+          ],
+          "reason": "公司产品资料直接列示面向生成式 AI 的服务器整机和 GPU 配置。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "ai_server_systems_2",
+      "group_id": "ai_server_systems",
+      "text": "销售用于运行生成式人工智能模型的计算服务器的企业",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "000977.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-inspur",
+            "theme-inspur-p11-acd155396acacfc27cfa774be23db79764bdf7c747c3606bbfb2f64faf6758ad"
+          ],
+          "reason": "年报说明已发布 AI 通用服务器，给出 NF8260G7 及大模型运行能力。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "00992.HK",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-lenovo",
+            "theme-lenovo-p10-11c0282677754349116a14c65f456e38caf4ad060cc74bebdee79cbd90e0e016"
+          ],
+          "reason": "公司产品资料直接列示面向生成式 AI 的服务器整机和 GPU 配置。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "ai_server_systems_3",
+      "group_id": "ai_server_systems",
+      "text": "Vendors offering complete server systems for generative artificial intelligence workloads",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "000977.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-inspur",
+            "theme-inspur-p11-acd155396acacfc27cfa774be23db79764bdf7c747c3606bbfb2f64faf6758ad"
+          ],
+          "reason": "年报说明已发布 AI 通用服务器，给出 NF8260G7 及大模型运行能力。",
+          "annotation_status": "assistant_annotated"
+        },
+        {
+          "ticker": "00992.HK",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-lenovo",
+            "theme-lenovo-p10-11c0282677754349116a14c65f456e38caf4ad060cc74bebdee79cbd90e0e016"
+          ],
+          "reason": "公司产品资料直接列示面向生成式 AI 的服务器整机和 GPU 配置。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "cpu_only_llm_server_1",
+      "group_id": "cpu_only_llm_server",
+      "text": "仅靠 4 颗 CPU 运行千亿参数大模型的服务器",
+      "variant": "product_constraint",
+      "judgments": [
+        {
+          "ticker": "000977.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-inspur",
+            "theme-inspur-p11-acd155396acacfc27cfa774be23db79764bdf7c747c3606bbfb2f64faf6758ad"
+          ],
+          "reason": "年报明确 NF8260G7 仅用四颗 CPU 即可运行千亿参数大模型，直接满足处理器数量和不依赖 GPU 的限定。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "cpu_only_llm_server_2",
+      "group_id": "cpu_only_llm_server",
+      "text": "不用图形加速卡，仅以四枚中央处理器运行千亿参数语言模型的整机",
+      "variant": "zh_paraphrase",
+      "judgments": [
+        {
+          "ticker": "000977.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-inspur",
+            "theme-inspur-p11-acd155396acacfc27cfa774be23db79764bdf7c747c3606bbfb2f64faf6758ad"
+          ],
+          "reason": "年报明确 NF8260G7 仅用四颗 CPU 即可运行千亿参数大模型，直接满足处理器数量和不依赖 GPU 的限定。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    },
+    {
+      "query_id": "cpu_only_llm_server_3",
+      "group_id": "cpu_only_llm_server",
+      "text": "A server demonstrated to run a hundred-billion-parameter language model using only four CPUs",
+      "variant": "en_paraphrase",
+      "judgments": [
+        {
+          "ticker": "000977.SZ",
+          "grade": 2,
+          "source_document_ids": [
+            "theme-inspur",
+            "theme-inspur-p11-acd155396acacfc27cfa774be23db79764bdf7c747c3606bbfb2f64faf6758ad"
+          ],
+          "reason": "年报明确 NF8260G7 仅用四颗 CPU 即可运行千亿参数大模型，直接满足处理器数量和不依赖 GPU 的限定。",
+          "annotation_status": "assistant_annotated"
+        }
+      ]
+    }
+  ]
+}

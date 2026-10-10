@@ -1,0 +1,2025 @@
+{
+  "schema_version": 1,
+  "dataset_id": "chenxi-business-claims-development-v1",
+  "frozen_at": "2026-10-10",
+  "independently_annotated": false,
+  "held_out": false,
+  "annotation_provenance": "Public labels reuse the existing selected-source development cases; synthetic labels were specified from the scenario before evaluating this benchmark. No independent analyst adjudication is claimed.",
+  "limitations": [
+    "Public excerpts and synthetic adversarial examples must always be scored separately.",
+    "Labels concern selected evidence, not complete issuer truth or investment performance.",
+    "Public examples were used during development; they are not a holdout.",
+    "Dates and source hashes in synthetic examples are fixture metadata, not real disclosures."
+  ],
+  "cases": [
+    {
+      "id": "public-innolight",
+      "kind": "public_excerpt",
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ],
+      "query": "光模块",
+      "as_of": "2026-10-10",
+      "company": {
+        "ticker": "300308.SZ",
+        "name": "中际旭创",
+        "market": "A",
+        "sector": "Communication Equipment",
+        "scope": "technology",
+        "universe_as_of": "2026-10-10",
+        "aliases": [
+          "Zhongji InnoLight",
+          "InnoLight"
+        ]
+      },
+      "documents": [
+        {
+          "document_id": "theme-innolight",
+          "ticker": "300308.SZ",
+          "available_at": "2026-10-10",
+          "source_url": "https://www.zj-innolight.com/en/cloud_ai_infrastructure.html",
+          "source_type": "company_website",
+          "page": "Cloud & AI Infrastructure",
+          "text": "The Company offers a comprehensive portfolio of optical transceivers from 10G to 1.6T",
+          "title": "Cloud & AI Infrastructure",
+          "source_sha256": "e7af71eb70e61b3ac5c1463175cc8a218895eefeafbdef1207e95e924988e026",
+          "source_id": "innolight",
+          "date_basis": "observed_at",
+          "scope": "technology",
+          "universe_as_of": "2026-10-10",
+          "excerpt_sha256": "a07ddaebd80acca802f1be4b3150449e0417794d15b2c69607ac93c1fef16e2a"
+        }
+      ],
+      "public_reference": {
+        "dataset_path": "data/theme_documents.jsonl",
+        "document_id": "theme-innolight"
+      },
+      "annotation_reason": "Existing curated source example: the selected issuer product statement supports a business association.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "public-eoptolink",
+      "kind": "public_excerpt",
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ],
+      "query": "光模块",
+      "as_of": "2026-10-10",
+      "company": {
+        "ticker": "300502.SZ",
+        "name": "新易盛",
+        "market": "A",
+        "sector": "Communication Equipment",
+        "scope": "technology",
+        "universe_as_of": "2026-10-10",
+        "aliases": [
+          "Eoptolink"
+        ]
+      },
+      "documents": [
+        {
+          "document_id": "theme-eoptolink",
+          "ticker": "300502.SZ",
+          "available_at": "2025-04-23",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-23/1223219348.PDF",
+          "source_type": "annual_report",
+          "page": 11,
+          "text": "公司一直致力于高性能光模块的研发、生产和销售",
+          "title": "2024年年度报告",
+          "source_sha256": "148155f6d95c86f8f77c6aa5ec7e486e97cea2e9f73c9aaa235079df94140aec",
+          "source_id": "eoptolink",
+          "date_basis": "official_release",
+          "scope": "technology",
+          "universe_as_of": "2026-10-10",
+          "excerpt_sha256": "7cffca35e87bc7f715f4c9e31693b686fbc6a37b8f07d6f41ca337ed470c83f5"
+        }
+      ],
+      "public_reference": {
+        "dataset_path": "data/theme_documents.jsonl",
+        "document_id": "theme-eoptolink"
+      },
+      "annotation_reason": "Existing curated source example: the selected issuer product statement supports a business association.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "public-accelink",
+      "kind": "public_excerpt",
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ],
+      "query": "光模块",
+      "as_of": "2026-10-10",
+      "company": {
+        "ticker": "002281.SZ",
+        "name": "光迅科技",
+        "market": "A",
+        "sector": "Communication Equipment",
+        "scope": "technology",
+        "universe_as_of": "2026-10-10",
+        "aliases": [
+          "Accelink"
+        ]
+      },
+      "documents": [
+        {
+          "document_id": "theme-accelink",
+          "ticker": "002281.SZ",
+          "available_at": "2026-10-10",
+          "source_url": "https://www.accelink.com/lighting_your_dreams/CloudandEnterprise.html",
+          "source_type": "company_website",
+          "page": "Cloud and Enterprise",
+          "text": "Accelink has developed a series of high-speed optical module products with the product rate ranging from 10G to 800G",
+          "title": "Cloud and Enterprise",
+          "source_sha256": "827afa16c018ba6d88e668b0fa864928c6a7c23d013d68499ef28da5eb6e13fb",
+          "source_id": "accelink",
+          "date_basis": "observed_at",
+          "scope": "technology",
+          "universe_as_of": "2026-10-10",
+          "excerpt_sha256": "f040914eabf7ba61b345fe3f0cbb23873d093c9cce9b33831bc46e171c8815aa"
+        }
+      ],
+      "public_reference": {
+        "dataset_path": "data/theme_documents.jsonl",
+        "document_id": "theme-accelink"
+      },
+      "annotation_reason": "Existing curated source example: the selected issuer product statement supports a business association.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "public-estun",
+      "kind": "public_excerpt",
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ],
+      "query": "机器人",
+      "as_of": "2026-10-10",
+      "company": {
+        "ticker": "002747.SZ",
+        "name": "埃斯顿",
+        "market": "A",
+        "sector": "Industrial Robotics",
+        "scope": "manufacturing",
+        "universe_as_of": "2026-10-10",
+        "aliases": [
+          "Estun"
+        ]
+      },
+      "documents": [
+        {
+          "document_id": "theme-estun",
+          "ticker": "002747.SZ",
+          "available_at": "2025-04-29",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223370517.PDF",
+          "source_type": "annual_report",
+          "page": 13,
+          "text": "公司拥有覆盖3kg到700kg负载的87款工业机器人产品",
+          "title": "2024年年度报告",
+          "source_sha256": "ccebb48578e1fe9b1a28e185d7fe8d3b61b0e7019a4ba903000724ce13753f35",
+          "source_id": "estun",
+          "date_basis": "official_release",
+          "scope": "manufacturing",
+          "universe_as_of": "2026-10-10",
+          "excerpt_sha256": "1d7c1a8c24a5caf7d53bf90509397d03a60e8debb7e6cc4b7bbe606e325841a9"
+        }
+      ],
+      "public_reference": {
+        "dataset_path": "data/theme_documents.jsonl",
+        "document_id": "theme-estun"
+      },
+      "annotation_reason": "Existing curated source example: the selected issuer product statement supports a business association.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "public-ubtech",
+      "kind": "public_excerpt",
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ],
+      "query": "机器人",
+      "as_of": "2026-10-10",
+      "company": {
+        "ticker": "09880.HK",
+        "name": "优必选",
+        "market": "HK",
+        "sector": "Industrial Robotics",
+        "scope": "manufacturing",
+        "universe_as_of": "2026-10-10",
+        "aliases": [
+          "UBTECH"
+        ]
+      },
+      "documents": [
+        {
+          "document_id": "theme-ubtech",
+          "ticker": "09880.HK",
+          "available_at": "2026-10-10",
+          "source_url": "https://www.ubtrobot.com/cn",
+          "source_type": "company_website",
+          "page": "消费级智能硬件",
+          "text": "优必选科技推出一系列适合家庭使用的用户友好型产品，并配备优必选AI赋能的机器人技术，使其在家庭环境中安全易用",
+          "title": "优必选官网：消费级智能硬件",
+          "source_sha256": "032b6d397a70a676ff2a076c966f061011bde2e1685865bf5d09851b37d56f4b",
+          "source_id": "ubtech",
+          "date_basis": "observed_at",
+          "scope": "manufacturing",
+          "universe_as_of": "2026-10-10",
+          "excerpt_sha256": "96171f8feda60d337068fbacdf01c69fd39738787dec22f524a607d98abf51cf"
+        }
+      ],
+      "public_reference": {
+        "dataset_path": "data/theme_documents.jsonl",
+        "document_id": "theme-ubtech"
+      },
+      "annotation_reason": "Existing curated source example: the selected issuer product statement supports a business association.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "public-lenovo",
+      "kind": "public_excerpt",
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ],
+      "query": "AI服务器",
+      "as_of": "2026-10-10",
+      "company": {
+        "ticker": "00992.HK",
+        "name": "联想集团",
+        "market": "HK",
+        "sector": "Computing Hardware",
+        "scope": "technology",
+        "universe_as_of": "2026-10-10",
+        "aliases": [
+          "Lenovo"
+        ]
+      },
+      "documents": [
+        {
+          "document_id": "theme-lenovo",
+          "ticker": "00992.HK",
+          "available_at": "2026-10-10",
+          "source_url": "https://lenovopress.lenovo.com/lp1553.pdf",
+          "source_type": "company_website",
+          "page": 10,
+          "text": "Lenovo AI servers are set to power the new era of generative AI.",
+          "title": "Lenovo ThinkSystem portfolio: GPU Rich Servers for AI",
+          "source_sha256": "f338cde035f7168d69ac615f8fe116413411f37d369dca42ad5a692d424dbdb1",
+          "source_id": "lenovo",
+          "date_basis": "observed_at",
+          "scope": "technology",
+          "universe_as_of": "2026-10-10",
+          "excerpt_sha256": "11730747b0b6c65f63cd8cc353d7b6eb1571206a93c9e4b39e7bf76013c27c60"
+        }
+      ],
+      "public_reference": {
+        "dataset_path": "data/theme_documents.jsonl",
+        "document_id": "theme-lenovo"
+      },
+      "annotation_reason": "Existing curated source example: the selected issuer product statement supports a business association.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "public-inspur",
+      "kind": "public_excerpt",
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ],
+      "query": "AI服务器",
+      "as_of": "2026-10-10",
+      "company": {
+        "ticker": "000977.SZ",
+        "name": "浪潮信息",
+        "market": "A",
+        "sector": "Computing Hardware",
+        "scope": "technology",
+        "universe_as_of": "2026-10-10",
+        "aliases": []
+      },
+      "documents": [
+        {
+          "document_id": "theme-inspur",
+          "ticker": "000977.SZ",
+          "available_at": "2025-03-29",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-03-29/1222950880.PDF",
+          "source_type": "annual_report",
+          "page": 11,
+          "text": "2024年，公司发布了业界首个仅靠4颗CPU运行千亿参数大模型的AI通用服务器NF8260G7",
+          "title": "2024年年度报告",
+          "source_sha256": "c2f5bfe90b96425989a62dadf565b1286b7f6befb36d3e47dcb1df1e38b95429",
+          "source_id": "inspur",
+          "date_basis": "official_release",
+          "scope": "technology",
+          "universe_as_of": "2026-10-10",
+          "excerpt_sha256": "efd1ffca19fbd879dd60176374641f1b82094f87754b15d5dbf71f3f343928f8"
+        }
+      ],
+      "public_reference": {
+        "dataset_path": "data/theme_documents.jsonl",
+        "document_id": "theme-inspur"
+      },
+      "annotation_reason": "Existing curated source example: the selected issuer product statement supports a business association.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "public-swancor",
+      "kind": "public_excerpt",
+      "tags": [
+        "public_source",
+        "development"
+      ],
+      "query": "机器人",
+      "as_of": "2026-10-10",
+      "company": {
+        "ticker": "688585.SH",
+        "name": "上纬新材",
+        "market": "A",
+        "sector": "Advanced Materials",
+        "scope": "manufacturing",
+        "universe_as_of": "2026-10-10",
+        "aliases": []
+      },
+      "documents": [
+        {
+          "document_id": "theme-swancor",
+          "ticker": "688585.SH",
+          "available_at": "2025-12-06",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-06/1224855156.PDF",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "公司的具身智能机器人业务当前仍处于开发阶段，尚未实现量产及规模化销售，相关业务尚未形成营收及利润",
+          "title": "关于签订许可协议暨关联交易的公告",
+          "source_sha256": "6a2a380509f8cbbf9c24a0e6e5973af34ba1ebe8c2d940424dab7be32882d880",
+          "source_id": "swancor",
+          "date_basis": "official_release",
+          "scope": "manufacturing",
+          "universe_as_of": "2026-10-10",
+          "excerpt_sha256": "416617ae59e87785826d41c4354d100f0f3b08d00fd0c45082f1b1aaaef179ef"
+        }
+      ],
+      "public_reference": {
+        "dataset_path": "data/theme_documents.jsonl",
+        "document_id": "theme-swancor"
+      },
+      "annotation_reason": "The selected announcement explicitly describes development-stage business without established commercialization.",
+      "expected": {
+        "claim_status": "planned",
+        "business_status": "planned_business"
+      }
+    },
+    {
+      "id": "public-daimay",
+      "kind": "public_excerpt",
+      "tags": [
+        "public_source",
+        "development"
+      ],
+      "query": "机器人",
+      "as_of": "2026-10-10",
+      "company": {
+        "ticker": "603730.SH",
+        "name": "岱美股份",
+        "market": "A",
+        "sector": "Auto Components",
+        "scope": "manufacturing",
+        "universe_as_of": "2026-10-10",
+        "aliases": []
+      },
+      "documents": [
+        {
+          "document_id": "theme-daimay",
+          "ticker": "603730.SH",
+          "available_at": "2025-11-18",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-11-18/1224808933.PDF",
+          "source_type": "announcement",
+          "page": 4,
+          "text": "公司目前机器人相关业务尚处于初期技术开发准备阶段，存在开发不成功的风险",
+          "title": "关于对外投资设立全资子公司的公告",
+          "source_sha256": "b17b494a44d85d5194fbc25aaef0a50ba8295dd57f7cded3de48ded080928dfc",
+          "source_id": "daimay",
+          "date_basis": "official_release",
+          "scope": "manufacturing",
+          "universe_as_of": "2026-10-10",
+          "excerpt_sha256": "b2faa85d88b1e64db560966d2fa2ed86a0f74053fa3b5e9ed4d12426da110440"
+        }
+      ],
+      "public_reference": {
+        "dataset_path": "data/theme_documents.jsonl",
+        "document_id": "theme-daimay"
+      },
+      "annotation_reason": "The selected announcement explicitly describes development-stage business without established commercialization.",
+      "expected": {
+        "claim_status": "planned",
+        "business_status": "planned_business"
+      }
+    },
+    {
+      "id": "synthetic-self-cn",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "self"
+      ],
+      "query": "光模块",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "self-cn-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/self-cn-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司主要从事光模块产品的研发、生产和销售。",
+          "date_basis": "official_release",
+          "source_sha256": "ebc724e50a4004888a6ea31eb55cda02806b8498b34f484e3f605359b371402a",
+          "excerpt_sha256": "ebc724e50a4004888a6ea31eb55cda02806b8498b34f484e3f605359b371402a",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-self-en",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "self"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "self-en-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/self-en-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "We manufacture and sell robots.",
+          "date_basis": "official_release",
+          "source_sha256": "3ed6268fb14d7c4b63d795a8a738bafb7ddfc7a9dc0984d4ad36fdac67e9ec92",
+          "excerpt_sha256": "3ed6268fb14d7c4b63d795a8a738bafb7ddfc7a9dc0984d4ad36fdac67e9ec92",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-self-traditional",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "traditional_chinese"
+      ],
+      "query": "光模块",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "self-traditional-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/self-traditional-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司主要生產光模組產品。",
+          "date_basis": "official_release",
+          "source_sha256": "b1fb112ed54aad4c8258556737a306a8ad94c30477686c7d1e6518548bd27bb3",
+          "excerpt_sha256": "b1fb112ed54aad4c8258556737a306a8ad94c30477686c7d1e6518548bd27bb3",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-named-issuer",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "named_issuer"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "named-issuer-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/named-issuer-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "示例科技主要生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "363ca968d29c121c21128d88338c3eaed61195dcafc6a75e9e858c8dc8451ee4",
+          "excerpt_sha256": "363ca968d29c121c21128d88338c3eaed61195dcafc6a75e9e858c8dc8451ee4",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-named-third-party",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "third_party"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "named-third-party-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/named-third-party-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "甲公司主要生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "2919f80e5bdff90ce806b1838c739b405206098bc6c46438ef3c7e399fc71af5",
+          "excerpt_sha256": "2919f80e5bdff90ce806b1838c739b405206098bc6c46438ef3c7e399fc71af5",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "uncertain",
+        "business_status": "uncertain"
+      }
+    },
+    {
+      "id": "synthetic-competitor",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "third_party"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "competitor-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/competitor-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "我们的竞争对手生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "4901bb44f614d1807ddd02a3017debdbeafaed590ccde59fc371e0c785aca717",
+          "excerpt_sha256": "4901bb44f614d1807ddd02a3017debdbeafaed590ccde59fc371e0c785aca717",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "uncertain",
+        "business_status": "uncertain"
+      }
+    },
+    {
+      "id": "synthetic-customer",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "customer"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "customer-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/customer-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司的客户生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "e1cdf5b2925af7884a09d21de5b52e8b64a0bb5d4ffbca9a6b800416eed29e8e",
+          "excerpt_sha256": "e1cdf5b2925af7884a09d21de5b52e8b64a0bb5d4ffbca9a6b800416eed29e8e",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "uncertain",
+        "business_status": "uncertain"
+      }
+    },
+    {
+      "id": "synthetic-industry",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "industry"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "industry-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/industry-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "机器人行业市场规模快速增长。",
+          "date_basis": "official_release",
+          "source_sha256": "fa1d8c4b09de8332a602a71aabb26f3c0e15365b392f94939bc3f82f2c5916fc",
+          "excerpt_sha256": "fa1d8c4b09de8332a602a71aabb26f3c0e15365b392f94939bc3f82f2c5916fc",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "uncertain",
+        "business_status": "uncertain"
+      }
+    },
+    {
+      "id": "synthetic-registered-scope",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "registered_scope"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "registered-scope-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/registered-scope-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司经营范围包括机器人制造。",
+          "date_basis": "official_release",
+          "source_sha256": "b3d52721e6daa42aefebec955158f83cf9a977e5127cd00e9822d9c64ee308c8",
+          "excerpt_sha256": "b3d52721e6daa42aefebec955158f83cf9a977e5127cd00e9822d9c64ee308c8",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "uncertain",
+        "business_status": "uncertain"
+      }
+    },
+    {
+      "id": "synthetic-future-plan",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "plan"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "future-plan-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/future-plan-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司计划开展机器人产品研发。",
+          "date_basis": "official_release",
+          "source_sha256": "2c8dbfa8670e3044f4349722b4fcd36f5d20d99452c09279c15d1849e82243fd",
+          "excerpt_sha256": "2c8dbfa8670e3044f4349722b4fcd36f5d20d99452c09279c15d1849e82243fd",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "planned",
+        "business_status": "planned_business"
+      }
+    },
+    {
+      "id": "synthetic-development",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "development"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "development-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/development-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司机器人业务仍处于开发阶段，尚未实现量产。",
+          "date_basis": "official_release",
+          "source_sha256": "92c8b0b46338b56b9b5a13be27685ffd726cff81fe859f431b400b7a1f912b6c",
+          "excerpt_sha256": "92c8b0b46338b56b9b5a13be27685ffd726cff81fe859f431b400b7a1f912b6c",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "planned",
+        "business_status": "planned_business"
+      }
+    },
+    {
+      "id": "synthetic-rd-team",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "plan"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "rd-team-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/rd-team-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司组建机器人研发团队。",
+          "date_basis": "official_release",
+          "source_sha256": "26dc9263918ef51b33696c117b7c053548535c92f9b17000252e5ef6a35480be",
+          "excerpt_sha256": "26dc9263918ef51b33696c117b7c053548535c92f9b17000252e5ef6a35480be",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "planned",
+        "business_status": "planned_business"
+      }
+    },
+    {
+      "id": "synthetic-denial",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "negation"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "denial-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/denial-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司不生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "55e0bfd9dd29abadefcdd10c111c95d2bb71d117e32aabc1da1f3386f88e7f8a",
+          "excerpt_sha256": "55e0bfd9dd29abadefcdd10c111c95d2bb71d117e32aabc1da1f3386f88e7f8a",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "negated",
+        "business_status": "no_match"
+      }
+    },
+    {
+      "id": "synthetic-cessation",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "cessation"
+      ],
+      "query": "光模块",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "cessation-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/cessation-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产光模块产品。",
+          "date_basis": "official_release",
+          "source_sha256": "97c312657cdd257f9dda5e598ba0d1f9c78aa4e092f8617a28122c1c8d967ad6",
+          "excerpt_sha256": "97c312657cdd257f9dda5e598ba0d1f9c78aa4e092f8617a28122c1c8d967ad6",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "negated",
+        "business_status": "no_match"
+      }
+    },
+    {
+      "id": "synthetic-not-only-cn",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "negation_scope"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "not-only-cn-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/not-only-cn-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司不仅生产机器人产品，还生产其他工业设备。",
+          "date_basis": "official_release",
+          "source_sha256": "0a2554e897f10a9a8d5793737641e5ddf7f972fefde6d93ee862af4d6be36781",
+          "excerpt_sha256": "0a2554e897f10a9a8d5793737641e5ddf7f972fefde6d93ee862af4d6be36781",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-chain-cn",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "supply_chain"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "chain-cn-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/chain-cn-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司为机器人供应核心零部件产品。",
+          "date_basis": "official_release",
+          "source_sha256": "9faa058ba08217b29114a574a6b2d3ad98bfc62a613720f6c4bc5af50f38d19f",
+          "excerpt_sha256": "9faa058ba08217b29114a574a6b2d3ad98bfc62a613720f6c4bc5af50f38d19f",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "upstream_or_downstream",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-chain-en",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "supply_chain"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "chain-en-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/chain-en-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "We manufacture components used in robots.",
+          "date_basis": "official_release",
+          "source_sha256": "9d15451fe926aa81034122b72d495f19d8517cfa0fd45c7a1972a5db57b5a3b1",
+          "excerpt_sha256": "9d15451fe926aa81034122b72d495f19d8517cfa0fd45c7a1972a5db57b5a3b1",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "upstream_or_downstream",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-model-denial",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "model_specific_denial"
+      ],
+      "query": "光模块",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "model-denial-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/model-denial-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司不生产800G光模块。",
+          "date_basis": "official_release",
+          "source_sha256": "24e7772944fab9eed2de747f7283276c4292a1c034aef7aee84807583339a067",
+          "excerpt_sha256": "24e7772944fab9eed2de747f7283276c4292a1c034aef7aee84807583339a067",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "negated",
+        "business_status": "no_match"
+      }
+    },
+    {
+      "id": "synthetic-model-mismatch",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "model_qualifier"
+      ],
+      "query": "800G 光模块",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "model-mismatch-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/model-mismatch-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产100G光模块产品。",
+          "date_basis": "official_release",
+          "source_sha256": "fdfa8f0fb07f9883fd062c956c2f87338f7a23e6db1076bad6a4d21b320ea4db",
+          "excerpt_sha256": "fdfa8f0fb07f9883fd062c956c2f87338f7a23e6db1076bad6a4d21b320ea4db",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "not_retrieved",
+        "business_status": "no_match"
+      }
+    },
+    {
+      "id": "synthetic-model-match",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "model_qualifier"
+      ],
+      "query": "800G 光模块",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "model-match-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/model-match-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产800G光模块产品。",
+          "date_basis": "official_release",
+          "source_sha256": "2839584f0e8079c0bd57f17c27f566fea8f344c69a67d6dd5e08b1c96fc9b8ee",
+          "excerpt_sha256": "2839584f0e8079c0bd57f17c27f566fea8f344c69a67d6dd5e08b1c96fc9b8ee",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-line-wrap",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "original_offsets"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "line-wrap-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/line-wrap-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机\n器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "58500876e9430c7d8bdef1e83f61351ae69bb4b3f4a04e0a78d81d965dfecad8",
+          "excerpt_sha256": "58500876e9430c7d8bdef1e83f61351ae69bb4b3f4a04e0a78d81d965dfecad8",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-not-only-en",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "negation_scope"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "not-only-en-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/not-only-en-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "We not only manufacture robots but also offer maintenance services.",
+          "date_basis": "official_release",
+          "source_sha256": "14c28dcabbf122cbd5549f62d25e86067fe698ca00984edb23ac4261d910da78",
+          "excerpt_sha256": "14c28dcabbf122cbd5549f62d25e86067fe698ca00984edb23ac4261d910da78",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-other-product-denial",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "negation_scope"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "other-product-denial-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/other-product-denial-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司不生产光模块，生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "8a44701c868204205ddc1d9d011d1546b8dad7b7e196ac54d736283c5d0a9efb",
+          "excerpt_sha256": "8a44701c868204205ddc1d9d011d1546b8dad7b7e196ac54d736283c5d0a9efb",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "direct_business",
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-separate-window-model",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "model_qualifier"
+      ],
+      "query": "800G 光模块",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "separate-window-model-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/separate-window-model-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产光模块产品。800G设备需要进一步研发。",
+          "date_basis": "official_release",
+          "source_sha256": "dee37c668163d19c0164751a9dceed04f8010baea025125666fdf6aeb035aff4",
+          "excerpt_sha256": "dee37c668163d19c0164751a9dceed04f8010baea025125666fdf6aeb035aff4",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "not_retrieved",
+        "business_status": "no_match"
+      }
+    },
+    {
+      "id": "synthetic-unrelated",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "unrelated"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "unrelated-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/unrelated-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产工业水泵并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "fdc6ed951e7ed243b63fabedbd21dc2b9d963352429cfbdd3a7250603f9f4d2b",
+          "excerpt_sha256": "fdc6ed951e7ed243b63fabedbd21dc2b9d963352429cfbdd3a7250603f9f4d2b",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented boundary example; expected label is based on the stated issuer, scope and stage, not a fact about a listed company.",
+      "expected": {
+        "claim_status": "not_retrieved",
+        "business_status": "no_match"
+      }
+    },
+    {
+      "id": "synthetic-future-assertion",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "future_isolation"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "future-assertion-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-07-01",
+          "source_url": "https://example.org/synthetic/future-assertion-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "ed9945434804ecc009b03a283402542622e9ce0100eb5f061e27b6104714e9f6",
+          "excerpt_sha256": "ed9945434804ecc009b03a283402542622e9ce0100eb5f061e27b6104714e9f6",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "The assertion is not yet available at the query cutoff.",
+      "expected": {
+        "claim_status": "not_retrieved",
+        "business_status": "no_match"
+      }
+    },
+    {
+      "id": "synthetic-newer-exit",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "date_conflict",
+        "cessation"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "newer-exit-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/newer-exit-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "newer-exit-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-06-01",
+          "source_url": "https://example.org/synthetic/newer-exit-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "excerpt_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "historical_or_disputed"
+      }
+    },
+    {
+      "id": "synthetic-same-day-conflict",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "date_conflict"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "same-day-conflict-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-06-01",
+          "source_url": "https://example.org/synthetic/same-day-conflict-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "same-day-conflict-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-06-01",
+          "source_url": "https://example.org/synthetic/same-day-conflict-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "excerpt_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "historical_or_disputed"
+      }
+    },
+    {
+      "id": "synthetic-later-reopening",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "date_conflict",
+        "reopening"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "later-reopening-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/later-reopening-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "excerpt_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "later-reopening-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-06-01",
+          "source_url": "https://example.org/synthetic/later-reopening-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-observation-denial",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "date_basis",
+        "date_conflict"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "observation-denial-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/observation-denial-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "observation-denial-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-06-01",
+          "source_url": "https://example.org/synthetic/observation-denial-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产机器人产品。",
+          "date_basis": "observed_at",
+          "source_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "excerpt_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "historical_or_disputed"
+      }
+    },
+    {
+      "id": "synthetic-observation-support",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "date_basis",
+        "date_conflict"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "observation-support-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/observation-support-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "excerpt_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "observation-support-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-06-01",
+          "source_url": "https://example.org/synthetic/observation-support-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "observed_at",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "historical_or_disputed"
+      }
+    },
+    {
+      "id": "synthetic-future-exit",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "future_isolation",
+        "cessation"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "future-exit-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/future-exit-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "future-exit-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-07-01",
+          "source_url": "https://example.org/synthetic/future-exit-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "excerpt_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-future-reopening",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "future_isolation",
+        "reopening"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "future-reopening-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/future-reopening-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "excerpt_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "future-reopening-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-07-01",
+          "source_url": "https://example.org/synthetic/future-reopening-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "no_match"
+      }
+    },
+    {
+      "id": "synthetic-subtype-denial",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "model_specific_denial",
+        "negation_scope"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "subtype-denial-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/subtype-denial-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "subtype-denial-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-06-01",
+          "source_url": "https://example.org/synthetic/subtype-denial-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司不生产人形机器人。",
+          "date_basis": "official_release",
+          "source_sha256": "596a40dea24ec6d78bf7dd2698252b956ecd38493ec9e013efc541097716141e",
+          "excerpt_sha256": "596a40dea24ec6d78bf7dd2698252b956ecd38493ec9e013efc541097716141e",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-reissued-support",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "deduplication",
+        "date_conflict"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "reissued-support-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-03-01",
+          "source_url": "https://example.org/synthetic/reissued-support-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "reissued-support-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/reissued-support-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "excerpt_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "reissued-support-d3",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-06-01",
+          "source_url": "https://example.org/synthetic/reissued-support-d3.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司生产机器人产品并对外销售。",
+          "date_basis": "official_release",
+          "source_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "excerpt_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "current_business"
+      }
+    },
+    {
+      "id": "synthetic-plan-after-exit",
+      "kind": "synthetic_adversarial",
+      "tags": [
+        "date_conflict",
+        "plan"
+      ],
+      "query": "机器人",
+      "as_of": "2025-06-30",
+      "company": {
+        "ticker": "SYNTHETIC.A",
+        "name": "示例科技",
+        "aliases": [
+          "Example Technology"
+        ],
+        "market": "A",
+        "sector": "Synthetic technology peer group",
+        "scope": "technology",
+        "universe_as_of": "2025-01-01"
+      },
+      "documents": [
+        {
+          "document_id": "plan-after-exit-d1",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-04-01",
+          "source_url": "https://example.org/synthetic/plan-after-exit-d1.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司已停止生产机器人产品。",
+          "date_basis": "official_release",
+          "source_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "excerpt_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+          "fixture_kind": "synthetic_adversarial"
+        },
+        {
+          "document_id": "plan-after-exit-d2",
+          "ticker": "SYNTHETIC.A",
+          "available_at": "2025-06-01",
+          "source_url": "https://example.org/synthetic/plan-after-exit-d2.txt",
+          "source_type": "announcement",
+          "page": 1,
+          "text": "本公司计划重新开展机器人业务。",
+          "date_basis": "official_release",
+          "source_sha256": "7feddbd4f065800ea9a366f4b401609e0265d897674d6b55c6ca59d090ffc020",
+          "excerpt_sha256": "7feddbd4f065800ea9a366f4b401609e0265d897674d6b55c6ca59d090ffc020",
+          "fixture_kind": "synthetic_adversarial"
+        }
+      ],
+      "annotation_reason": "Invented multi-document case: compare actual official release dates and whole-company scope; observation time cannot prove a later business change.",
+      "expected": {
+        "business_status": "planned_business"
+      }
+    }
+  ]
+}

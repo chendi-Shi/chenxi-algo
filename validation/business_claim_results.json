@@ -1,0 +1,2172 @@
+{
+  "cases": [
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "public-innolight",
+      "kind": "public_excerpt",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2026-10-10",
+            "char_end": 85,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "observed_at",
+            "document_id": "theme-innolight",
+            "page": "Cloud & AI Infrastructure",
+            "quote_sha256": "a07ddaebd80acca802f1be4b3150449e0417794d15b2c69607ac93c1fef16e2a",
+            "source_url": "https://www.zj-innolight.com/en/cloud_ai_infrastructure.html"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "public-eoptolink",
+      "kind": "public_excerpt",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-23",
+            "char_end": 22,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "theme-eoptolink",
+            "page": 11,
+            "quote_sha256": "7cffca35e87bc7f715f4c9e31693b686fbc6a37b8f07d6f41ca337ed470c83f5",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-23/1223219348.PDF"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "public-accelink",
+      "kind": "public_excerpt",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2026-10-10",
+            "char_end": 116,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "observed_at",
+            "document_id": "theme-accelink",
+            "page": "Cloud and Enterprise",
+            "quote_sha256": "f040914eabf7ba61b345fe3f0cbb23873d093c9cce9b33831bc46e171c8815aa",
+            "source_url": "https://www.accelink.com/lighting_your_dreams/CloudandEnterprise.html"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "public-estun",
+      "kind": "public_excerpt",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-29",
+            "char_end": 28,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "theme-estun",
+            "page": 13,
+            "quote_sha256": "1d7c1a8c24a5caf7d53bf90509397d03a60e8debb7e6cc4b7bbe606e325841a9",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223370517.PDF"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": false,
+        "claim_status": false
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "public-ubtech",
+      "kind": "public_excerpt",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2026-10-10",
+            "char_end": 54,
+            "char_start": 0,
+            "claim_status": "uncertain",
+            "company_level_denial": false,
+            "date_basis": "observed_at",
+            "document_id": "theme-ubtech",
+            "page": "\u6d88\u8d39\u7ea7\u667a\u80fd\u786c\u4ef6",
+            "quote_sha256": "96171f8feda60d337068fbacdf01c69fd39738787dec22f524a607d98abf51cf",
+            "source_url": "https://www.ubtrobot.com/cn"
+          }
+        ],
+        "business_status": "uncertain",
+        "claim_status": "uncertain",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": false,
+        "claim_status": false
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "public-lenovo",
+      "kind": "public_excerpt",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2026-10-10",
+            "char_end": 64,
+            "char_start": 0,
+            "claim_status": "uncertain",
+            "company_level_denial": false,
+            "date_basis": "observed_at",
+            "document_id": "theme-lenovo",
+            "page": 10,
+            "quote_sha256": "11730747b0b6c65f63cd8cc353d7b6eb1571206a93c9e4b39e7bf76013c27c60",
+            "source_url": "https://lenovopress.lenovo.com/lp1553.pdf"
+          }
+        ],
+        "business_status": "uncertain",
+        "claim_status": "uncertain",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "public-inspur",
+      "kind": "public_excerpt",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-03-29",
+            "char_end": 47,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "theme-inspur",
+            "page": 11,
+            "quote_sha256": "efd1ffca19fbd879dd60176374641f1b82094f87754b15d5dbf71f3f343928f8",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2025-03-29/1222950880.PDF"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "public_source",
+        "issuer_business"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "planned_business",
+        "claim_status": "planned"
+      },
+      "id": "public-swancor",
+      "kind": "public_excerpt",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-12-06",
+            "char_end": 48,
+            "char_start": 0,
+            "claim_status": "planned",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "theme-swancor",
+            "page": 1,
+            "quote_sha256": "416617ae59e87785826d41c4354d100f0f3b08d00fd0c45082f1b1aaaef179ef",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-06/1224855156.PDF"
+          }
+        ],
+        "business_status": "planned_business",
+        "claim_status": "planned",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "public_source",
+        "development"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "planned_business",
+        "claim_status": "planned"
+      },
+      "id": "public-daimay",
+      "kind": "public_excerpt",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-11-18",
+            "char_end": 35,
+            "char_start": 0,
+            "claim_status": "planned",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "theme-daimay",
+            "page": 4,
+            "quote_sha256": "b2faa85d88b1e64db560966d2fa2ed86a0f74053fa3b5e9ed4d12426da110440",
+            "source_url": "https://static.cninfo.com.cn/finalpage/2025-11-18/1224808933.PDF"
+          }
+        ],
+        "business_status": "planned_business",
+        "claim_status": "planned",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "public_source",
+        "development"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "synthetic-self-cn",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 22,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "self-cn-d1",
+            "page": 1,
+            "quote_sha256": "ebc724e50a4004888a6ea31eb55cda02806b8498b34f484e3f605359b371402a",
+            "source_url": "https://example.org/synthetic/self-cn-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "self"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "synthetic-self-en",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 31,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "self-en-d1",
+            "page": 1,
+            "quote_sha256": "3ed6268fb14d7c4b63d795a8a738bafb7ddfc7a9dc0984d4ad36fdac67e9ec92",
+            "source_url": "https://example.org/synthetic/self-en-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "self"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "synthetic-self-traditional",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 13,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "self-traditional-d1",
+            "page": 1,
+            "quote_sha256": "b1fb112ed54aad4c8258556737a306a8ad94c30477686c7d1e6518548bd27bb3",
+            "source_url": "https://example.org/synthetic/self-traditional-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "traditional_chinese"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "synthetic-named-issuer",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "named-issuer-d1",
+            "page": 1,
+            "quote_sha256": "363ca968d29c121c21128d88338c3eaed61195dcafc6a75e9e858c8dc8451ee4",
+            "source_url": "https://example.org/synthetic/named-issuer-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "named_issuer"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "uncertain",
+        "claim_status": "uncertain"
+      },
+      "id": "synthetic-named-third-party",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 13,
+            "char_start": 0,
+            "claim_status": "uncertain",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "named-third-party-d1",
+            "page": 1,
+            "quote_sha256": "2919f80e5bdff90ce806b1838c739b405206098bc6c46438ef3c7e399fc71af5",
+            "source_url": "https://example.org/synthetic/named-third-party-d1.txt"
+          }
+        ],
+        "business_status": "uncertain",
+        "claim_status": "uncertain",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "third_party"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "uncertain",
+        "claim_status": "uncertain"
+      },
+      "id": "synthetic-competitor",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 15,
+            "char_start": 0,
+            "claim_status": "uncertain",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "competitor-d1",
+            "page": 1,
+            "quote_sha256": "4901bb44f614d1807ddd02a3017debdbeafaed590ccde59fc371e0c785aca717",
+            "source_url": "https://example.org/synthetic/competitor-d1.txt"
+          }
+        ],
+        "business_status": "uncertain",
+        "claim_status": "uncertain",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "third_party"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "uncertain",
+        "claim_status": "uncertain"
+      },
+      "id": "synthetic-customer",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "uncertain",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "customer-d1",
+            "page": 1,
+            "quote_sha256": "e1cdf5b2925af7884a09d21de5b52e8b64a0bb5d4ffbca9a6b800416eed29e8e",
+            "source_url": "https://example.org/synthetic/customer-d1.txt"
+          }
+        ],
+        "business_status": "uncertain",
+        "claim_status": "uncertain",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "customer"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "uncertain",
+        "claim_status": "uncertain"
+      },
+      "id": "synthetic-industry",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "uncertain",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "industry-d1",
+            "page": 1,
+            "quote_sha256": "fa1d8c4b09de8332a602a71aabb26f3c0e15365b392f94939bc3f82f2c5916fc",
+            "source_url": "https://example.org/synthetic/industry-d1.txt"
+          }
+        ],
+        "business_status": "uncertain",
+        "claim_status": "uncertain",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "industry"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "uncertain",
+        "claim_status": "uncertain"
+      },
+      "id": "synthetic-registered-scope",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 15,
+            "char_start": 0,
+            "claim_status": "uncertain",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "registered-scope-d1",
+            "page": 1,
+            "quote_sha256": "b3d52721e6daa42aefebec955158f83cf9a977e5127cd00e9822d9c64ee308c8",
+            "source_url": "https://example.org/synthetic/registered-scope-d1.txt"
+          }
+        ],
+        "business_status": "uncertain",
+        "claim_status": "uncertain",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "registered_scope"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "planned_business",
+        "claim_status": "planned"
+      },
+      "id": "synthetic-future-plan",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 15,
+            "char_start": 0,
+            "claim_status": "planned",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "future-plan-d1",
+            "page": 1,
+            "quote_sha256": "2c8dbfa8670e3044f4349722b4fcd36f5d20d99452c09279c15d1849e82243fd",
+            "source_url": "https://example.org/synthetic/future-plan-d1.txt"
+          }
+        ],
+        "business_status": "planned_business",
+        "claim_status": "planned",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "plan"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "planned_business",
+        "claim_status": "planned"
+      },
+      "id": "synthetic-development",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 23,
+            "char_start": 0,
+            "claim_status": "planned",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "development-d1",
+            "page": 1,
+            "quote_sha256": "92c8b0b46338b56b9b5a13be27685ffd726cff81fe859f431b400b7a1f912b6c",
+            "source_url": "https://example.org/synthetic/development-d1.txt"
+          }
+        ],
+        "business_status": "planned_business",
+        "claim_status": "planned",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "development"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "planned_business",
+        "claim_status": "planned"
+      },
+      "id": "synthetic-rd-team",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 13,
+            "char_start": 0,
+            "claim_status": "planned",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "rd-team-d1",
+            "page": 1,
+            "quote_sha256": "26dc9263918ef51b33696c117b7c053548535c92f9b17000252e5ef6a35480be",
+            "source_url": "https://example.org/synthetic/rd-team-d1.txt"
+          }
+        ],
+        "business_status": "planned_business",
+        "claim_status": "planned",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "plan"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "no_match",
+        "claim_status": "negated"
+      },
+      "id": "synthetic-denial",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 12,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "official_release",
+            "document_id": "denial-d1",
+            "page": 1,
+            "quote_sha256": "55e0bfd9dd29abadefcdd10c111c95d2bb71d117e32aabc1da1f3386f88e7f8a",
+            "source_url": "https://example.org/synthetic/denial-d1.txt"
+          }
+        ],
+        "business_status": "no_match",
+        "claim_status": "negated",
+        "discovery_status": "no_matches",
+        "negated_only": [
+          "SYNTHETIC.A"
+        ],
+        "rejected_documents": []
+      },
+      "tags": [
+        "negation"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "no_match",
+        "claim_status": "negated"
+      },
+      "id": "synthetic-cessation",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "official_release",
+            "document_id": "cessation-d1",
+            "page": 1,
+            "quote_sha256": "97c312657cdd257f9dda5e598ba0d1f9c78aa4e092f8617a28122c1c8d967ad6",
+            "source_url": "https://example.org/synthetic/cessation-d1.txt"
+          }
+        ],
+        "business_status": "no_match",
+        "claim_status": "negated",
+        "discovery_status": "no_matches",
+        "negated_only": [
+          "SYNTHETIC.A"
+        ],
+        "rejected_documents": []
+      },
+      "tags": [
+        "cessation"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "synthetic-not-only-cn",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 23,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "not-only-cn-d1",
+            "page": 1,
+            "quote_sha256": "0a2554e897f10a9a8d5793737641e5ddf7f972fefde6d93ee862af4d6be36781",
+            "source_url": "https://example.org/synthetic/not-only-cn-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "negation_scope"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "upstream_or_downstream"
+      },
+      "id": "synthetic-chain-cn",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 17,
+            "char_start": 0,
+            "claim_status": "upstream_or_downstream",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "chain-cn-d1",
+            "page": 1,
+            "quote_sha256": "9faa058ba08217b29114a574a6b2d3ad98bfc62a613720f6c4bc5af50f38d19f",
+            "source_url": "https://example.org/synthetic/chain-cn-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "upstream_or_downstream",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "supply_chain"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "upstream_or_downstream"
+      },
+      "id": "synthetic-chain-en",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 41,
+            "char_start": 0,
+            "claim_status": "upstream_or_downstream",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "chain-en-d1",
+            "page": 1,
+            "quote_sha256": "9d15451fe926aa81034122b72d495f19d8517cfa0fd45c7a1972a5db57b5a3b1",
+            "source_url": "https://example.org/synthetic/chain-en-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "upstream_or_downstream",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "supply_chain"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "no_match",
+        "claim_status": "negated"
+      },
+      "id": "synthetic-model-denial",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "model-denial-d1",
+            "page": 1,
+            "quote_sha256": "24e7772944fab9eed2de747f7283276c4292a1c034aef7aee84807583339a067",
+            "source_url": "https://example.org/synthetic/model-denial-d1.txt"
+          }
+        ],
+        "business_status": "no_match",
+        "claim_status": "negated",
+        "discovery_status": "no_matches",
+        "negated_only": [
+          "SYNTHETIC.A"
+        ],
+        "rejected_documents": []
+      },
+      "tags": [
+        "model_specific_denial"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "no_match",
+        "claim_status": "not_retrieved"
+      },
+      "id": "synthetic-model-mismatch",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [],
+        "business_status": "no_match",
+        "claim_status": "not_retrieved",
+        "discovery_status": "no_matches",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "model_qualifier"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "synthetic-model-match",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 15,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "model-match-d1",
+            "page": 1,
+            "quote_sha256": "2839584f0e8079c0bd57f17c27f566fea8f344c69a67d6dd5e08b1c96fc9b8ee",
+            "source_url": "https://example.org/synthetic/model-match-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "model_qualifier"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "synthetic-line-wrap",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 17,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "line-wrap-d1",
+            "page": 1,
+            "quote_sha256": "58500876e9430c7d8bdef1e83f61351ae69bb4b3f4a04e0a78d81d965dfecad8",
+            "source_url": "https://example.org/synthetic/line-wrap-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "original_offsets"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "synthetic-not-only-en",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 67,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "not-only-en-d1",
+            "page": 1,
+            "quote_sha256": "14c28dcabbf122cbd5549f62d25e86067fe698ca00984edb23ac4261d910da78",
+            "source_url": "https://example.org/synthetic/not-only-en-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "negation_scope"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "current_business",
+        "claim_status": "direct_business"
+      },
+      "id": "synthetic-other-product-denial",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 18,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "other-product-denial-d1",
+            "page": 1,
+            "quote_sha256": "8a44701c868204205ddc1d9d011d1546b8dad7b7e196ac54d736283c5d0a9efb",
+            "source_url": "https://example.org/synthetic/other-product-denial-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "negation_scope"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "no_match",
+        "claim_status": "not_retrieved"
+      },
+      "id": "synthetic-separate-window-model",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [],
+        "business_status": "no_match",
+        "claim_status": "not_retrieved",
+        "discovery_status": "no_matches",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "model_qualifier"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "no_match",
+        "claim_status": "not_retrieved"
+      },
+      "id": "synthetic-unrelated",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [],
+        "business_status": "no_match",
+        "claim_status": "not_retrieved",
+        "discovery_status": "no_matches",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "unrelated"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true,
+        "claim_status": true
+      },
+      "expected": {
+        "business_status": "no_match",
+        "claim_status": "not_retrieved"
+      },
+      "id": "synthetic-future-assertion",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [],
+        "business_status": "no_match",
+        "claim_status": "not_retrieved",
+        "discovery_status": "no_eligible_documents",
+        "negated_only": [],
+        "rejected_documents": [
+          {
+            "document_id": "future-assertion-d1",
+            "index": 0,
+            "reason": "available_after_as_of"
+          }
+        ]
+      },
+      "tags": [
+        "future_isolation"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "historical_or_disputed"
+      },
+      "id": "synthetic-newer-exit",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 16,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "newer-exit-d1",
+            "page": 1,
+            "quote_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+            "source_url": "https://example.org/synthetic/newer-exit-d1.txt"
+          },
+          {
+            "available_at": "2025-06-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "official_release",
+            "document_id": "newer-exit-d2",
+            "page": 1,
+            "quote_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+            "source_url": "https://example.org/synthetic/newer-exit-d2.txt"
+          }
+        ],
+        "business_status": "historical_or_disputed",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "date_conflict",
+        "cessation"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "historical_or_disputed"
+      },
+      "id": "synthetic-same-day-conflict",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-06-01",
+            "char_end": 16,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "same-day-conflict-d1",
+            "page": 1,
+            "quote_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+            "source_url": "https://example.org/synthetic/same-day-conflict-d1.txt"
+          },
+          {
+            "available_at": "2025-06-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "official_release",
+            "document_id": "same-day-conflict-d2",
+            "page": 1,
+            "quote_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+            "source_url": "https://example.org/synthetic/same-day-conflict-d2.txt"
+          }
+        ],
+        "business_status": "historical_or_disputed",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "date_conflict"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "current_business"
+      },
+      "id": "synthetic-later-reopening",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "official_release",
+            "document_id": "later-reopening-d1",
+            "page": 1,
+            "quote_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+            "source_url": "https://example.org/synthetic/later-reopening-d1.txt"
+          },
+          {
+            "available_at": "2025-06-01",
+            "char_end": 16,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "later-reopening-d2",
+            "page": 1,
+            "quote_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+            "source_url": "https://example.org/synthetic/later-reopening-d2.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "date_conflict",
+        "reopening"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "historical_or_disputed"
+      },
+      "id": "synthetic-observation-denial",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 16,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "observation-denial-d1",
+            "page": 1,
+            "quote_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+            "source_url": "https://example.org/synthetic/observation-denial-d1.txt"
+          },
+          {
+            "available_at": "2025-06-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "observed_at",
+            "document_id": "observation-denial-d2",
+            "page": 1,
+            "quote_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+            "source_url": "https://example.org/synthetic/observation-denial-d2.txt"
+          }
+        ],
+        "business_status": "historical_or_disputed",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "date_basis",
+        "date_conflict"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "historical_or_disputed"
+      },
+      "id": "synthetic-observation-support",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "official_release",
+            "document_id": "observation-support-d1",
+            "page": 1,
+            "quote_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+            "source_url": "https://example.org/synthetic/observation-support-d1.txt"
+          },
+          {
+            "available_at": "2025-06-01",
+            "char_end": 16,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "observed_at",
+            "document_id": "observation-support-d2",
+            "page": 1,
+            "quote_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+            "source_url": "https://example.org/synthetic/observation-support-d2.txt"
+          }
+        ],
+        "business_status": "historical_or_disputed",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "date_basis",
+        "date_conflict"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "current_business"
+      },
+      "id": "synthetic-future-exit",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 16,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "future-exit-d1",
+            "page": 1,
+            "quote_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+            "source_url": "https://example.org/synthetic/future-exit-d1.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": [
+          {
+            "document_id": "future-exit-d2",
+            "index": 1,
+            "reason": "available_after_as_of"
+          }
+        ]
+      },
+      "tags": [
+        "future_isolation",
+        "cessation"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "no_match"
+      },
+      "id": "synthetic-future-reopening",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "official_release",
+            "document_id": "future-reopening-d1",
+            "page": 1,
+            "quote_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+            "source_url": "https://example.org/synthetic/future-reopening-d1.txt"
+          }
+        ],
+        "business_status": "no_match",
+        "claim_status": "negated",
+        "discovery_status": "no_matches",
+        "negated_only": [
+          "SYNTHETIC.A"
+        ],
+        "rejected_documents": [
+          {
+            "document_id": "future-reopening-d2",
+            "index": 1,
+            "reason": "available_after_as_of"
+          }
+        ]
+      },
+      "tags": [
+        "future_isolation",
+        "reopening"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "current_business"
+      },
+      "id": "synthetic-subtype-denial",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 16,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "subtype-denial-d1",
+            "page": 1,
+            "quote_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+            "source_url": "https://example.org/synthetic/subtype-denial-d1.txt"
+          },
+          {
+            "available_at": "2025-06-01",
+            "char_end": 12,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "subtype-denial-d2",
+            "page": 1,
+            "quote_sha256": "596a40dea24ec6d78bf7dd2698252b956ecd38493ec9e013efc541097716141e",
+            "source_url": "https://example.org/synthetic/subtype-denial-d2.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "model_specific_denial",
+        "negation_scope"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "current_business"
+      },
+      "id": "synthetic-reissued-support",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-03-01",
+            "char_end": 16,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "reissued-support-d1",
+            "page": 1,
+            "quote_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+            "source_url": "https://example.org/synthetic/reissued-support-d1.txt"
+          },
+          {
+            "available_at": "2025-06-01",
+            "char_end": 16,
+            "char_start": 0,
+            "claim_status": "direct_business",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "reissued-support-d3",
+            "page": 1,
+            "quote_sha256": "e9eb5b870fc1d330eb49836e0f96c5e23ebad0c36d6c3f191c031d753d437e26",
+            "source_url": "https://example.org/synthetic/reissued-support-d3.txt"
+          },
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "official_release",
+            "document_id": "reissued-support-d2",
+            "page": 1,
+            "quote_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+            "source_url": "https://example.org/synthetic/reissued-support-d2.txt"
+          }
+        ],
+        "business_status": "current_business",
+        "claim_status": "direct_business",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "deduplication",
+        "date_conflict"
+      ]
+    },
+    {
+      "correct": {
+        "business_status": true
+      },
+      "expected": {
+        "business_status": "planned_business"
+      },
+      "id": "synthetic-plan-after-exit",
+      "kind": "synthetic_adversarial",
+      "predicted": {
+        "assertions": [
+          {
+            "available_at": "2025-04-01",
+            "char_end": 14,
+            "char_start": 0,
+            "claim_status": "negated",
+            "company_level_denial": true,
+            "date_basis": "official_release",
+            "document_id": "plan-after-exit-d1",
+            "page": 1,
+            "quote_sha256": "3dd37e1dd0305f0defbd3e85d97a914372ca60e8a7db9e2f24a8af852c48517e",
+            "source_url": "https://example.org/synthetic/plan-after-exit-d1.txt"
+          },
+          {
+            "available_at": "2025-06-01",
+            "char_end": 15,
+            "char_start": 0,
+            "claim_status": "planned",
+            "company_level_denial": false,
+            "date_basis": "official_release",
+            "document_id": "plan-after-exit-d2",
+            "page": 1,
+            "quote_sha256": "7feddbd4f065800ea9a366f4b401609e0265d897674d6b55c6ca59d090ffc020",
+            "source_url": "https://example.org/synthetic/plan-after-exit-d2.txt"
+          }
+        ],
+        "business_status": "planned_business",
+        "claim_status": "planned",
+        "discovery_status": "completed",
+        "negated_only": [],
+        "rejected_documents": []
+      },
+      "tags": [
+        "date_conflict",
+        "plan"
+      ]
+    }
+  ],
+  "classifier": "existing_theme_search_rules_no_training",
+  "code_sha256": {
+    "theme_search.py": "2a0006308a5e0d15de30f595c1f2b5521ee70352d74cb6b93018c0e39955905f",
+    "validation/business_claim_eval.py": "bd2d24169184f280b93128c1320d9db339e423f32f7bf60756253f2348634de5"
+  },
+  "dataset_id": "chenxi-business-claims-development-v1",
+  "dataset_sha256": "781bd2065e799be5eea421feef098d9c3e2ecd8a6326d3176199d5dd764dc6cb",
+  "held_out": false,
+  "independently_annotated": false,
+  "limitations": [
+    "Public labels concern the selected excerpt and supplied context, not complete current company operations.",
+    "Labels were curated during development and have not received independent double annotation.",
+    "Synthetic adversarial cases are invented text and never count as real-market accuracy.",
+    "The two data kinds deliberately have no combined accuracy or F1.",
+    "Unevaluated classes and zero-support classes are reported explicitly; this is not a held-out performance estimate.",
+    "Temporal company cases and single-source assertion cases are separate tasks; one company can have conflicting assertions.",
+    "No model is trained, no dataset is sampled randomly, and no acceptance threshold is implied by status=evaluated."
+  ],
+  "metrics_by_data_kind": {
+    "public_excerpt": {
+      "business_status": {
+        "accuracy": 0.777778,
+        "cases": 9,
+        "classes_without_reference_examples": [
+          "historical_or_disputed",
+          "uncertain",
+          "no_match"
+        ],
+        "confusion_matrix": {
+          "current_business": {
+            "current_business": 5,
+            "historical_or_disputed": 0,
+            "no_match": 0,
+            "planned_business": 0,
+            "uncertain": 2
+          },
+          "historical_or_disputed": {
+            "current_business": 0,
+            "historical_or_disputed": 0,
+            "no_match": 0,
+            "planned_business": 0,
+            "uncertain": 0
+          },
+          "no_match": {
+            "current_business": 0,
+            "historical_or_disputed": 0,
+            "no_match": 0,
+            "planned_business": 0,
+            "uncertain": 0
+          },
+          "planned_business": {
+            "current_business": 0,
+            "historical_or_disputed": 0,
+            "no_match": 0,
+            "planned_business": 2,
+            "uncertain": 0
+          },
+          "uncertain": {
+            "current_business": 0,
+            "historical_or_disputed": 0,
+            "no_match": 0,
+            "planned_business": 0,
+            "uncertain": 0
+          }
+        },
+        "confusion_orientation": "rows=expected, columns=predicted",
+        "correct": 7,
+        "macro_classes": [
+          "current_business",
+          "planned_business",
+          "uncertain"
+        ],
+        "macro_definition": "Unweighted mean over labels present in truth or predictions; no-retrieval/no-match errors remain in the confusion matrix.",
+        "macro_f1": 0.611111,
+        "per_class": {
+          "current_business": {
+            "f1": 0.833333,
+            "precision": 1.0,
+            "predicted_count": 5,
+            "recall": 0.714286,
+            "support": 7
+          },
+          "historical_or_disputed": {
+            "f1": null,
+            "precision": null,
+            "predicted_count": 0,
+            "recall": null,
+            "support": 0
+          },
+          "no_match": {
+            "f1": null,
+            "precision": null,
+            "predicted_count": 0,
+            "recall": null,
+            "support": 0
+          },
+          "planned_business": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 2,
+            "recall": 1.0,
+            "support": 2
+          },
+          "uncertain": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "predicted_count": 2,
+            "recall": null,
+            "support": 0
+          }
+        }
+      },
+      "cases": 9,
+      "claim_status": {
+        "accuracy": 0.777778,
+        "cases": 9,
+        "classes_without_reference_examples": [
+          "upstream_or_downstream",
+          "negated",
+          "uncertain",
+          "not_retrieved"
+        ],
+        "confusion_matrix": {
+          "direct_business": {
+            "direct_business": 5,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 0,
+            "uncertain": 2,
+            "upstream_or_downstream": 0
+          },
+          "negated": {
+            "direct_business": 0,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 0,
+            "uncertain": 0,
+            "upstream_or_downstream": 0
+          },
+          "not_retrieved": {
+            "direct_business": 0,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 0,
+            "uncertain": 0,
+            "upstream_or_downstream": 0
+          },
+          "planned": {
+            "direct_business": 0,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 2,
+            "uncertain": 0,
+            "upstream_or_downstream": 0
+          },
+          "uncertain": {
+            "direct_business": 0,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 0,
+            "uncertain": 0,
+            "upstream_or_downstream": 0
+          },
+          "upstream_or_downstream": {
+            "direct_business": 0,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 0,
+            "uncertain": 0,
+            "upstream_or_downstream": 0
+          }
+        },
+        "confusion_orientation": "rows=expected, columns=predicted",
+        "correct": 7,
+        "macro_classes": [
+          "direct_business",
+          "planned",
+          "uncertain"
+        ],
+        "macro_definition": "Unweighted mean over labels present in truth or predictions; no-retrieval/no-match errors remain in the confusion matrix.",
+        "macro_f1": 0.611111,
+        "per_class": {
+          "direct_business": {
+            "f1": 0.833333,
+            "precision": 1.0,
+            "predicted_count": 5,
+            "recall": 0.714286,
+            "support": 7
+          },
+          "negated": {
+            "f1": null,
+            "precision": null,
+            "predicted_count": 0,
+            "recall": null,
+            "support": 0
+          },
+          "not_retrieved": {
+            "f1": null,
+            "precision": null,
+            "predicted_count": 0,
+            "recall": null,
+            "support": 0
+          },
+          "planned": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 2,
+            "recall": 1.0,
+            "support": 2
+          },
+          "uncertain": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "predicted_count": 2,
+            "recall": null,
+            "support": 0
+          },
+          "upstream_or_downstream": {
+            "f1": null,
+            "precision": null,
+            "predicted_count": 0,
+            "recall": null,
+            "support": 0
+          }
+        }
+      },
+      "tags": {
+        "development": 2,
+        "issuer_business": 7,
+        "public_source": 9
+      }
+    },
+    "synthetic_adversarial": {
+      "business_status": {
+        "accuracy": 1.0,
+        "cases": 36,
+        "classes_without_reference_examples": [],
+        "confusion_matrix": {
+          "current_business": {
+            "current_business": 15,
+            "historical_or_disputed": 0,
+            "no_match": 0,
+            "planned_business": 0,
+            "uncertain": 0
+          },
+          "historical_or_disputed": {
+            "current_business": 0,
+            "historical_or_disputed": 4,
+            "no_match": 0,
+            "planned_business": 0,
+            "uncertain": 0
+          },
+          "no_match": {
+            "current_business": 0,
+            "historical_or_disputed": 0,
+            "no_match": 8,
+            "planned_business": 0,
+            "uncertain": 0
+          },
+          "planned_business": {
+            "current_business": 0,
+            "historical_or_disputed": 0,
+            "no_match": 0,
+            "planned_business": 4,
+            "uncertain": 0
+          },
+          "uncertain": {
+            "current_business": 0,
+            "historical_or_disputed": 0,
+            "no_match": 0,
+            "planned_business": 0,
+            "uncertain": 5
+          }
+        },
+        "confusion_orientation": "rows=expected, columns=predicted",
+        "correct": 36,
+        "macro_classes": [
+          "current_business",
+          "planned_business",
+          "historical_or_disputed",
+          "uncertain",
+          "no_match"
+        ],
+        "macro_definition": "Unweighted mean over labels present in truth or predictions; no-retrieval/no-match errors remain in the confusion matrix.",
+        "macro_f1": 1.0,
+        "per_class": {
+          "current_business": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 15,
+            "recall": 1.0,
+            "support": 15
+          },
+          "historical_or_disputed": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 4,
+            "recall": 1.0,
+            "support": 4
+          },
+          "no_match": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 8,
+            "recall": 1.0,
+            "support": 8
+          },
+          "planned_business": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 4,
+            "recall": 1.0,
+            "support": 4
+          },
+          "uncertain": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 5,
+            "recall": 1.0,
+            "support": 5
+          }
+        }
+      },
+      "cases": 36,
+      "claim_status": {
+        "accuracy": 1.0,
+        "cases": 26,
+        "classes_without_reference_examples": [],
+        "confusion_matrix": {
+          "direct_business": {
+            "direct_business": 9,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 0,
+            "uncertain": 0,
+            "upstream_or_downstream": 0
+          },
+          "negated": {
+            "direct_business": 0,
+            "negated": 3,
+            "not_retrieved": 0,
+            "planned": 0,
+            "uncertain": 0,
+            "upstream_or_downstream": 0
+          },
+          "not_retrieved": {
+            "direct_business": 0,
+            "negated": 0,
+            "not_retrieved": 4,
+            "planned": 0,
+            "uncertain": 0,
+            "upstream_or_downstream": 0
+          },
+          "planned": {
+            "direct_business": 0,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 3,
+            "uncertain": 0,
+            "upstream_or_downstream": 0
+          },
+          "uncertain": {
+            "direct_business": 0,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 0,
+            "uncertain": 5,
+            "upstream_or_downstream": 0
+          },
+          "upstream_or_downstream": {
+            "direct_business": 0,
+            "negated": 0,
+            "not_retrieved": 0,
+            "planned": 0,
+            "uncertain": 0,
+            "upstream_or_downstream": 2
+          }
+        },
+        "confusion_orientation": "rows=expected, columns=predicted",
+        "correct": 26,
+        "macro_classes": [
+          "direct_business",
+          "upstream_or_downstream",
+          "planned",
+          "negated",
+          "uncertain",
+          "not_retrieved"
+        ],
+        "macro_definition": "Unweighted mean over labels present in truth or predictions; no-retrieval/no-match errors remain in the confusion matrix.",
+        "macro_f1": 1.0,
+        "per_class": {
+          "direct_business": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 9,
+            "recall": 1.0,
+            "support": 9
+          },
+          "negated": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 3,
+            "recall": 1.0,
+            "support": 3
+          },
+          "not_retrieved": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 4,
+            "recall": 1.0,
+            "support": 4
+          },
+          "planned": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 3,
+            "recall": 1.0,
+            "support": 3
+          },
+          "uncertain": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 5,
+            "recall": 1.0,
+            "support": 5
+          },
+          "upstream_or_downstream": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "predicted_count": 2,
+            "recall": 1.0,
+            "support": 2
+          }
+        }
+      },
+      "tags": {
+        "cessation": 3,
+        "customer": 1,
+        "date_basis": 2,
+        "date_conflict": 7,
+        "deduplication": 1,
+        "development": 1,
+        "future_isolation": 3,
+        "industry": 1,
+        "model_qualifier": 3,
+        "model_specific_denial": 2,
+        "named_issuer": 1,
+        "negation": 1,
+        "negation_scope": 4,
+        "original_offsets": 1,
+        "plan": 3,
+        "registered_scope": 1,
+        "reopening": 2,
+        "self": 2,
+        "supply_chain": 2,
+        "third_party": 2,
+        "traditional_chinese": 1,
+        "unrelated": 1
+      }
+    }
+  },
+  "misclassified_case_ids": [
+    "public-ubtech",
+    "public-lenovo"
+  ],
+  "production_approved": false,
+  "schema_version": 1,
+  "status": "evaluated"
+}

@@ -154,7 +154,7 @@ def search_check():
 
 def code_hashes():
     paths = sorted([p for p in ROOT.glob('*.py') if p.name != 'package_delivery.py']
-                   + list((ROOT/'tests').glob('*.py')) + list((ROOT/'validation').glob('enterprise*.py')))
+                   + list((ROOT/'tests').glob('*.py')) + list((ROOT/'validation').glob('*.py')))
     return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
 
 

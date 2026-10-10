@@ -1,0 +1,3 @@
+# Audit manifests and frozen labels hash exact bytes. Preserve stored line endings
+# on Windows and Linux rather than rewriting their contents during checkout.
+* -text
