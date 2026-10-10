@@ -1,0 +1,1663 @@
+{
+  "validation_date": "2026-10-10",
+  "historical_cutoff": "2025-06-30",
+  "status": "source_checks_passed_with_scope_limitations",
+  "facts_sha256": "8e941ae774bdd4c9868353783db9a33f41f96ca2b3bf7253c2a685c2f279beda",
+  "script_sha256": "66b64f336ec0ca5fb1236de26b5156eb25ae86b39b05c5cf8b3e5e8a90851e2d",
+  "summary": {
+    "sources": 4,
+    "companies": 2,
+    "company_years": 6,
+    "monetary_source_facts": 113,
+    "pdf_facts_checked": 113,
+    "dataset_comparisons": 54,
+    "dataset_matches": 54,
+    "restatement_fields": 8,
+    "cash_reconciliations": 3,
+    "sources_after_cutoff": 0,
+    "candidate_approvals": 0
+  },
+  "source_documents": [
+    {
+      "source_id": "moutai_2024",
+      "sha256": "5299f4940e2ce4e91084b73dc457d558b9d335fa76fbfee6227e4254eb7f4a30",
+      "pdf_hash_match": true,
+      "stated_publication_before_cutoff": true,
+      "contemporaneous_archive_capture_verified": false
+    },
+    {
+      "source_id": "moutai_2023",
+      "sha256": "2125ff97a452ea79b0d784e2432f7d224b6aecc330b644b593477d69e22f4ed1",
+      "pdf_hash_match": true,
+      "stated_publication_before_cutoff": true,
+      "contemporaneous_archive_capture_verified": false
+    },
+    {
+      "source_id": "wuliangye_2024",
+      "sha256": "b737191a758994a35e9442d46847de771fe48b758feb9a7f35601def922435e7",
+      "pdf_hash_match": true,
+      "stated_publication_before_cutoff": true,
+      "contemporaneous_archive_capture_verified": false
+    },
+    {
+      "source_id": "wuliangye_2023",
+      "sha256": "1aab0efbe751c145990ac9652c3aff165452ee060bf22a0fe0412996a55e8566",
+      "pdf_hash_match": true,
+      "stated_publication_before_cutoff": true,
+      "contemporaneous_archive_capture_verified": false
+    }
+  ],
+  "source_fact_checks": [
+    {
+      "id": "600519.SH:2022:revenue",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:net_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:core_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:operating_cash_flow",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:total_assets",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:equity_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2023:revenue",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2023:net_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2023:core_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2023:operating_cash_flow",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2023:total_assets",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2023:equity_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:revenue",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:net_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:core_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:operating_cash_flow",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:total_assets",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:equity_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:revenue",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:net_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:core_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:operating_cash_flow",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:total_assets",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:equity_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:revenue",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:net_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:core_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:operating_cash_flow",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:total_assets",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:equity_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:revenue",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:net_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:core_income_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:operating_cash_flow",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:total_assets",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:equity_parent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:cash",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2023:cash",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:cash",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:monetary_funds",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2023:monetary_funds",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:monetary_funds",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:lease_current",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2023:lease_current",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:lease_current",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:lease_noncurrent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2023:lease_noncurrent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:lease_noncurrent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:gross_interest_expense_finance_cost",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2023:gross_interest_expense_finance_cost",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2024:gross_interest_expense_finance_cost",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2022:financial_subsidiary_interest_cost",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2023:financial_subsidiary_interest_cost",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2024:financial_subsidiary_interest_cost",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2022:financial_subsidiary_customer_deposits",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2023:financial_subsidiary_customer_deposits",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2024:financial_subsidiary_customer_deposits",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2022:restricted_statutory_reserve",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2023:restricted_statutory_reserve",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:restricted_statutory_reserve",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:restricted_interbank_deposits",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2023:restricted_interbank_deposits",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2024:restricted_interbank_deposits",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:cogs",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2023:cogs",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2024:cogs",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2022:net_income",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2023:net_income",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2024:net_income",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2022:profit_before_tax",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2023:profit_before_tax",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2024:profit_before_tax",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2022:cash",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2023:cash",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:cash",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:monetary_funds",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:monetary_funds",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:monetary_funds",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:lease_current",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:lease_current",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:lease_current",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:lease_noncurrent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:lease_noncurrent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:lease_noncurrent",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:gross_interest_expense_finance_cost",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:gross_interest_expense_finance_cost",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2024:gross_interest_expense_finance_cost",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2022:restricted_monetary_funds",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2023:restricted_monetary_funds",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:restricted_monetary_funds",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:accrued_deposit_interest_excluded_from_cash",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2023:accrued_deposit_interest_excluded_from_cash",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:accrued_deposit_interest_excluded_from_cash",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:deposit_with_group_finance_company",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:deposit_with_group_finance_company",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2024:deposit_with_group_finance_company",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:cogs",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:cogs",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2024:cogs",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2022:net_income",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:net_income",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2024:net_income",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2022:profit_before_tax",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2023:profit_before_tax",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "000858.SZ:2024:profit_before_tax",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2025-04-26",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": false
+    },
+    {
+      "id": "600519.SH:2022:net_income_parent_before_2023_restatement",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:core_income_parent_before_2023_restatement",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:total_assets_before_2023_restatement",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "600519.SH:2022:equity_parent_before_2023_restatement",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-03",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:net_income_parent_before_2023_restatement",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:core_income_parent_before_2023_restatement",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:total_assets_before_2023_restatement",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    },
+    {
+      "id": "000858.SZ:2022:equity_parent_before_2023_restatement",
+      "pdf_amount_found": true,
+      "pdf_label_found": true,
+      "available_from_dated_source": "2024-04-29",
+      "source_eligible_at_cutoff": true,
+      "selected_page_visually_reviewed": true
+    }
+  ],
+  "dataset_comparisons": [
+    {
+      "id": "600519.SH:2022:revenue",
+      "dataset_field": "revenue",
+      "source_value": "124099843771.99",
+      "dataset_value": 124099843771.99,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2022:net_income_parent",
+      "dataset_field": "net_income_parent",
+      "source_value": "62717467870.12",
+      "dataset_value": 62717467870.12,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2022:core_income_parent",
+      "dataset_field": "core_income_parent",
+      "source_value": "62792896829.57",
+      "dataset_value": 62792896829.57,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2022:operating_cash_flow",
+      "dataset_field": "operating_cash_flow",
+      "source_value": "36698595830.03",
+      "dataset_value": 36698595830.03,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2022:total_assets",
+      "dataset_field": "total_assets",
+      "source_value": "254500826096.02",
+      "dataset_value": 254500826096.02,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2022:equity_parent",
+      "dataset_field": "equity_parent",
+      "source_value": "197480041239.46",
+      "dataset_value": 197480041239.46,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2023:revenue",
+      "dataset_field": "revenue",
+      "source_value": "147693604994.14",
+      "dataset_value": 147693604994.14,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2023:net_income_parent",
+      "dataset_field": "net_income_parent",
+      "source_value": "74734071550.75",
+      "dataset_value": 74734071550.75,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2023:core_income_parent",
+      "dataset_field": "core_income_parent",
+      "source_value": "74752564425.52",
+      "dataset_value": 74752564425.52,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2023:operating_cash_flow",
+      "dataset_field": "operating_cash_flow",
+      "source_value": "66593247721.09",
+      "dataset_value": 66593247721.09,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2023:total_assets",
+      "dataset_field": "total_assets",
+      "source_value": "272699660092.25",
+      "dataset_value": 272699660092.25,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2023:equity_parent",
+      "dataset_field": "equity_parent",
+      "source_value": "215668571607.43",
+      "dataset_value": 215668571607.43,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2024:revenue",
+      "dataset_field": "revenue",
+      "source_value": "170899152276.34",
+      "dataset_value": 170899152276.34,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2024:net_income_parent",
+      "dataset_field": "net_income_parent",
+      "source_value": "86228146421.62",
+      "dataset_value": 86228146421.62,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2024:core_income_parent",
+      "dataset_field": "core_income_parent",
+      "source_value": "86240905977.42",
+      "dataset_value": 86240905977.42,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2024:operating_cash_flow",
+      "dataset_field": "operating_cash_flow",
+      "source_value": "92463692168.43",
+      "dataset_value": 92463692168.43,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2024:total_assets",
+      "dataset_field": "total_assets",
+      "source_value": "298944579918.70",
+      "dataset_value": 298944579918.7,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2024:equity_parent",
+      "dataset_field": "equity_parent",
+      "source_value": "233105984399.47",
+      "dataset_value": 233105984399.47,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2022:revenue",
+      "dataset_field": "revenue",
+      "source_value": "73968640704.54",
+      "dataset_value": 73968640704.54,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2022:net_income_parent",
+      "dataset_field": "net_income_parent",
+      "source_value": "26689983647.20",
+      "dataset_value": 26689983647.2,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2022:core_income_parent",
+      "dataset_field": "core_income_parent",
+      "source_value": "26662058958.76",
+      "dataset_value": 26662058958.76,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2022:operating_cash_flow",
+      "dataset_field": "operating_cash_flow",
+      "source_value": "24431136261.48",
+      "dataset_value": 24431136261.48,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2022:total_assets",
+      "dataset_field": "total_assets",
+      "source_value": "152811927251.18",
+      "dataset_value": 152811927251.18,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2022:equity_parent",
+      "dataset_field": "equity_parent",
+      "source_value": "114027897212.18",
+      "dataset_value": 114027897212.18,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2023:revenue",
+      "dataset_field": "revenue",
+      "source_value": "83272067317.19",
+      "dataset_value": 83272067317.19,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2023:net_income_parent",
+      "dataset_field": "net_income_parent",
+      "source_value": "30210585269.30",
+      "dataset_value": 30210585269.3,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2023:core_income_parent",
+      "dataset_field": "core_income_parent",
+      "source_value": "30116468910.79",
+      "dataset_value": 30116468910.79,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2023:operating_cash_flow",
+      "dataset_field": "operating_cash_flow",
+      "source_value": "41742479908.23",
+      "dataset_value": 41742479908.23,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2023:total_assets",
+      "dataset_field": "total_assets",
+      "source_value": "165432981684.75",
+      "dataset_value": 165432981684.75,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2023:equity_parent",
+      "dataset_field": "equity_parent",
+      "source_value": "129558241040.51",
+      "dataset_value": 129558241040.51,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2024:revenue",
+      "dataset_field": "revenue",
+      "source_value": "89175178322.70",
+      "dataset_value": 89175178322.7,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2024:net_income_parent",
+      "dataset_field": "net_income_parent",
+      "source_value": "31853172533.98",
+      "dataset_value": 31853172533.98,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2024:core_income_parent",
+      "dataset_field": "core_income_parent",
+      "source_value": "31741959276.27",
+      "dataset_value": 31741959276.27,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2024:operating_cash_flow",
+      "dataset_field": "operating_cash_flow",
+      "source_value": "33939755192.78",
+      "dataset_value": 33939755192.78,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2024:total_assets",
+      "dataset_field": "total_assets",
+      "source_value": "188252218704.17",
+      "dataset_value": 188252218704.17,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2024:equity_parent",
+      "dataset_field": "equity_parent",
+      "source_value": "133285282015.97",
+      "dataset_value": 133285282015.97,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2022:cash",
+      "dataset_field": "cash",
+      "source_value": "152378738982.83",
+      "dataset_value": 152378738982.83,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2023:cash",
+      "dataset_field": "cash",
+      "source_value": "150360188952.47",
+      "dataset_value": 150360188952.47,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2024:cash",
+      "dataset_field": "cash",
+      "source_value": "169970089257.83",
+      "dataset_value": 169970089257.83,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2022:cogs",
+      "dataset_field": "cogs",
+      "source_value": "10093468616.63",
+      "dataset_value": 10093468616.63,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2023:cogs",
+      "dataset_field": "cogs",
+      "source_value": "11867273851.78",
+      "dataset_value": 11867273851.78,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2024:cogs",
+      "dataset_field": "cogs",
+      "source_value": "13789482367.98",
+      "dataset_value": 13789482367.98,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2022:net_income",
+      "dataset_field": "net_income",
+      "source_value": "65376039957.88",
+      "dataset_value": 65376039957.88,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2023:net_income",
+      "dataset_field": "net_income",
+      "source_value": "77521476277.80",
+      "dataset_value": 77521476277.8,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "600519.SH:2024:net_income",
+      "dataset_field": "net_income",
+      "source_value": "89334728025.90",
+      "dataset_value": 89334728025.9,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2022:cash",
+      "dataset_field": "cash",
+      "source_value": "90584643897.66",
+      "dataset_value": 90584643897.66,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2023:cash",
+      "dataset_field": "cash",
+      "source_value": "113095684224.30",
+      "dataset_value": 113095684224.3,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2024:cash",
+      "dataset_field": "cash",
+      "source_value": "124771274417.68",
+      "dataset_value": 124771274417.68,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2022:cogs",
+      "dataset_field": "cogs",
+      "source_value": "18178425659.64",
+      "dataset_value": 18178425659.64,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2023:cogs",
+      "dataset_field": "cogs",
+      "source_value": "20157143952.21",
+      "dataset_value": 20157143952.21,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2024:cogs",
+      "dataset_field": "cogs",
+      "source_value": "20461423083.74",
+      "dataset_value": 20461423083.74,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2022:net_income",
+      "dataset_field": "net_income",
+      "source_value": "27969785575.27",
+      "dataset_value": 27969785575.27,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2023:net_income",
+      "dataset_field": "net_income",
+      "source_value": "31520777582.15",
+      "dataset_value": 31520777582.15,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    },
+    {
+      "id": "000858.SZ:2024:net_income",
+      "dataset_field": "net_income",
+      "source_value": "33193460484.32",
+      "dataset_value": 33193460484.32,
+      "difference_yuan": "0.00",
+      "match_to_cent": true
+    }
+  ],
+  "derived_reconciliations": [
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2022,
+      "verified_lease_liabilities_including_current": "392658748.50",
+      "lease_calculation": "lease_current + lease_noncurrent",
+      "verified_finance_cost_gross_interest": "48003667.91",
+      "verified_cash_and_cash_equivalents": "90584643897.66",
+      "total_debt": null,
+      "net_debt": null,
+      "interest_coverage": null,
+      "candidate_approval": false,
+      "cash_reconciliation": "monetary_funds - restricted_monetary_funds - accrued_deposit_interest_excluded_from_cash",
+      "reconciled_cash": "90584643897.66",
+      "cash_reconciliation_difference": "0.00",
+      "cash_reconciliation_match": true
+    },
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2023,
+      "verified_lease_liabilities_including_current": "130235057.60",
+      "lease_calculation": "lease_current + lease_noncurrent",
+      "verified_finance_cost_gross_interest": "11618338.87",
+      "verified_cash_and_cash_equivalents": "113095684224.30",
+      "total_debt": null,
+      "net_debt": null,
+      "interest_coverage": null,
+      "candidate_approval": false,
+      "cash_reconciliation": "monetary_funds - restricted_monetary_funds - accrued_deposit_interest_excluded_from_cash",
+      "reconciled_cash": "113095684224.30",
+      "cash_reconciliation_difference": "0.00",
+      "cash_reconciliation_match": true
+    },
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2024,
+      "verified_lease_liabilities_including_current": "802597789.53",
+      "lease_calculation": "lease_current + lease_noncurrent",
+      "verified_finance_cost_gross_interest": "40436892.68",
+      "verified_cash_and_cash_equivalents": "124771274417.68",
+      "total_debt": null,
+      "net_debt": null,
+      "interest_coverage": null,
+      "candidate_approval": false,
+      "cash_reconciliation": "monetary_funds - restricted_monetary_funds - accrued_deposit_interest_excluded_from_cash",
+      "reconciled_cash": "124771274417.68",
+      "cash_reconciliation_difference": "0.00",
+      "cash_reconciliation_match": true
+    },
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2022,
+      "verified_lease_liabilities_including_current": "443799098.07",
+      "lease_calculation": "lease_current + lease_noncurrent",
+      "verified_finance_cost_gross_interest": "12023204.77",
+      "verified_cash_and_cash_equivalents": "152378738982.83",
+      "total_debt": null,
+      "net_debt": null,
+      "interest_coverage": null,
+      "candidate_approval": false,
+      "financial_subsidiary_customer_deposits": "12874043355.42",
+      "financial_subsidiary_interest_cost": "105584206.24",
+      "additional_review": "Separate finance-subsidiary customer funding/cash/CFO from industrial cash. Consolidated interest policy remains unapproved."
+    },
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2023,
+      "verified_lease_liabilities_including_current": "323691113.52",
+      "lease_calculation": "lease_current + lease_noncurrent",
+      "verified_finance_cost_gross_interest": "12624628.35",
+      "verified_cash_and_cash_equivalents": "150360188952.47",
+      "total_debt": null,
+      "net_debt": null,
+      "interest_coverage": null,
+      "candidate_approval": false,
+      "financial_subsidiary_customer_deposits": "12034492909.95",
+      "financial_subsidiary_interest_cost": "113500129.93",
+      "additional_review": "Separate finance-subsidiary customer funding/cash/CFO from industrial cash. Consolidated interest policy remains unapproved."
+    },
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2024,
+      "verified_lease_liabilities_including_current": "425857527.96",
+      "lease_calculation": "lease_current + lease_noncurrent",
+      "verified_finance_cost_gross_interest": "14474584.09",
+      "verified_cash_and_cash_equivalents": "169970089257.83",
+      "total_debt": null,
+      "net_debt": null,
+      "interest_coverage": null,
+      "candidate_approval": false,
+      "financial_subsidiary_customer_deposits": "23102858820.97",
+      "financial_subsidiary_interest_cost": "105127802.03",
+      "additional_review": "Separate finance-subsidiary customer funding/cash/CFO from industrial cash. Consolidated interest policy remains unapproved."
+    }
+  ],
+  "restatements": [
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2022,
+      "field": "net_income_parent",
+      "before": "62716443738.27",
+      "after": "62717467870.12",
+      "delta": "1024131.85",
+      "announced_in_source": "moutai_2023",
+      "reason": "会计政策变更：企业会计准则解释第16号；追溯调整递延所得税。",
+      "usable_from": "2024-04-03"
+    },
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2022,
+      "field": "core_income_parent",
+      "before": "62791872697.72",
+      "after": "62792896829.57",
+      "delta": "1024131.85",
+      "announced_in_source": "moutai_2023",
+      "reason": "会计政策变更：企业会计准则解释第16号；追溯调整递延所得税。",
+      "usable_from": "2024-04-03"
+    },
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2022,
+      "field": "total_assets",
+      "before": "254364804995.25",
+      "after": "254500826096.02",
+      "delta": "136021100.77",
+      "announced_in_source": "moutai_2023",
+      "reason": "会计政策变更：企业会计准则解释第16号；追溯调整递延所得税。",
+      "usable_from": "2024-04-03"
+    },
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2022,
+      "field": "equity_parent",
+      "before": "197506672396.00",
+      "after": "197480041239.46",
+      "delta": "-26631156.54",
+      "announced_in_source": "moutai_2023",
+      "reason": "会计政策变更：企业会计准则解释第16号；追溯调整递延所得税。",
+      "usable_from": "2024-04-03"
+    },
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2022,
+      "field": "net_income_parent",
+      "before": "26690661397.42",
+      "after": "26689983647.20",
+      "delta": "-677750.22",
+      "announced_in_source": "wuliangye_2023",
+      "reason": "会计政策变更：企业会计准则解释第16号；追溯调整递延所得税。",
+      "usable_from": "2024-04-29"
+    },
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2022,
+      "field": "core_income_parent",
+      "before": "26662736708.98",
+      "after": "26662058958.76",
+      "delta": "-677750.22",
+      "announced_in_source": "wuliangye_2023",
+      "reason": "会计政策变更：企业会计准则解释第16号；追溯调整递延所得税。",
+      "usable_from": "2024-04-29"
+    },
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2022,
+      "field": "total_assets",
+      "before": "152714727880.22",
+      "after": "152811927251.18",
+      "delta": "97199370.96",
+      "announced_in_source": "wuliangye_2023",
+      "reason": "会计政策变更：企业会计准则解释第16号；追溯调整递延所得税。",
+      "usable_from": "2024-04-29"
+    },
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2022,
+      "field": "equity_parent",
+      "before": "114025058788.17",
+      "after": "114027897212.18",
+      "delta": "2838424.01",
+      "announced_in_source": "wuliangye_2023",
+      "reason": "会计政策变更：企业会计准则解释第16号；追溯调整递延所得税。",
+      "usable_from": "2024-04-29"
+    }
+  ],
+  "unresolved": [
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2022,
+      "total_debt": null,
+      "long_term_debt": null,
+      "bank_borrowings": null,
+      "reason": "Short/long borrowing and bond rows in consolidated balance sheet are blank, not explicit numeric zero. Lease obligations are verified positive; total interest-bearing debt policy/completeness needs independent sign-off. Moutai also has finance-company customer deposits; do not treat liquor consolidated cash/CFO as ordinary industrial cash.",
+      "source_id": "moutai_2023",
+      "balance_sheet_pages": [
+        59,
+        60
+      ]
+    },
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2023,
+      "total_debt": null,
+      "long_term_debt": null,
+      "bank_borrowings": null,
+      "reason": "Short/long borrowing and bond rows in consolidated balance sheet are blank, not explicit numeric zero. Lease obligations are verified positive; total interest-bearing debt policy/completeness needs independent sign-off. Moutai also has finance-company customer deposits; do not treat liquor consolidated cash/CFO as ordinary industrial cash.",
+      "source_id": "moutai_2024",
+      "balance_sheet_pages": [
+        59,
+        60
+      ]
+    },
+    {
+      "ticker": "600519.SH",
+      "fiscal_year": 2024,
+      "total_debt": null,
+      "long_term_debt": null,
+      "bank_borrowings": null,
+      "reason": "Short/long borrowing and bond rows in consolidated balance sheet are blank, not explicit numeric zero. Lease obligations are verified positive; total interest-bearing debt policy/completeness needs independent sign-off. Moutai also has finance-company customer deposits; do not treat liquor consolidated cash/CFO as ordinary industrial cash.",
+      "source_id": "moutai_2024",
+      "balance_sheet_pages": [
+        59,
+        60
+      ]
+    },
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2022,
+      "total_debt": null,
+      "long_term_debt": null,
+      "bank_borrowings": null,
+      "reason": "Short/long borrowing and bond rows in consolidated balance sheet are blank, not explicit numeric zero. Lease obligations are verified positive; total interest-bearing debt policy/completeness needs independent sign-off. Moutai also has finance-company customer deposits; do not treat liquor consolidated cash/CFO as ordinary industrial cash.",
+      "source_id": "wuliangye_2023",
+      "balance_sheet_pages": [
+        54,
+        55
+      ]
+    },
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2023,
+      "total_debt": null,
+      "long_term_debt": null,
+      "bank_borrowings": null,
+      "reason": "Short/long borrowing and bond rows in consolidated balance sheet are blank, not explicit numeric zero. Lease obligations are verified positive; total interest-bearing debt policy/completeness needs independent sign-off. Moutai also has finance-company customer deposits; do not treat liquor consolidated cash/CFO as ordinary industrial cash.",
+      "source_id": "wuliangye_2024",
+      "balance_sheet_pages": [
+        57,
+        58
+      ]
+    },
+    {
+      "ticker": "000858.SZ",
+      "fiscal_year": 2024,
+      "total_debt": null,
+      "long_term_debt": null,
+      "bank_borrowings": null,
+      "reason": "Short/long borrowing and bond rows in consolidated balance sheet are blank, not explicit numeric zero. Lease obligations are verified positive; total interest-bearing debt policy/completeness needs independent sign-off. Moutai also has finance-company customer deposits; do not treat liquor consolidated cash/CFO as ordinary industrial cash.",
+      "source_id": "wuliangye_2024",
+      "balance_sheet_pages": [
+        57,
+        58
+      ]
+    }
+  ],
+  "limitations": [
+    "Only two selected A-share liquor companies and 2022-2024; no representative multi-industry or delisting sample.",
+    "These dated reports were retrieved later; source publication dates do not constitute a contemporaneous archival-capture audit.",
+    "Text-token verification confirms amount and label on an identified page; selected tables also visually checked. Independent human preparer/reviewer sign-off is still required.",
+    "Gross finance-cost interest is separate from Moutai finance-subsidiary funding interest. No consolidated EBIT/coverage is silently derived without agreeing that policy.",
+    "Cash-equivalent disclosure is not proof that all balances are freely distributable to listed-company shareholders."
+  ],
+  "review_status": "independent_human_preparer_reviewer_signoff_required"
+}

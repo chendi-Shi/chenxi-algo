@@ -87,7 +87,8 @@ class SearchCLITests(unittest.TestCase):
         self.assertNotIn('configuration_search', json.loads(written['results.json']))
 
     def test_search_space_rejects_nonfinite_json_and_nonobjects(self):
-        for text in ('{"min_roe":[NaN]}', '{"min_roe":[1e999]}', '[]'):
+        for text in ('{"min_roe":[NaN]}', '{"min_roe":[1e999]}', '[]',
+                     '{"min_roe":[0.08],"min_roe":[0.16]}'):
             with self.subTest(text=text), mock.patch.object(Path, 'read_text', return_value=text):
                 with self.assertRaises(ValueError):
                     run.load_search_space(Path('unused.json'))

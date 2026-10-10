@@ -110,7 +110,7 @@
         "objective": {
           "target_distance": 1,
           "configuration_distance": 0.15384615384615385,
-          "mean_baseline_score": 90.24925595238095
+          "mean_baseline_score": 89.28571428571429
         },
         "overlap_with_baseline": 0.8,
         "suppressed_candidates": []
@@ -225,7 +225,7 @@
         "objective": {
           "target_distance": 1,
           "configuration_distance": 0.15384615384615385,
-          "mean_baseline_score": 90.24925595238095
+          "mean_baseline_score": 89.28571428571429
         },
         "overlap_with_baseline": 0.8,
         "suppressed_candidates": []
@@ -327,8 +327,8 @@
     "best": null
   },
   "code_sha256": {
-    "engine.py": "55a5cc70766be7c7b08b5f7d2bf6b96c84a4b2000996994aaeec1a13349b78ab",
-    "search.py": "448beecde5583df18223d099aa08f91596d3e6c8960a9399907d085dcb984264"
+    "engine.py": "52292ee2940abd8d8ca4f3c96c6a7aacbdd77b5851c03688a0e336b16e477cec",
+    "search.py": "338852dd3eea882d782350a56ba48786333189225b52f83aa6f8f15827f3098b"
   },
   "note": "Algorithmic search comparison on synthetic data; real incomplete data remains blocked. No investment efficacy test."
 }

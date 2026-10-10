@@ -1,0 +1,3217 @@
+{
+  "schema_version": 1,
+  "validation_date": "2026-10-10",
+  "company": {
+    "ticker": "02331.HK",
+    "name": "Li Ning Company Limited",
+    "financial_currency": "CNY",
+    "market": "HK"
+  },
+  "scope": "Original 2023 and 2024 annual-report evidence for 2022-2024 financial years; one issuer, not market coverage or efficacy validation. New records do not mutate the screening dataset.",
+  "sources": {
+    "lining_2024": {
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "local_path": "raw/lining_2024.pdf",
+      "publication_date": "2025-04-29",
+      "report_year": 2024,
+      "column_years": [
+        2024,
+        2023
+      ],
+      "visually_reviewed_pdf_pages": [
+        21,
+        148,
+        173,
+        174,
+        175,
+        179,
+        230,
+        231,
+        242,
+        248,
+        249
+      ],
+      "sha256": "ca55a1bd0a67ec38b52f0ab92f6b9df587e3e9e0ae15864ddaa788c8b59c1a0d",
+      "publication_date_basis": "Official repository document date; conservative availability for facts transcribed from this document, not the earlier results announcement.",
+      "provenance": "Original issuer annual report on an official disclosure repository; PDF checked locally and public URL verified using web retrieval."
+    },
+    "lining_2023": {
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "local_path": "raw/enterprise_hk_lining_2023.pdf",
+      "publication_date": "2024-04-23",
+      "report_year": 2023,
+      "column_years": [
+        2023,
+        2022
+      ],
+      "visually_reviewed_pdf_pages": [
+        20,
+        138,
+        160,
+        161,
+        162,
+        166,
+        214,
+        215,
+        226
+      ],
+      "sha256": "aac7bdc4e7277b25b655c52e2bb38581a5300da7ebab5b041b4eae0e67b4476e",
+      "publication_date_basis": "Official repository document date; conservative availability for facts transcribed from this document, not the earlier results announcement.",
+      "provenance": "Original issuer annual report on an official disclosure repository; PDF checked locally and public URL verified using web retrieval."
+    }
+  },
+  "facts": [
+    {
+      "field": "revenue",
+      "fiscal_year": 2022,
+      "value_yuan": 25803383000,
+      "currency": "CNY",
+      "source_value": 25803383,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "收入",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        27598491,
+        25803383
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "revenue",
+      "fiscal_year": 2023,
+      "value_yuan": 27598491000,
+      "currency": "CNY",
+      "source_value": 27598491,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "收入",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        28675643,
+        27598491
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "revenue",
+      "fiscal_year": 2024,
+      "value_yuan": 28675643000,
+      "currency": "CNY",
+      "source_value": 28675643,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "收入",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        28675643,
+        27598491
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "cost_of_goods_sold",
+      "fiscal_year": 2022,
+      "value_yuan": 13318590000,
+      "currency": "CNY",
+      "source_value": 13318590,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "銷售成本",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        14246436,
+        13318590
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "cost_of_goods_sold",
+      "fiscal_year": 2023,
+      "value_yuan": 14246436000,
+      "currency": "CNY",
+      "source_value": 14246436,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "銷售成本",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        14519540,
+        14246436
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "cost_of_goods_sold",
+      "fiscal_year": 2024,
+      "value_yuan": 14519540000,
+      "currency": "CNY",
+      "source_value": 14519540,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "銷售成本",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        14519540,
+        14246436
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "gross_profit",
+      "fiscal_year": 2022,
+      "value_yuan": 12484793000,
+      "currency": "CNY",
+      "source_value": 12484793,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "毛利",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        13352055,
+        12484793
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "gross_profit",
+      "fiscal_year": 2023,
+      "value_yuan": 13352055000,
+      "currency": "CNY",
+      "source_value": 13352055,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "毛利",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        14156103,
+        13352055
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "gross_profit",
+      "fiscal_year": 2024,
+      "value_yuan": 14156103000,
+      "currency": "CNY",
+      "source_value": 14156103,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "毛利",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        14156103,
+        13352055
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "operating_profit",
+      "fiscal_year": 2022,
+      "value_yuan": 4886758000,
+      "currency": "CNY",
+      "source_value": 4886758,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Reported operating profit; retained separately from any research EBIT definition.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "經營溢利",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        3559087,
+        4886758
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "operating_profit",
+      "fiscal_year": 2023,
+      "value_yuan": 3559087000,
+      "currency": "CNY",
+      "source_value": 3559087,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Reported operating profit; retained separately from any research EBIT definition.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "經營溢利",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        3678206,
+        3559087
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "operating_profit",
+      "fiscal_year": 2024,
+      "value_yuan": 3678206000,
+      "currency": "CNY",
+      "source_value": 3678206,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Reported operating profit; retained separately from any research EBIT definition.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "經營溢利",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        3678206,
+        3559087
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "finance_income",
+      "fiscal_year": 2022,
+      "value_yuan": 447748000,
+      "currency": "CNY",
+      "source_value": 447748,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "融資收入",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        500556,
+        447748
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "finance_income",
+      "fiscal_year": 2023,
+      "value_yuan": 500556000,
+      "currency": "CNY",
+      "source_value": 500556,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "融資收入",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        429525,
+        500556
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "finance_income",
+      "fiscal_year": 2024,
+      "value_yuan": 429525000,
+      "currency": "CNY",
+      "source_value": 429525,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "融資收入",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        429525,
+        500556
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "gross_finance_expense",
+      "fiscal_year": 2022,
+      "value_yuan": 120561000,
+      "currency": "CNY",
+      "source_value": 120561,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "融資開支",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        181446,
+        120561
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "gross_finance_expense",
+      "fiscal_year": 2023,
+      "value_yuan": 181446000,
+      "currency": "CNY",
+      "source_value": 181446,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "融資開支",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        254421,
+        181446
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "gross_finance_expense",
+      "fiscal_year": 2024,
+      "value_yuan": 254421000,
+      "currency": "CNY",
+      "source_value": 254421,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "融資開支",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        254421,
+        181446
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "equity_method_profit",
+      "fiscal_year": 2022,
+      "value_yuan": 201155000,
+      "currency": "CNY",
+      "source_value": 201155,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "享有按權益法入賬之投資的溢利份額",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        377972,
+        201155
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "equity_method_profit",
+      "fiscal_year": 2023,
+      "value_yuan": 377972000,
+      "currency": "CNY",
+      "source_value": 377972,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "享有按權益法入賬之投資的溢利份額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        256299,
+        377972
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "equity_method_profit",
+      "fiscal_year": 2024,
+      "value_yuan": 256299000,
+      "currency": "CNY",
+      "source_value": 256299,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "享有按權益法入賬之投資的溢利份額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        256299,
+        377972
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "profit_before_tax",
+      "fiscal_year": 2022,
+      "value_yuan": 5415100000,
+      "currency": "CNY",
+      "source_value": 5415100,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "除所得稅前溢利",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        4256169,
+        5415100
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "profit_before_tax",
+      "fiscal_year": 2023,
+      "value_yuan": 4256169000,
+      "currency": "CNY",
+      "source_value": 4256169,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "除所得稅前溢利",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        4109609,
+        4256169
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "profit_before_tax",
+      "fiscal_year": 2024,
+      "value_yuan": 4109609000,
+      "currency": "CNY",
+      "source_value": 4109609,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "除所得稅前溢利",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        4109609,
+        4256169
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "income_tax_expense",
+      "fiscal_year": 2022,
+      "value_yuan": 1351329000,
+      "currency": "CNY",
+      "source_value": 1351329,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "所得稅開支",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        1069207,
+        1351329
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "income_tax_expense",
+      "fiscal_year": 2023,
+      "value_yuan": 1069207000,
+      "currency": "CNY",
+      "source_value": 1069207,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "所得稅開支",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        1096691,
+        1069207
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "income_tax_expense",
+      "fiscal_year": 2024,
+      "value_yuan": 1096691000,
+      "currency": "CNY",
+      "source_value": 1096691,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "所得稅開支",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        1096691,
+        1069207
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "net_income_consolidated",
+      "fiscal_year": 2022,
+      "value_yuan": 4063771000,
+      "currency": "CNY",
+      "source_value": 4063771,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "年內溢利",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        3186962,
+        4063771
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "net_income_consolidated",
+      "fiscal_year": 2023,
+      "value_yuan": 3186962000,
+      "currency": "CNY",
+      "source_value": 3186962,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "年內溢利",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        3012918,
+        3186962
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "net_income_consolidated",
+      "fiscal_year": 2024,
+      "value_yuan": 3012918000,
+      "currency": "CNY",
+      "source_value": 3012918,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "年內溢利",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        3012918,
+        3186962
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "net_income_parent",
+      "fiscal_year": 2022,
+      "value_yuan": 4063834000,
+      "currency": "CNY",
+      "source_value": 4063834,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Attributable to owners of the company, excludes non-controlling interests.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 160,
+      "pdf_page": 162,
+      "available_at": "2024-04-23",
+      "table_label": "本公司權益持有人",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        3186910,
+        4063834
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "net_income_parent",
+      "fiscal_year": 2023,
+      "value_yuan": 3186910000,
+      "currency": "CNY",
+      "source_value": 3186910,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Attributable to owners of the company, excludes non-controlling interests.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "本公司權益持有人",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        3012918,
+        3186910
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "net_income_parent",
+      "fiscal_year": 2024,
+      "value_yuan": 3012918000,
+      "currency": "CNY",
+      "source_value": 3012918,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Attributable to owners of the company, excludes non-controlling interests.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 173,
+      "pdf_page": 175,
+      "available_at": "2025-04-29",
+      "table_label": "本公司權益持有人",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        3012918,
+        3186910
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "operating_cash_flow",
+      "fiscal_year": 2022,
+      "value_yuan": 3913604000,
+      "currency": "CNY",
+      "source_value": 3913604,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 164,
+      "pdf_page": 166,
+      "available_at": "2024-04-23",
+      "table_label": "經營活動產生之現金淨額",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        4687936,
+        3913604
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "operating_cash_flow",
+      "fiscal_year": 2023,
+      "value_yuan": 4687936000,
+      "currency": "CNY",
+      "source_value": 4687936,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "經營活動產生之現金淨額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        5267935,
+        4687936
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "operating_cash_flow",
+      "fiscal_year": 2024,
+      "value_yuan": 5267935000,
+      "currency": "CNY",
+      "source_value": 5267935,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "經營活動產生之現金淨額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        5267935,
+        4687936
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "total_assets",
+      "fiscal_year": 2022,
+      "value_yuan": 33646519000,
+      "currency": "CNY",
+      "source_value": 33646519,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 158,
+      "pdf_page": 160,
+      "available_at": "2024-04-23",
+      "table_label": "資產總額",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        34207803,
+        33646519
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "total_assets",
+      "fiscal_year": 2023,
+      "value_yuan": 34207803000,
+      "currency": "CNY",
+      "source_value": 34207803,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "資產總額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        35708406,
+        34207803
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "total_assets",
+      "fiscal_year": 2024,
+      "value_yuan": 35708406000,
+      "currency": "CNY",
+      "source_value": 35708406,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "資產總額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        35708406,
+        34207803
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "equity_consolidated",
+      "fiscal_year": 2022,
+      "value_yuan": 24331928000,
+      "currency": "CNY",
+      "source_value": 24331928,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Including non-controlling interests.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 158,
+      "pdf_page": 160,
+      "available_at": "2024-04-23",
+      "table_label": "權益總額",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        24406641,
+        24331928
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "equity_consolidated",
+      "fiscal_year": 2023,
+      "value_yuan": 24406641000,
+      "currency": "CNY",
+      "source_value": 24406641,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Including non-controlling interests.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "權益總額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        26103689,
+        24406641
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "equity_consolidated",
+      "fiscal_year": 2024,
+      "value_yuan": 26103689000,
+      "currency": "CNY",
+      "source_value": 26103689,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Including non-controlling interests.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "權益總額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        26103689,
+        24406641
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "equity_parent",
+      "fiscal_year": 2022,
+      "value_yuan": 24329430000,
+      "currency": "CNY",
+      "source_value": 24329430,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Owners of company subtotal; 2022 excludes non-controlling interests of RMB 2.498 million.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 158,
+      "pdf_page": 160,
+      "available_at": "2024-04-23",
+      "table_label": "",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        24406641,
+        24329430
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "equity_parent",
+      "fiscal_year": 2023,
+      "value_yuan": 24406641000,
+      "currency": "CNY",
+      "source_value": 24406641,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Owners of company subtotal; 2022 excludes non-controlling interests of RMB 2.498 million.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "權益總額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        26103689,
+        24406641
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "equity_parent",
+      "fiscal_year": 2024,
+      "value_yuan": 26103689000,
+      "currency": "CNY",
+      "source_value": 26103689,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Owners of company subtotal; 2022 excludes non-controlling interests of RMB 2.498 million.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "權益總額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        26103689,
+        24406641
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "total_liabilities",
+      "fiscal_year": 2022,
+      "value_yuan": 9314591000,
+      "currency": "CNY",
+      "source_value": 9314591,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 159,
+      "pdf_page": 161,
+      "available_at": "2024-04-23",
+      "table_label": "負債總額",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        9801162,
+        9314591
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "total_liabilities",
+      "fiscal_year": 2023,
+      "value_yuan": 9801162000,
+      "currency": "CNY",
+      "source_value": 9801162,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "負債總額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        9604717,
+        9801162
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "total_liabilities",
+      "fiscal_year": 2024,
+      "value_yuan": 9604717000,
+      "currency": "CNY",
+      "source_value": 9604717,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "負債總額",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        9604717,
+        9801162
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "cash_and_cash_equivalents",
+      "fiscal_year": 2022,
+      "value_yuan": 7382218000,
+      "currency": "CNY",
+      "source_value": 7382218,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Cash and cash equivalents only; excludes separately reported restricted deposits and term deposits over three months.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 158,
+      "pdf_page": 160,
+      "available_at": "2024-04-23",
+      "table_label": "現金及等同現金項目",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        5443883,
+        7382218
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "cash_and_cash_equivalents",
+      "fiscal_year": 2023,
+      "value_yuan": 5443883000,
+      "currency": "CNY",
+      "source_value": 5443883,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Cash and cash equivalents only; excludes separately reported restricted deposits and term deposits over three months.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "現金及等同現金項目",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        7498596,
+        5443883
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "cash_and_cash_equivalents",
+      "fiscal_year": 2024,
+      "value_yuan": 7498596000,
+      "currency": "CNY",
+      "source_value": 7498596,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Cash and cash equivalents only; excludes separately reported restricted deposits and term deposits over three months.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "現金及等同現金項目",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        7498596,
+        5443883
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "term_deposits_current",
+      "fiscal_year": 2022,
+      "value_yuan": 643324000,
+      "currency": "CNY",
+      "source_value": 643324,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Separate from cash equivalents; balance includes accrued interest, not automatically all immediately spendable.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 158,
+      "pdf_page": 160,
+      "available_at": "2024-04-23",
+      "table_label": "短期銀行存款",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        3493687,
+        643324
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "term_deposits_current",
+      "fiscal_year": 2023,
+      "value_yuan": 3493687000,
+      "currency": "CNY",
+      "source_value": 3493687,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Separate from cash equivalents; balance includes accrued interest, not automatically all immediately spendable.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "定期銀行存款－即期部分",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        8264361,
+        3493687
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "term_deposits_current",
+      "fiscal_year": 2024,
+      "value_yuan": 8264361000,
+      "currency": "CNY",
+      "source_value": 8264361,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Separate from cash equivalents; balance includes accrued interest, not automatically all immediately spendable.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "定期銀行存款－即期部分",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        8264361,
+        3493687
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "term_deposits_noncurrent",
+      "fiscal_year": 2022,
+      "value_yuan": 11023296000,
+      "currency": "CNY",
+      "source_value": 11023296,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Noncurrent term deposits, separate from cash equivalents; includes accrued interest.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 158,
+      "pdf_page": 160,
+      "available_at": "2024-04-23",
+      "table_label": "長期銀行存款",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        9037142,
+        11023296
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "term_deposits_noncurrent",
+      "fiscal_year": 2023,
+      "value_yuan": 9037142000,
+      "currency": "CNY",
+      "source_value": 9037142,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Noncurrent term deposits, separate from cash equivalents; includes accrued interest.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "定期銀行存款",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        2377970,
+        9037142
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "term_deposits_noncurrent",
+      "fiscal_year": 2024,
+      "value_yuan": 2377970000,
+      "currency": "CNY",
+      "source_value": 2377970,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Noncurrent term deposits, separate from cash equivalents; includes accrued interest.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "定期銀行存款",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        2377970,
+        9037142
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "restricted_bank_deposits",
+      "fiscal_year": 2022,
+      "value_yuan": 970000,
+      "currency": "CNY",
+      "source_value": 970,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Restricted for lease arrangements and other operating purposes; excluded from available cash basis.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 158,
+      "pdf_page": 160,
+      "available_at": "2024-04-23",
+      "table_label": "受限制之銀行存款",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        806,
+        970
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "restricted_bank_deposits",
+      "fiscal_year": 2023,
+      "value_yuan": 806000,
+      "currency": "CNY",
+      "source_value": 806,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Restricted for lease arrangements and other operating purposes; excluded from available cash basis.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "受限制之銀行存款",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        23261,
+        806
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "restricted_bank_deposits",
+      "fiscal_year": 2024,
+      "value_yuan": 23261000,
+      "currency": "CNY",
+      "source_value": 23261,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Restricted for lease arrangements and other operating purposes; excluded from available cash basis.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 171,
+      "pdf_page": 173,
+      "available_at": "2025-04-29",
+      "table_label": "受限制之銀行存款",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        23261,
+        806
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_liabilities_current",
+      "fiscal_year": 2022,
+      "value_yuan": 667762000,
+      "currency": "CNY",
+      "source_value": 667762,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 159,
+      "pdf_page": 161,
+      "available_at": "2024-04-23",
+      "table_label": "租賃負債－即期部分",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        716665,
+        667762
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_liabilities_current",
+      "fiscal_year": 2023,
+      "value_yuan": 716665000,
+      "currency": "CNY",
+      "source_value": 716665,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "租賃負債－即期部分",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        551610,
+        716665
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_liabilities_current",
+      "fiscal_year": 2024,
+      "value_yuan": 551610000,
+      "currency": "CNY",
+      "source_value": 551610,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "租賃負債－即期部分",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        551610,
+        716665
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_liabilities_noncurrent",
+      "fiscal_year": 2022,
+      "value_yuan": 1473905000,
+      "currency": "CNY",
+      "source_value": 1473905,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 159,
+      "pdf_page": 161,
+      "available_at": "2024-04-23",
+      "table_label": "租賃負債",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        1825288,
+        1473905
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_liabilities_noncurrent",
+      "fiscal_year": 2023,
+      "value_yuan": 1825288000,
+      "currency": "CNY",
+      "source_value": 1825288,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "租賃負債",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        1384527,
+        1825288
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_liabilities_noncurrent",
+      "fiscal_year": 2024,
+      "value_yuan": 1384527000,
+      "currency": "CNY",
+      "source_value": 1384527,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "租賃負債",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        1384527,
+        1825288
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "royalty_payables_current",
+      "fiscal_year": 2022,
+      "value_yuan": 50540000,
+      "currency": "CNY",
+      "source_value": 50540,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Discounted royalty payable; retained separately, not silently treated as borrowing.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 159,
+      "pdf_page": 161,
+      "available_at": "2024-04-23",
+      "table_label": "應付特許使用費－即期部分",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        38484,
+        50540
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "royalty_payables_current",
+      "fiscal_year": 2023,
+      "value_yuan": 38484000,
+      "currency": "CNY",
+      "source_value": 38484,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Discounted royalty payable; retained separately, not silently treated as borrowing.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "應付特許使用費－即期部分",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        40917,
+        38484
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "royalty_payables_current",
+      "fiscal_year": 2024,
+      "value_yuan": 40917000,
+      "currency": "CNY",
+      "source_value": 40917,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Discounted royalty payable; retained separately, not silently treated as borrowing.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "應付特許使用費－即期部分",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        40917,
+        38484
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "royalty_payables_noncurrent",
+      "fiscal_year": 2022,
+      "value_yuan": 15531000,
+      "currency": "CNY",
+      "source_value": 15531,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 159,
+      "pdf_page": 161,
+      "available_at": "2024-04-23",
+      "table_label": "應付特許使用費",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        8581,
+        15531
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "royalty_payables_noncurrent",
+      "fiscal_year": 2023,
+      "value_yuan": 8581000,
+      "currency": "CNY",
+      "source_value": 8581,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "應付特許使用費",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        16500,
+        8581
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "royalty_payables_noncurrent",
+      "fiscal_year": 2024,
+      "value_yuan": 16500000,
+      "currency": "CNY",
+      "source_value": 16500,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 172,
+      "pdf_page": 174,
+      "available_at": "2025-04-29",
+      "table_label": "應付特許使用費",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        16500,
+        8581
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "borrowing_interest_cost",
+      "fiscal_year": 2022,
+      "value_yuan": 3391000,
+      "currency": "CNY",
+      "source_value": 3391,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 224,
+      "pdf_page": 226,
+      "available_at": "2024-04-23",
+      "table_label": "借款利息",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        16006,
+        3391
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "borrowing_interest_cost",
+      "fiscal_year": 2023,
+      "value_yuan": 16006000,
+      "currency": "CNY",
+      "source_value": 16006,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 240,
+      "pdf_page": 242,
+      "available_at": "2025-04-29",
+      "table_label": "借款利息",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        28176,
+        16006
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "borrowing_interest_cost",
+      "fiscal_year": 2024,
+      "value_yuan": 28176000,
+      "currency": "CNY",
+      "source_value": 28176,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 240,
+      "pdf_page": 242,
+      "available_at": "2025-04-29",
+      "table_label": "借款利息",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        28176,
+        16006
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_interest_cost",
+      "fiscal_year": 2022,
+      "value_yuan": 99035000,
+      "currency": "CNY",
+      "source_value": 99035,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 224,
+      "pdf_page": 226,
+      "available_at": "2024-04-23",
+      "table_label": "貼現攤銷－租賃負債",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        144488,
+        99035
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_interest_cost",
+      "fiscal_year": 2023,
+      "value_yuan": 144488000,
+      "currency": "CNY",
+      "source_value": 144488,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 240,
+      "pdf_page": 242,
+      "available_at": "2025-04-29",
+      "table_label": "貼現攤銷－租賃負債",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        126994,
+        144488
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_interest_cost",
+      "fiscal_year": 2024,
+      "value_yuan": 126994000,
+      "currency": "CNY",
+      "source_value": 126994,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 240,
+      "pdf_page": 242,
+      "available_at": "2025-04-29",
+      "table_label": "貼現攤銷－租賃負債",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        126994,
+        144488
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "royalty_unwinding_cost",
+      "fiscal_year": 2022,
+      "value_yuan": 2363000,
+      "currency": "CNY",
+      "source_value": 2363,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 224,
+      "pdf_page": 226,
+      "available_at": "2024-04-23",
+      "table_label": "貼現攤銷－應付特許使用費",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        1993,
+        2363
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "royalty_unwinding_cost",
+      "fiscal_year": 2023,
+      "value_yuan": 1993000,
+      "currency": "CNY",
+      "source_value": 1993,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 240,
+      "pdf_page": 242,
+      "available_at": "2025-04-29",
+      "table_label": "貼現攤銷－應付特許使用費",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        1362,
+        1993
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "royalty_unwinding_cost",
+      "fiscal_year": 2024,
+      "value_yuan": 1362000,
+      "currency": "CNY",
+      "source_value": 1362,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 240,
+      "pdf_page": 242,
+      "available_at": "2025-04-29",
+      "table_label": "貼現攤銷－應付特許使用費",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        1362,
+        1993
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "other_finance_expense",
+      "fiscal_year": 2022,
+      "value_yuan": 15772000,
+      "currency": "CNY",
+      "source_value": 15772,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Reported other financing costs; composition not inferred to be interest.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 224,
+      "pdf_page": 226,
+      "available_at": "2024-04-23",
+      "table_label": "其他",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        18959,
+        15772
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "other_finance_expense",
+      "fiscal_year": 2023,
+      "value_yuan": 18959000,
+      "currency": "CNY",
+      "source_value": 18959,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Reported other financing costs; composition not inferred to be interest.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 240,
+      "pdf_page": 242,
+      "available_at": "2025-04-29",
+      "table_label": "其他",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        23996,
+        18959
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "other_finance_expense",
+      "fiscal_year": 2024,
+      "value_yuan": 23996000,
+      "currency": "CNY",
+      "source_value": 23996,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Reported other financing costs; composition not inferred to be interest.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 240,
+      "pdf_page": 242,
+      "available_at": "2025-04-29",
+      "table_label": "其他",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        23996,
+        18959
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "bank_borrowings_received",
+      "fiscal_year": 2022,
+      "value_yuan": 600000000,
+      "currency": "CNY",
+      "source_value": 600000,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 164,
+      "pdf_page": 166,
+      "available_at": "2024-04-23",
+      "table_label": "銀行借貸所得款項",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        2500000,
+        600000
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "bank_borrowings_received",
+      "fiscal_year": 2023,
+      "value_yuan": 2500000000,
+      "currency": "CNY",
+      "source_value": 2500000,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "銀行借貸所得款項",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        5006216,
+        2500000
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "bank_borrowings_received",
+      "fiscal_year": 2024,
+      "value_yuan": 5006216000,
+      "currency": "CNY",
+      "source_value": 5006216,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "銀行借貸所得款項",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        5006216,
+        2500000
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "bank_borrowings_repaid",
+      "fiscal_year": 2022,
+      "value_yuan": 600000000,
+      "currency": "CNY",
+      "source_value": 600000,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 164,
+      "pdf_page": 166,
+      "available_at": "2024-04-23",
+      "table_label": "償還銀行借貸",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        2500000,
+        600000
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "bank_borrowings_repaid",
+      "fiscal_year": 2023,
+      "value_yuan": 2500000000,
+      "currency": "CNY",
+      "source_value": 2500000,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "償還銀行借貸",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        5006216,
+        2500000
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "bank_borrowings_repaid",
+      "fiscal_year": 2024,
+      "value_yuan": 5006216000,
+      "currency": "CNY",
+      "source_value": 5006216,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "償還銀行借貸",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        5006216,
+        2500000
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "borrowing_interest_paid",
+      "fiscal_year": 2022,
+      "value_yuan": 3391000,
+      "currency": "CNY",
+      "source_value": 3391,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 164,
+      "pdf_page": 166,
+      "available_at": "2024-04-23",
+      "table_label": "已付利息",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        16006,
+        3391
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "borrowing_interest_paid",
+      "fiscal_year": 2023,
+      "value_yuan": 16006000,
+      "currency": "CNY",
+      "source_value": 16006,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "已付利息",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        28176,
+        16006
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "borrowing_interest_paid",
+      "fiscal_year": 2024,
+      "value_yuan": 28176000,
+      "currency": "CNY",
+      "source_value": 28176,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "已付利息",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        28176,
+        16006
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_principal_and_interest_paid",
+      "fiscal_year": 2022,
+      "value_yuan": 627429000,
+      "currency": "CNY",
+      "source_value": 627429,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 164,
+      "pdf_page": 166,
+      "available_at": "2024-04-23",
+      "table_label": "支付租賃負債之本金及相關利息",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        872236,
+        627429
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_principal_and_interest_paid",
+      "fiscal_year": 2023,
+      "value_yuan": 872236000,
+      "currency": "CNY",
+      "source_value": 872236,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "支付租賃負債之本金及相關利息",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        856075,
+        872236
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "lease_principal_and_interest_paid",
+      "fiscal_year": 2024,
+      "value_yuan": 856075000,
+      "currency": "CNY",
+      "source_value": 856075,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "支付租賃負債之本金及相關利息",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        856075,
+        872236
+      ],
+      "pdf_sign": -1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "share_option_issuance_proceeds",
+      "fiscal_year": 2022,
+      "value_yuan": 96715000,
+      "currency": "CNY",
+      "source_value": 96715,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Positive issuance proceeds establish issuance occurred even when net share count fell due to cancellation/buybacks.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 164,
+      "pdf_page": 166,
+      "available_at": "2024-04-23",
+      "table_label": "因購股權計劃而發行股份之所得款項",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        7416,
+        96715
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "share_option_issuance_proceeds",
+      "fiscal_year": 2023,
+      "value_yuan": 7416000,
+      "currency": "CNY",
+      "source_value": 7416,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Positive issuance proceeds establish issuance occurred even when net share count fell due to cancellation/buybacks.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "因購股權計劃而發行股份之所得款項",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        3917,
+        7416
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "share_option_issuance_proceeds",
+      "fiscal_year": 2024,
+      "value_yuan": 3917000,
+      "currency": "CNY",
+      "source_value": 3917,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Positive issuance proceeds establish issuance occurred even when net share count fell due to cancellation/buybacks.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 177,
+      "pdf_page": 179,
+      "available_at": "2025-04-29",
+      "table_label": "因購股權計劃而發行股份之所得款項",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        3917,
+        7416
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "cash_at_bank_and_on_hand",
+      "fiscal_year": 2022,
+      "value_yuan": 7187863000,
+      "currency": "CNY",
+      "source_value": 7187863,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 212,
+      "pdf_page": 214,
+      "available_at": "2024-04-23",
+      "table_label": "銀行及手頭現金",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        5348970,
+        7187863
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "cash_at_bank_and_on_hand",
+      "fiscal_year": 2023,
+      "value_yuan": 5348970000,
+      "currency": "CNY",
+      "source_value": 5348970,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 228,
+      "pdf_page": 230,
+      "available_at": "2025-04-29",
+      "table_label": "銀行及手頭現金",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        7198591,
+        5348970
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "cash_at_bank_and_on_hand",
+      "fiscal_year": 2024,
+      "value_yuan": 7198591000,
+      "currency": "CNY",
+      "source_value": 7198591,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 228,
+      "pdf_page": 230,
+      "available_at": "2025-04-29",
+      "table_label": "銀行及手頭現金",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        7198591,
+        5348970
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "deposit_original_maturity_under_three_months",
+      "fiscal_year": 2022,
+      "value_yuan": 194355000,
+      "currency": "CNY",
+      "source_value": 194355,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 212,
+      "pdf_page": 214,
+      "available_at": "2024-04-23",
+      "table_label": "初步期限為三個月內的短期銀行存款",
+      "source_column_years": [
+        2023,
+        2022
+      ],
+      "source_column_values": [
+        94913,
+        194355
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "deposit_original_maturity_under_three_months",
+      "fiscal_year": 2023,
+      "value_yuan": 94913000,
+      "currency": "CNY",
+      "source_value": 94913,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 228,
+      "pdf_page": 230,
+      "available_at": "2025-04-29",
+      "table_label": "初步期限為三個月內的定期銀行存款",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        300005,
+        94913
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "deposit_original_maturity_under_three_months",
+      "fiscal_year": 2024,
+      "value_yuan": 300005000,
+      "currency": "CNY",
+      "source_value": 300005,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "consolidated",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 228,
+      "pdf_page": 230,
+      "available_at": "2025-04-29",
+      "table_label": "初步期限為三個月內的定期銀行存款",
+      "source_column_years": [
+        2024,
+        2023
+      ],
+      "source_column_values": [
+        300005,
+        94913
+      ],
+      "pdf_sign": 1,
+      "verification_method": "table_transcription_with_pdf_text_and_visual_review"
+    },
+    {
+      "field": "bank_borrowings_at_year_end",
+      "fiscal_year": 2022,
+      "value_yuan": 0,
+      "currency": "CNY",
+      "source_value": 0,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Explicit no-bank-borrowing disclosure; does not imply zero leases or zero annual interest.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 136,
+      "pdf_page": 138,
+      "available_at": "2024-04-23",
+      "text_assertions": [
+        "銀行借貸",
+        "並無銀行借貸",
+        "2023年12月31日"
+      ],
+      "verification_method": "explicit_zero_narrative_with_visual_review"
+    },
+    {
+      "field": "core_income_parent",
+      "fiscal_year": 2022,
+      "value_yuan": null,
+      "currency": "CNY",
+      "status": "unmapped",
+      "reason": "No unified A-share statutory non-recurring-adjusted parent-profit mapping established. The 2023 single-gain adjustment is recorded separately and is not substituted here.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 19,
+      "pdf_page": 21,
+      "available_at": "2025-04-29",
+      "verification_method": "semantic_review; null retained, no imputation"
+    },
+    {
+      "field": "bank_borrowings_at_year_end",
+      "fiscal_year": 2023,
+      "value_yuan": 0,
+      "currency": "CNY",
+      "source_value": 0,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Explicit no-bank-borrowing disclosure; does not imply zero leases or zero annual interest.",
+      "source_id": "lining_2023",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "report_page": 136,
+      "pdf_page": 138,
+      "available_at": "2024-04-23",
+      "text_assertions": [
+        "銀行借貸",
+        "並無銀行借貸",
+        "2023年12月31日"
+      ],
+      "verification_method": "explicit_zero_narrative_with_visual_review"
+    },
+    {
+      "field": "core_income_parent",
+      "fiscal_year": 2023,
+      "value_yuan": null,
+      "currency": "CNY",
+      "status": "unmapped",
+      "reason": "No unified A-share statutory non-recurring-adjusted parent-profit mapping established. The 2023 single-gain adjustment is recorded separately and is not substituted here.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 19,
+      "pdf_page": 21,
+      "available_at": "2025-04-29",
+      "verification_method": "semantic_review; null retained, no imputation"
+    },
+    {
+      "field": "bank_borrowings_at_year_end",
+      "fiscal_year": 2024,
+      "value_yuan": 0,
+      "currency": "CNY",
+      "source_value": 0,
+      "source_unit": "RMB thousand",
+      "scale_to_yuan": 1000,
+      "basis": "Explicit no-bank-borrowing disclosure; does not imply zero leases or zero annual interest.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 146,
+      "pdf_page": 148,
+      "available_at": "2025-04-29",
+      "text_assertions": [
+        "銀行借貸",
+        "並無銀行借貸",
+        "2024年12月31日"
+      ],
+      "verification_method": "explicit_zero_narrative_with_visual_review"
+    },
+    {
+      "field": "core_income_parent",
+      "fiscal_year": 2024,
+      "value_yuan": null,
+      "currency": "CNY",
+      "status": "unmapped",
+      "reason": "No unified A-share statutory non-recurring-adjusted parent-profit mapping established. The 2023 single-gain adjustment is recorded separately and is not substituted here.",
+      "source_id": "lining_2024",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "report_page": 19,
+      "pdf_page": 21,
+      "available_at": "2025-04-29",
+      "verification_method": "semantic_review; null retained, no imputation"
+    }
+  ],
+  "derived_facts": [
+    {
+      "field": "bank_and_lease_debt",
+      "fiscal_year": 2022,
+      "value_yuan": 2141667000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "bank_borrowings_at_year_end",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_current",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_noncurrent",
+          "coefficient": 1
+        }
+      ],
+      "basis": "Bank borrowings plus current/noncurrent lease obligations. Discounted royalty payables remain separately identified.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "bank_and_lease_interest",
+      "fiscal_year": 2022,
+      "value_yuan": 102426000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "borrowing_interest_cost",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_interest_cost",
+          "coefficient": 1
+        }
+      ],
+      "basis": "Borrowing interest plus lease discount unwinding. Excludes FX losses and unidentified other financing costs.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "net_debt_cash_equivalents_basis",
+      "fiscal_year": 2022,
+      "value_yuan": -5240551000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "bank_borrowings_at_year_end",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_current",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_noncurrent",
+          "coefficient": 1
+        },
+        {
+          "field": "cash_and_cash_equivalents",
+          "coefficient": -1
+        }
+      ],
+      "basis": "Conservative cash basis: cash equivalents only; term/restricted deposits excluded. Negative denotes net cash.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "reported_cash_and_unrestricted_term_deposits",
+      "fiscal_year": 2022,
+      "value_yuan": 19048838000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "cash_and_cash_equivalents",
+          "coefficient": 1
+        },
+        {
+          "field": "term_deposits_current",
+          "coefficient": 1
+        },
+        {
+          "field": "term_deposits_noncurrent",
+          "coefficient": 1
+        }
+      ],
+      "basis": "Reported cash-plus-term-deposit balance, not a claim of immediate fungibility. Term balances include accrued interest.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "bank_and_lease_debt",
+      "fiscal_year": 2023,
+      "value_yuan": 2541953000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "bank_borrowings_at_year_end",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_current",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_noncurrent",
+          "coefficient": 1
+        }
+      ],
+      "basis": "Bank borrowings plus current/noncurrent lease obligations. Discounted royalty payables remain separately identified.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "bank_and_lease_interest",
+      "fiscal_year": 2023,
+      "value_yuan": 160494000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "borrowing_interest_cost",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_interest_cost",
+          "coefficient": 1
+        }
+      ],
+      "basis": "Borrowing interest plus lease discount unwinding. Excludes FX losses and unidentified other financing costs.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "net_debt_cash_equivalents_basis",
+      "fiscal_year": 2023,
+      "value_yuan": -2901930000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "bank_borrowings_at_year_end",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_current",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_noncurrent",
+          "coefficient": 1
+        },
+        {
+          "field": "cash_and_cash_equivalents",
+          "coefficient": -1
+        }
+      ],
+      "basis": "Conservative cash basis: cash equivalents only; term/restricted deposits excluded. Negative denotes net cash.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "reported_cash_and_unrestricted_term_deposits",
+      "fiscal_year": 2023,
+      "value_yuan": 17974712000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "cash_and_cash_equivalents",
+          "coefficient": 1
+        },
+        {
+          "field": "term_deposits_current",
+          "coefficient": 1
+        },
+        {
+          "field": "term_deposits_noncurrent",
+          "coefficient": 1
+        }
+      ],
+      "basis": "Reported cash-plus-term-deposit balance, not a claim of immediate fungibility. Term balances include accrued interest.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "bank_and_lease_debt",
+      "fiscal_year": 2024,
+      "value_yuan": 1936137000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "bank_borrowings_at_year_end",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_current",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_noncurrent",
+          "coefficient": 1
+        }
+      ],
+      "basis": "Bank borrowings plus current/noncurrent lease obligations. Discounted royalty payables remain separately identified.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "bank_and_lease_interest",
+      "fiscal_year": 2024,
+      "value_yuan": 155170000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "borrowing_interest_cost",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_interest_cost",
+          "coefficient": 1
+        }
+      ],
+      "basis": "Borrowing interest plus lease discount unwinding. Excludes FX losses and unidentified other financing costs.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "net_debt_cash_equivalents_basis",
+      "fiscal_year": 2024,
+      "value_yuan": -5562459000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "bank_borrowings_at_year_end",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_current",
+          "coefficient": 1
+        },
+        {
+          "field": "lease_liabilities_noncurrent",
+          "coefficient": 1
+        },
+        {
+          "field": "cash_and_cash_equivalents",
+          "coefficient": -1
+        }
+      ],
+      "basis": "Conservative cash basis: cash equivalents only; term/restricted deposits excluded. Negative denotes net cash.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    },
+    {
+      "field": "reported_cash_and_unrestricted_term_deposits",
+      "fiscal_year": 2024,
+      "value_yuan": 18140927000,
+      "currency": "CNY",
+      "formula_terms": [
+        {
+          "field": "cash_and_cash_equivalents",
+          "coefficient": 1
+        },
+        {
+          "field": "term_deposits_current",
+          "coefficient": 1
+        },
+        {
+          "field": "term_deposits_noncurrent",
+          "coefficient": 1
+        }
+      ],
+      "basis": "Reported cash-plus-term-deposit balance, not a claim of immediate fungibility. Term balances include accrued interest.",
+      "status": "derived_from_verified_facts; not automatically injected into engine"
+    }
+  ],
+  "specific_adjustment": {
+    "year": 2023,
+    "reported_parent_profit_yuan": 3186910000,
+    "equity_method_oneoff_gain_yuan": 140457000,
+    "company_adjusted_parent_profit_yuan": 3046453000,
+    "source_id": "lining_2024",
+    "report_page": 19,
+    "pdf_page": 21,
+    "source_unit": "RMB yuan",
+    "scale_to_yuan": 1,
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+    "oneoff_gain_source": {
+      "source_id": "lining_2023",
+      "report_page": 18,
+      "pdf_page": 20,
+      "source_unit": "RMB yuan",
+      "scale_to_yuan": 1,
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF"
+    },
+    "status": "company_specific_adjustment_only_not_core_income_parent"
+  },
+  "finance_expense_reconciliation": {
+    "2022": {
+      "fx_loss_yuan": 0,
+      "zero_basis": "2023 report note 27 presents FX gain in financing income; sum of all expense rows exactly reconciles to gross finance expense."
+    },
+    "2023": {
+      "fx_loss_yuan": 0,
+      "zero_basis": "2024 report note 27 shows dash for FX loss, and 2023 report note 27 shows FX gain."
+    },
+    "2024": {
+      "fx_loss_yuan": 73893000,
+      "source_id": "lining_2024",
+      "report_page": 240,
+      "pdf_page": 242,
+      "source_unit": "RMB thousand",
+      "source_value": 73893,
+      "scale_to_yuan": 1000
+    }
+  },
+  "remaining_blockers": {
+    "core_income_parent": "Market-specific earnings normalization policy and source reconciliation remain unresolved; all three years retain null.",
+    "audit_opinion": "Not mapped in this extension; original auditor report still requires explicit structured audit review.",
+    "valuation": "No date-matched total company market capitalization and CNY conversion in this extension.",
+    "peer_coverage": "Only one Hong Kong issuer; cannot form an adequate same-market/industry ranking group.",
+    "historical_availability": "Annual report dates are conservative dates for these specific immutable documents. 2022 values here become available with 2023 report in 2024, not retroactively in 2023. Earlier results announcements and restatement chain are not reconstructed.",
+    "enterprise_release": "No approval to run this as an unattended enterprise investment-selection system is implied by field reconciliation."
+  },
+  "cash_policy": "Use reported cash equivalents for the narrow net-debt diagnostic. Restricted deposits are excluded. Term deposits and accrued interest are explicitly separated; cross-border remittance constraints remain relevant.",
+  "earnings_policy": "Keep consolidated net income and owners profit distinct. Do not set HK core_income_parent to reported profit or to a narrow company-specific adjusted figure.",
+  "release_to_engine": false
+}

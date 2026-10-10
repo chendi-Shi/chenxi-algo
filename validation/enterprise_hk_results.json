@@ -1,0 +1,5672 @@
+{
+  "company": "02331.HK",
+  "facts_sha256": "749e39fbade2d7cbeb4dc6d628f061e347cb3dc910e0124ea859613ef9708cdb",
+  "frozen_fact_count": 111,
+  "numeric_fact_count": 108,
+  "derived_fact_count": 12,
+  "frozen_checks": [
+    {
+      "name": "no_duplicate_field_year",
+      "observed": 111,
+      "expected": 111,
+      "passed": true
+    },
+    {
+      "name": "2022:revenue:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:revenue:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:revenue:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:revenue:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:revenue:yuan",
+      "observed": 25803383000,
+      "expected": 25803383000,
+      "passed": true
+    },
+    {
+      "name": "2022:revenue:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:revenue:year_column",
+      "observed": 25803383,
+      "expected": 25803383,
+      "passed": true
+    },
+    {
+      "name": "2023:revenue:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:revenue:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:revenue:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:revenue:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:revenue:yuan",
+      "observed": 27598491000,
+      "expected": 27598491000,
+      "passed": true
+    },
+    {
+      "name": "2023:revenue:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:revenue:year_column",
+      "observed": 27598491,
+      "expected": 27598491,
+      "passed": true
+    },
+    {
+      "name": "2024:revenue:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:revenue:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:revenue:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:revenue:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:revenue:yuan",
+      "observed": 28675643000,
+      "expected": 28675643000,
+      "passed": true
+    },
+    {
+      "name": "2024:revenue:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:revenue:year_column",
+      "observed": 28675643,
+      "expected": 28675643,
+      "passed": true
+    },
+    {
+      "name": "2022:cost_of_goods_sold:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:cost_of_goods_sold:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:cost_of_goods_sold:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:cost_of_goods_sold:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:cost_of_goods_sold:yuan",
+      "observed": 13318590000,
+      "expected": 13318590000,
+      "passed": true
+    },
+    {
+      "name": "2022:cost_of_goods_sold:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:cost_of_goods_sold:year_column",
+      "observed": 13318590,
+      "expected": 13318590,
+      "passed": true
+    },
+    {
+      "name": "2023:cost_of_goods_sold:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:cost_of_goods_sold:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:cost_of_goods_sold:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:cost_of_goods_sold:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:cost_of_goods_sold:yuan",
+      "observed": 14246436000,
+      "expected": 14246436000,
+      "passed": true
+    },
+    {
+      "name": "2023:cost_of_goods_sold:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:cost_of_goods_sold:year_column",
+      "observed": 14246436,
+      "expected": 14246436,
+      "passed": true
+    },
+    {
+      "name": "2024:cost_of_goods_sold:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:cost_of_goods_sold:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:cost_of_goods_sold:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:cost_of_goods_sold:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:cost_of_goods_sold:yuan",
+      "observed": 14519540000,
+      "expected": 14519540000,
+      "passed": true
+    },
+    {
+      "name": "2024:cost_of_goods_sold:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:cost_of_goods_sold:year_column",
+      "observed": 14519540,
+      "expected": 14519540,
+      "passed": true
+    },
+    {
+      "name": "2022:gross_profit:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:gross_profit:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:gross_profit:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:gross_profit:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:gross_profit:yuan",
+      "observed": 12484793000,
+      "expected": 12484793000,
+      "passed": true
+    },
+    {
+      "name": "2022:gross_profit:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:gross_profit:year_column",
+      "observed": 12484793,
+      "expected": 12484793,
+      "passed": true
+    },
+    {
+      "name": "2023:gross_profit:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:gross_profit:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:gross_profit:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:gross_profit:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:gross_profit:yuan",
+      "observed": 13352055000,
+      "expected": 13352055000,
+      "passed": true
+    },
+    {
+      "name": "2023:gross_profit:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:gross_profit:year_column",
+      "observed": 13352055,
+      "expected": 13352055,
+      "passed": true
+    },
+    {
+      "name": "2024:gross_profit:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:gross_profit:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:gross_profit:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:gross_profit:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:gross_profit:yuan",
+      "observed": 14156103000,
+      "expected": 14156103000,
+      "passed": true
+    },
+    {
+      "name": "2024:gross_profit:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:gross_profit:year_column",
+      "observed": 14156103,
+      "expected": 14156103,
+      "passed": true
+    },
+    {
+      "name": "2022:operating_profit:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:operating_profit:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:operating_profit:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:operating_profit:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:operating_profit:yuan",
+      "observed": 4886758000,
+      "expected": 4886758000,
+      "passed": true
+    },
+    {
+      "name": "2022:operating_profit:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:operating_profit:year_column",
+      "observed": 4886758,
+      "expected": 4886758,
+      "passed": true
+    },
+    {
+      "name": "2023:operating_profit:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:operating_profit:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:operating_profit:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:operating_profit:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:operating_profit:yuan",
+      "observed": 3559087000,
+      "expected": 3559087000,
+      "passed": true
+    },
+    {
+      "name": "2023:operating_profit:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:operating_profit:year_column",
+      "observed": 3559087,
+      "expected": 3559087,
+      "passed": true
+    },
+    {
+      "name": "2024:operating_profit:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:operating_profit:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:operating_profit:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:operating_profit:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:operating_profit:yuan",
+      "observed": 3678206000,
+      "expected": 3678206000,
+      "passed": true
+    },
+    {
+      "name": "2024:operating_profit:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:operating_profit:year_column",
+      "observed": 3678206,
+      "expected": 3678206,
+      "passed": true
+    },
+    {
+      "name": "2022:finance_income:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:finance_income:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:finance_income:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:finance_income:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:finance_income:yuan",
+      "observed": 447748000,
+      "expected": 447748000,
+      "passed": true
+    },
+    {
+      "name": "2022:finance_income:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:finance_income:year_column",
+      "observed": 447748,
+      "expected": 447748,
+      "passed": true
+    },
+    {
+      "name": "2023:finance_income:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:finance_income:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:finance_income:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:finance_income:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:finance_income:yuan",
+      "observed": 500556000,
+      "expected": 500556000,
+      "passed": true
+    },
+    {
+      "name": "2023:finance_income:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:finance_income:year_column",
+      "observed": 500556,
+      "expected": 500556,
+      "passed": true
+    },
+    {
+      "name": "2024:finance_income:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:finance_income:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:finance_income:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:finance_income:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:finance_income:yuan",
+      "observed": 429525000,
+      "expected": 429525000,
+      "passed": true
+    },
+    {
+      "name": "2024:finance_income:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:finance_income:year_column",
+      "observed": 429525,
+      "expected": 429525,
+      "passed": true
+    },
+    {
+      "name": "2022:gross_finance_expense:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:gross_finance_expense:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:gross_finance_expense:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:gross_finance_expense:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:gross_finance_expense:yuan",
+      "observed": 120561000,
+      "expected": 120561000,
+      "passed": true
+    },
+    {
+      "name": "2022:gross_finance_expense:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:gross_finance_expense:year_column",
+      "observed": 120561,
+      "expected": 120561,
+      "passed": true
+    },
+    {
+      "name": "2023:gross_finance_expense:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:gross_finance_expense:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:gross_finance_expense:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:gross_finance_expense:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:gross_finance_expense:yuan",
+      "observed": 181446000,
+      "expected": 181446000,
+      "passed": true
+    },
+    {
+      "name": "2023:gross_finance_expense:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:gross_finance_expense:year_column",
+      "observed": 181446,
+      "expected": 181446,
+      "passed": true
+    },
+    {
+      "name": "2024:gross_finance_expense:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:gross_finance_expense:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:gross_finance_expense:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:gross_finance_expense:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:gross_finance_expense:yuan",
+      "observed": 254421000,
+      "expected": 254421000,
+      "passed": true
+    },
+    {
+      "name": "2024:gross_finance_expense:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:gross_finance_expense:year_column",
+      "observed": 254421,
+      "expected": 254421,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_method_profit:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:equity_method_profit:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_method_profit:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_method_profit:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:equity_method_profit:yuan",
+      "observed": 201155000,
+      "expected": 201155000,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_method_profit:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:equity_method_profit:year_column",
+      "observed": 201155,
+      "expected": 201155,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_method_profit:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_method_profit:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_method_profit:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_method_profit:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_method_profit:yuan",
+      "observed": 377972000,
+      "expected": 377972000,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_method_profit:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_method_profit:year_column",
+      "observed": 377972,
+      "expected": 377972,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_method_profit:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:equity_method_profit:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_method_profit:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_method_profit:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:equity_method_profit:yuan",
+      "observed": 256299000,
+      "expected": 256299000,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_method_profit:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:equity_method_profit:year_column",
+      "observed": 256299,
+      "expected": 256299,
+      "passed": true
+    },
+    {
+      "name": "2022:profit_before_tax:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:profit_before_tax:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:profit_before_tax:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:profit_before_tax:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:profit_before_tax:yuan",
+      "observed": 5415100000,
+      "expected": 5415100000,
+      "passed": true
+    },
+    {
+      "name": "2022:profit_before_tax:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:profit_before_tax:year_column",
+      "observed": 5415100,
+      "expected": 5415100,
+      "passed": true
+    },
+    {
+      "name": "2023:profit_before_tax:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:profit_before_tax:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:profit_before_tax:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:profit_before_tax:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:profit_before_tax:yuan",
+      "observed": 4256169000,
+      "expected": 4256169000,
+      "passed": true
+    },
+    {
+      "name": "2023:profit_before_tax:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:profit_before_tax:year_column",
+      "observed": 4256169,
+      "expected": 4256169,
+      "passed": true
+    },
+    {
+      "name": "2024:profit_before_tax:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:profit_before_tax:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:profit_before_tax:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:profit_before_tax:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:profit_before_tax:yuan",
+      "observed": 4109609000,
+      "expected": 4109609000,
+      "passed": true
+    },
+    {
+      "name": "2024:profit_before_tax:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:profit_before_tax:year_column",
+      "observed": 4109609,
+      "expected": 4109609,
+      "passed": true
+    },
+    {
+      "name": "2022:income_tax_expense:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:income_tax_expense:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:income_tax_expense:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:income_tax_expense:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:income_tax_expense:yuan",
+      "observed": 1351329000,
+      "expected": 1351329000,
+      "passed": true
+    },
+    {
+      "name": "2022:income_tax_expense:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:income_tax_expense:year_column",
+      "observed": 1351329,
+      "expected": 1351329,
+      "passed": true
+    },
+    {
+      "name": "2023:income_tax_expense:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:income_tax_expense:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:income_tax_expense:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:income_tax_expense:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:income_tax_expense:yuan",
+      "observed": 1069207000,
+      "expected": 1069207000,
+      "passed": true
+    },
+    {
+      "name": "2023:income_tax_expense:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:income_tax_expense:year_column",
+      "observed": 1069207,
+      "expected": 1069207,
+      "passed": true
+    },
+    {
+      "name": "2024:income_tax_expense:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:income_tax_expense:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:income_tax_expense:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:income_tax_expense:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:income_tax_expense:yuan",
+      "observed": 1096691000,
+      "expected": 1096691000,
+      "passed": true
+    },
+    {
+      "name": "2024:income_tax_expense:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:income_tax_expense:year_column",
+      "observed": 1096691,
+      "expected": 1096691,
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_consolidated:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_consolidated:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_consolidated:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_consolidated:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_consolidated:yuan",
+      "observed": 4063771000,
+      "expected": 4063771000,
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_consolidated:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_consolidated:year_column",
+      "observed": 4063771,
+      "expected": 4063771,
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_consolidated:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_consolidated:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_consolidated:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_consolidated:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_consolidated:yuan",
+      "observed": 3186962000,
+      "expected": 3186962000,
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_consolidated:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_consolidated:year_column",
+      "observed": 3186962,
+      "expected": 3186962,
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_consolidated:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_consolidated:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_consolidated:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_consolidated:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_consolidated:yuan",
+      "observed": 3012918000,
+      "expected": 3012918000,
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_consolidated:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_consolidated:year_column",
+      "observed": 3012918,
+      "expected": 3012918,
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_parent:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_parent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_parent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_parent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_parent:yuan",
+      "observed": 4063834000,
+      "expected": 4063834000,
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_parent:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_parent:year_column",
+      "observed": 4063834,
+      "expected": 4063834,
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_parent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_parent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_parent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_parent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_parent:yuan",
+      "observed": 3186910000,
+      "expected": 3186910000,
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_parent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_parent:year_column",
+      "observed": 3186910,
+      "expected": 3186910,
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_parent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_parent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_parent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_parent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_parent:yuan",
+      "observed": 3012918000,
+      "expected": 3012918000,
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_parent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_parent:year_column",
+      "observed": 3012918,
+      "expected": 3012918,
+      "passed": true
+    },
+    {
+      "name": "2022:operating_cash_flow:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:operating_cash_flow:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:operating_cash_flow:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:operating_cash_flow:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:operating_cash_flow:yuan",
+      "observed": 3913604000,
+      "expected": 3913604000,
+      "passed": true
+    },
+    {
+      "name": "2022:operating_cash_flow:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:operating_cash_flow:year_column",
+      "observed": 3913604,
+      "expected": 3913604,
+      "passed": true
+    },
+    {
+      "name": "2023:operating_cash_flow:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:operating_cash_flow:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:operating_cash_flow:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:operating_cash_flow:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:operating_cash_flow:yuan",
+      "observed": 4687936000,
+      "expected": 4687936000,
+      "passed": true
+    },
+    {
+      "name": "2023:operating_cash_flow:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:operating_cash_flow:year_column",
+      "observed": 4687936,
+      "expected": 4687936,
+      "passed": true
+    },
+    {
+      "name": "2024:operating_cash_flow:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:operating_cash_flow:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:operating_cash_flow:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:operating_cash_flow:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:operating_cash_flow:yuan",
+      "observed": 5267935000,
+      "expected": 5267935000,
+      "passed": true
+    },
+    {
+      "name": "2024:operating_cash_flow:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:operating_cash_flow:year_column",
+      "observed": 5267935,
+      "expected": 5267935,
+      "passed": true
+    },
+    {
+      "name": "2022:total_assets:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:total_assets:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:total_assets:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:total_assets:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:total_assets:yuan",
+      "observed": 33646519000,
+      "expected": 33646519000,
+      "passed": true
+    },
+    {
+      "name": "2022:total_assets:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:total_assets:year_column",
+      "observed": 33646519,
+      "expected": 33646519,
+      "passed": true
+    },
+    {
+      "name": "2023:total_assets:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:total_assets:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:total_assets:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:total_assets:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:total_assets:yuan",
+      "observed": 34207803000,
+      "expected": 34207803000,
+      "passed": true
+    },
+    {
+      "name": "2023:total_assets:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:total_assets:year_column",
+      "observed": 34207803,
+      "expected": 34207803,
+      "passed": true
+    },
+    {
+      "name": "2024:total_assets:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:total_assets:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:total_assets:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:total_assets:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:total_assets:yuan",
+      "observed": 35708406000,
+      "expected": 35708406000,
+      "passed": true
+    },
+    {
+      "name": "2024:total_assets:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:total_assets:year_column",
+      "observed": 35708406,
+      "expected": 35708406,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_consolidated:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:equity_consolidated:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_consolidated:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_consolidated:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:equity_consolidated:yuan",
+      "observed": 24331928000,
+      "expected": 24331928000,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_consolidated:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:equity_consolidated:year_column",
+      "observed": 24331928,
+      "expected": 24331928,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_consolidated:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_consolidated:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_consolidated:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_consolidated:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_consolidated:yuan",
+      "observed": 24406641000,
+      "expected": 24406641000,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_consolidated:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_consolidated:year_column",
+      "observed": 24406641,
+      "expected": 24406641,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_consolidated:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:equity_consolidated:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_consolidated:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_consolidated:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:equity_consolidated:yuan",
+      "observed": 26103689000,
+      "expected": 26103689000,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_consolidated:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:equity_consolidated:year_column",
+      "observed": 26103689,
+      "expected": 26103689,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_parent:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:equity_parent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_parent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_parent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:equity_parent:yuan",
+      "observed": 24329430000,
+      "expected": 24329430000,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_parent:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:equity_parent:year_column",
+      "observed": 24329430,
+      "expected": 24329430,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_parent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_parent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_parent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_parent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_parent:yuan",
+      "observed": 24406641000,
+      "expected": 24406641000,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_parent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_parent:year_column",
+      "observed": 24406641,
+      "expected": 24406641,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_parent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:equity_parent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_parent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_parent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:equity_parent:yuan",
+      "observed": 26103689000,
+      "expected": 26103689000,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_parent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:equity_parent:year_column",
+      "observed": 26103689,
+      "expected": 26103689,
+      "passed": true
+    },
+    {
+      "name": "2022:total_liabilities:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:total_liabilities:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:total_liabilities:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:total_liabilities:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:total_liabilities:yuan",
+      "observed": 9314591000,
+      "expected": 9314591000,
+      "passed": true
+    },
+    {
+      "name": "2022:total_liabilities:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:total_liabilities:year_column",
+      "observed": 9314591,
+      "expected": 9314591,
+      "passed": true
+    },
+    {
+      "name": "2023:total_liabilities:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:total_liabilities:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:total_liabilities:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:total_liabilities:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:total_liabilities:yuan",
+      "observed": 9801162000,
+      "expected": 9801162000,
+      "passed": true
+    },
+    {
+      "name": "2023:total_liabilities:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:total_liabilities:year_column",
+      "observed": 9801162,
+      "expected": 9801162,
+      "passed": true
+    },
+    {
+      "name": "2024:total_liabilities:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:total_liabilities:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:total_liabilities:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:total_liabilities:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:total_liabilities:yuan",
+      "observed": 9604717000,
+      "expected": 9604717000,
+      "passed": true
+    },
+    {
+      "name": "2024:total_liabilities:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:total_liabilities:year_column",
+      "observed": 9604717,
+      "expected": 9604717,
+      "passed": true
+    },
+    {
+      "name": "2022:cash_and_cash_equivalents:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:cash_and_cash_equivalents:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:cash_and_cash_equivalents:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:cash_and_cash_equivalents:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:cash_and_cash_equivalents:yuan",
+      "observed": 7382218000,
+      "expected": 7382218000,
+      "passed": true
+    },
+    {
+      "name": "2022:cash_and_cash_equivalents:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:cash_and_cash_equivalents:year_column",
+      "observed": 7382218,
+      "expected": 7382218,
+      "passed": true
+    },
+    {
+      "name": "2023:cash_and_cash_equivalents:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:cash_and_cash_equivalents:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:cash_and_cash_equivalents:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:cash_and_cash_equivalents:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:cash_and_cash_equivalents:yuan",
+      "observed": 5443883000,
+      "expected": 5443883000,
+      "passed": true
+    },
+    {
+      "name": "2023:cash_and_cash_equivalents:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:cash_and_cash_equivalents:year_column",
+      "observed": 5443883,
+      "expected": 5443883,
+      "passed": true
+    },
+    {
+      "name": "2024:cash_and_cash_equivalents:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:cash_and_cash_equivalents:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:cash_and_cash_equivalents:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:cash_and_cash_equivalents:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:cash_and_cash_equivalents:yuan",
+      "observed": 7498596000,
+      "expected": 7498596000,
+      "passed": true
+    },
+    {
+      "name": "2024:cash_and_cash_equivalents:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:cash_and_cash_equivalents:year_column",
+      "observed": 7498596,
+      "expected": 7498596,
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_current:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_current:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_current:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_current:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_current:yuan",
+      "observed": 643324000,
+      "expected": 643324000,
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_current:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_current:year_column",
+      "observed": 643324,
+      "expected": 643324,
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_current:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_current:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_current:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_current:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_current:yuan",
+      "observed": 3493687000,
+      "expected": 3493687000,
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_current:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_current:year_column",
+      "observed": 3493687,
+      "expected": 3493687,
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_current:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_current:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_current:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_current:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_current:yuan",
+      "observed": 8264361000,
+      "expected": 8264361000,
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_current:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_current:year_column",
+      "observed": 8264361,
+      "expected": 8264361,
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_noncurrent:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_noncurrent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_noncurrent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_noncurrent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_noncurrent:yuan",
+      "observed": 11023296000,
+      "expected": 11023296000,
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_noncurrent:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:term_deposits_noncurrent:year_column",
+      "observed": 11023296,
+      "expected": 11023296,
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_noncurrent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_noncurrent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_noncurrent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_noncurrent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_noncurrent:yuan",
+      "observed": 9037142000,
+      "expected": 9037142000,
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_noncurrent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:term_deposits_noncurrent:year_column",
+      "observed": 9037142,
+      "expected": 9037142,
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_noncurrent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_noncurrent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_noncurrent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_noncurrent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_noncurrent:yuan",
+      "observed": 2377970000,
+      "expected": 2377970000,
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_noncurrent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:term_deposits_noncurrent:year_column",
+      "observed": 2377970,
+      "expected": 2377970,
+      "passed": true
+    },
+    {
+      "name": "2022:restricted_bank_deposits:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:restricted_bank_deposits:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:restricted_bank_deposits:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:restricted_bank_deposits:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:restricted_bank_deposits:yuan",
+      "observed": 970000,
+      "expected": 970000,
+      "passed": true
+    },
+    {
+      "name": "2022:restricted_bank_deposits:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:restricted_bank_deposits:year_column",
+      "observed": 970,
+      "expected": 970,
+      "passed": true
+    },
+    {
+      "name": "2023:restricted_bank_deposits:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:restricted_bank_deposits:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:restricted_bank_deposits:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:restricted_bank_deposits:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:restricted_bank_deposits:yuan",
+      "observed": 806000,
+      "expected": 806000,
+      "passed": true
+    },
+    {
+      "name": "2023:restricted_bank_deposits:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:restricted_bank_deposits:year_column",
+      "observed": 806,
+      "expected": 806,
+      "passed": true
+    },
+    {
+      "name": "2024:restricted_bank_deposits:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:restricted_bank_deposits:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:restricted_bank_deposits:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:restricted_bank_deposits:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:restricted_bank_deposits:yuan",
+      "observed": 23261000,
+      "expected": 23261000,
+      "passed": true
+    },
+    {
+      "name": "2024:restricted_bank_deposits:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:restricted_bank_deposits:year_column",
+      "observed": 23261,
+      "expected": 23261,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_current:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_current:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_current:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_current:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_current:yuan",
+      "observed": 667762000,
+      "expected": 667762000,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_current:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_current:year_column",
+      "observed": 667762,
+      "expected": 667762,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_current:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_current:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_current:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_current:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_current:yuan",
+      "observed": 716665000,
+      "expected": 716665000,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_current:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_current:year_column",
+      "observed": 716665,
+      "expected": 716665,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_current:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_current:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_current:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_current:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_current:yuan",
+      "observed": 551610000,
+      "expected": 551610000,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_current:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_current:year_column",
+      "observed": 551610,
+      "expected": 551610,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_noncurrent:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_noncurrent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_noncurrent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_noncurrent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_noncurrent:yuan",
+      "observed": 1473905000,
+      "expected": 1473905000,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_noncurrent:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_liabilities_noncurrent:year_column",
+      "observed": 1473905,
+      "expected": 1473905,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_noncurrent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_noncurrent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_noncurrent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_noncurrent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_noncurrent:yuan",
+      "observed": 1825288000,
+      "expected": 1825288000,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_noncurrent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_liabilities_noncurrent:year_column",
+      "observed": 1825288,
+      "expected": 1825288,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_noncurrent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_noncurrent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_noncurrent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_noncurrent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_noncurrent:yuan",
+      "observed": 1384527000,
+      "expected": 1384527000,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_noncurrent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_liabilities_noncurrent:year_column",
+      "observed": 1384527,
+      "expected": 1384527,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_current:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_current:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_current:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_current:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_current:yuan",
+      "observed": 50540000,
+      "expected": 50540000,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_current:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_current:year_column",
+      "observed": 50540,
+      "expected": 50540,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_current:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_current:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_current:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_current:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_current:yuan",
+      "observed": 38484000,
+      "expected": 38484000,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_current:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_current:year_column",
+      "observed": 38484,
+      "expected": 38484,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_current:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_current:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_current:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_current:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_current:yuan",
+      "observed": 40917000,
+      "expected": 40917000,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_current:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_current:year_column",
+      "observed": 40917,
+      "expected": 40917,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_noncurrent:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_noncurrent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_noncurrent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_noncurrent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_noncurrent:yuan",
+      "observed": 15531000,
+      "expected": 15531000,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_noncurrent:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_payables_noncurrent:year_column",
+      "observed": 15531,
+      "expected": 15531,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_noncurrent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_noncurrent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_noncurrent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_noncurrent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_noncurrent:yuan",
+      "observed": 8581000,
+      "expected": 8581000,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_noncurrent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_payables_noncurrent:year_column",
+      "observed": 8581,
+      "expected": 8581,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_noncurrent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_noncurrent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_noncurrent:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_noncurrent:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_noncurrent:yuan",
+      "observed": 16500000,
+      "expected": 16500000,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_noncurrent:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_payables_noncurrent:year_column",
+      "observed": 16500,
+      "expected": 16500,
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_cost:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_cost:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_cost:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_cost:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_cost:yuan",
+      "observed": 3391000,
+      "expected": 3391000,
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_cost:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_cost:year_column",
+      "observed": 3391,
+      "expected": 3391,
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_cost:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_cost:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_cost:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_cost:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_cost:yuan",
+      "observed": 16006000,
+      "expected": 16006000,
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_cost:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_cost:year_column",
+      "observed": 16006,
+      "expected": 16006,
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_cost:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_cost:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_cost:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_cost:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_cost:yuan",
+      "observed": 28176000,
+      "expected": 28176000,
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_cost:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_cost:year_column",
+      "observed": 28176,
+      "expected": 28176,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_interest_cost:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_interest_cost:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_interest_cost:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_interest_cost:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_interest_cost:yuan",
+      "observed": 99035000,
+      "expected": 99035000,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_interest_cost:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_interest_cost:year_column",
+      "observed": 99035,
+      "expected": 99035,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_interest_cost:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_interest_cost:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_interest_cost:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_interest_cost:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_interest_cost:yuan",
+      "observed": 144488000,
+      "expected": 144488000,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_interest_cost:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_interest_cost:year_column",
+      "observed": 144488,
+      "expected": 144488,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_interest_cost:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_interest_cost:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_interest_cost:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_interest_cost:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_interest_cost:yuan",
+      "observed": 126994000,
+      "expected": 126994000,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_interest_cost:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_interest_cost:year_column",
+      "observed": 126994,
+      "expected": 126994,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_unwinding_cost:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_unwinding_cost:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_unwinding_cost:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_unwinding_cost:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_unwinding_cost:yuan",
+      "observed": 2363000,
+      "expected": 2363000,
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_unwinding_cost:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:royalty_unwinding_cost:year_column",
+      "observed": 2363,
+      "expected": 2363,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_unwinding_cost:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_unwinding_cost:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_unwinding_cost:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_unwinding_cost:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_unwinding_cost:yuan",
+      "observed": 1993000,
+      "expected": 1993000,
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_unwinding_cost:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:royalty_unwinding_cost:year_column",
+      "observed": 1993,
+      "expected": 1993,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_unwinding_cost:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_unwinding_cost:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_unwinding_cost:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_unwinding_cost:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_unwinding_cost:yuan",
+      "observed": 1362000,
+      "expected": 1362000,
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_unwinding_cost:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:royalty_unwinding_cost:year_column",
+      "observed": 1362,
+      "expected": 1362,
+      "passed": true
+    },
+    {
+      "name": "2022:other_finance_expense:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:other_finance_expense:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:other_finance_expense:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:other_finance_expense:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:other_finance_expense:yuan",
+      "observed": 15772000,
+      "expected": 15772000,
+      "passed": true
+    },
+    {
+      "name": "2022:other_finance_expense:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:other_finance_expense:year_column",
+      "observed": 15772,
+      "expected": 15772,
+      "passed": true
+    },
+    {
+      "name": "2023:other_finance_expense:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:other_finance_expense:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:other_finance_expense:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:other_finance_expense:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:other_finance_expense:yuan",
+      "observed": 18959000,
+      "expected": 18959000,
+      "passed": true
+    },
+    {
+      "name": "2023:other_finance_expense:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:other_finance_expense:year_column",
+      "observed": 18959,
+      "expected": 18959,
+      "passed": true
+    },
+    {
+      "name": "2024:other_finance_expense:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:other_finance_expense:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:other_finance_expense:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:other_finance_expense:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:other_finance_expense:yuan",
+      "observed": 23996000,
+      "expected": 23996000,
+      "passed": true
+    },
+    {
+      "name": "2024:other_finance_expense:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:other_finance_expense:year_column",
+      "observed": 23996,
+      "expected": 23996,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_received:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_received:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_received:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_received:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_received:yuan",
+      "observed": 600000000,
+      "expected": 600000000,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_received:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_received:year_column",
+      "observed": 600000,
+      "expected": 600000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_received:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_received:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_received:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_received:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_received:yuan",
+      "observed": 2500000000,
+      "expected": 2500000000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_received:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_received:year_column",
+      "observed": 2500000,
+      "expected": 2500000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_received:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_received:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_received:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_received:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_received:yuan",
+      "observed": 5006216000,
+      "expected": 5006216000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_received:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_received:year_column",
+      "observed": 5006216,
+      "expected": 5006216,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_repaid:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_repaid:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_repaid:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_repaid:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_repaid:yuan",
+      "observed": 600000000,
+      "expected": 600000000,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_repaid:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_repaid:year_column",
+      "observed": 600000,
+      "expected": 600000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_repaid:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_repaid:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_repaid:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_repaid:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_repaid:yuan",
+      "observed": 2500000000,
+      "expected": 2500000000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_repaid:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_repaid:year_column",
+      "observed": 2500000,
+      "expected": 2500000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_repaid:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_repaid:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_repaid:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_repaid:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_repaid:yuan",
+      "observed": 5006216000,
+      "expected": 5006216000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_repaid:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_repaid:year_column",
+      "observed": 5006216,
+      "expected": 5006216,
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_paid:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_paid:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_paid:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_paid:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_paid:yuan",
+      "observed": 3391000,
+      "expected": 3391000,
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_paid:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:borrowing_interest_paid:year_column",
+      "observed": 3391,
+      "expected": 3391,
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_paid:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_paid:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_paid:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_paid:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_paid:yuan",
+      "observed": 16006000,
+      "expected": 16006000,
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_paid:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:borrowing_interest_paid:year_column",
+      "observed": 16006,
+      "expected": 16006,
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_paid:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_paid:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_paid:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_paid:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_paid:yuan",
+      "observed": 28176000,
+      "expected": 28176000,
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_paid:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:borrowing_interest_paid:year_column",
+      "observed": 28176,
+      "expected": 28176,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_principal_and_interest_paid:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_principal_and_interest_paid:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_principal_and_interest_paid:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_principal_and_interest_paid:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_principal_and_interest_paid:yuan",
+      "observed": 627429000,
+      "expected": 627429000,
+      "passed": true
+    },
+    {
+      "name": "2022:lease_principal_and_interest_paid:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:lease_principal_and_interest_paid:year_column",
+      "observed": 627429,
+      "expected": 627429,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_principal_and_interest_paid:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_principal_and_interest_paid:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_principal_and_interest_paid:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_principal_and_interest_paid:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_principal_and_interest_paid:yuan",
+      "observed": 872236000,
+      "expected": 872236000,
+      "passed": true
+    },
+    {
+      "name": "2023:lease_principal_and_interest_paid:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:lease_principal_and_interest_paid:year_column",
+      "observed": 872236,
+      "expected": 872236,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_principal_and_interest_paid:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_principal_and_interest_paid:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_principal_and_interest_paid:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_principal_and_interest_paid:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_principal_and_interest_paid:yuan",
+      "observed": 856075000,
+      "expected": 856075000,
+      "passed": true
+    },
+    {
+      "name": "2024:lease_principal_and_interest_paid:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:lease_principal_and_interest_paid:year_column",
+      "observed": 856075,
+      "expected": 856075,
+      "passed": true
+    },
+    {
+      "name": "2022:share_option_issuance_proceeds:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:share_option_issuance_proceeds:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:share_option_issuance_proceeds:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:share_option_issuance_proceeds:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:share_option_issuance_proceeds:yuan",
+      "observed": 96715000,
+      "expected": 96715000,
+      "passed": true
+    },
+    {
+      "name": "2022:share_option_issuance_proceeds:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:share_option_issuance_proceeds:year_column",
+      "observed": 96715,
+      "expected": 96715,
+      "passed": true
+    },
+    {
+      "name": "2023:share_option_issuance_proceeds:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:share_option_issuance_proceeds:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:share_option_issuance_proceeds:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:share_option_issuance_proceeds:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:share_option_issuance_proceeds:yuan",
+      "observed": 7416000,
+      "expected": 7416000,
+      "passed": true
+    },
+    {
+      "name": "2023:share_option_issuance_proceeds:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:share_option_issuance_proceeds:year_column",
+      "observed": 7416,
+      "expected": 7416,
+      "passed": true
+    },
+    {
+      "name": "2024:share_option_issuance_proceeds:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:share_option_issuance_proceeds:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:share_option_issuance_proceeds:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:share_option_issuance_proceeds:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:share_option_issuance_proceeds:yuan",
+      "observed": 3917000,
+      "expected": 3917000,
+      "passed": true
+    },
+    {
+      "name": "2024:share_option_issuance_proceeds:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:share_option_issuance_proceeds:year_column",
+      "observed": 3917,
+      "expected": 3917,
+      "passed": true
+    },
+    {
+      "name": "2022:cash_at_bank_and_on_hand:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:cash_at_bank_and_on_hand:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:cash_at_bank_and_on_hand:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:cash_at_bank_and_on_hand:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:cash_at_bank_and_on_hand:yuan",
+      "observed": 7187863000,
+      "expected": 7187863000,
+      "passed": true
+    },
+    {
+      "name": "2022:cash_at_bank_and_on_hand:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:cash_at_bank_and_on_hand:year_column",
+      "observed": 7187863,
+      "expected": 7187863,
+      "passed": true
+    },
+    {
+      "name": "2023:cash_at_bank_and_on_hand:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:cash_at_bank_and_on_hand:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:cash_at_bank_and_on_hand:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:cash_at_bank_and_on_hand:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:cash_at_bank_and_on_hand:yuan",
+      "observed": 5348970000,
+      "expected": 5348970000,
+      "passed": true
+    },
+    {
+      "name": "2023:cash_at_bank_and_on_hand:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:cash_at_bank_and_on_hand:year_column",
+      "observed": 5348970,
+      "expected": 5348970,
+      "passed": true
+    },
+    {
+      "name": "2024:cash_at_bank_and_on_hand:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:cash_at_bank_and_on_hand:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:cash_at_bank_and_on_hand:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:cash_at_bank_and_on_hand:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:cash_at_bank_and_on_hand:yuan",
+      "observed": 7198591000,
+      "expected": 7198591000,
+      "passed": true
+    },
+    {
+      "name": "2024:cash_at_bank_and_on_hand:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:cash_at_bank_and_on_hand:year_column",
+      "observed": 7198591,
+      "expected": 7198591,
+      "passed": true
+    },
+    {
+      "name": "2022:deposit_original_maturity_under_three_months:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:deposit_original_maturity_under_three_months:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:deposit_original_maturity_under_three_months:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:deposit_original_maturity_under_three_months:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:deposit_original_maturity_under_three_months:yuan",
+      "observed": 194355000,
+      "expected": 194355000,
+      "passed": true
+    },
+    {
+      "name": "2022:deposit_original_maturity_under_three_months:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:deposit_original_maturity_under_three_months:year_column",
+      "observed": 194355,
+      "expected": 194355,
+      "passed": true
+    },
+    {
+      "name": "2023:deposit_original_maturity_under_three_months:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:deposit_original_maturity_under_three_months:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:deposit_original_maturity_under_three_months:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:deposit_original_maturity_under_three_months:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:deposit_original_maturity_under_three_months:yuan",
+      "observed": 94913000,
+      "expected": 94913000,
+      "passed": true
+    },
+    {
+      "name": "2023:deposit_original_maturity_under_three_months:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2023:deposit_original_maturity_under_three_months:year_column",
+      "observed": 94913,
+      "expected": 94913,
+      "passed": true
+    },
+    {
+      "name": "2024:deposit_original_maturity_under_three_months:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:deposit_original_maturity_under_three_months:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:deposit_original_maturity_under_three_months:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:deposit_original_maturity_under_three_months:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:deposit_original_maturity_under_three_months:yuan",
+      "observed": 300005000,
+      "expected": 300005000,
+      "passed": true
+    },
+    {
+      "name": "2024:deposit_original_maturity_under_three_months:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:deposit_original_maturity_under_three_months:year_column",
+      "observed": 300005,
+      "expected": 300005,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_at_year_end:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_at_year_end:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_at_year_end:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_at_year_end:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_at_year_end:yuan",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_borrowings_at_year_end:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2022:core_income_parent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2022:core_income_parent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2022:core_income_parent:only_explicit_core_unknown",
+      "observed": "core_income_parent",
+      "expected": "core_income_parent",
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_at_year_end:source_url",
+      "observed": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "expected": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219750452.PDF",
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_at_year_end:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_at_year_end:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_at_year_end:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_at_year_end:yuan",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_borrowings_at_year_end:availability",
+      "observed": "2024-04-23",
+      "expected": "2024-04-23",
+      "passed": true
+    },
+    {
+      "name": "2023:core_income_parent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2023:core_income_parent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2023:core_income_parent:only_explicit_core_unknown",
+      "observed": "core_income_parent",
+      "expected": "core_income_parent",
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_at_year_end:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_at_year_end:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_at_year_end:unit_scale",
+      "observed": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_at_year_end:unit",
+      "observed": "RMB thousand",
+      "expected": "RMB thousand",
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_at_year_end:yuan",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_borrowings_at_year_end:availability",
+      "observed": "2025-04-29",
+      "expected": "2025-04-29",
+      "passed": true
+    },
+    {
+      "name": "2024:core_income_parent:source_url",
+      "observed": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "expected": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042901719_c.pdf",
+      "passed": true
+    },
+    {
+      "name": "2024:core_income_parent:page_offset",
+      "observed": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "2024:core_income_parent:only_explicit_core_unknown",
+      "observed": "core_income_parent",
+      "expected": "core_income_parent",
+      "passed": true
+    },
+    {
+      "name": "2022:balance_sheet",
+      "observed": 33646519000,
+      "expected": 33646519000,
+      "passed": true
+    },
+    {
+      "name": "2022:gross_profit",
+      "observed": 12484793000,
+      "expected": 12484793000,
+      "passed": true
+    },
+    {
+      "name": "2022:profit_before_tax",
+      "observed": 5415100000,
+      "expected": 5415100000,
+      "passed": true
+    },
+    {
+      "name": "2022:profit_after_tax",
+      "observed": 4063771000,
+      "expected": 4063771000,
+      "passed": true
+    },
+    {
+      "name": "2022:cash_components",
+      "observed": 7382218000,
+      "expected": 7382218000,
+      "passed": true
+    },
+    {
+      "name": "2022:finance_expense_components",
+      "observed": 120561000,
+      "expected": 120561000,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_loan_flow_reconciles",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "2022:interest_paid_matches_accrued",
+      "observed": 3391000,
+      "expected": 3391000,
+      "passed": true
+    },
+    {
+      "name": "2022:issuance_occurred",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "2022:core_profit_preserved_unknown",
+      "observed": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "2022:zero_bank_debt_does_not_zero_interest",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "2023:balance_sheet",
+      "observed": 34207803000,
+      "expected": 34207803000,
+      "passed": true
+    },
+    {
+      "name": "2023:gross_profit",
+      "observed": 13352055000,
+      "expected": 13352055000,
+      "passed": true
+    },
+    {
+      "name": "2023:profit_before_tax",
+      "observed": 4256169000,
+      "expected": 4256169000,
+      "passed": true
+    },
+    {
+      "name": "2023:profit_after_tax",
+      "observed": 3186962000,
+      "expected": 3186962000,
+      "passed": true
+    },
+    {
+      "name": "2023:cash_components",
+      "observed": 5443883000,
+      "expected": 5443883000,
+      "passed": true
+    },
+    {
+      "name": "2023:finance_expense_components",
+      "observed": 181446000,
+      "expected": 181446000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_loan_flow_reconciles",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "2023:interest_paid_matches_accrued",
+      "observed": 16006000,
+      "expected": 16006000,
+      "passed": true
+    },
+    {
+      "name": "2023:issuance_occurred",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "2023:core_profit_preserved_unknown",
+      "observed": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "2023:zero_bank_debt_does_not_zero_interest",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "2024:balance_sheet",
+      "observed": 35708406000,
+      "expected": 35708406000,
+      "passed": true
+    },
+    {
+      "name": "2024:gross_profit",
+      "observed": 14156103000,
+      "expected": 14156103000,
+      "passed": true
+    },
+    {
+      "name": "2024:profit_before_tax",
+      "observed": 4109609000,
+      "expected": 4109609000,
+      "passed": true
+    },
+    {
+      "name": "2024:profit_after_tax",
+      "observed": 3012918000,
+      "expected": 3012918000,
+      "passed": true
+    },
+    {
+      "name": "2024:cash_components",
+      "observed": 7498596000,
+      "expected": 7498596000,
+      "passed": true
+    },
+    {
+      "name": "2024:finance_expense_components",
+      "observed": 254421000,
+      "expected": 254421000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_loan_flow_reconciles",
+      "observed": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "2024:interest_paid_matches_accrued",
+      "observed": 28176000,
+      "expected": 28176000,
+      "passed": true
+    },
+    {
+      "name": "2024:issuance_occurred",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "2024:core_profit_preserved_unknown",
+      "observed": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "2024:zero_bank_debt_does_not_zero_interest",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_and_lease_debt:formula",
+      "observed": 2141667000,
+      "expected": 2141667000,
+      "passed": true
+    },
+    {
+      "name": "2022:bank_and_lease_interest:formula",
+      "observed": 102426000,
+      "expected": 102426000,
+      "passed": true
+    },
+    {
+      "name": "2022:net_debt_cash_equivalents_basis:formula",
+      "observed": -5240551000,
+      "expected": -5240551000,
+      "passed": true
+    },
+    {
+      "name": "2022:reported_cash_and_unrestricted_term_deposits:formula",
+      "observed": 19048838000,
+      "expected": 19048838000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_and_lease_debt:formula",
+      "observed": 2541953000,
+      "expected": 2541953000,
+      "passed": true
+    },
+    {
+      "name": "2023:bank_and_lease_interest:formula",
+      "observed": 160494000,
+      "expected": 160494000,
+      "passed": true
+    },
+    {
+      "name": "2023:net_debt_cash_equivalents_basis:formula",
+      "observed": -2901930000,
+      "expected": -2901930000,
+      "passed": true
+    },
+    {
+      "name": "2023:reported_cash_and_unrestricted_term_deposits:formula",
+      "observed": 17974712000,
+      "expected": 17974712000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_and_lease_debt:formula",
+      "observed": 1936137000,
+      "expected": 1936137000,
+      "passed": true
+    },
+    {
+      "name": "2024:bank_and_lease_interest:formula",
+      "observed": 155170000,
+      "expected": 155170000,
+      "passed": true
+    },
+    {
+      "name": "2024:net_debt_cash_equivalents_basis:formula",
+      "observed": -5562459000,
+      "expected": -5562459000,
+      "passed": true
+    },
+    {
+      "name": "2024:reported_cash_and_unrestricted_term_deposits:formula",
+      "observed": 18140927000,
+      "expected": 18140927000,
+      "passed": true
+    },
+    {
+      "name": "2023:single_gain_adjustment_reconciles",
+      "observed": 3046453000,
+      "expected": 3046453000,
+      "passed": true
+    },
+    {
+      "name": "2022:parent_vs_total_equity",
+      "observed": 2498000,
+      "expected": 2498000,
+      "passed": true
+    },
+    {
+      "name": "2022:parent_vs_total_profit",
+      "observed": -63000,
+      "expected": -63000,
+      "passed": true
+    },
+    {
+      "name": "2023:parent_vs_total_profit",
+      "observed": 52000,
+      "expected": 52000,
+      "passed": true
+    },
+    {
+      "name": "automatic_engine_release_disabled",
+      "observed": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "2022:revenue:aggregator_vs_original",
+      "observed": 25803383000,
+      "expected": 25803383000,
+      "passed": true
+    },
+    {
+      "name": "2022:net_income_parent:aggregator_vs_original",
+      "observed": 4063834000,
+      "expected": 4063834000,
+      "passed": true
+    },
+    {
+      "name": "2022:total_assets:aggregator_vs_original",
+      "observed": 33646519000,
+      "expected": 33646519000,
+      "passed": true
+    },
+    {
+      "name": "2022:equity_parent:aggregator_vs_original",
+      "observed": 24329430000,
+      "expected": 24329430000,
+      "passed": true
+    },
+    {
+      "name": "2022:operating_cash_flow:aggregator_vs_original",
+      "observed": 3913604000,
+      "expected": 3913604000,
+      "passed": true
+    },
+    {
+      "name": "2023:revenue:aggregator_vs_original",
+      "observed": 27598491000,
+      "expected": 27598491000,
+      "passed": true
+    },
+    {
+      "name": "2023:net_income_parent:aggregator_vs_original",
+      "observed": 3186910000,
+      "expected": 3186910000,
+      "passed": true
+    },
+    {
+      "name": "2023:total_assets:aggregator_vs_original",
+      "observed": 34207803000,
+      "expected": 34207803000,
+      "passed": true
+    },
+    {
+      "name": "2023:equity_parent:aggregator_vs_original",
+      "observed": 24406641000,
+      "expected": 24406641000,
+      "passed": true
+    },
+    {
+      "name": "2023:operating_cash_flow:aggregator_vs_original",
+      "observed": 4687936000,
+      "expected": 4687936000,
+      "passed": true
+    },
+    {
+      "name": "2024:revenue:aggregator_vs_original",
+      "observed": 28675643000,
+      "expected": 28675643000,
+      "passed": true
+    },
+    {
+      "name": "2024:net_income_parent:aggregator_vs_original",
+      "observed": 3012918000,
+      "expected": 3012918000,
+      "passed": true
+    },
+    {
+      "name": "2024:total_assets:aggregator_vs_original",
+      "observed": 35708406000,
+      "expected": 35708406000,
+      "passed": true
+    },
+    {
+      "name": "2024:equity_parent:aggregator_vs_original",
+      "observed": 26103689000,
+      "expected": 26103689000,
+      "passed": true
+    },
+    {
+      "name": "2024:operating_cash_flow:aggregator_vs_original",
+      "observed": 5267935000,
+      "expected": 5267935000,
+      "passed": true
+    }
+  ],
+  "original_pdf_checks": [
+    {
+      "name": "lining_2024:pdf_sha256",
+      "passed": true
+    },
+    {
+      "name": "lining_2023:pdf_sha256",
+      "passed": true
+    },
+    {
+      "name": "2022:revenue:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:revenue:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:revenue:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:cost_of_goods_sold:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:cost_of_goods_sold:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:cost_of_goods_sold:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:gross_profit:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:gross_profit:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:gross_profit:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:operating_profit:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:operating_profit:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:operating_profit:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:finance_income:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:finance_income:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:finance_income:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:gross_finance_expense:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:gross_finance_expense:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:gross_finance_expense:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:equity_method_profit:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:equity_method_profit:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:equity_method_profit:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:profit_before_tax:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:profit_before_tax:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:profit_before_tax:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:income_tax_expense:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:income_tax_expense:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:income_tax_expense:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:net_income_consolidated:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:net_income_consolidated:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:net_income_consolidated:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:net_income_parent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 162
+    },
+    {
+      "name": "2023:net_income_parent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2024:net_income_parent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 175
+    },
+    {
+      "name": "2022:operating_cash_flow:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 166
+    },
+    {
+      "name": "2023:operating_cash_flow:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2024:operating_cash_flow:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2022:total_assets:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 160
+    },
+    {
+      "name": "2023:total_assets:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2024:total_assets:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2022:equity_consolidated:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 160
+    },
+    {
+      "name": "2023:equity_consolidated:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2024:equity_consolidated:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2022:equity_parent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 160
+    },
+    {
+      "name": "2023:equity_parent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2024:equity_parent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2022:total_liabilities:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 161
+    },
+    {
+      "name": "2023:total_liabilities:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2024:total_liabilities:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2022:cash_and_cash_equivalents:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 160
+    },
+    {
+      "name": "2023:cash_and_cash_equivalents:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2024:cash_and_cash_equivalents:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2022:term_deposits_current:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 160
+    },
+    {
+      "name": "2023:term_deposits_current:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2024:term_deposits_current:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2022:term_deposits_noncurrent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 160
+    },
+    {
+      "name": "2023:term_deposits_noncurrent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2024:term_deposits_noncurrent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2022:restricted_bank_deposits:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 160
+    },
+    {
+      "name": "2023:restricted_bank_deposits:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2024:restricted_bank_deposits:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 173
+    },
+    {
+      "name": "2022:lease_liabilities_current:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 161
+    },
+    {
+      "name": "2023:lease_liabilities_current:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2024:lease_liabilities_current:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2022:lease_liabilities_noncurrent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 161
+    },
+    {
+      "name": "2023:lease_liabilities_noncurrent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2024:lease_liabilities_noncurrent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2022:royalty_payables_current:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 161
+    },
+    {
+      "name": "2023:royalty_payables_current:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2024:royalty_payables_current:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2022:royalty_payables_noncurrent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 161
+    },
+    {
+      "name": "2023:royalty_payables_noncurrent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2024:royalty_payables_noncurrent:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 174
+    },
+    {
+      "name": "2022:borrowing_interest_cost:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 226
+    },
+    {
+      "name": "2023:borrowing_interest_cost:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 242
+    },
+    {
+      "name": "2024:borrowing_interest_cost:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 242
+    },
+    {
+      "name": "2022:lease_interest_cost:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 226
+    },
+    {
+      "name": "2023:lease_interest_cost:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 242
+    },
+    {
+      "name": "2024:lease_interest_cost:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 242
+    },
+    {
+      "name": "2022:royalty_unwinding_cost:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 226
+    },
+    {
+      "name": "2023:royalty_unwinding_cost:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 242
+    },
+    {
+      "name": "2024:royalty_unwinding_cost:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 242
+    },
+    {
+      "name": "2022:other_finance_expense:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 226
+    },
+    {
+      "name": "2023:other_finance_expense:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 242
+    },
+    {
+      "name": "2024:other_finance_expense:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 242
+    },
+    {
+      "name": "2022:bank_borrowings_received:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 166
+    },
+    {
+      "name": "2023:bank_borrowings_received:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2024:bank_borrowings_received:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2022:bank_borrowings_repaid:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 166
+    },
+    {
+      "name": "2023:bank_borrowings_repaid:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2024:bank_borrowings_repaid:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2022:borrowing_interest_paid:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 166
+    },
+    {
+      "name": "2023:borrowing_interest_paid:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2024:borrowing_interest_paid:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2022:lease_principal_and_interest_paid:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 166
+    },
+    {
+      "name": "2023:lease_principal_and_interest_paid:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2024:lease_principal_and_interest_paid:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2022:share_option_issuance_proceeds:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 166
+    },
+    {
+      "name": "2023:share_option_issuance_proceeds:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2024:share_option_issuance_proceeds:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 179
+    },
+    {
+      "name": "2022:cash_at_bank_and_on_hand:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 214
+    },
+    {
+      "name": "2023:cash_at_bank_and_on_hand:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 230
+    },
+    {
+      "name": "2024:cash_at_bank_and_on_hand:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 230
+    },
+    {
+      "name": "2022:deposit_original_maturity_under_three_months:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 214
+    },
+    {
+      "name": "2023:deposit_original_maturity_under_three_months:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 230
+    },
+    {
+      "name": "2024:deposit_original_maturity_under_three_months:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 230
+    },
+    {
+      "name": "2022:bank_borrowings_at_year_end:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 138
+    },
+    {
+      "name": "2023:bank_borrowings_at_year_end:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2023",
+      "pdf_page": 138
+    },
+    {
+      "name": "2024:bank_borrowings_at_year_end:original_pdf_row",
+      "passed": true,
+      "source_id": "lining_2024",
+      "pdf_page": 148
+    },
+    {
+      "name": "2023:company_specific_adjustment:pdf_prose",
+      "passed": true
+    },
+    {
+      "name": "2023:equity_method_oneoff_gain:pdf_prose",
+      "passed": true
+    }
+  ],
+  "original_pdf_verification_requested": true,
+  "negative_control_checks": [
+    {
+      "name": "wrong_scale",
+      "passed": true
+    },
+    {
+      "name": "zero_lease",
+      "passed": true
+    },
+    {
+      "name": "filled_core",
+      "passed": true
+    },
+    {
+      "name": "wrong_year_column",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "remaining_blockers": {
+    "core_income_parent": "Market-specific earnings normalization policy and source reconciliation remain unresolved; all three years retain null.",
+    "audit_opinion": "Not mapped in this extension; original auditor report still requires explicit structured audit review.",
+    "valuation": "No date-matched total company market capitalization and CNY conversion in this extension.",
+    "peer_coverage": "Only one Hong Kong issuer; cannot form an adequate same-market/industry ranking group.",
+    "historical_availability": "Annual report dates are conservative dates for these specific immutable documents. 2022 values here become available with 2023 report in 2024, not retroactively in 2023. Earlier results announcements and restatement chain are not reconstructed.",
+    "enterprise_release": "No approval to run this as an unattended enterprise investment-selection system is implied by field reconciliation."
+  },
+  "automatically_released_to_screening": false
+}

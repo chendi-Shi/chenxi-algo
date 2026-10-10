@@ -11,6 +11,7 @@ import math
 import sqlite3
 import sys
 from collections import Counter
+from contextlib import closing
 from pathlib import Path
 
 from demo import create_demo
@@ -21,6 +22,13 @@ ROOT = Path(__file__).resolve().parent
 STATUS_CN = {'candidate': '优先研究', 'watchlist': '观察清单', 'data_review': '数据待核验',
              'specialist_review': '行业专用分析', 'excluded': '未通过初筛'}
 BLOCK_CN = {'quality': '盈利质量', 'value': '相对估值', 'growth': '增长持续性', 'balance': '资产负债表'}
+OUTPUT_FILES = ('results.json', 'manifest.json', 'search.json', 'audit.json',
+                'report.html', 'screen.csv', 'research.sqlite')
+CSV_FIELDS = ('ticker', 'name', 'market', 'sector', 'status', 'score', 'f_score',
+              'f_score_lower_bound', 'f_score_known', 'peer_count', 'roe',
+              'cash_conversion', 'core_earnings_yield', 'fcf_yield',
+              'revenue_cagr_2y', 'core_profit_cagr_2y', 'net_debt_to_cfo',
+              'interest_cover', 'reasons', 'warnings')
 
 
 def dump_json(value):
@@ -29,6 +37,14 @@ def dump_json(value):
 
 def load_search_space(path):
     """Read a finite JSON object without accepting nonstandard numeric constants."""
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f'duplicate search-space key: {key}')
+            result[key] = value
+        return result
+
     def reject_constant(value):
         raise ValueError(f'search space contains non-finite JSON number: {value}')
 
@@ -39,7 +55,8 @@ def load_search_space(path):
         return parsed
 
     space = json.loads(path.read_text(encoding='utf-8-sig'),
-                       parse_constant=reject_constant, parse_float=finite_float)
+                       parse_constant=reject_constant, parse_float=finite_float,
+                       object_pairs_hook=unique_object)
     if not isinstance(space, dict):
         raise ValueError('--search-space must contain a JSON object')
     return space
@@ -52,7 +69,7 @@ def display(value, percentage=False):
 
 
 def save_database(path, run_id, manifest, results, inputs, document_path=None):
-    with sqlite3.connect(path) as con:
+    with closing(sqlite3.connect(path)) as con, con:
         con.executescript('''
             CREATE TABLE IF NOT EXISTS runs (
                 run_id TEXT PRIMARY KEY, as_of TEXT NOT NULL, manifest_json TEXT NOT NULL);
@@ -95,25 +112,26 @@ def save_database(path, run_id, manifest, results, inputs, document_path=None):
                         (run_id, row['document_id'], row['ticker'], row['source_url'], row['available_at'], dump_json(row)))
 
 
+def csv_row(company):
+    """Canonical exported cells, shared with the independent output verifier."""
+    row = {key: company.get(key, '') for key in CSV_FIELDS}
+    row.update({key: company['metrics'].get(key) for key in CSV_FIELDS if key in company['metrics']})
+    row['reasons'] = ' | '.join(company['reasons'])
+    row['warnings'] = ' | '.join(company['warnings'])
+    # Sanitize text before string conversion: actual negative numbers stay numeric.
+    for key, value in row.items():
+        if isinstance(value, str) and (value.lstrip().startswith(('=', '+', '-', '@')) or value.startswith(('\t', '\r', '\n'))):
+            value = "'" + value
+        row[key] = '' if value is None else str(value)
+    return row
+
+
 def export_csv(path, companies):
-    fields = ['ticker', 'name', 'market', 'sector', 'status', 'score', 'f_score',
-              'f_score_lower_bound', 'f_score_known', 'peer_count', 'roe',
-              'cash_conversion', 'core_earnings_yield', 'fcf_yield',
-              'revenue_cagr_2y', 'core_profit_cagr_2y', 'net_debt_to_cfo',
-              'interest_cover', 'reasons', 'warnings']
     with path.open('w', encoding='utf-8-sig', newline='') as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS)
         writer.writeheader()
         for company in companies:
-            row = {key: company.get(key, '') for key in fields}
-            row.update({key: company['metrics'].get(key) for key in fields if key in company['metrics']})
-            row['reasons'] = ' | '.join(company['reasons'])
-            row['warnings'] = ' | '.join(company['warnings'])
-            # Prevent spreadsheet programs from interpreting imported text as formulas.
-            for key, value in row.items():
-                if isinstance(value, str) and (value.lstrip().startswith(('=', '+', '-', '@')) or value.startswith(('\t', '\r', '\n'))):
-                    row[key] = "'" + value
-            writer.writerow(row)
+            writer.writerow(csv_row(company))
 
 
 def report_html(results, synthetic=False):
@@ -243,6 +261,9 @@ def main(argv=None):
             args.statements, args.valuations, args.documents = (paths[k] for k in ('statements', 'valuations', 'documents'))
         if args.statements is None or args.valuations is None:
             raise ValueError('provide --statements and --valuations, or use --demo')
+        input_paths = {'statements': args.statements, 'valuations': args.valuations, 'documents': args.documents}
+        hashes = {key: hashlib.sha256(path.read_bytes()).hexdigest() for key, path in input_paths.items() if path}
+        code_hashes = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in ROOT.glob('*.py')}
         inputs = {'statements': load_csv(args.statements), 'valuations': load_csv(args.valuations)}
         if not inputs['statements']:
             raise ValueError('statement input is empty')
@@ -269,9 +290,10 @@ def main(argv=None):
                 target_count=search_request['target_size'], method=search_request['method'],
                 beam_width=search_request['beam_width'], max_evaluations=search_request['max_evaluations'],
                 top_k=search_request['top_k'], space=search_request['space'])
-        input_paths = {'statements': args.statements, 'valuations': args.valuations, 'documents': args.documents}
-        hashes = {key: hashlib.sha256(path.read_bytes()).hexdigest() for key, path in input_paths.items() if path}
-        code_hashes = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in ROOT.glob('*.py')}
+        if hashes != {key: hashlib.sha256(path.read_bytes()).hexdigest() for key, path in input_paths.items() if path}:
+            raise ValueError('input files changed during computation; rerun with immutable input snapshots')
+        if code_hashes != {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in ROOT.glob('*.py')}:
+            raise ValueError('source code changed during computation; rerun with a fixed code version')
         numpy_version = None
         if args.ml_cleaning:
             try:
@@ -289,6 +311,10 @@ def main(argv=None):
                     'python_version': sys.version.split()[0]}
         results['run_id'] = run_id
         args.output.mkdir(parents=True, exist_ok=True)
+        # Written before any export: a failed write cannot leave a previous
+        # completion marker that advertises this directory as ready to consume.
+        (args.output / 'completion.json').write_text(dump_json({
+            'status': 'writing', 'run_id': run_id}), encoding='utf-8')
         (args.output / 'results.json').write_text(dump_json(results), encoding='utf-8')
         (args.output / 'manifest.json').write_text(dump_json(manifest), encoding='utf-8')
         # Explicitly overwrite this generated artifact when search is disabled,
@@ -301,6 +327,14 @@ def main(argv=None):
         (args.output / 'report.html').write_text(report_html(results, args.demo), encoding='utf-8')
         export_csv(args.output / 'screen.csv', results['companies'])
         save_database(args.output / 'research.sqlite', run_id, manifest, results, inputs, args.documents)
+        # The document archive is read by save_database; also detect changes
+        # during export before marking the output set complete.
+        if hashes != {key: hashlib.sha256(path.read_bytes()).hexdigest() for key, path in input_paths.items() if path}:
+            raise ValueError('input files changed during export; output is incomplete')
+        (args.output / 'completion.json').write_text(dump_json({
+            'status': 'complete', 'run_id': run_id,
+            'sha256': {name: hashlib.sha256((args.output / name).read_bytes()).hexdigest()
+                       for name in OUTPUT_FILES}}), encoding='utf-8')
         counts = Counter(c['status'] for c in results['companies'])
         print(dump_json({'run_id': run_id, 'synthetic_demo': args.demo,
                          'counts': dict(counts), 'report': str((args.output / 'report.html').resolve())}))

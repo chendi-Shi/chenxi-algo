@@ -13,7 +13,7 @@ import math
 import statistics
 from collections import Counter
 
-from engine import BLOCK_FIELDS, DEFAULT_CONFIG, screen
+from engine import BLOCK_FIELDS, DEFAULT_CONFIG, screen, validate_config
 
 AXES = ('weights', 'min_roe', 'min_cash_conversion',
         'max_net_debt_to_cfo', 'candidate_score')
@@ -152,8 +152,7 @@ def search_configs(statement_rows, valuation_rows, as_of, base_config, *,
             raise ValueError(f'{name} must be a positive integer')
     if not isinstance(base_config, dict) or set(base_config) - set(DEFAULT_CONFIG):
         raise ValueError('base_config has unsupported configuration keys')
-    base = copy.deepcopy(DEFAULT_CONFIG)
-    base.update(copy.deepcopy(base_config))
+    base = validate_config(base_config)
     base['weights'] = _weights(base['weights'])
     for axis in AXES[1:]:
         base[axis] = _number(base[axis], axis)

@@ -69,11 +69,13 @@ def source_url_valid(value):
 
 
 def number(value, field: str):
-    if value is None or str(value).strip() in ('', 'NA', 'N/A', 'null'):
+    if value is None or (isinstance(value, str) and value.strip() in ('', 'NA', 'N/A', 'null')):
         return None
+    if isinstance(value, bool):
+        raise ValueError(f'{field}: boolean is not a financial number')
     try:
         result = float(value)
-    except (ValueError, TypeError) as exc:
+    except (ValueError, TypeError, OverflowError) as exc:
         raise ValueError(f'{field}: invalid numeric value') from exc
     if not math.isfinite(result):
         raise ValueError(f'{field}: NaN/inf is invalid')
@@ -180,9 +182,14 @@ def visible_versions(rows: list[dict], as_of: date, end_field: str):
             if end > as_of:
                 rejected.append({'line': line, 'ticker': ticker, 'reason': 'not_yet_available'})
                 continue
-            revision = int(raw.get('revision_id', '0') or '0')
-            if revision < 0:
-                raise ValueError('revision_id must be nonnegative')
+            revision_raw = raw.get('revision_id', '0')
+            if revision_raw in (None, ''):
+                revision_raw = '0'
+            if (isinstance(revision_raw, bool)
+                    or not isinstance(revision_raw, (str, int))
+                    or not re.fullmatch(r'[0-9]+', str(revision_raw).strip())):
+                raise ValueError('revision_id must be a nonnegative integer')
+            revision = int(revision_raw)
             key, version = (ticker, end), (available, revision)
             seen_key = (*key, *version)
             if seen_key in seen_versions and seen_versions[seen_key] != raw:
@@ -249,6 +256,15 @@ def compute_metrics(old: dict, prior: dict, current: dict, valuation: dict | Non
 
 def percentile(value: float, values: list[float], higher=True):
     """Ties share their midrank. A constant cohort is neutral (50), never 100."""
+    # Unit conversion can introduce machine-epsilon differences in otherwise
+    # equal ratios (e.g. CNY versus CNY ten-thousands). Rank at 12 significant
+    # digits, far finer than financial input precision, without changing raw
+    # reported metrics. Apply the same key recursively to debt-free ordering.
+    def rank_key(number):
+        if isinstance(number, tuple):
+            return tuple(rank_key(x) for x in number)
+        return float(format(number, '.12g'))
+    value, values = rank_key(value), [rank_key(x) for x in values]
     if len(values) < 2 or min(values) == max(values):
         return 50.0
     lower = sum(x < value for x in values)
@@ -276,25 +292,35 @@ def interest_order(company):
     return None if cover is None else (0, cover)
 
 
-def config_from(path: str | None):
+def validate_config(supplied=None):
+    """Validate every entry point and return an independent complete config."""
     config = copy.deepcopy(DEFAULT_CONFIG)
-    if path:
-        supplied = json.loads(Path(path).read_text(encoding='utf-8'))
+    if supplied is not None:
+        if not isinstance(supplied, dict):
+            raise ValueError('configuration must be a JSON object')
         unknown = set(supplied) - set(config)
         if unknown:
-            raise ValueError(f'unknown configuration keys: {sorted(unknown)}')
-        config.update(supplied)
+            raise ValueError(f'unknown configuration keys: {sorted(map(str, unknown))}')
+        config.update(copy.deepcopy(supplied))
+    def finite_numeric(value):
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            return False
+        try:
+            return math.isfinite(value)
+        except OverflowError:
+            return False
     weights = config['weights']
-    if set(weights) != set(BLOCK_FIELDS) or any(not isinstance(v, (int, float)) or not math.isfinite(v) or v < 0 for v in weights.values()) or not math.isclose(sum(weights.values()), 1):
+    if (not isinstance(weights, dict) or set(weights) != set(BLOCK_FIELDS)
+            or any(not finite_numeric(v) or v < 0 for v in weights.values())
+            or not math.isclose(sum(weights.values()), 1)):
         raise ValueError('four finite nonnegative weights must sum to 1')
     for key in ('min_peer_count', 'max_filing_age_days', 'max_valuation_age_days', 'max_fx_age_days'):
-        if not isinstance(config[key], int) or config[key] < (2 if key == 'min_peer_count' else 0):
+        if isinstance(config[key], bool) or not isinstance(config[key], int) or config[key] < (2 if key == 'min_peer_count' else 0):
             raise ValueError(f'invalid {key}')
     for key in ('candidate_score', 'min_roe', 'min_cash_conversion', 'max_net_debt_to_cfo'):
-        if not isinstance(config[key], (int, float)) or not math.isfinite(config[key]):
+        if not finite_numeric(config[key]):
             raise ValueError(f'invalid {key}')
-    if config['min_f_score'] is not None and (not isinstance(config['min_f_score'], (int, float))
-            or not math.isfinite(config['min_f_score']) or not 0 <= config['min_f_score'] <= 9):
+    if config['min_f_score'] is not None and (not finite_numeric(config['min_f_score']) or not 0 <= config['min_f_score'] <= 9):
         raise ValueError('min_f_score must be null for diagnostic use or a score from 0 to 9')
     if not 0 <= config['candidate_score'] <= 100:
         raise ValueError('score threshold is outside its range')
@@ -305,13 +331,42 @@ def config_from(path: str | None):
     return config
 
 
+def config_from(path: str | None):
+    if not path:
+        return validate_config()
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f'duplicate configuration key: {key}')
+            result[key] = value
+        return result
+    supplied = json.loads(Path(path).read_text(encoding='utf-8-sig'), object_pairs_hook=unique_object)
+    if not isinstance(supplied, dict):
+        raise ValueError('configuration must be a JSON object')
+    return validate_config(supplied)
+
+
 def load_csv(path):
     with open(path, encoding='utf-8-sig', newline='') as handle:
-        return list(csv.DictReader(handle))
+        reader = csv.DictReader(handle)
+        fields = reader.fieldnames
+        if not fields or any(not field or not field.strip() for field in fields):
+            raise ValueError('CSV requires nonempty column names')
+        if any(field != field.strip() for field in fields) or len(set(fields)) != len(fields):
+            raise ValueError('CSV column names must be unique and have no surrounding whitespace')
+        rows = []
+        for row in reader:
+            if None in row:
+                raise ValueError(f'CSV row {reader.line_num} has more values than column names')
+            rows.append(row)
+        return rows
 
 
 def screen(statement_rows, valuation_rows, as_of: date, config=None):
-    config = config or config_from(None)
+    if type(as_of) is not date:
+        raise ValueError('as_of must be a calendar date, not a timestamp or string')
+    config = validate_config(config)
     active_blocks = tuple(b for b, weight in config['weights'].items() if weight > 0)
     expected_latest = iso(config['expected_latest_period']) if config.get('expected_latest_period') else None
     if expected_latest is not None and expected_latest > as_of:
@@ -423,8 +478,9 @@ def screen(statement_rows, valuation_rows, as_of: date, config=None):
                 r['warnings'].append('extreme cash conversion; reconcile working capital, profit denominator and cash-flow classification; quality rank is capped at 2')
             if metrics['core_profit_share'] is not None and metrics['core_profit_share'] > 1.5:
                 r['warnings'].append('core profit materially exceeds reported profit; reconcile non-recurring losses and adjustment definitions; quality rank is capped at 1')
-            if c.get('audit_opinion') != 'unqualified':
-                r['warnings'].append('audit opinion is missing or not unqualified; manual review required')
+            audit_complete = all(x.get('audit_opinion') == 'unqualified' for x in parsed)
+            if not audit_complete:
+                r['warnings'].append('audit opinion is missing or not unqualified in the three-year history; manual review required')
             if metrics['core_profit_share'] is not None and metrics['core_profit_share'] < .7:
                 r['warnings'].append('reported profit contains material non-core contribution')
             if metrics['fcf'] is not None and metrics['fcf'] < 0:
@@ -437,9 +493,10 @@ def screen(statement_rows, valuation_rows, as_of: date, config=None):
             if set(active_blocks) & {'quality', 'value', 'growth'}:
                 required_positive.append('core_income_parent')
             if (any(c[k] is None for k in required_positive)
+                    or c['total_debt'] is None or c['cash'] is None or p['equity_parent'] is None
                     or (config['min_f_score'] is not None and known < 9)
                     or ('value' in active_blocks and valuation is None)
-                    or c.get('audit_opinion') != 'unqualified'):
+                    or not audit_complete):
                 r['reasons'].append('critical data, enabled scoring fields, configured F-score gate, valuation or audit review is required')
                 continue
             failures = []
@@ -461,11 +518,16 @@ def screen(statement_rows, valuation_rows, as_of: date, config=None):
             r['reasons'].extend(failures)
         except (ValueError, TypeError) as exc:
             r['reasons'].append(str(exc))
-    # Valid non-financial peers set comparison distributions, before research gates.
+    # Verified non-financial peers set distributions before research gates.
+    # Economic gate failures remain comparable. Unverified data must never move
+    # another company's percentile or appear to satisfy minimum peer coverage.
     groups = defaultdict(list)
     for r in results:
-        if r['metrics']:
+        r['peer_eligible'] = bool(r['metrics']) and r['status'] in ('watchlist', 'candidate', 'excluded')
+        if r['peer_eligible']:
             groups[(r['market'], r['sector'])].append(r)
+        elif r['metrics']:
+            r['warnings'].append('data-review company excluded from peer distributions and composite scoring')
     for group in groups.values():
         for r in group:
             r['peer_count'] = len(group)

@@ -1,0 +1,205 @@
+{
+  "validation_date": "2026-10-10",
+  "python": "3.12.14",
+  "platform": "Windows",
+  "numpy": "2.3.5",
+  "tests": {
+    "run": 117,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "checks": {
+    "independent_arithmetic": {
+      "companies": 200,
+      "financial_metric_comparisons": 1800,
+      "max_metric_error": 3.552713678800501e-15,
+      "weighted_score_comparisons": 200,
+      "max_score_error": 1.4210854715202004e-14,
+      "unit_conversion_metric_error": 1.4210854715202004e-14,
+      "unit_conversion_max_score_drift": 10.526315789473685
+    },
+    "search_cross_check": {
+      "independent_random_cohorts": 20,
+      "wide_beam_matches": 20,
+      "narrow_beam_matches": 20,
+      "cases": [
+        {
+          "seed": 0,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 1,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 2,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 3,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 4,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 5,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 6,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 7,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 8,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 9,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 10,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 11,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 12,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 13,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 14,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 15,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 16,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 17,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 18,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        },
+        {
+          "seed": 19,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 9,
+          "narrow_beam_evaluations": 5
+        }
+      ]
+    },
+    "scale": {
+      "synthetic_companies": 1000,
+      "statement_rows": 3000,
+      "repetitions": 3,
+      "seconds": [
+        1.561267899996892,
+        1.4390749000012875,
+        0.8644365999934962
+      ],
+      "median_seconds": 1.4390749000012875
+    }
+  },
+  "failures": [],
+  "code_sha256": {
+    "anomaly.py": "e6a1f385c5f64540101b486674c9d828130c8d641fadea2f308a3ac4e74f15d9",
+    "demo.py": "13397a7a3dde2c9ecf1273bc5bdcc027f8fb75f7983492ca88237fe5720c3d43",
+    "engine.py": "4726e74a07afc64e455abf4b577681e5da2acace1f3404f66c2ff4f22ea7cf09",
+    "evidence.py": "b9c4c17e8492e70785fc10876849a555eff9d3bc92aee372bd71894f550cbd89",
+    "package_delivery.py": "01fc7aa591624e89e0db576f9ce58d7821baf69d079f9602cc1e000b0aa5bdf2",
+    "run.py": "d285bf12f977254a9c2c08882ea9c74204bdef8db327e9eeb5d15a5df96cf0de",
+    "search.py": "338852dd3eea882d782350a56ba48786333189225b52f83aa6f8f15827f3098b",
+    "tests/test_anomaly.py": "5917fa8c1f6d9e3074fd2c69d7ff78ff0247b8961506d4cdf04d7e7d68ff75c7",
+    "tests/test_engine.py": "de253ee1456530dcd59bd63f7b41ae51fb6fa35a792e11aaf6411c43e01a9502",
+    "tests/test_enterprise_engine.py": "93ceb3a0beaef9381f2ff5ce6afa769c8b28f98dcd0db3c62aa20b29a2982ae1",
+    "tests/test_enterprise_exports.py": "ffdbbab4edea0e26aca8bb58f4bf5230b6e9380a545fabf97dad379d428d5c45",
+    "tests/test_evidence.py": "747f90ff4de1a7c08716e5c825c48478c1eb35ee523a23664725228eb90bf30d",
+    "tests/test_run.py": "add63785acb9dc8c2df24d01b7ce43a22619ec0378d27c25e9fc62f09fbe2eae",
+    "tests/test_search.py": "fab7782727561b332f99930c31963904999657139c5c67fa466af76238bf6776",
+    "tests/test_search_cli.py": "da53950385c159e4f5e1d32e022b4415f6d7741a37593da6bfe6a67dfa8303e9",
+    "validation/enterprise_checks.py": "18720b1ebfdabddf5cc26f3e447cc90d347101a140c19eacfd4437c66596ac88",
+    "verify_run.py": "b3ecd63728275fc15c49d0d33acdb7f398d203e54afced66399943b73574f56e"
+  },
+  "investment_efficacy_validated": false,
+  "initial_harness_reported_pass": true,
+  "acceptance_passed": false,
+  "finding": "The initial harness measured but did not yet enforce rank invariance under unit conversion. A 10.526315789473685-point drift was observed; the revised harness rejects it and the ranking fix removes it."
+}

@@ -90,9 +90,13 @@ class ExportAndStorageTests(unittest.TestCase):
         results["documents"]["evidence"] = [doc]
         inputs = {"statements": annual_history(ticker), "valuations": [valuation(ticker)]}
         original = copy.deepcopy((results, inputs))
-        connection = sqlite3.connect(":memory:")
+        # Keep one shared in-memory connection alive while each production
+        # save opens and explicitly closes its own connection.
+        connect = sqlite3.connect
+        memory_uri = 'file:enterprise-storage-test?mode=memory&cache=shared'
+        connection = connect(memory_uri, uri=True)
         try:
-            with mock.patch.object(run.sqlite3, "connect", return_value=connection):
+            with mock.patch.object(run.sqlite3, "connect", side_effect=lambda _: connect(memory_uri, uri=True)):
                 run.save_database("unused", "fixture-run", {"input_hash": "hash"}, results, inputs)
                 run.save_database("unused", "fixture-run", {"input_hash": "hash"}, results, inputs)
             self.assertEqual(connection.execute("SELECT count(*) FROM companies").fetchone()[0], 1)
