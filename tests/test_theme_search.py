@@ -64,6 +64,45 @@ class ThemeSearchTests(unittest.TestCase):
         self.assertEqual(evidence["exact_excerpt"], text[evidence["char_start"]:evidence["char_end"]])
         self.assertEqual(result["query"], "ＡＩ服务器")
 
+    def test_pdf_word_wrapping_matches_and_preserves_original_character_offsets(self):
+        for text, query in (("本公司生产机\n器人产品并对外销售。", "机器人"),
+                            ("本公司生产光\r\n模 块产品。", "光模块"),
+                            ("The company manufactures ＡＩ servers.", "AI服务器")):
+            with self.subTest(text=text):
+                result = self.discover([self.document(text=text)], query=query)
+                row = result["companies"][0]
+                self.assertEqual(row["business_status"], "current_business")
+                item = row["evidence"][0]
+                self.assertEqual(item["exact_excerpt"], text[item["char_start"]:item["char_end"]])
+                self.assertGreater(item["relevance_score"], 0)
+
+    def test_wrapped_word_offsets_after_long_text_remain_exact(self):
+        text = "无关资料。" * 300 + "本公司主要生产光\n模块产品。" + "其他资料。" * 100
+        result = self.discover([self.document(text=text)], config={"excerpt_chars": 80})
+        item = result["companies"][0]["evidence"][0]
+        self.assertGreater(item["char_start"], 1000)
+        self.assertEqual(item["exact_excerpt"], text[item["char_start"]:item["char_end"]])
+        self.assertIn("光\n模块", item["exact_excerpt"])
+
+    def test_specification_qualifier_survives_theme_expansion(self):
+        docs = [self.document("100g", text="本公司生产100G光模块产品。")]
+        result = self.discover(docs, query="800G 光模块")
+        self.assertEqual(result["required_qualifiers"], ["800g"])
+        self.assertEqual(result["companies"], [])
+        self.assertEqual(result["audit"]["qualifier_filtered_passages"], 1)
+        self.assertEqual(len(self.discover(docs)["companies"]), 1)
+        for specification in ("800G", "1.6T", "SR680a"):
+            query = specification + " 光模块"
+            text = "本公司生产" + specification + "光模块产品。"
+            with self.subTest(specification=specification):
+                self.assertEqual(len(self.discover([self.document(text=text)], query=query)["companies"]), 1)
+
+    def test_qualifier_must_be_in_same_evidence_passage_and_exact_model(self):
+        for text in ("本公司生产100G光模块产品。公司计划投资800G技术。",
+                     "本公司生产1800G光模块产品。"):
+            with self.subTest(text=text):
+                self.assertEqual(self.discover([self.document(text=text)], query="800G 光模块")["companies"], [])
+
     def test_issuer_names_and_explicit_aliases_support_own_business_only(self):
         result = self.discover([self.document(text="示例科技生产光模块产品。")])
         self.assertEqual(result["companies"][0]["relations"], ["direct_business"])
@@ -218,7 +257,8 @@ class ThemeSearchTests(unittest.TestCase):
 
     def test_third_party_business_cannot_be_attributed_to_source_company(self):
         for text in ("竞争对手公司主要从事光模块生产。", "其他公司主要从事光模块生产。",
-                     "该公司主要从事光模块生产。", "The company describes its competitor producing optical transceivers."):
+                     "该公司主要从事光模块生产。", "甲公司主要从事光模块生产和销售。",
+                     "某某集团主要生产光模块。", "The company describes its competitor producing optical transceivers."):
             with self.subTest(text=text):
                 result = self.discover([self.document(text=text)])
                 self.assertEqual(result["companies"][0]["relations"], ["uncertain"])
@@ -246,6 +286,74 @@ class ThemeSearchTests(unittest.TestCase):
         self.assertIn("negated", row["relations"])
         self.assertTrue(any(item["claim_status"] == "negated" for item in row["evidence"]))
         self.assertEqual(result["audit"]["conflicts"][0]["type"], "positive_and_negative_assertions")
+        self.assertEqual(row["business_status"], "historical_or_disputed")
+
+    def test_new_official_exit_blocks_current_business_without_hiding_history(self):
+        docs = [self.document("old", date_basis="official_release", available_at="2025-02-01"),
+                self.document("exit", date_basis="official_release", available_at="2025-05-01",
+                              text="本公司已停止光模块产品生产，已退出该业务。")]
+        row = self.discover(docs)["companies"][0]
+        self.assertEqual(row["business_status"], "historical_or_disputed")
+        self.assertTrue(any(item["company_level_denial"] for item in row["evidence"]))
+        self.assertIn("direct_business", row["relations"])
+        self.assertTrue(row["has_conflicting_assertions"])
+
+    def test_same_day_conflict_needs_review_and_later_official_support_can_reopen(self):
+        docs = [self.document("support", date_basis="official_release"),
+                self.document("denial", date_basis="official_release", text="本公司不涉及光模块业务。")]
+        self.assertEqual(self.discover(docs)["companies"][0]["business_status"], "historical_or_disputed")
+        docs[0]["available_at"] = "2025-05-01"
+        self.assertEqual(self.discover(docs)["companies"][0]["business_status"], "current_business")
+
+    def test_observation_date_cannot_determine_order_of_conflicting_claims(self):
+        for basis in ("observed_at", "operator_supplied"):
+            for support_basis, denial_basis in ((basis, "official_release"), ("official_release", basis)):
+                docs = [self.document("support", date_basis=support_basis, available_at="2025-05-01"),
+                        self.document("denial", date_basis=denial_basis, available_at="2025-02-01",
+                                      text="本公司不涉及光模块业务。")]
+                with self.subTest(support_basis=support_basis, denial_basis=denial_basis):
+                    self.assertEqual(self.discover(docs)["companies"][0]["business_status"], "historical_or_disputed")
+
+    def test_republished_support_keeps_latest_date_without_increasing_lexical_score(self):
+        docs = [self.document("old", date_basis="official_release", available_at="2025-02-01"),
+                self.document("denial", date_basis="official_release", available_at="2025-03-01",
+                              text="本公司不涉及光模块业务。")]
+        before = self.discover(docs)
+        docs.append(self.document("new", date_basis="official_release", available_at="2025-05-01",
+                                  source_url="https://example.org/new-confirmation.pdf"))
+        after = self.discover(docs)
+        self.assertEqual(before["companies"][0]["business_status"], "historical_or_disputed")
+        self.assertEqual(after["companies"][0]["business_status"], "current_business")
+        self.assertEqual(before["companies"][0]["relevance_score"], after["companies"][0]["relevance_score"])
+        self.assertEqual(before["coverage"]["indexed_passages"], after["coverage"]["indexed_passages"])
+        self.assertEqual(after["companies"][0]["evidence"][0]["document_id"], "new")
+        self.assertEqual({item["document_id"] for item in after["companies"][0]["evidence"]}, {"old", "denial", "new"})
+        self.assertEqual(after["companies"], self.discover(list(reversed(docs)))["companies"])
+
+    def test_local_variant_denial_does_not_erase_entire_theme_business(self):
+        for text, query, positive in (
+            ("本公司不生产800G光模块。", "光模块", "本公司生产100G光模块产品。"),
+            ("本公司不涉及人形机器人业务。", "机器人", "本公司工业机器人已量产并交付。"),
+            ("本公司已停止新一代光模块产品生产。", "光模块", "本公司生产光模块产品。"),
+            ("甲公司已停止光模块业务。", "光模块", "本公司生产光模块产品。")):
+            docs = [self.document("support", date_basis="official_release", available_at="2025-02-01", text=positive),
+                    self.document("denial", date_basis="official_release", available_at="2025-05-01", text=text)]
+            with self.subTest(text=text):
+                row = self.discover(docs, query=query)["companies"][0]
+                self.assertEqual(row["business_status"], "current_business")
+                self.assertFalse(any(item["company_level_denial"] for item in row["evidence"]))
+
+    def test_counterevidence_retained_even_when_display_budget_is_one(self):
+        docs = [self.document(), self.document("denial", text="本公司不涉及光模块业务。")]
+        row = self.discover(docs, config={"max_evidence_per_company": 1})["companies"][0]
+        self.assertEqual(len(row["evidence"]), 2)
+        self.assertTrue(any(item["company_level_denial"] for item in row["evidence"]))
+
+    def test_nonoperating_business_statuses_are_explicit(self):
+        for text, status in (("本公司计划进入光模块业务。", "planned_business"),
+                             ("光模块行业持续增长。", "uncertain")):
+            with self.subTest(status=status):
+                self.assertEqual(self.discover([self.document(text=text)])["companies"][0]["business_status"], status)
 
     def test_exact_document_and_passage_duplicates_do_not_increase_score(self):
         baseline = self.discover()

@@ -152,6 +152,12 @@ def search_check():
             'narrow_beam_matches': sum(c['narrow_beam_matches_grid'] for c in comparisons), 'cases': comparisons}
 
 
+def code_hashes():
+    paths = sorted([p for p in ROOT.glob('*.py') if p.name != 'package_delivery.py']
+                   + list((ROOT/'tests').glob('*.py')) + list((ROOT/'validation').glob('enterprise*.py')))
+    return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT/'validation'/'enterprise_results.json')
@@ -159,16 +165,20 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.companies < 40:
         parser.error('--companies must be >=40')
+    before_hashes = code_hashes()
+    print('Running regression tests against a fingerprinted code snapshot...', flush=True)
     test_log = io.StringIO()
     sys.path.insert(0, str(ROOT/'tests'))
     suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'))
     suite.addTests(unittest.defaultTestLoader.loadTestsFromName('validation.enterprise_a_share_tests'))
     tests = unittest.TextTestRunner(stream=test_log).run(suite)
+    print(f'Regression finished: {tests.testsRun} tests, {len(tests.failures)} failures, {len(tests.errors)} errors.', flush=True)
     report = {'validation_date': '2026-10-10', 'python': platform.python_version(),
         'platform': platform.system(), 'numpy': importlib.metadata.version('numpy'),
         'tests': {'run': tests.testsRun, 'failures': len(tests.failures), 'errors': len(tests.errors),
                   'skipped': len(tests.skipped)}, 'checks': {}, 'failures': []}
     for name, checker in (('independent_arithmetic', oracle_check), ('search_cross_check', search_check)):
+        print(f'Running {name}...', flush=True)
         try:
             report['checks'][name] = checker()
         except (AssertionError, ValueError) as exc:
@@ -181,9 +191,13 @@ def main(argv=None):
         timings.append(time.perf_counter() - start)
     report['checks']['scale'] = {'synthetic_companies': len(result['companies']), 'statement_rows': len(rows),
         'repetitions': 3, 'seconds': timings, 'median_seconds': statistics.median(timings)}
-    report['code_sha256'] = {str(p.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest()
-        for p in sorted([p for p in ROOT.glob('*.py') if p.name != 'package_delivery.py']
-                        + list((ROOT/'tests').glob('*.py')) + list((ROOT/'validation').glob('enterprise*.py')))}
+    after_hashes = code_hashes()
+    report['code_sha256'] = before_hashes
+    report['code_changed_during_validation'] = sorted(
+        name for name in before_hashes.keys() | after_hashes.keys()
+        if before_hashes.get(name) != after_hashes.get(name))
+    if report['code_changed_during_validation']:
+        report['failures'].append('Program or tests changed during validation; rerun against frozen inputs.')
     report['software_checks_passed'] = tests.wasSuccessful() and not tests.skipped and not report['failures']
     report['investment_efficacy_validated'] = False
     args.output.parent.mkdir(parents=True, exist_ok=True)

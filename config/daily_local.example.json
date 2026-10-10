@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "lookback_days": 365,
+  "companies": "../data/pilot_companies.example.json",
+  "production_policy": "production_policy.example.json",
+  "queries": [
+    {"name": "optics", "query": "光模块", "market": "A"},
+    {"name": "optics_800g", "query": "800G 光模块", "market": "A"}
+  ],
+  "source_selection": {
+    "universe_sources": ["szse"],
+    "categories": ["annual_report"],
+    "max_pages": 20,
+    "min_interval_seconds": 1.0
+  },
+  "limit": 20,
+  "output_root": "../output/daily_local_pilot"
+}

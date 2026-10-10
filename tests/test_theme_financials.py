@@ -7,8 +7,10 @@ from theme_financials import attach_fundamentals
 
 
 def discovery(tickers=('600001',), **changes):
-    return {'as_of': '2026-05-01', 'companies': [dict(ticker=t, name='Fixture', market='A',
-            sector='Industrials', relevance_score=1., relations=['direct_business'], **changes) for t in tickers]}
+    defaults = dict(name='Fixture', market='A', sector='Industrials', relevance_score=1.,
+                    relations=['direct_business'], business_status='current_business')
+    defaults.update(changes)
+    return {'as_of': '2026-05-01', 'companies': [dict(ticker=t, **defaults) for t in tickers]}
 
 
 class ThemeFinancialTests(unittest.TestCase):
@@ -16,6 +18,19 @@ class ThemeFinancialTests(unittest.TestCase):
         result = attach_fundamentals(discovery())
         self.assertEqual(result['style_lists']['unclassified'], ['600001'])
         self.assertIsNone(result['companies'][0]['financial']['loss_making'])
+
+    def test_disputed_planned_and_uncertain_business_cannot_enter_profitable_styles(self):
+        for status in ('historical_or_disputed', 'planned_business', 'uncertain', 'not_assessed'):
+            result = attach_fundamentals(discovery(business_status=status), annual_history(), [valuation()])
+            financial = result['companies'][0]['financial']
+            self.assertEqual(financial['styles'], ['unclassified'])
+            self.assertIn('quality_growth', financial['financial_style_candidates'])
+
+    def test_loss_watchlist_survives_disputed_business_classification(self):
+        rows = annual_history()
+        rows[-1]['net_income_parent'] = -1
+        result = attach_fundamentals(discovery(business_status='historical_or_disputed'), rows)
+        self.assertEqual(result['style_lists']['loss_watchlist'], ['600001'])
 
     def test_quality_and_improvement_do_not_require_a_share_price(self):
         result = attach_fundamentals(discovery(), annual_history())

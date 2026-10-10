@@ -1,0 +1,501 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-10T03:59:58.975139+00:00",
+  "as_of": "2026-10-10",
+  "status": "source_pipeline_verified_research_data_blocked",
+  "production_approved": false,
+  "declared_pool": [
+    "300308.SZ",
+    "300502.SZ"
+  ],
+  "window": {
+    "start_date": "2025-10-10",
+    "end_date": "2026-10-10",
+    "inclusive_days": 366,
+    "timezone": "Asia/Shanghai"
+  },
+  "code_sha256": {
+    "daily_update.py": "ceeb7225f80a6e28ddf8ae6759d102bb8e6f09047e73064fdb7484507e26c558",
+    "disclosure_sources.py": "19e9e3dc8a532ffbf78e7bffd71651fdad7a86411131fcca66a9dc4f64e683fa",
+    "discover.py": "e52135ac8ba4ba51e73fb9a8c17f68cbd7edb810fb39147606b7e294f8dc7da2",
+    "engine.py": "52292ee2940abd8d8ca4f3c96c6a7aacbdd77b5851c03688a0e336b16e477cec",
+    "ingest_theme.py": "b7f3086bc75766f62643f8b552c736a3c6d2baddee6e964f0f7a4b797785185d",
+    "readiness.py": "8fa64b17a01f02a7c1f1344510bed08fcec612c4f95cf9253bb32cd3ef45b193",
+    "research_job.py": "4a347b88692b5f206b9f7483ae409c120ba1e3732f2a0533bcf58feaa49a48a5",
+    "theme_financials.py": "a9ba5eeffb35337e69b995294dd5c13eb9d70d28257549c575cdfb3b7e78cff5",
+    "theme_search.py": "1e72b872133311a5faa24fe84f92d83d24678b84dc8599f4b45314f69a00d7ad",
+    "universe_sources.py": "94ea8a4d9c5e521c55d4eb294513739ce3ad48ec81ee24ec630be31a53740034"
+  },
+  "input_sha256": {
+    "companies": "99fbb38bfd7006fe572856d832e959d0f86cba7449b32d5d3239d8dee82cd24e",
+    "daily_config": "1aa8366f85bbc0d65ff1c5f5bedcd54c0562ab238aaafc397f7eea0c9e31fe64",
+    "production_policy": "d5ebb0d213c444cde1061d8f4179df281e2e2474c7e64d28f6e73b7f21f9c96a"
+  },
+  "first_real_attempt": {
+    "run_id": "20261010T034046918317Z-a9c074bef6254909b38fc0d3f792ca69",
+    "status": "failed",
+    "duration_seconds": 142.813,
+    "stages": [
+      {
+        "name": "input_snapshots",
+        "status": "succeeded",
+        "duration_seconds": 0.094
+      },
+      {
+        "name": "official_directory",
+        "status": "succeeded",
+        "duration_seconds": 7.312
+      },
+      {
+        "name": "company_membership",
+        "status": "succeeded",
+        "duration_seconds": 0.031
+      },
+      {
+        "name": "disclosure_discovery",
+        "status": "succeeded",
+        "duration_seconds": 2.891
+      },
+      {
+        "name": "document_ingestion",
+        "status": "failed",
+        "duration_seconds": 132.375
+      }
+    ],
+    "root_cause": "Windows legacy path limit prevented writing the deeply nested content-addressed cache temporary file after successful downloads.",
+    "correction": "Canonical extended Windows filesystem paths, consistent input/output boundaries, short temporary prefix, and a real greater-than-260-character filesystem pipeline regression.",
+    "original_audit_preserved": true,
+    "requests": [
+      {
+        "attempt": 1,
+        "status": 200,
+        "bytes": 6150814,
+        "outcome": "completed"
+      },
+      {
+        "attempt": 1,
+        "status": 200,
+        "bytes": 2902416,
+        "outcome": "completed"
+      }
+    ]
+  },
+  "corrected_live_attempt": {
+    "run_id": "20261010T035303282188Z-cfeaae388c9748e5b6ff558aba203618",
+    "status": "blocked",
+    "duration_seconds": 154.219,
+    "stages": [
+      {
+        "name": "input_snapshots",
+        "status": "succeeded",
+        "duration_seconds": 0.156
+      },
+      {
+        "name": "official_directory",
+        "status": "succeeded",
+        "duration_seconds": 9.454
+      },
+      {
+        "name": "company_membership",
+        "status": "succeeded",
+        "duration_seconds": 0.031
+      },
+      {
+        "name": "disclosure_discovery",
+        "status": "succeeded",
+        "duration_seconds": 3.047
+      },
+      {
+        "name": "document_ingestion",
+        "status": "succeeded",
+        "duration_seconds": 126.063
+      },
+      {
+        "name": "research_batch",
+        "status": "blocked",
+        "duration_seconds": 15.328
+      }
+    ],
+    "original_output_location_retained": true,
+    "longest_cache_path_characters_without_extended_prefix": 257,
+    "ingestion_status": "completed",
+    "corpus_sha256": "0cbbbd754cb7e39e537fd8d4c7320d8945af2687f7c2ab89d10d99814ef17239",
+    "source_documents": 2,
+    "pages_imported": 399,
+    "documents": [
+      {
+        "ticker": "300308.SZ",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF",
+        "source_sha256": "0290f380253dde79613d43a1c6203674ae36cb89f849f063668ccde9a8789b5e",
+        "bytes": 6150814,
+        "pages_imported": 229,
+        "pages_total": 229,
+        "pages_without_text": [],
+        "extraction_warnings": [],
+        "acquisition": "https_download"
+      },
+      {
+        "ticker": "300502.SZ",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225172598.PDF",
+        "source_sha256": "3432905a431a8254c2274c2188269e94cfc5a69e92c7d34332a5a3a7da8b15b6",
+        "bytes": 2902416,
+        "pages_imported": 170,
+        "pages_total": 170,
+        "pages_without_text": [],
+        "extraction_warnings": [],
+        "acquisition": "https_download"
+      }
+    ],
+    "queries": [
+      {
+        "name": "optics",
+        "query": "光模块",
+        "discovery_status": "completed",
+        "matched_companies": 2,
+        "indexed_passages": 3686,
+        "required_qualifiers": [],
+        "companies": [
+          {
+            "ticker": "300502.SZ",
+            "relevance_score": 21.2920595,
+            "business_status": "current_business",
+            "evidence_count": 68,
+            "requires_review": true,
+            "has_conflicting_assertions": true,
+            "support_pages": [
+              12
+            ],
+            "financial_status": "unclassified",
+            "financial_styles": [
+              "unclassified"
+            ]
+          },
+          {
+            "ticker": "300308.SZ",
+            "relevance_score": 18.43365713,
+            "business_status": "current_business",
+            "evidence_count": 67,
+            "requires_review": true,
+            "has_conflicting_assertions": false,
+            "support_pages": [
+              12
+            ],
+            "financial_status": "unclassified",
+            "financial_styles": [
+              "unclassified"
+            ]
+          }
+        ],
+        "financial_style_lists": {
+          "loss_watchlist": [],
+          "operating_improvement": [],
+          "quality_growth": [],
+          "relative_value": [],
+          "unclassified": [
+            "300502.SZ",
+            "300308.SZ"
+          ]
+        },
+        "data_gates": {
+          "status": "blocked",
+          "reasons": [
+            "operating_coverage",
+            "valuation_coverage"
+          ],
+          "scope": {
+            "document_companies": 2,
+            "expected_companies": 2,
+            "operating_companies": 0,
+            "present_companies": 2,
+            "valuation_companies": 0
+          },
+          "checks": [
+            {
+              "actual": 2,
+              "affected_tickers": [],
+              "name": "declared_universe_present",
+              "passed": true,
+              "threshold": 2
+            },
+            {
+              "actual": 0,
+              "affected_tickers": [],
+              "name": "universe_freshness",
+              "passed": true,
+              "threshold": 0
+            },
+            {
+              "actual": 1.0,
+              "affected_tickers": [],
+              "name": "document_coverage",
+              "passed": true,
+              "threshold": 1.0
+            },
+            {
+              "actual": 0.0,
+              "affected_tickers": [
+                "300308.SZ",
+                "300502.SZ"
+              ],
+              "name": "operating_coverage",
+              "passed": false,
+              "threshold": 1.0
+            },
+            {
+              "actual": 0.0,
+              "affected_tickers": [
+                "300308.SZ",
+                "300502.SZ"
+              ],
+              "name": "valuation_coverage",
+              "passed": false,
+              "threshold": 1.0
+            },
+            {
+              "actual": 0,
+              "name": "invalid_records",
+              "passed": true,
+              "threshold": 0
+            },
+            {
+              "actual": 0,
+              "name": "identity_conflicts",
+              "passed": true,
+              "threshold": 0
+            },
+            {
+              "actual": 0,
+              "affected_tickers": [],
+              "name": "theme_business_freshness",
+              "passed": true,
+              "threshold": 0
+            }
+          ]
+        }
+      },
+      {
+        "name": "optics_800g",
+        "query": "800G 光模块",
+        "discovery_status": "completed",
+        "matched_companies": 2,
+        "indexed_passages": 3686,
+        "required_qualifiers": [
+          "800g"
+        ],
+        "companies": [
+          {
+            "ticker": "300502.SZ",
+            "relevance_score": 26.30527244,
+            "business_status": "current_business",
+            "evidence_count": 7,
+            "requires_review": true,
+            "has_conflicting_assertions": false,
+            "support_pages": [
+              12
+            ],
+            "financial_status": "unclassified",
+            "financial_styles": [
+              "unclassified"
+            ]
+          },
+          {
+            "ticker": "300308.SZ",
+            "relevance_score": 15.46721022,
+            "business_status": "current_business",
+            "evidence_count": 14,
+            "requires_review": true,
+            "has_conflicting_assertions": false,
+            "support_pages": [
+              22
+            ],
+            "financial_status": "unclassified",
+            "financial_styles": [
+              "unclassified"
+            ]
+          }
+        ],
+        "financial_style_lists": {
+          "loss_watchlist": [],
+          "operating_improvement": [],
+          "quality_growth": [],
+          "relative_value": [],
+          "unclassified": [
+            "300502.SZ",
+            "300308.SZ"
+          ]
+        },
+        "data_gates": {
+          "status": "blocked",
+          "reasons": [
+            "operating_coverage",
+            "valuation_coverage"
+          ],
+          "scope": {
+            "document_companies": 2,
+            "expected_companies": 2,
+            "operating_companies": 0,
+            "present_companies": 2,
+            "valuation_companies": 0
+          },
+          "checks": [
+            {
+              "actual": 2,
+              "affected_tickers": [],
+              "name": "declared_universe_present",
+              "passed": true,
+              "threshold": 2
+            },
+            {
+              "actual": 0,
+              "affected_tickers": [],
+              "name": "universe_freshness",
+              "passed": true,
+              "threshold": 0
+            },
+            {
+              "actual": 1.0,
+              "affected_tickers": [],
+              "name": "document_coverage",
+              "passed": true,
+              "threshold": 1.0
+            },
+            {
+              "actual": 0.0,
+              "affected_tickers": [
+                "300308.SZ",
+                "300502.SZ"
+              ],
+              "name": "operating_coverage",
+              "passed": false,
+              "threshold": 1.0
+            },
+            {
+              "actual": 0.0,
+              "affected_tickers": [
+                "300308.SZ",
+                "300502.SZ"
+              ],
+              "name": "valuation_coverage",
+              "passed": false,
+              "threshold": 1.0
+            },
+            {
+              "actual": 0,
+              "name": "invalid_records",
+              "passed": true,
+              "threshold": 0
+            },
+            {
+              "actual": 0,
+              "name": "identity_conflicts",
+              "passed": true,
+              "threshold": 0
+            },
+            {
+              "actual": 0,
+              "affected_tickers": [],
+              "name": "theme_business_freshness",
+              "passed": true,
+              "threshold": 0
+            }
+          ]
+        }
+      }
+    ],
+    "last_success_present": false
+  },
+  "ah_future_effective_guard": {
+    "run_id": "20261010T034152976678Z-7a436ce0fa0e4086a88b8d5784b16cd9",
+    "status": "blocked",
+    "duration_seconds": 32.812,
+    "stages": [
+      {
+        "name": "input_snapshots",
+        "status": "succeeded",
+        "duration_seconds": 0.156
+      },
+      {
+        "name": "official_directory",
+        "status": "blocked",
+        "duration_seconds": 32.609
+      }
+    ],
+    "requested_sources": [
+      "szse",
+      "hkex"
+    ],
+    "observed_at": "2026-10-10T03:42:23+00:00",
+    "future_effective_sources": [
+      "hkex"
+    ],
+    "source_effective_dates": {
+      "szse": null,
+      "hkex": "2026-10-12"
+    },
+    "disclosure_stage_started": false,
+    "last_success_present": false
+  },
+  "offline_replay": {
+    "run_id": "20261010T035641354646Z-729a2650c71d4484b568169615cfd2f1",
+    "status": "blocked",
+    "duration_seconds": 131.062,
+    "stages": [
+      {
+        "name": "input_snapshots",
+        "status": "succeeded",
+        "duration_seconds": 0.172
+      },
+      {
+        "name": "official_directory",
+        "status": "succeeded",
+        "duration_seconds": 9.547
+      },
+      {
+        "name": "company_membership",
+        "status": "succeeded",
+        "duration_seconds": 0.062
+      },
+      {
+        "name": "disclosure_discovery",
+        "status": "succeeded",
+        "duration_seconds": 0.516
+      },
+      {
+        "name": "document_ingestion",
+        "status": "succeeded",
+        "duration_seconds": 107.828
+      },
+      {
+        "name": "research_batch",
+        "status": "blocked",
+        "duration_seconds": 12.781
+      }
+    ],
+    "network_request_calls": 0,
+    "pdf_download_calls": 0,
+    "network_guard": "urllib OpenerDirector.open and ingest_theme._download patched to raise on any call during complete replay.",
+    "cached_documents": 2,
+    "corpus_sha256": "0cbbbd754cb7e39e537fd8d4c7320d8945af2687f7c2ab89d10d99814ef17239",
+    "corpus_bytes_equal": true,
+    "full_query_results_equal_except_audit_run_id": {
+      "optics": true,
+      "optics_800g": true
+    },
+    "last_success_present": false
+  },
+  "immutable_audit_verification": {
+    "first_failure": "failed",
+    "live": "blocked",
+    "ah_guard": "blocked",
+    "offline": "blocked"
+  },
+  "limitations": [
+    "This validates a declared two-company SZSE pool, not market-wide completeness or financial screening performance.",
+    "Official source availability and membership are date-specific; the captured HKEX file was effective two days after the cutoff and was correctly blocked.",
+    "Operating and valuation coverage are both zero because no reconciled financial or valuation CSV was supplied. No financial style or successful research publication was produced.",
+    "Business relation labels are heuristic and require analyst review; the optics query contains mixed and conflicting assertions for one company.",
+    "The fixed date window is re-fetched in full; this is not an incremental historical store.",
+    "The local Windows greater-than-260-character path was exercised; no live UNC network-share deployment was tested.",
+    "No scheduler, deployment, automatic financial extraction, or production approval is included."
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "validation_date": "2026-10-10",
+  "python": "3.12.14",
+  "platform": "Windows",
+  "numpy": "2.3.5",
+  "tests": {
+    "run": 375,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "checks": {
+    "independent_arithmetic": {
+      "companies": 200,
+      "financial_metric_comparisons": 1800,
+      "max_metric_error": 3.552713678800501e-15,
+      "weighted_score_comparisons": 200,
+      "max_score_error": 1.4210854715202004e-14,
+      "unit_conversion_metric_error": 1.4210854715202004e-14,
+      "unit_conversion_max_score_drift": 0.0
+    },
+    "search_cross_check": {
+      "independent_random_cohorts": 20,
+      "wide_beam_matches": 20,
+      "narrow_beam_matches": 16,
+      "cases": [
+        {
+          "seed": 0,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 1,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": false,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 2,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": false,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 3,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 4,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 5,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 6,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 7,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 8,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 9,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 10,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 11,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 12,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 13,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 14,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 15,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 16,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 17,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": false,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 18,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": false,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        },
+        {
+          "seed": 19,
+          "wide_beam_matches_grid": true,
+          "narrow_beam_matches_grid": true,
+          "grid_evaluations": 72,
+          "narrow_beam_evaluations": 8
+        }
+      ]
+    },
+    "scale": {
+      "synthetic_companies": 1000,
+      "statement_rows": 3000,
+      "repetitions": 3,
+      "seconds": [
+        1.8887534999958007,
+        2.0095954999997048,
+        2.3457262000010815
+      ],
+      "median_seconds": 2.0095954999997048
+    }
+  },
+  "failures": [],
+  "code_sha256": {
+    "anomaly.py": "e6a1f385c5f64540101b486674c9d828130c8d641fadea2f308a3ac4e74f15d9",
+    "daily_update.py": "ceeb7225f80a6e28ddf8ae6759d102bb8e6f09047e73064fdb7484507e26c558",
+    "demo.py": "13397a7a3dde2c9ecf1273bc5bdcc027f8fb75f7983492ca88237fe5720c3d43",
+    "demo_theme.py": "4c1cf95b8814c2a1debdc24dd28e1897ceb1cf30e27727c815b86470bb032b0e",
+    "disclosure_sources.py": "19e9e3dc8a532ffbf78e7bffd71651fdad7a86411131fcca66a9dc4f64e683fa",
+    "discover.py": "e52135ac8ba4ba51e73fb9a8c17f68cbd7edb810fb39147606b7e294f8dc7da2",
+    "engine.py": "52292ee2940abd8d8ca4f3c96c6a7aacbdd77b5851c03688a0e336b16e477cec",
+    "evidence.py": "b9c4c17e8492e70785fc10876849a555eff9d3bc92aee372bd71894f550cbd89",
+    "ingest_theme.py": "b7f3086bc75766f62643f8b552c736a3c6d2baddee6e964f0f7a4b797785185d",
+    "readiness.py": "8fa64b17a01f02a7c1f1344510bed08fcec612c4f95cf9253bb32cd3ef45b193",
+    "research_job.py": "4a347b88692b5f206b9f7483ae409c120ba1e3732f2a0533bcf58feaa49a48a5",
+    "run.py": "c24df2390a0ed8adfde612b926e856602d744cbd37b9ba30474f86c2fa0b0ae2",
+    "search.py": "338852dd3eea882d782350a56ba48786333189225b52f83aa6f8f15827f3098b",
+    "tests/test_anomaly.py": "5917fa8c1f6d9e3074fd2c69d7ff78ff0247b8961506d4cdf04d7e7d68ff75c7",
+    "tests/test_daily_update.py": "48dbacee1409cf5ecff7e16c5d6972dacff70f0b27f859c6c116e0c20e357c99",
+    "tests/test_disclosure_sources.py": "26100092c0576153837fa3c2c78b25111058d5b61d955dc413203b6e79c3df50",
+    "tests/test_discover.py": "940239013bd585e654421b2093f9e40f0b045bf8973ea3e76e2468ae55773b42",
+    "tests/test_engine.py": "de253ee1456530dcd59bd63f7b41ae51fb6fa35a792e11aaf6411c43e01a9502",
+    "tests/test_enterprise_engine.py": "93ceb3a0beaef9381f2ff5ce6afa769c8b28f98dcd0db3c62aa20b29a2982ae1",
+    "tests/test_enterprise_exports.py": "de2ce2f72b89fd943918626b6d4ef752e3a80179ffa1b0f4c95af62fc85170b6",
+    "tests/test_evidence.py": "747f90ff4de1a7c08716e5c825c48478c1eb35ee523a23664725228eb90bf30d",
+    "tests/test_ingest_theme.py": "e3702da346ba6a24b26eacc719464545a3c36f242c1eccceee37d4b39bc521b0",
+    "tests/test_numerical_stability.py": "0b114af33c2028e54766d46b81d4d437a8a3db42983fb8d3f5c2990bbe5cd9e2",
+    "tests/test_readiness.py": "3f993ccbbdbf3d8adcaaeb30b881b2ef9c6ec2a4024a1d2db43b8650fc550cb7",
+    "tests/test_research_job.py": "7c4710b9025d85f8a44ac740996ed6ade68a955bb0d61c0e4e0f936e6634ff5f",
+    "tests/test_run.py": "add63785acb9dc8c2df24d01b7ce43a22619ec0378d27c25e9fc62f09fbe2eae",
+    "tests/test_search.py": "fab7782727561b332f99930c31963904999657139c5c67fa466af76238bf6776",
+    "tests/test_search_cli.py": "f55de4632395f3aaa80aa03c70ed2a0fc9a4b56cb70f94c246965048a26e201d",
+    "tests/test_theme_financials.py": "de7014e31b41814dd254a45ac4c69fe9cc42e049ac2fb005f8711cbf9a0cd48f",
+    "tests/test_theme_search.py": "47d2f9b29c2e78d199d8176b39b0d89b7f58680278b4de170b7e0537d6357af7",
+    "tests/test_theme_sources.py": "03ea35b89c1cd6ad5dc3cd8a063dd00d6bbfba761389300b34227d0962ecf6ce",
+    "tests/test_universe_sources.py": "9c5534f15df41699987069f5ba8fb8d10a18d736491ffd873f56cc749982a792",
+    "theme_financials.py": "a9ba5eeffb35337e69b995294dd5c13eb9d70d28257549c575cdfb3b7e78cff5",
+    "theme_search.py": "1e72b872133311a5faa24fe84f92d83d24678b84dc8599f4b45314f69a00d7ad",
+    "universe_sources.py": "94ea8a4d9c5e521c55d4eb294513739ce3ad48ec81ee24ec630be31a53740034",
+    "validation/enterprise_a_share.py": "66b64f336ec0ca5fb1236de26b5156eb25ae86b39b05c5cf8b3e5e8a90851e2d",
+    "validation/enterprise_a_share_tests.py": "2a99c26f97adc2d36e47d1a28196d03a2e76c768b44f27233b3913576ba9b747",
+    "validation/enterprise_checks.py": "2314118287ab7d5a48b470091a07cb986fc1430ff92de3c600166d117df5d399",
+    "validation/enterprise_hk.py": "63204556342b4fbf585b461272b189af6f4bc9f515eee9f74b21fef598137890",
+    "verify_run.py": "49501dff94f92ac0bd756fb06d3476ddcd7346597a552de8d832de99548ae79e"
+  },
+  "code_changed_during_validation": [],
+  "software_checks_passed": true,
+  "investment_efficacy_validated": false
+}

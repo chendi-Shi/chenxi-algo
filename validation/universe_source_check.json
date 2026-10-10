@@ -1,0 +1,144 @@
+{
+  "checked_at": "2026-10-10",
+  "status": "blocked_for_full_A_HK_production",
+  "offline_replay_equal": true,
+  "snapshot_observed_at": "2026-10-10T03:19:54+00:00",
+  "snapshot_manifest_sha256": "4db595d75d941f47773ff1130c00ea6ba69927693a624c11349fdef869d9bd91",
+  "adapter_sha256": "94ea8a4d9c5e521c55d4eb294513739ce3ad48ec81ee24ec630be31a53740034",
+  "sources": [
+    {
+      "source": "sse",
+      "count": 2320,
+      "effective_at": null,
+      "excluded": {},
+      "usable_on_observation_date": true
+    },
+    {
+      "source": "szse",
+      "count": 2904,
+      "effective_at": null,
+      "excluded": {},
+      "usable_on_observation_date": true
+    },
+    {
+      "source": "hkex",
+      "count": 2771,
+      "effective_at": "2026-10-12",
+      "excluded": {
+        "other_equity_subcategory": 30,
+        "non_equity": 14379,
+        "non_HKD_counter": 25
+      },
+      "usable_on_observation_date": false
+    }
+  ],
+  "coverage": {
+    "security_count": 7995,
+    "by_market": {
+      "A": 5224,
+      "HK": 2771
+    },
+    "by_security_type": {
+      "equity": 7994,
+      "depositary_receipt": 1
+    },
+    "eligible_on_observation_date": 5224,
+    "all_a_shares": false,
+    "missing_exchanges": [
+      "BSE"
+    ],
+    "technology_manufacturing_classified": 0,
+    "official_industry_scope_suggestions": {
+      "manufacturing": 3555,
+      "technology": 416
+    }
+  },
+  "raw_sources": [
+    {
+      "source": "sse",
+      "pages": [
+        {
+          "url": "https://query.sse.com.cn/sseQuery/commonQuery.do?STOCK_TYPE=1%2C8&REG_PROVINCE=&CSRC_CODE=&STOCK_CODE=&sqlId=COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L&COMPANY_STATUS=2%2C4%2C5%2C7%2C8&type=inParams&isPagination=true&pageHelp.cacheSize=1&pageHelp.beginPage=1&pageHelp.pageSize=2000&pageHelp.pageNo=1&pageHelp.endPage=1",
+          "bytes": 2293088,
+          "sha256": "e5ae5beff90fce1e1d256ebeb4778a14c9ca99132adc67ddd239fab4c8447fab"
+        },
+        {
+          "url": "https://query.sse.com.cn/sseQuery/commonQuery.do?STOCK_TYPE=1%2C8&REG_PROVINCE=&CSRC_CODE=&STOCK_CODE=&sqlId=COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L&COMPANY_STATUS=2%2C4%2C5%2C7%2C8&type=inParams&isPagination=true&pageHelp.cacheSize=1&pageHelp.beginPage=2&pageHelp.pageSize=2000&pageHelp.pageNo=2&pageHelp.endPage=2",
+          "bytes": 370270,
+          "sha256": "8ee1060450dca05c63414449b4470fdf994f9845122e73305f33c80bf3c7618f"
+        }
+      ]
+    },
+    {
+      "source": "szse",
+      "pages": [
+        {
+          "url": "https://www.szse.cn/api/report/ShowReport?SHOWTYPE=xlsx&CATALOGID=1110&TABKEY=tab1",
+          "bytes": 545048,
+          "sha256": "2b91b5b1277b82d5aa498b4e65d7b8ba7b7d374a24bd70582ff438846061706a"
+        }
+      ]
+    },
+    {
+      "source": "hkex",
+      "pages": [
+        {
+          "url": "https://www.hkex.com.hk/eng/services/trading/securities/securitieslists/ListOfSecurities.xlsx",
+          "bytes": 1351351,
+          "sha256": "dfeeab4726febaf20d322ba1d9b5b931bddd8d5d777b7b9d7b5fd988e376fc49"
+        }
+      ]
+    }
+  ],
+  "blocking_gaps": [
+    {
+      "source": "hkex",
+      "reason": "Official workbook effective date 2026-10-12 is later than 2026-10-10 observation. Records have universe_as_of=2026-10-12 and cannot be used for 2026-10-10."
+    },
+    {
+      "source": "bse",
+      "url": "https://www.bse.cn/nqxxController/nqxxCnzq.do",
+      "reason": "Actual HTTPS attempt failed CERTIFICATE_VERIFY_FAILED (unable to get local issuer certificate). TLS verification was not disabled; BSE adapter is not supported."
+    },
+    {
+      "source": "all",
+      "reason": "Official broad industry is retained, with C/I scope suggestions only. Reviewed business classification and disclosure coverage are not established by the directory."
+    }
+  ],
+  "rejected_as_current_universe_source": {
+    "url": "https://www.cninfo.com.cn/new/data/szse_stock.json",
+    "sha256": "41e6087be6466873e9b0135f9f9fc317d421be555bf63b875946949142e51e55",
+    "total_rows": 6260,
+    "a_category_rows": 6180,
+    "reason": "Contains historical/delisted entries; not accepted as a current listing directory."
+  },
+  "commands": [
+    "python universe_sources.py --download --output output/universe/20261010",
+    "python universe_sources.py --replay output/universe/20261010"
+  ],
+  "notes": [
+    "Raw source files stay in ignored local validation/raw or output directories.",
+    "Snapshot report stores original URLs, observation time, byte hashes and provider date.",
+    "No automatic commercial redistribution entitlement or current tradability is inferred.",
+    "SSE includes one CDR (689009); security_type is explicit and CDR is excluded from ordinary-equity scope export. Official code reference: https://www.sse.com.cn/aboutus/publication/factbook/documents/c/10170562/files/da4f403a0b7443fa9b2ba2e002d38f10.pdf"
+  ],
+  "scope_export": {
+    "as_of": "2026-10-10",
+    "count": 3970,
+    "excluded": {
+      "industry_missing_or_outside_mapping": 1253,
+      "unavailable_as_of": 2771,
+      "non_ordinary_equity": 1
+    },
+    "scope_counts": {
+      "manufacturing": 3554,
+      "technology": 416
+    },
+    "classification_status": "unverified; official broad-industry mapping only"
+  },
+  "live_repeat_observation": {
+    "attempt": "second download after first successful capture",
+    "sse": "Connection refused (WinError 10061); adapter returned partial and did not reuse old data. Third capture succeeded.",
+    "implication": "Successful spot acquisition is not an availability/SLA guarantee."
+  }
+}

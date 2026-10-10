@@ -33,7 +33,7 @@ _WORDS = re.compile(r"[a-z0-9]+")
 _NEGATION = re.compile(
     r"(?:不涉及|不从事|不從事|未涉及|未开展|未開展|未从事|未從事|没有|沒有|并无|並無|尚无|尚無|尚未|不生产|不生產|不销售|不銷售|未生产|未生產|未销售|未銷售|不提供|未提供|未布局|不是|並非|并非|不存在|未有|无相关|無相關|不属于|不屬於|not\s+(?:currently\s+)?(?:engage|involve|manufactur|produc|sell|supply)|(?:does|do|did|is|are|has|have)\s+not|(?:doesn|don|didn|isn|aren|hasn|haven)['’]t|\bno\b[^.!?;。！？；]{0,80}\b(?:business|revenue|sales|involvement|operations)\b|neither)", re.I)
 _PLAN = re.compile(r"(?:计划|計劃|拟|擬|将开展|將開展|探索|筹备|籌備|有望|未来|未來|plan(?:s|ned)?\s+to|intend(?:s)?\s+to|explor(?:e|es|ing)|may\s+(?:enter|develop)|potential)", re.I)
-_SELF = re.compile(r"(?:本公司|公司|本集团|本集團|集团|集團|我们|我們|本企业|本企業|\bwe\b|\bour\b|\bthe\s+(?:company|group)\b)", re.I)
+_SELF = re.compile(r"(?:本公司|本集团|本集團|我们|我們|本企业|本企業|(?<![\u3400-\u9fffA-Za-z0-9])(?:公司|集团|集團)|\bwe\b|\bour\b|\bthe\s+(?:company|group)\b)", re.I)
 _OPERATING = re.compile(r"(?:主要从事|主要從事|主营|主營|业务|業務|产品|產品|生产|生產|销售|銷售|制造|製造|研发|研發|收入|营收|營收|交付|发布|發佈|推出|manufactur|produc|develop|design|sell|sales|revenue|business|deliver|\boffers?\b|\bportfolio\b|\blaunch|\bintroduc)", re.I)
 _CHAIN = re.compile(r"(?:上游|下游|零部件|零组件|零組件|供应|供應|配套|供货|供貨|供给|供給|供应商|供應商|用于|用於|upstream|downstream|component|suppl(?:y|ies|ier)|used\s+in)", re.I)
 _INDUSTRY = re.compile(r"(?:行业|行業|市场|市場|趋势|趨勢|行业规模|行業規模|industry|market\s+(?:size|growth|trend)|global\s+demand)", re.I)
@@ -50,6 +50,26 @@ _ESTABLISHED_PRODUCTION = re.compile(r"(?:已|已经|已經)[\s\S]{0,10}(?:量�
 def _analysis_text(text):
     """Join PDF line breaks inside Chinese words without altering quote offsets."""
     return re.sub(r"(?<=[\u3400-\u9fff])\s+(?=[\u3400-\u9fff])", "", text)
+
+
+def _matching_text(text):
+    """Normalize matching text and retain an exact map to original characters.
+
+    PDF line wrapping can split a Chinese product name. Removing that spacing
+    only in the matching copy prevents false negatives without forging quotes.
+    NFKC/casefold may expand one character into several, all mapped to its source.
+    """
+    removed = set()
+    for match in re.finditer(r"(?<=[\u3400-\u9fff])\s+(?=[\u3400-\u9fff])", text):
+        removed.update(range(match.start(), match.end()))
+    chars, offsets = [], []
+    for index, char in enumerate(text):
+        if index in removed:
+            continue
+        normalized = unicodedata.normalize("NFKC", char).casefold()
+        chars.extend(normalized)
+        offsets.extend([index] * len(normalized))
+    return "".join(chars), offsets
 
 
 def _source_key(document):
@@ -146,6 +166,13 @@ def _query_terms(query, dictionary):
     for term in terms:
         unique.setdefault(_norm(term), term)
     return sorted(unique.values(), key=lambda item: (_norm(item), item)), themes
+
+
+def _required_qualifiers(query):
+    """Keep literal alphanumeric model/specification constraints during expansion."""
+    words = re.findall(r"[A-Za-z0-9]+(?:[.-][A-Za-z0-9]+)*", unicodedata.normalize("NFKC", query))
+    return sorted({_norm(word) for word in words
+                   if re.search(r"[A-Za-z]", word) and re.search(r"[0-9]", word)})
 
 
 def _tokens(text):
@@ -256,9 +283,11 @@ def _validate_documents(documents, companies, cutoff, audit):
             continue
         candidates.append(rows[0])
         audit["duplicates"]["documents"] += len(rows) - 1
-    # Prefer the first public dated copy, with deterministic provenance ties.
+    # Same-source duplicates do not add information. A distinct dated release
+    # must survive deduplication: a reissued assertion may resolve an old denial.
     for row in sorted(candidates, key=lambda item: (item["available_at"], item["document_id"])):
-        key = (row["ticker"], _norm(row["text"]))
+        key = (row["ticker"], _norm(row["text"]), row["source_url"],
+               row["available_at"], row["date_basis"], row.get("source_sha256"))
         if key in text_seen:
             audit["duplicates"]["documents"] += 1
         else:
@@ -311,9 +340,64 @@ def _claim_status(sentence, hit_start, hit_end, issuer_patterns=()):
     return "uncertain"
 
 
-def _passages(documents, patterns, maximum, audit, companies):
+def _company_level_denial(sentence, hit_start, hit_end, term, query, issuer_patterns):
+    """Recognize only explicit issuer-wide denial, not a product variant's status."""
+    before = list(re.finditer(r"[,，]", sentence[:hit_start]))
+    start = before[-1].end() if before else 0
+    after = re.search(r"[,，]", sentence[hit_end:])
+    end = hit_end + after.start() if after else len(sentence)
+    clause = _analysis_text(sentence[start:end])
+    prefix = _analysis_text(sentence[start:hit_start])
+    suffix = _analysis_text(sentence[hit_end:end])
+    own = bool(_SELF.search(clause)) or any(pattern.search(clause) for pattern in issuer_patterns)
+    if not own or any(pattern.search(clause) for pattern in
+                      (_LOCAL_VARIANT, _CUSTOMER, _THIRD_PARTY, _INDUSTRY, _DEVELOPMENT)):
+        return False
+    # Expansion may include narrower related products. A denial of humanoids
+    # cannot erase an issuer's established industrial robot business.
+    normalized_term, normalized_query = _norm(term), _norm(query)
+    if normalized_term in {"humanoid", "人形机器人", "人形機器人"} and normalized_term not in normalized_query:
+        return False
+    if normalized_query in normalized_term and normalized_term != normalized_query:
+        return False
+    # Requiring the denial predicate adjacent to the matched product avoids
+    # treating 'does not make 800G optical modules' as denial of ALL modules.
+    predicate_before = re.search(
+        r"(?:不涉及|不从事|不從事|未涉及|未开展|未開展|未从事|未從事|不生产|不生產|不销售|不銷售|未生产|未生產|未销售|未銷售|不提供|未提供|未布局|尚无|尚無|没有|沒有|并无|並無|已退出|已停止|已经停止|已經停止|不再(?:生产|生產|销售|銷售|经营|經營)?|停止(?:生产|生產|销售|銷售|经营|經營))\s*$|"
+        r"(?:(?:does|do|did|is|are|has|have)\s+not\s+(?:(?:currently|manufacture|manufacturing|produce|producing|sell|selling|offer|supply|develop)\s+)*|(?:doesn|don|didn)['’]t\s+(?:(?:manufacture|produce|sell|offer|supply|develop)\s+)*|(?:has|have)\s+no\s+|no\s+longer\s+(?:manufactures?|produces?|sells?|offers?|supplies)\s+|(?:discontinued|ceased)\s+(?:manufacturing|producing|selling|offering|supplying)\s+)\s*$",
+        prefix, re.I)
+    predicate_after = re.match(
+        r"(?:业务|業務|产品|產品)(?:已经|已經|已)?(?:停止|终止|終止|退出|停产|停產)|"
+        r"\s+(?:business|operations?|production)\s+(?:has|have|was|were)\s+(?:been\s+)?(?:discontinued|ceased)",
+        suffix, re.I)
+    # In subject-product-predicate form, reject an unrecognized subtype before
+    # the product ('company humanoid robot business has ceased').
+    if predicate_after and not re.search(r"(?:本公司|公司|本集团|本集團)(?:的)?$|\b(?:our|the company(?:'s)?)\s*$", prefix, re.I):
+        predicate_after = None
+    return bool(predicate_before or predicate_after)
+
+
+def _business_status(evidence):
+    support = [item for item in evidence if item["claim_status"] in ("direct_business", "upstream_or_downstream")]
+    denials = [item for item in evidence if item["company_level_denial"]]
+    if support and denials:
+        if any(item["date_basis"] != "official_release" for item in support + denials):
+            return "historical_or_disputed", ["Issuer-wide positive and negative assertions have non-comparable publication dates; verify current business."]
+        newest_support = max(item["available_at"] for item in support)
+        newest_denial = max(item["available_at"] for item in denials)
+        if newest_denial >= newest_support:
+            return "historical_or_disputed", ["An issuer-wide denial is as recent as or newer than all operating support; historical evidence cannot establish current business."]
+        return "current_business", ["Operating support was officially released after the issuer-wide denial; verify any change in business scope."]
+    if support:
+        return "current_business", ["Source text supports operating business; this heuristic still requires human review."]
+    if any(item["claim_status"] == "planned" for item in evidence):
+        return "planned_business", ["Only planned or development-stage business is supported."]
+    return "uncertain", ["Related text does not establish that the issuer operates this business."]
+
+
+def _passages(documents, patterns, maximum, audit, companies, query, qualifiers):
     passages = []
-    seen = set()
+    seen = {}
     source_stages = {}
     sources_with_established_production = set()
     for document in documents:
@@ -322,8 +406,9 @@ def _passages(documents, patterns, maximum, audit, companies):
         issuer_patterns = [_pattern(name) for name in [issuer["name"]] + issuer["aliases"]]
         for start, end in _sentences(text):
             sentence = text[start:end]
-            hits = [(match.start(), match.end(), term) for term, pattern in patterns
-                    for match in pattern.finditer(sentence)]
+            matching, offsets = _matching_text(sentence)
+            hits = [(offsets[match.start()], offsets[match.end() - 1] + 1, term)
+                    for term, pattern in patterns for match in pattern.finditer(matching)]
             analysis_sentence = _analysis_text(sentence)
             if _ESTABLISHED_PRODUCTION.search(analysis_sentence) and any(
                     _claim_status(sentence, a, b, issuer_patterns) == "direct_business" for a, b, _ in hits):
@@ -353,23 +438,39 @@ def _passages(documents, patterns, maximum, audit, companies):
                     windows.append((left, min(end, left + maximum)))
             for left, right in sorted(set(windows)):
                 excerpt = text[left:right]
-                key = (document["ticker"], _norm(excerpt))
+                local_hits = [(a, b, term) for a, b, term in hits if start + a >= left and start + b <= right]
+                normalized_excerpt, _ = _matching_text(excerpt)
+                if local_hits and not all(_pattern(term).search(normalized_excerpt) for term in qualifiers):
+                    audit["qualifier_filtered_passages"] += 1
+                    local_hits = []
+                claims = sorted({(term, _claim_status(sentence, a, b, issuer_patterns)) for a, b, term in local_hits})
+                issuer_denial = any(_claim_status(sentence, a, b, issuer_patterns) == "negated" and
+                                    _company_level_denial(sentence, a, b, term, query, issuer_patterns)
+                                    for a, b, term in local_hits)
+                version = {"document": document, "start": left, "end": right,
+                           "exact_excerpt": excerpt, "claims": claims,
+                           "company_level_denial": issuer_denial,
+                           "claim_context_truncated": left > start or right < end}
+                key = (document["ticker"], _norm(excerpt), tuple(claims), issuer_denial)
+                version_key = (*_source_key(document), document["page"], document["date_basis"])
                 if key in seen:
                     audit["duplicates"]["passages"] += 1
+                    existing = seen[key]
+                    if version_key not in existing["version_keys"]:
+                        existing["versions"].append(version)
+                        existing["version_keys"].add(version_key)
                     continue
-                seen.add(key)
-                local_hits = [(a, b, term) for a, b, term in hits if start + a >= left and start + b <= right]
-                claims = sorted({(term, _claim_status(sentence, a, b, issuer_patterns)) for a, b, term in local_hits})
-                passages.append({"document": document, "start": left, "end": right,
-                                 "exact_excerpt": excerpt, "claims": claims,
-                                 "claim_context_truncated": left > start or right < end,
-                                 "tokens": _tokens(excerpt)})
-    for passage in passages:
-        stage = source_stages.get(_source_key(passage["document"]))
-        if stage and _source_key(passage["document"]) not in sources_with_established_production and any(status in ("direct_business", "upstream_or_downstream") for _, status in passage["claims"]):
-            passage["claims"] = [(term, "planned" if status in ("direct_business", "upstream_or_downstream") else status)
-                                 for term, status in passage["claims"]]
-            passage["source_development_disclosure"] = stage
+                passage = {"tokens": _tokens(normalized_excerpt), "versions": [version],
+                           "version_keys": {version_key}}
+                seen[key] = passage
+                passages.append(passage)
+    for indexed in passages:
+        for passage in indexed["versions"]:
+            stage = source_stages.get(_source_key(passage["document"]))
+            if stage and _source_key(passage["document"]) not in sources_with_established_production and any(status in ("direct_business", "upstream_or_downstream") for _, status in passage["claims"]):
+                passage["claims"] = [(term, "planned" if status in ("direct_business", "upstream_or_downstream") else status)
+                                     for term, status in passage["claims"]]
+                passage["source_development_disclosure"] = stage
     return passages
 
 
@@ -389,12 +490,15 @@ def discover_companies(companies, documents, query, as_of, *, config=None, limit
     _integer(limit, "limit", 1)
     settings = _configuration(config)
     terms, themes = _query_terms(query, settings["theme_dictionary"])
+    qualifiers = _required_qualifiers(query)
     query_tokens = set().union(*(_tokens(term).keys() for term in terms))
     audit = {"rejected_companies": [], "rejected_documents": [],
-             "duplicates": {"companies": 0, "documents": 0, "passages": 0}, "conflicts": []}
+             "duplicates": {"companies": 0, "documents": 0, "passages": 0}, "conflicts": [],
+             "qualifier_filtered_passages": 0}
     universe = _validate_companies(companies, cutoff, audit)
     visible_docs = _validate_documents(documents, universe, cutoff, audit)
-    passages = _passages(visible_docs, [(term, _pattern(term)) for term in terms], settings["excerpt_chars"], audit, universe)
+    passages = _passages(visible_docs, [(term, _pattern(_norm(term))) for term in terms],
+                         settings["excerpt_chars"], audit, universe, query, qualifiers)
     postings = defaultdict(list)
     lengths = []
     for index, passage in enumerate(passages):
@@ -411,7 +515,10 @@ def discover_companies(companies, documents, query, as_of, *, config=None, limit
             denominator = frequency + settings["k1"] * (1 - settings["b"] + settings["b"] * lengths[index] / average_length)
             scores[index] += idf * frequency * (settings["k1"] + 1) / denominator
     by_company = defaultdict(list)
-    for index, passage in enumerate(passages):
+    # Each unique lexical passage is scored once; separate dated source versions
+    # retain their own quotes and assertion dates without multiplying BM25 input.
+    for index, passage in ((i, version) for i, indexed in enumerate(passages)
+                           for version in indexed["versions"]):
         if not passage["claims"]:
             continue  # Bigram/word overlap alone is not a theme assertion.
         statuses = {status for _, status in passage["claims"]}
@@ -431,6 +538,7 @@ def discover_companies(companies, documents, query, as_of, *, config=None, limit
                          "warnings": ["historical_evidence_over_730_days"] if evidence_age > 730 else [],
                          "matched_terms": sorted({term for term, _ in passage["claims"]}, key=_norm),
                          "claim_status": best_status,
+                         "company_level_denial": passage["company_level_denial"],
                          "term_claims": [{"term": term, "status": status} for term, status in passage["claims"]],
                          "relevance_score": round(score, 8), "requires_review": True})
         by_company[doc["ticker"]].append(evidence)
@@ -442,7 +550,7 @@ def discover_companies(companies, documents, query, as_of, *, config=None, limit
             if all(item["claim_status"] == "negated" for item in evidence):
                 negated_only.append(ticker)
             continue
-        evidence.sort(key=lambda item: (-item["relevance_score"], item["available_at"], item["document_id"], item["char_start"]))
+        evidence.sort(key=lambda item: (-item["relevance_score"], -_date(item["available_at"], "available_at").toordinal(), item["document_id"], item["char_start"]))
         statuses = sorted({claim["status"] for item in evidence for claim in item["term_claims"]})
         contradictory = "negated" in statuses and "direct_business" in statuses
         if contradictory:
@@ -450,12 +558,31 @@ def discover_companies(companies, documents, query, as_of, *, config=None, limit
         selected = evidence[:settings["max_evidence_per_company"]]
         # Include denials in the evidence budget where possible; never hide them.
         denials = [item for item in evidence if any(claim["status"] == "negated" for claim in item["term_claims"])]
-        if denials and all(item not in selected for item in denials) and len(selected) > 1:
-            selected[-1] = denials[0]
+        if denials and all(item not in selected for item in denials):
+            if len(selected) > 1:
+                selected[-1] = denials[0]
+            else:
+                # Contradictory evidence is mandatory even with a one-item
+                # display budget. A source-backed warning cannot hide its proof.
+                selected.append(denials[0])
+        business_status, business_reasons = _business_status(evidence)
+        # The display budget must not hide the newest actual operating support.
+        # Keep its full quote/offset/provenance, separately for each date/hash
+        # assurance tier, so a stricter caller can select qualifying evidence.
+        support_by_assurance = {}
+        for item in sorted(evidence, key=lambda item: (-_date(item["available_at"], "available_at").toordinal(),
+                                                        item["document_id"], item["char_start"])):
+            if item["claim_status"] not in ("direct_business", "upstream_or_downstream"):
+                continue
+            key = (item["date_basis"], "source_sha256" in item)
+            support_by_assurance.setdefault(key, item)
+        business_support = list(support_by_assurance.values())
         row = {key: universe[ticker][key] for key in ("ticker", "name", "market", "sector")}
         row.update({"relevance_score": max(item["relevance_score"] for item in positive),
                     "matched_terms": sorted({term for item in positive for term in item["matched_terms"]}, key=_norm),
                     "relations": statuses, "evidence": selected, "requires_review": True,
+                    "business_status": business_status, "business_status_reasons": business_reasons,
+                    "business_support_evidence": business_support,
                     "has_conflicting_assertions": contradictory,
                     "has_mixed_business_stages": "planned" in statuses and "direct_business" in statuses,
                     "warnings": (["all_supporting_evidence_over_730_days"] if all(item["evidence_age_days"] > 730 for item in positive)
@@ -466,7 +593,7 @@ def discover_companies(companies, documents, query, as_of, *, config=None, limit
     audit["negated_only_tickers"] = negated_only
     return {"status": "completed" if results else ("no_matches" if visible_docs else "no_eligible_documents"),
             "query": query, "as_of": cutoff.isoformat(), "method": "bm25_theme_expansion",
-            "expanded_terms": terms, "matched_themes": themes, "config": settings,
+            "expanded_terms": terms, "matched_themes": themes, "required_qualifiers": qualifiers, "config": settings,
             "companies": results[:limit], "audit": audit,
             "coverage": {"input_companies": len(companies), "visible_companies": len(universe),
                          "input_documents": len(documents), "visible_unique_documents": len(visible_docs),
@@ -479,4 +606,6 @@ def discover_companies(companies, documents, query, as_of, *, config=None, limit
                             "Source content, identity mappings and available dates are supplied by the caller and are not authenticated.",
                             "Coverage is limited to the supplied point-in-time universe and documents; absence is not evidence of no business.",
                             "Evidence older than 730 days is flagged as historical; this does not establish whether the business currently exists.",
+                            "Model/specification tokens containing both letters and digits are required literally in the same evidence window; other natural-language modifiers are not semantically interpreted.",
+                            "Business status uses conservative issuer-wide denial rules and official release dates; observed or operator-supplied dates cannot prove that conflicting business assertions supersede each other.",
                             "Company relevance is the maximum weighted passage BM25 score, not a sum of repeated mentions."]}

@@ -1,0 +1,319 @@
+{
+  "checked_at": "2026-10-10",
+  "status": "bounded_official_source_validation_passed_with_known_gaps",
+  "adapter_sha256": "19e9e3dc8a532ffbf78e7bffd71651fdad7a86411131fcca66a9dc4f64e683fa",
+  "offline_tests_passed": 19,
+  "official_sources": {
+    "cninfo_stock_identifier_lookup": "https://www.cninfo.com.cn/new/data/szse_stock.json",
+    "cninfo_disclosure_search": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+    "hkex_stock_identifier_lookup": "https://www1.hkexnews.hk/ncms/script/eds/activestock_sehk_e.json",
+    "hkex_disclosure_search": "https://www1.hkexnews.hk/search/titleSearchServlet.do",
+    "hkex_categories": "https://www1.hkexnews.hk/ncms/script/eds/tiertwo_e.json",
+    "hkex_official_search_page": "https://www1.hkexnews.hk/search/titlesearch.xhtml?lang=en",
+    "hkex_official_frontend_configuration": "https://www1.hkexnews.hk/ncms/eds/titlesearch/config.js"
+  },
+  "annual_reports": {
+    "observed_at": "2026-10-10T03:37:40+00:00",
+    "snapshot_manifest_sha256": "7ed40ee2f4054e44362f33998faaf6bb991bf605a80d74c244041d8cf550ae28",
+    "request": {
+      "securities": [
+        {
+          "ticker": "002747.SZ",
+          "name": "Estun",
+          "market": "A"
+        },
+        {
+          "ticker": "00992.HK",
+          "name": "Lenovo",
+          "market": "HK"
+        },
+        {
+          "ticker": "09880.HK",
+          "name": "UBTECH",
+          "market": "HK"
+        },
+        {
+          "ticker": "300308.SZ",
+          "name": "InnoLight",
+          "market": "A"
+        },
+        {
+          "ticker": "688585.SH",
+          "name": "Swancor",
+          "market": "A"
+        }
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-10-10",
+      "categories": [
+        "annual_report"
+      ],
+      "max_pages": 20,
+      "page_size": 100,
+      "max_requests": 10000
+    },
+    "coverage": {
+      "requested_companies": 5,
+      "completed_companies": 5,
+      "failed_tickers": [],
+      "records": 5,
+      "pdf_links": 5,
+      "non_pdf_records": 0,
+      "http_requests": 8
+    },
+    "audit": [
+      {
+        "ticker": "002747.SZ",
+        "provider": "cninfo",
+        "status": "completed",
+        "selected": 1,
+        "category_filtered": 1,
+        "requests": 1,
+        "pages": 1,
+        "provider_total": 2,
+        "totalpages_field_ignored": "observed provider field is 0 even for nonempty results"
+      },
+      {
+        "ticker": "00992.HK",
+        "provider": "hkex",
+        "status": "completed",
+        "selected": 1,
+        "category_filtered": 0,
+        "requests": 1,
+        "pages": 1,
+        "date_window_splits": 0,
+        "provider_total": 1
+      },
+      {
+        "ticker": "09880.HK",
+        "provider": "hkex",
+        "status": "completed",
+        "selected": 1,
+        "category_filtered": 0,
+        "requests": 1,
+        "pages": 1,
+        "date_window_splits": 0,
+        "provider_total": 1
+      },
+      {
+        "ticker": "300308.SZ",
+        "provider": "cninfo",
+        "status": "completed",
+        "selected": 1,
+        "category_filtered": 1,
+        "requests": 1,
+        "pages": 1,
+        "provider_total": 2,
+        "totalpages_field_ignored": "observed provider field is 0 even for nonempty results"
+      },
+      {
+        "ticker": "688585.SH",
+        "provider": "cninfo",
+        "status": "completed",
+        "selected": 1,
+        "category_filtered": 1,
+        "requests": 1,
+        "pages": 1,
+        "provider_total": 2,
+        "totalpages_field_ignored": "observed provider field is 0 even for nonempty results"
+      }
+    ],
+    "offline_replay_equal": true,
+    "filings": [
+      {
+        "document_id": "cninfo-002747-1225059898",
+        "ticker": "002747.SZ",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225059898.PDF",
+        "available_at": "2026-03-31",
+        "released_at": null,
+        "date_precision": "day"
+      },
+      {
+        "document_id": "hkex-00992-12216966",
+        "ticker": "00992.HK",
+        "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0626/2026062600475.pdf",
+        "available_at": "2026-06-26",
+        "released_at": "2026-06-26T16:38+08:00",
+        "date_precision": "minute"
+      },
+      {
+        "document_id": "hkex-09880-12105605",
+        "ticker": "09880.HK",
+        "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0414/2026041401168.pdf",
+        "available_at": "2026-04-14",
+        "released_at": "2026-04-14T22:31+08:00",
+        "date_precision": "minute"
+      },
+      {
+        "document_id": "cninfo-300308-1225056459",
+        "ticker": "300308.SZ",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225056459.PDF",
+        "available_at": "2026-03-31",
+        "released_at": null,
+        "date_precision": "day"
+      },
+      {
+        "document_id": "cninfo-688585-1225063383",
+        "ticker": "688585.SH",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225063383.PDF",
+        "available_at": "2026-03-31",
+        "released_at": null,
+        "date_precision": "day"
+      }
+    ]
+  },
+  "all_disclosures_pagination_probe": {
+    "observed_at": "2026-10-10T03:32:24+00:00",
+    "snapshot_manifest_sha256": "efa1a53f96c3b4ce829957ce04a8c3fd17a37b2617058ff08539894ca13b5146",
+    "request_window": [
+      "2026-01-01",
+      "2026-10-10"
+    ],
+    "coverage": {
+      "requested_companies": 5,
+      "completed_companies": 4,
+      "failed_tickers": [
+        "09880.HK"
+      ],
+      "records": 466,
+      "pdf_links": 426,
+      "non_pdf_records": 40,
+      "http_requests": 26
+    },
+    "audit": [
+      {
+        "ticker": "002747.SZ",
+        "provider": "cninfo",
+        "status": "completed",
+        "selected": 130,
+        "category_filtered": 0,
+        "requests": 5,
+        "pages": 5,
+        "provider_total": 130,
+        "totalpages_field_ignored": "observed provider field is 0 even for nonempty results"
+      },
+      {
+        "ticker": "00992.HK",
+        "provider": "hkex",
+        "status": "completed",
+        "selected": 44,
+        "category_filtered": 0,
+        "requests": 7,
+        "pages": 7,
+        "date_window_splits": 3,
+        "provider_total": 44
+      },
+      {
+        "ticker": "09880.HK",
+        "provider": "hkex",
+        "status": "failed",
+        "requests": 1
+      },
+      {
+        "ticker": "300308.SZ",
+        "provider": "cninfo",
+        "status": "completed",
+        "selected": 197,
+        "category_filtered": 0,
+        "requests": 7,
+        "pages": 7,
+        "provider_total": 197,
+        "totalpages_field_ignored": "observed provider field is 0 even for nonempty results"
+      },
+      {
+        "ticker": "688585.SH",
+        "provider": "cninfo",
+        "status": "completed",
+        "selected": 95,
+        "category_filtered": 0,
+        "requests": 4,
+        "pages": 4,
+        "provider_total": 95,
+        "totalpages_field_ignored": "observed provider field is 0 even for nonempty results"
+      }
+    ],
+    "failures": [
+      {
+        "ticker": "09880.HK",
+        "provider": "hkex",
+        "error": "unexpected HKEX filing path"
+      }
+    ],
+    "offline_replay_equal": true,
+    "hk_row_cap": 20,
+    "note": "Lenovo required seven date-window requests (three splits) to reconcile all 44 records. Three A-share companies required 5, 7 and 4 pages."
+  },
+  "real_failure_cases": [
+    {
+      "provider": "hkex",
+      "ticker": "09880.HK",
+      "provider_record_id": "12279319",
+      "advertised_type": "PDF",
+      "returned_path": "/listedco/listconews/sehk/dod/en.html",
+      "behavior": "all-disclosure query fails this company closed because Documents on Display wrapper is not a verified direct PDF; no bypass or invented link."
+    },
+    {
+      "provider": "hkex",
+      "url": "https://www.hkexnews.hk/titlesearch.xhtml?lang=en",
+      "behavior": "Initial legacy root URL returned HTTP 404; official www1 /search/titlesearch.xhtml entry was inspected and used."
+    }
+  ],
+  "fixed_regression": {
+    "issue": "Combined Annual Report / ESG taxonomy was incorrectly filtered as non-annual.",
+    "fix": "Classify exact Annual Report token among official bracketed category labels after HTML entity decoding.",
+    "evidence": "New live query returned the expected complete annual report for UBTECH as well as four other selected issuers; regression test includes a negative Notice of Publication of Annual Report case."
+  },
+  "hk_current_universe_alternative_assessment": {
+    "source": "https://www1.hkexnews.hk/ncms/script/eds/activestock_sehk_e.json",
+    "raw_sha256": "65295977bcf905e1ff129d413c0dd7feda57efa2781b75440830357a4685d92f",
+    "rows_observed": 17505,
+    "fields": [
+      "i",
+      "c",
+      "n",
+      "s"
+    ],
+    "examples": [
+      {
+        "i": 2325,
+        "c": "00992",
+        "n": "LENOVO GROUP",
+        "s": 10531
+      },
+      {
+        "i": 4649,
+        "c": "02800",
+        "n": "TRACKER FUND",
+        "s": 15099
+      },
+      {
+        "i": 222837,
+        "c": "06000",
+        "n": "IFC DEV N2904",
+        "s": 8378
+      },
+      {
+        "i": 1000208870,
+        "c": "09880",
+        "n": "UBTECH ROBOTICS",
+        "s": 16938
+      },
+      {
+        "i": 1000194659,
+        "c": "80700",
+        "n": "TENCENT-R",
+        "s": 15006
+      }
+    ],
+    "official_popup": "https://www.hkexnews.hk/stocklist_active_main.htm",
+    "conclusion": "Not a sufficient ordinary-equity universe replacement: active lookup mixes funds, debt/other products and RMB counters, contains no product category or effective date. Official popup uses exactly this lookup. Future-dated HKEX workbook gate remains in force."
+  },
+  "limitations": [
+    "No PDF bodies were downloaded during this disclosure-discovery validation.",
+    "Only three selected A-share issuers and two HK Main Board issuers were exercised live; GEM and delisted-history queries remain unvalidated.",
+    "CNINFO publishes a day-valued timestamp here; released_at stays null rather than claiming actual midnight release.",
+    "Counts reconcile to provider pages/windows, not an independent full-market disclosure census or uptime guarantee.",
+    "HKEX Documents on Display wrapper resolution is not implemented.",
+    "HK current stock-master future date and incomplete BSE support still prevent full A/H production readiness."
+  ]
+}

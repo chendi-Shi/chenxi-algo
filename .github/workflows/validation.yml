@@ -32,7 +32,7 @@ jobs:
         run: python validation/validate_theme_retrieval.py --output validation/output/theme_retrieval_ci.json
       - name: Run theme discovery and verify the export
         run: |
-          python discover.py --query "robotics" --as-of 2026-10-10 --output output/theme-ci
+          python discover.py --demo-corpus --query "robotics" --as-of 2026-10-10 --output output/theme-ci
           python discover.py --verify output/theme-ci
       - name: Run a complete export
         run: python run.py --demo --as-of 2026-10-09 --ml-cleaning --search-method beam --search-market A --search-sector Consumer --output output/ci

@@ -173,6 +173,16 @@ def attach_fundamentals(discovery, statement_rows=None, valuation_rows=None, *,
                         financial['risks'].append('Operating improvement signals present, but losses persist; kept only in loss watchlist.')
                     else:
                         financial['styles'].append('operating_improvement')
+        # Financial strength cannot turn an unverified or discontinued theme
+        # association into a current-business research recommendation.
+        financial['financial_style_candidates'] = [style for style in financial['styles']
+                                                    if style != 'loss_watchlist']
+        financial['business_status'] = company.get('business_status', 'not_assessed')
+        if financial['business_status'] != 'current_business':
+            held = [style for style in financial['styles'] if style != 'loss_watchlist']
+            financial['styles'] = [style for style in financial['styles'] if style == 'loss_watchlist']
+            if held:
+                financial['reasons'].append('Financial thresholds pass, but current theme business is not established; styles withheld pending business review.')
         if not financial['styles']:
             financial['styles'].append('unclassified')
         for style in financial['styles']:
@@ -181,6 +191,10 @@ def attach_fundamentals(discovery, statement_rows=None, valuation_rows=None, *,
     result['style_config'] = cfg
     result['financial_audit'] = {
         'supplied_statement_companies': len(operating),
+        'company_statuses': {ticker: {'market': row['market'], 'sector': row['sector'],
+                                     'operating_status': row['status'],
+                                     'valuation_status': valuation[ticker]['status']}
+                             for ticker, row in sorted(operating.items())},
         'matched_companies_with_statements': sum(c['ticker'] in operating for c in result['companies']),
         'statement_versions': op_report['audit'], 'valuation_versions': value_report['valuation_audit'],
         'operating_config': operating_cfg, 'value_config': value_cfg,

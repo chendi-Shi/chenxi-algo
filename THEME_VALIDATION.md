@@ -1,6 +1,6 @@
-# 主题发现流程验证（2026-10-10）
+# v0.2 主题发现流程验证（2026-10-10，历史记录）
 
-本次验收对象是可运行的 Python 研究原型：主题检索、证据溯源、业务阶段区分、财务分组、导出与审计。尚未完成全市场覆盖、真实科技制造财务数据库准入或投资研究有效性验收。
+本记录对应 v0.2 研究原型与当时的代码哈希，测试数量不代表当前版本。后续生产化工作与新验证记录见 [PRODUCTION.md](PRODUCTION.md)。尚未完成全市场覆盖、真实科技制造财务数据库准入或投资研究有效性验收。
 
 ## 已完成的验证
 
@@ -36,7 +36,7 @@ python validation/enterprise_checks.py --companies 1000 --output validation/outp
 python validation/validate_theme_sources.py --output validation/output/source_recheck.json
 python ingest_theme.py --manifest data/theme_ingest_manifest.json --output output/theme_full_documents.jsonl --download
 python validation/validate_theme_retrieval.py --full-documents output/theme_full_documents.jsonl --output validation/output/retrieval_recheck.json
-python discover.py --query "机器人" --documents output/theme_full_documents.jsonl --as-of 2026-10-10 --output output/full-robots
+python discover.py --query "机器人" --companies data/theme_companies.json --documents output/theme_full_documents.jsonl --as-of 2026-10-10 --output output/full-robots
 python discover.py --verify output/full-robots
 ```
 

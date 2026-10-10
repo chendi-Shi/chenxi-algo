@@ -1,0 +1,12 @@
+{
+  "expected_tickers": ["300308.SZ", "300502.SZ"],
+  "max_universe_age_days": 1,
+  "max_document_age_days": 365,
+  "min_document_coverage": 1.0,
+  "min_operating_coverage": 1.0,
+  "min_valuation_coverage": 1.0,
+  "max_invalid_records": 0,
+  "max_identity_conflicts": 0,
+  "require_document_hashes": true,
+  "require_known_date_basis": true
+}

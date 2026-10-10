@@ -1,0 +1,25 @@
+{
+  "benchmark": "single_query_rebuild_existing_full_pdf_corpus",
+  "query": "机器人",
+  "as_of": "2026-10-10",
+  "python": "3.12.14",
+  "pdf_page_records": 669,
+  "corpus_bytes": 1889865,
+  "indexed_passages": 6437,
+  "returned_companies": 4,
+  "query_wall_seconds": 11.481532,
+  "query_cpu_seconds": 7.328125,
+  "peak_process_working_set_bytes": 98992128,
+  "peak_process_private_bytes": 90677248,
+  "source_sha256": {
+    "companies": "f290f5d81b6cfff92d1318cc03fe177d00809ff4c6231f41581cbadf3d1fcbad",
+    "documents": "8ef04dec0f6c993e8bdaf36fd6ac6e9b008d92704e35009373c4b2c85bf837a5",
+    "retrieval_code": "1e72b872133311a5faa24fe84f92d83d24678b84dc8599f4b45314f69a00d7ad"
+  },
+  "limitations": [
+    "One query over a six-company corpus; not a market-scale benchmark.",
+    "Peak process memory includes imports and input parsing.",
+    "Other validation processes ran concurrently; wall time is not isolated service latency.",
+    "No source downloading or PDF extraction included."
+  ]
+}

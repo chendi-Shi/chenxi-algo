@@ -5,21 +5,21 @@
 需要 Python 3.10+。检索、财务分类和 TXT 导入只使用标准库；PDF 导入另需 `python -m pip install "pypdf>=5,<7"`。
 
 ```powershell
-python discover.py --query "光模块" --as-of 2026-10-10 --output output/optics
-python discover.py --query "AI服务器" --market HK --as-of 2026-10-10 --output output/ai-hk
+python discover.py --demo-corpus --query "光模块" --as-of 2026-10-10 --output output/optics
+python discover.py --demo-corpus --query "AI服务器" --market HK --as-of 2026-10-10 --output output/ai-hk
 python discover.py --verify output/optics
 ```
 
-默认是真实公开来源的短证据样例，9 家公司仅为开发验证集。下载并导入原文件全文后运行：
+`--demo-corpus` 选择真实公开来源的短证据样例，9 家公司仅为开发验证集；不加该选项时必须明确输入公司库、文档库。下载并导入原文件全文后运行：
 
 ```powershell
 python ingest_theme.py --manifest data/theme_ingest_manifest.json --output output/theme_full_documents.jsonl --download
-python discover.py --query "机器人" --documents output/theme_full_documents.jsonl --as-of 2026-10-10 --output output/full-robots
+python discover.py --query "机器人" --companies data/theme_companies.json --documents output/theme_full_documents.jsonl --as-of 2026-10-10 --output output/full-robots
 ```
 
 PDF 清单覆盖 6 家，其余官网摘录仍在默认 JSONL 中；两个数据集覆盖范围不同。首次下载需要网络，来源内容变化导致 SHA256 不一致时会拒绝，需复核新版本后更新清单。扫描件无文本页被记录，尚无 OCR。完整正文只存本地 `output/` / `validation/raw/`，不提交到公有仓库。
 
-自有资料使用 `--companies companies.json --documents documents.jsonl`。公司目录为 JSON 数组，必填 ticker、name、market（A/HK）、sector、scope（technology/manufacturing）、universe_as_of；证券代码与财务数据须一致，建议带交易所后缀。文档每行一个 JSON，必填 document_id、ticker、available_at、source_url、source_type、page、text。PDF 导入从 manifest 自动产生这些字段；TXT 页码为 1。目录与来源日期晚于截止日的记录不可用，元数据错误、重复冲突均进审计。当前没有自动维护全市场公司目录或跨上市地同发行人合并。
+自有资料使用 `--companies companies.json --documents documents.jsonl`。公司目录为 JSON 数组，必填 ticker、name、market（A/HK）、sector、scope（technology/manufacturing）、universe_as_of；证券代码与财务数据须一致，建议带交易所后缀。文档每行一个 JSON，必填 document_id、ticker、available_at、source_url、source_type、page、text。PDF 导入从 manifest 自动产生这些字段；TXT 页码为 1。目录与来源日期晚于截止日的记录不可用，元数据错误、重复冲突均进审计。官方名录采集与每日试跑见 [PRODUCTION.md](PRODUCTION.md)；全市场经核对的细分业务分类和跨上市地同发行人合并仍未完成。
 
 接入财务 CSV，字段沿用 [DATA_DICTIONARY.md](DATA_DICTIONARY.md)：
 
@@ -61,7 +61,9 @@ result = attach_fundamentals(matches, statements, valuations)
 
 ## 怎样进入财务名单
 
-以下默认值是可解释的研究假设，尚未用晨曦投资团队的历史判断校准；修改 `theme_config.json` 即可调整。公司可同时满足多个盈利风格，亏损公司单列。业务阶段仍同时显示，开发中的业务不会因为财务好而自动变成已量产。
+以下默认值是可解释的研究假设，尚未用晨曦投资团队的历史判断校准；修改 `theme_config.json` 即可调整。公司可同时满足多个盈利风格，亏损公司单列。三个盈利风格还要求 `business_status=current_business`。规划、主体不确定、历史或存在否定冲突的公司保留在线索中，财务上通过的风格记录在 `financial_style_candidates`，供人工复核；亏损观察不因此消失。
+
+提供 `--production-policy` 时，盈利风格还要求当前主题的经营支持证据满足指定时效、哈希和日期依据门槛。最新的一份无关公告不能替旧主题证据背书。支持原文保存在 `business_support_evidence`，输出同时给出 `theme_business_freshness` 和数据准入检查。
 
 | 名单 | 默认条件 |
 |---|---|
@@ -77,6 +79,6 @@ ROE＝当期归母利润/期初期末归母权益均值；净债务＝有息债�
 
 ## 输出与验收
 
-`results.json` 包含全部证据、逐项财务 checks、业务状态、亏损标记、分组名单、覆盖统计与拒绝审计。`matches.csv` 为简表，`manifest.json` 保存输入及代码哈希、配置和参数；`completion.json` 最后写入，用 `--verify` 检查导出和输入是否发生变化。复用目录将替换该次导出，复现不同运行请用不同目录。
+`results.json` 的 `all_companies` 保留所有匹配公司的证据和财务 checks，`companies` 是显示数量限制后的列表；文档证据本身的展示上限及是否截断另有标记。`all_matched_style_lists` 与全部公司对应，`style_lists` 与显示列表对应。`matches.csv` 为带业务状态的简表，`manifest.json` 保存输入及代码哈希、配置和参数；`completion.json` 最后写入，用 `--verify` 检查导出。单次入口复用目录会替换导出，持续运行请用 `research_job.py` 保留各次历史快照。
 
 软件回归、真实段落标签测试与完整 PDF 召回分别检查。真实来源验证不会证明全市场准确率；完整文件新增命中需逐条审阅，不能把未标注公司默认为负例。验证脚本和结果在 `validation/`。上线供团队持续使用前仍需补齐实际研究股票池、财务口径映射、人工相关性标注及更新任务；本版提供可运行和可审计的研究原型。

@@ -1,11 +1,15 @@
 # chenxi-algo：基本面股票筛选 Algo 项目
 
-**v0.2 主流程：输入产品或主题 → 从公司资料库发现相关 A/H 公司 → 展示原文证据和业务阶段 → 分为优质成长、相对价值、经营改善及亏损观察名单。** 第一版聚焦科技与制造，使用 Python，搜索与财务门槛均可调整。
+**状态：正在进行生产化改造，尚未通过团队生产验收。** 目标是每日更新 A/H 科技与制造公司资料，输入产品或主题，得到带原文来源的公司研究名单；第一阶段先在本机运行 Python，服务器部署随后确定。
 
-项目覆盖公开资料导入、非结构化文本清洗、主题检索、结构化财务计算、数据审计和研究名单交付。默认附带 9 家真实公司的公开证据样例，以及 6 份完整公开 PDF 的可下载清单。样例是有限语料验证；尚未接入全 A/H 上市公司资料库，不能声称全市场扫描或证明投资收益有效。
+主流程是公司名录与披露更新 → 主题检索 → 业务状态核验 → 优质成长、相对价值、经营改善及亏损观察名单。运行与数据准入规则见 **[PRODUCTION.md](PRODUCTION.md)**。自动测试通过表示已检查相应程序行为，不表示全市场数据齐备或研究判断已获认可。
+
+本机真实来源试跑入口：`python daily_update.py --config config/daily_local.example.json --download`。这份配置仅验证两家深市公司的年报链路；没有配套财务与估值，预期会明确阻断正式发布。它不是全 A/H 生产配置。
+
+项目覆盖公开资料导入、非结构化文本清洗、主题检索、结构化财务计算、数据审计和研究名单交付。仓库附带 9 家真实公司的公开证据样例，以及 6 份完整公开 PDF 的可下载清单。以下命令显式选择开发样例；正式运行必须指定公司库和文档库。
 
 ```powershell
-python discover.py --query "机器人" --as-of 2026-10-10 --output output/robots
+python discover.py --demo-corpus --query "机器人" --as-of 2026-10-10 --output output/robots
 python discover.py --verify output/robots
 ```
 
@@ -81,6 +85,9 @@ CFO/利润和扣非/归母的质量评分贡献分别在 2 和 1 封顶，原始
 | `discover.py` / `theme_search.py` | 新主入口；主题扩展、BM25 检索、来源及业务阶段 |
 | `theme_financials.py` / `theme_config.json` | 三类基本面研究风格、亏损观察、逐项门槛解释 |
 | `ingest_theme.py` / `data/` | 公开 PDF/TXT 导入、真实证据与来源清单 |
+| `universe_sources.py` / `readiness.py` | 官方证券名录快照、声明研究池的数据覆盖与时效门槛 |
+| `research_job.py` / `PRODUCTION.md` | 同一输入快照运行多个主题、保留历史、完整性检查和成功版本指针 |
+| `daily_update.py` / `disclosure_sources.py` | 一次每日更新、CNINFO/HKEX 公告发现和可复验来源快照 |
 | `THEME_ALGORITHM.md` / `THEMATIC_SOURCES.md` | 新流程使用方法、公式、边界、实测来源 |
 | `run.py` | CLI、数据落库、结果导出 |
 | `engine.py` | 财务口径、九项信号、基本面初筛、同业评分 |
