@@ -2,9 +2,11 @@
 
 **状态：正在进行生产化改造，尚未通过团队生产验收。** 目标是每日更新 A/H 科技与制造公司资料，输入产品或主题，得到带原文来源的公司研究名单；第一阶段先在本机运行 Python，服务器部署随后确定。
 
+第一次接触这些模型，可以先读 **[大白话说明：项目目标、各模型的分工与完整例子](MODELS_EXPLAINED.md)**，再看公式和代码。
+
 主流程是公司名录与披露更新 → 主题检索 → 业务状态核验 → 优质成长、相对价值、经营改善及亏损观察名单。运行与数据准入规则见 **[PRODUCTION.md](PRODUCTION.md)**。自动测试通过表示已检查相应程序行为，不表示全市场数据齐备或研究判断已获认可。
 
-新增可运行的**语义检索算法实验链**：固定分块 BM25 → multilingual E5 向量召回 → RRF 融合 → mMARCO Cross-Encoder 重排。模型在本机通过 ONNX Runtime CPU 推理，模型版本、权重校验值、原文偏移和输出清单可追溯。模块、公式、安装命令、冻结标签及五种方法的对照实验见 **[ALGORITHM_EXPERIMENTS.md](ALGORITHM_EXPERIMENTS.md)**。新入口是 `semantic_discover.py`；每日主流程继续使用既有检索，待真实研究标签验收后再决定是否接入。
+新增可运行的**语义检索算法实验链**：固定分块 BM25 与 multilingual E5 向量双路召回 → RRF 融合 → mMARCO Cross-Encoder 重排。模型在本机通过 ONNX Runtime CPU 推理，模型版本、权重校验值、原文偏移和输出清单可追溯。模块、公式、安装命令、冻结标签及五种方法的对照实验见 **[ALGORITHM_EXPERIMENTS.md](ALGORITHM_EXPERIMENTS.md)**。新入口是 `semantic_discover.py`；每日主流程继续使用既有检索，待真实研究标签验收后再决定是否接入。
 
 本机真实来源试跑入口：`python daily_update.py --config config/daily_local.example.json --download`。这份配置仅验证两家深市公司的年报链路；没有配套财务与估值，预期会明确阻断正式发布。它不是全 A/H 生产配置。
 
