@@ -1,12 +1,19 @@
 # chenxi-algo：基本面股票筛选 Algo 项目
 
-**2026-10-10 企业场景验证更新：**已完成 135 项测试（无跳过）、1,800 次独立指标复算、6 份原年报的 221 条数值记录核验，以及导出完整性检查。修复未核验公司污染排名、单位转换引发评分漂移等问题。实际股票池的数据准入与研究有效性尚未验收，详见 [ENTERPRISE_VALIDATION.md](ENTERPRISE_VALIDATION.md)。
+**v0.2 主流程：输入产品或主题 → 从公司资料库发现相关 A/H 公司 → 展示原文证据和业务阶段 → 分为优质成长、相对价值、经营改善及亏损观察名单。** 第一版聚焦科技与制造，使用 Python，搜索与财务门槛均可调整。
 
-一个面向 A 股、港股非金融公司的 Python 投研工具。输入标准化年度财务数据与估值快照，输出可解释的研究候选池、来源记录和复核问题。适合 Data Analyst Intern 展示数据治理、财务理解、算法实现和投资团队交付能力。
+项目覆盖公开资料导入、非结构化文本清洗、主题检索、结构化财务计算、数据审计和研究名单交付。默认附带 9 家真实公司的公开证据样例，以及 6 份完整公开 PDF 的可下载清单。样例是有限语料验证；尚未接入全 A/H 上市公司资料库，不能声称全市场扫描或证明投资收益有效。
 
-已完成可运行原型：财务清洗 → 披露日期与版本选择 → 指标计算 → 同市场同行业比较 → 基本面筛选 → 文本证据整理 → SQLite 数据库与报告。`examples/` 为合成演示；另已对六家 A 股白酒公司和李宁做公开财报可行性测试，详见 [VALIDATION.md](VALIDATION.md)。基础版本通过 73 项软件测试，搜索功能新增 21 项回归测试；11 个真实财报关键数值与原年报匹配。它目前适合数据整理和研究初筛，选股有效性尚未得到证明。
+```powershell
+python discover.py --query "机器人" --as-of 2026-10-10 --output output/robots
+python discover.py --verify output/robots
+```
 
-## 一键运行
+查看 `output/robots/results.json` 中的匹配原因、来源链接、物理页码、逐项财务判定；`matches.csv` 是简表。默认真实证据样例没有配套完整财务历史，因此财务分类为待补资料，不编造估值或利润。接入真实财务 CSV 和完整 PDF 的步骤、算法公式与全部可调门槛见 **[THEME_ALGORITHM.md](THEME_ALGORITHM.md)**；来源见 [THEMATIC_SOURCES.md](THEMATIC_SOURCES.md)，实测结果及剩余限制见 **[THEME_VALIDATION.md](THEME_VALIDATION.md)**。
+
+原有财务引擎、SQLite 输出和网格/束搜索继续保留，作为专题研究的辅助工具。旧版财务审计记录见 [ENTERPRISE_VALIDATION.md](ENTERPRISE_VALIDATION.md)，它与新主题检索的实测范围分别记录。
+
+## 原有财务引擎示例
 
 需要 Python 3.10+；核心流程只用标准库，不需要 API key。
 
@@ -71,6 +78,10 @@ CFO/利润和扣非/归母的质量评分贡献分别在 2 和 1 封顶，原始
 
 | 文件 | 用途 |
 |---|---|
+| `discover.py` / `theme_search.py` | 新主入口；主题扩展、BM25 检索、来源及业务阶段 |
+| `theme_financials.py` / `theme_config.json` | 三类基本面研究风格、亏损观察、逐项门槛解释 |
+| `ingest_theme.py` / `data/` | 公开 PDF/TXT 导入、真实证据与来源清单 |
+| `THEME_ALGORITHM.md` / `THEMATIC_SOURCES.md` | 新流程使用方法、公式、边界、实测来源 |
 | `run.py` | CLI、数据落库、结果导出 |
 | `engine.py` | 财务口径、九项信号、基本面初筛、同业评分 |
 | `search.py` / `SEARCH.md` | 受约束的网格与束搜索、研究名单规模目标及配置对照 |
@@ -83,7 +94,7 @@ CFO/利润和扣非/归母的质量评分贡献分别在 2 和 1 封顶，原始
 | `RESEARCH.md` | GitHub 项目对比、源码缺陷及公式来源 |
 | `VALIDATION.md` / `validation/` | 真实财报对账、经济边界测试、权重敏感性、公开数据及可复现结果 |
 
-每次运行导出 `screen.csv`、`results.json`、`report.html`、`audit.json`、`manifest.json`、`search.json` 和 `research.sqlite`。未启用搜索时，`search.json` 明确记录 `not_requested`，避免复用输出目录时残留旧方案。CSV 可查看，完整缺失状态、组成分数与引用在 JSON / 数据库中。
+`run.py` 每次运行导出 `screen.csv`、`results.json`、`report.html`、`audit.json`、`manifest.json`、`search.json` 和 `research.sqlite`。未启用搜索时，`search.json` 明确记录 `not_requested`，避免复用输出目录时残留旧方案。CSV 可查看，完整缺失状态、组成分数与引用在 JSON / 数据库中。
 
 SQLite 包含 `runs`、`raw_records`、`statements`、`companies`、`evidence`。原始输入与清洗后记录并存，可按 `run_id`、公司、截止日期复核。运行标识包含输入文件哈希、代码哈希、配置、截止日、Python / 可选 NumPy 环境和查询参数，便于复现；重复同一运行会更新同一标识。
 

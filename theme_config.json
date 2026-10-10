@@ -1,0 +1,16 @@
+{
+  "retrieval": {"k1": 1.5, "b": 0.75, "excerpt_chars": 480, "max_evidence_per_company": 5, "min_score": 0},
+  "styles": {
+    "quality_min_roe": 0.12,
+    "quality_min_cash_conversion": 1.0,
+    "quality_min_revenue_cagr": 0.10,
+    "quality_min_core_profit_cagr": 0.10,
+    "quality_min_core_profit_share": 0.80,
+    "quality_max_net_debt_to_cfo": 2.0,
+    "value_min_percentile": 75,
+    "value_min_peers": 5,
+    "value_max_net_debt_to_cfo": 4.0,
+    "improvement_min_signals": 2,
+    "improvement_min_margin_change": 0.005
+  }
+}

@@ -1,9 +1,10 @@
 [project]
 name = "fundamental-research-screen"
-version = "0.1.0"
+version = "0.2.0"
 description = "Traceable fundamental research screening for A-share and Hong Kong companies"
 requires-python = ">=3.10"
 dependencies = []
 
 [project.optional-dependencies]
 ml = ["numpy>=1.24,<3"]
+pdf = ["pypdf>=5,<7"]

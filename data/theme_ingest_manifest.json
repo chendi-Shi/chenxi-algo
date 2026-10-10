@@ -1,0 +1,74 @@
+[
+  {
+    "document_id": "theme-eoptolink",
+    "ticker": "300502.SZ",
+    "available_at": "2025-04-23",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-23/1223219348.PDF",
+    "source_type": "annual_report",
+    "title": "2024年年度报告",
+    "source_sha256": "148155f6d95c86f8f77c6aa5ec7e486e97cea2e9f73c9aaa235079df94140aec",
+    "date_basis": "official_release",
+    "format": "pdf",
+    "local_path": "../validation/raw/theme/eoptolink_annual.pdf"
+  },
+  {
+    "document_id": "theme-estun",
+    "ticker": "002747.SZ",
+    "available_at": "2025-04-29",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223370517.PDF",
+    "source_type": "annual_report",
+    "title": "2024年年度报告",
+    "source_sha256": "ccebb48578e1fe9b1a28e185d7fe8d3b61b0e7019a4ba903000724ce13753f35",
+    "date_basis": "official_release",
+    "format": "pdf",
+    "local_path": "../validation/raw/theme/estun.pdf"
+  },
+  {
+    "document_id": "theme-lenovo",
+    "ticker": "00992.HK",
+    "available_at": "2026-10-10",
+    "source_url": "https://lenovopress.lenovo.com/lp1553.pdf",
+    "source_type": "company_website",
+    "title": "Lenovo ThinkSystem portfolio: GPU Rich Servers for AI",
+    "source_sha256": "f338cde035f7168d69ac615f8fe116413411f37d369dca42ad5a692d424dbdb1",
+    "date_basis": "observed_at",
+    "format": "pdf",
+    "local_path": "../validation/raw/theme/lenovo_ai_portfolio.pdf"
+  },
+  {
+    "document_id": "theme-inspur",
+    "ticker": "000977.SZ",
+    "available_at": "2025-03-29",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2025-03-29/1222950880.PDF",
+    "source_type": "annual_report",
+    "title": "2024年年度报告",
+    "source_sha256": "c2f5bfe90b96425989a62dadf565b1286b7f6befb36d3e47dcb1df1e38b95429",
+    "date_basis": "official_release",
+    "format": "pdf",
+    "local_path": "../validation/raw/theme/inspur_annual.pdf"
+  },
+  {
+    "document_id": "theme-swancor",
+    "ticker": "688585.SH",
+    "available_at": "2025-12-06",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-06/1224855156.PDF",
+    "source_type": "announcement",
+    "title": "关于签订许可协议暨关联交易的公告",
+    "source_sha256": "6a2a380509f8cbbf9c24a0e6e5973af34ba1ebe8c2d940424dab7be32882d880",
+    "date_basis": "official_release",
+    "format": "pdf",
+    "local_path": "../validation/raw/theme/swancor.pdf"
+  },
+  {
+    "document_id": "theme-daimay",
+    "ticker": "603730.SH",
+    "available_at": "2025-11-18",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2025-11-18/1224808933.PDF",
+    "source_type": "announcement",
+    "title": "关于对外投资设立全资子公司的公告",
+    "source_sha256": "b17b494a44d85d5194fbc25aaef0a50ba8295dd57f7cded3de48ded080928dfc",
+    "date_basis": "official_release",
+    "format": "pdf",
+    "local_path": "../validation/raw/theme/daimay.pdf"
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "as_of": "2026-10-10",
+  "companies": 9,
+  "documents": 9,
+  "sources": 9,
+  "full_pdf_sources": 6,
+  "mode": "cached_originals",
+  "original_sources_reverified": true,
+  "source_checks": [
+    {
+      "document_id": "theme-innolight",
+      "sha256_match": true,
+      "quote_found": true,
+      "page": "Cloud & AI Infrastructure"
+    },
+    {
+      "document_id": "theme-eoptolink",
+      "sha256_match": true,
+      "quote_found": true,
+      "page": 11
+    },
+    {
+      "document_id": "theme-accelink",
+      "sha256_match": true,
+      "quote_found": true,
+      "page": "Cloud and Enterprise"
+    },
+    {
+      "document_id": "theme-estun",
+      "sha256_match": true,
+      "quote_found": true,
+      "page": 13
+    },
+    {
+      "document_id": "theme-ubtech",
+      "sha256_match": true,
+      "quote_found": true,
+      "page": "消费级智能硬件"
+    },
+    {
+      "document_id": "theme-lenovo",
+      "sha256_match": true,
+      "quote_found": true,
+      "page": 10
+    },
+    {
+      "document_id": "theme-inspur",
+      "sha256_match": true,
+      "quote_found": true,
+      "page": 11
+    },
+    {
+      "document_id": "theme-swancor",
+      "sha256_match": true,
+      "quote_found": true,
+      "page": 1
+    },
+    {
+      "document_id": "theme-daimay",
+      "sha256_match": true,
+      "quote_found": true,
+      "page": 4
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Small curated smoke-test corpus; not market-wide recall, precision or investment validation.",
+    "Offline metadata mode never claims original-source verification.",
+    "Cached-source verification does not establish current website contents or undisclosed later business changes."
+  ]
+}

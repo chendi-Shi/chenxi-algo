@@ -1,0 +1,881 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-10",
+  "status": "passed_with_documented_limitations",
+  "dataset_kind": "curated_development_smoke_test_not_holdout",
+  "input_hashes": {
+    "companies": "f290f5d81b6cfff92d1318cc03fe177d00809ff4c6231f41581cbadf3d1fcbad",
+    "sources_and_labels": "d2d725371ae1d1fef4a1859f4139e8914586573e9daaa67243fe7c72074f1941",
+    "selected_passages": "73c62c3a826b01535bf6c5fa02d079c7a5f8156034394089f96e8629d84422f7",
+    "retrieval_code": "9e0a21584ccd238a7b51c1e3a087d08c661bffcfc150aec1eb02ccc966b9a2e1",
+    "evaluation_code": "5dfe232ee664e921b7920b2b2c57710463b69bc03c1d17db5c483e9560588953",
+    "full_pdf_pages": "8ef04dec0f6c993e8bdaf36fd6ac6e9b008d92704e35009373c4b2c85bf837a5"
+  },
+  "selected_passage_metrics": {
+    "canonical_queries": 3,
+    "thematic_retrieval": {
+      "true_positive": 9,
+      "false_positive": 0,
+      "false_negative": 0,
+      "true_negative": 18,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "established_business_heuristic": {
+      "true_positive": 5,
+      "false_positive": 0,
+      "false_negative": 2,
+      "true_negative": 20,
+      "precision": 1.0,
+      "recall": 0.714286
+    }
+  },
+  "selected_passage_cases": [
+    {
+      "query": "光模块",
+      "expected_related": [
+        "002281.SZ",
+        "300308.SZ",
+        "300502.SZ"
+      ],
+      "matches": [
+        {
+          "ticker": "300502.SZ",
+          "relations": [
+            "direct_business"
+          ],
+          "relevance_score": 4.33103087,
+          "evidence": [
+            {
+              "document_id": "theme-eoptolink",
+              "page": 11,
+              "claim_status": "direct_business",
+              "char_start": 0,
+              "char_end": 22,
+              "evidence_age_days": 535
+            }
+          ]
+        },
+        {
+          "ticker": "300308.SZ",
+          "relations": [
+            "direct_business"
+          ],
+          "relevance_score": 4.15488357,
+          "evidence": [
+            {
+              "document_id": "theme-innolight",
+              "page": "Cloud & AI Infrastructure",
+              "claim_status": "direct_business",
+              "char_start": 0,
+              "char_end": 85,
+              "evidence_age_days": 0
+            }
+          ]
+        },
+        {
+          "ticker": "002281.SZ",
+          "relations": [
+            "direct_business"
+          ],
+          "relevance_score": 3.67592877,
+          "evidence": [
+            {
+              "document_id": "theme-accelink",
+              "page": "Cloud and Enterprise",
+              "claim_status": "direct_business",
+              "char_start": 0,
+              "char_end": 116,
+              "evidence_age_days": 0
+            }
+          ]
+        }
+      ],
+      "thematic_retrieval": {
+        "true_positive": 3,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_tickers": [],
+        "false_negative_tickers": []
+      },
+      "established_business_heuristic": {
+        "true_positive": 3,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_tickers": [],
+        "false_negative_tickers": []
+      },
+      "development_mislabelled_established": []
+    },
+    {
+      "query": "机器人",
+      "expected_related": [
+        "002747.SZ",
+        "09880.HK",
+        "603730.SH",
+        "688585.SH"
+      ],
+      "matches": [
+        {
+          "ticker": "002747.SZ",
+          "relations": [
+            "direct_business"
+          ],
+          "relevance_score": 1.85937658,
+          "evidence": [
+            {
+              "document_id": "theme-estun",
+              "page": 13,
+              "claim_status": "direct_business",
+              "char_start": 0,
+              "char_end": 28,
+              "evidence_age_days": 529
+            }
+          ]
+        },
+        {
+          "ticker": "603730.SH",
+          "relations": [
+            "planned"
+          ],
+          "relevance_score": 0.50853304,
+          "evidence": [
+            {
+              "document_id": "theme-daimay",
+              "page": 4,
+              "claim_status": "planned",
+              "char_start": 0,
+              "char_end": 35,
+              "evidence_age_days": 326
+            }
+          ]
+        },
+        {
+          "ticker": "688585.SH",
+          "relations": [
+            "planned"
+          ],
+          "relevance_score": 0.43399727,
+          "evidence": [
+            {
+              "document_id": "theme-swancor",
+              "page": 1,
+              "claim_status": "planned",
+              "char_start": 0,
+              "char_end": 48,
+              "evidence_age_days": 308
+            }
+          ]
+        },
+        {
+          "ticker": "09880.HK",
+          "relations": [
+            "uncertain"
+          ],
+          "relevance_score": 0.35317411,
+          "evidence": [
+            {
+              "document_id": "theme-ubtech",
+              "page": "消费级智能硬件",
+              "claim_status": "uncertain",
+              "char_start": 0,
+              "char_end": 54,
+              "evidence_age_days": 0
+            }
+          ]
+        }
+      ],
+      "thematic_retrieval": {
+        "true_positive": 4,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_tickers": [],
+        "false_negative_tickers": []
+      },
+      "established_business_heuristic": {
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 1,
+        "true_negative": 7,
+        "precision": 1.0,
+        "recall": 0.5,
+        "false_positive_tickers": [],
+        "false_negative_tickers": [
+          "09880.HK"
+        ]
+      },
+      "development_mislabelled_established": []
+    },
+    {
+      "query": "AI服务器",
+      "expected_related": [
+        "000977.SZ",
+        "00992.HK"
+      ],
+      "matches": [
+        {
+          "ticker": "000977.SZ",
+          "relations": [
+            "direct_business"
+          ],
+          "relevance_score": 8.11237281,
+          "evidence": [
+            {
+              "document_id": "theme-inspur",
+              "page": 11,
+              "claim_status": "direct_business",
+              "char_start": 0,
+              "char_end": 47,
+              "evidence_age_days": 560
+            }
+          ]
+        },
+        {
+          "ticker": "00992.HK",
+          "relations": [
+            "uncertain"
+          ],
+          "relevance_score": 1.27313104,
+          "evidence": [
+            {
+              "document_id": "theme-lenovo",
+              "page": 10,
+              "claim_status": "uncertain",
+              "char_start": 0,
+              "char_end": 64,
+              "evidence_age_days": 0
+            }
+          ]
+        }
+      ],
+      "thematic_retrieval": {
+        "true_positive": 2,
+        "false_positive": 0,
+        "false_negative": 0,
+        "true_negative": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_positive_tickers": [],
+        "false_negative_tickers": []
+      },
+      "established_business_heuristic": {
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 1,
+        "true_negative": 7,
+        "precision": 1.0,
+        "recall": 0.5,
+        "false_positive_tickers": [],
+        "false_negative_tickers": [
+          "00992.HK"
+        ]
+      },
+      "development_mislabelled_established": []
+    }
+  ],
+  "alias_cases": [
+    {
+      "canonical_query": "光模块",
+      "alias": "optical transceiver",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "002281.SZ",
+        "300308.SZ",
+        "300502.SZ"
+      ]
+    },
+    {
+      "canonical_query": "光模块",
+      "alias": "光模組",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "002281.SZ",
+        "300308.SZ",
+        "300502.SZ"
+      ]
+    },
+    {
+      "canonical_query": "机器人",
+      "alias": "robotics",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "002747.SZ",
+        "09880.HK",
+        "603730.SH",
+        "688585.SH"
+      ]
+    },
+    {
+      "canonical_query": "机器人",
+      "alias": "機器人",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "002747.SZ",
+        "09880.HK",
+        "603730.SH",
+        "688585.SH"
+      ]
+    },
+    {
+      "canonical_query": "AI服务器",
+      "alias": "AI servers",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "000977.SZ",
+        "00992.HK"
+      ]
+    },
+    {
+      "canonical_query": "AI服务器",
+      "alias": "ＡＩ服务器",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "000977.SZ",
+        "00992.HK"
+      ]
+    }
+  ],
+  "fulltext_corpus": {
+    "extracted_pdf_pages": 669,
+    "pdf_companies": 6,
+    "selected_website_supplements": 3,
+    "supplement_tickers": [
+      "002281.SZ",
+      "09880.HK",
+      "300308.SZ"
+    ]
+  },
+  "fulltext_cases": [
+    {
+      "query": "光模块",
+      "known_related_tickers": [
+        "002281.SZ",
+        "300308.SZ",
+        "300502.SZ"
+      ],
+      "known_positive_recall": 1.0,
+      "missing_known_positive_tickers": [],
+      "additional_matches_requiring_full_source_review": [],
+      "development_mislabelled_established": [],
+      "coverage": {
+        "input_companies": 9,
+        "visible_companies": 9,
+        "input_documents": 672,
+        "visible_unique_documents": 672,
+        "companies_with_documents": 9,
+        "indexed_passages": 6427,
+        "matched_companies": 3,
+        "returned_companies": 3,
+        "universe_without_documents": []
+      },
+      "matches": [
+        {
+          "ticker": "300502.SZ",
+          "relations": [
+            "direct_business",
+            "negated",
+            "planned",
+            "uncertain",
+            "upstream_or_downstream"
+          ],
+          "relevance_score": 31.6871868,
+          "evidence": [
+            {
+              "document_id": "theme-eoptolink-p15-d171814ae5a1966c9c9f24c415ed8076a6580f0c10bb7a1d82ebd33b3e934e58",
+              "page": 15,
+              "claim_status": "direct_business",
+              "char_start": 504,
+              "char_end": 623,
+              "evidence_age_days": 535
+            },
+            {
+              "document_id": "theme-eoptolink-p28-33f68145d2fb661fc3f38010adef9d8eb73d57b1c07d8f6f03f693c6143febc1",
+              "page": 28,
+              "claim_status": "direct_business",
+              "char_start": 946,
+              "char_end": 1062,
+              "evidence_age_days": 535
+            },
+            {
+              "document_id": "theme-eoptolink-p15-d171814ae5a1966c9c9f24c415ed8076a6580f0c10bb7a1d82ebd33b3e934e58",
+              "page": 15,
+              "claim_status": "direct_business",
+              "char_start": 426,
+              "char_end": 504,
+              "evidence_age_days": 535
+            },
+            {
+              "document_id": "theme-eoptolink-p22-ab11adb54756bcb6827644d5b0e0a392a490f274e860cfe9c81971403e807db2",
+              "page": 22,
+              "claim_status": "direct_business",
+              "char_start": 240,
+              "char_end": 321,
+              "evidence_age_days": 535
+            },
+            {
+              "document_id": "theme-eoptolink-p183-6c221bef23484425e8d172fd2d113f1461df5763880a29d53625dfcf7112da80",
+              "page": 183,
+              "claim_status": "negated",
+              "char_start": 92,
+              "char_end": 391,
+              "evidence_age_days": 535
+            }
+          ]
+        },
+        {
+          "ticker": "300308.SZ",
+          "relations": [
+            "direct_business"
+          ],
+          "relevance_score": 23.7396404,
+          "evidence": [
+            {
+              "document_id": "theme-innolight",
+              "page": "Cloud & AI Infrastructure",
+              "claim_status": "direct_business",
+              "char_start": 0,
+              "char_end": 85,
+              "evidence_age_days": 0
+            }
+          ]
+        },
+        {
+          "ticker": "002281.SZ",
+          "relations": [
+            "direct_business"
+          ],
+          "relevance_score": 21.19625851,
+          "evidence": [
+            {
+              "document_id": "theme-accelink",
+              "page": "Cloud and Enterprise",
+              "claim_status": "direct_business",
+              "char_start": 0,
+              "char_end": 116,
+              "evidence_age_days": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "机器人",
+      "known_related_tickers": [
+        "002747.SZ",
+        "09880.HK",
+        "603730.SH",
+        "688585.SH"
+      ],
+      "known_positive_recall": 1.0,
+      "missing_known_positive_tickers": [],
+      "additional_matches_requiring_full_source_review": [
+        "000977.SZ"
+      ],
+      "development_mislabelled_established": [],
+      "coverage": {
+        "input_companies": 9,
+        "visible_companies": 9,
+        "input_documents": 672,
+        "visible_unique_documents": 672,
+        "companies_with_documents": 9,
+        "indexed_passages": 6435,
+        "matched_companies": 5,
+        "returned_companies": 5,
+        "universe_without_documents": []
+      },
+      "matches": [
+        {
+          "ticker": "002747.SZ",
+          "relations": [
+            "direct_business",
+            "planned",
+            "uncertain",
+            "upstream_or_downstream"
+          ],
+          "relevance_score": 17.52788796,
+          "evidence": [
+            {
+              "document_id": "theme-estun-p11-f7c25dc8d890a86933553477c9cf024844edf4ad956dabf1880cfb8c5c3e2d14",
+              "page": 11,
+              "claim_status": "direct_business",
+              "char_start": 193,
+              "char_end": 413,
+              "evidence_age_days": 529
+            },
+            {
+              "document_id": "theme-estun-p13-d3017770a16647509204807343d9bd751e0ffb1527d7ad373df8f9d84e77cb4b",
+              "page": 13,
+              "claim_status": "direct_business",
+              "char_start": 634,
+              "char_end": 786,
+              "evidence_age_days": 529
+            },
+            {
+              "document_id": "theme-estun-p12-3d8afe24170a1170825904fd67411cd7fa66ea86dbcf23c3584b9edc4097cd4e",
+              "page": 12,
+              "claim_status": "direct_business",
+              "char_start": 476,
+              "char_end": 859,
+              "evidence_age_days": 529
+            },
+            {
+              "document_id": "theme-estun-p15-5600d1d85368599de8032c04b51c82bc273da5354b771374ad4655ca916bb4b2",
+              "page": 15,
+              "claim_status": "direct_business",
+              "char_start": 249,
+              "char_end": 380,
+              "evidence_age_days": 529
+            },
+            {
+              "document_id": "theme-estun-p161-c2f9d6e0878e7a652759f8b2026829ffabedc3a60f0289c82bd99a80fd78760d",
+              "page": 161,
+              "claim_status": "direct_business",
+              "char_start": 2175,
+              "char_end": 2242,
+              "evidence_age_days": 529
+            }
+          ]
+        },
+        {
+          "ticker": "688585.SH",
+          "relations": [
+            "planned",
+            "uncertain"
+          ],
+          "relevance_score": 3.42957383,
+          "evidence": [
+            {
+              "document_id": "theme-swancor-p2-877cd615e801489798d028497db726da429930dedc086510deff585b92ce1f4f",
+              "page": 2,
+              "claim_status": "uncertain",
+              "char_start": 732,
+              "char_end": 740,
+              "evidence_age_days": 308
+            },
+            {
+              "document_id": "theme-swancor-p2-877cd615e801489798d028497db726da429930dedc086510deff585b92ce1f4f",
+              "page": 2,
+              "claim_status": "uncertain",
+              "char_start": 712,
+              "char_end": 721,
+              "evidence_age_days": 308
+            },
+            {
+              "document_id": "theme-swancor-p2-877cd615e801489798d028497db726da429930dedc086510deff585b92ce1f4f",
+              "page": 2,
+              "claim_status": "uncertain",
+              "char_start": 721,
+              "char_end": 732,
+              "evidence_age_days": 308
+            },
+            {
+              "document_id": "theme-swancor-p3-0acb894f8793e9e9809c1a05158124bf100e4b7325c007b07554b6f6536d5a28",
+              "page": 3,
+              "claim_status": "uncertain",
+              "char_start": 133,
+              "char_end": 152,
+              "evidence_age_days": 308
+            },
+            {
+              "document_id": "theme-swancor-p7-468785cc0be01e6ffa42faaf6145522c16963fc939f4b1c50e5f82b2e7fa5f4f",
+              "page": 7,
+              "claim_status": "uncertain",
+              "char_start": 182,
+              "char_end": 253,
+              "evidence_age_days": 308
+            }
+          ]
+        },
+        {
+          "ticker": "603730.SH",
+          "relations": [
+            "negated",
+            "planned",
+            "uncertain"
+          ],
+          "relevance_score": 3.28419626,
+          "evidence": [
+            {
+              "document_id": "theme-daimay-p3-3e6efe2937defbb6476f8b6d9d416295a82a06e4d8c782d0570246446456216f",
+              "page": 3,
+              "claim_status": "uncertain",
+              "char_start": 0,
+              "char_end": 120,
+              "evidence_age_days": 326
+            },
+            {
+              "document_id": "theme-daimay-p4-36f7f182203a587d9bbc0f914ef3817900510cf8a660d7857857fcea03a953cf",
+              "page": 4,
+              "claim_status": "planned",
+              "char_start": 5,
+              "char_end": 54,
+              "evidence_age_days": 326
+            },
+            {
+              "document_id": "theme-daimay-p1-6bd47cfbd18e6fd32eb3dfd8d62cb4a4e7d1f4262e3a1992feb8870792085ef5",
+              "page": 1,
+              "claim_status": "planned",
+              "char_start": 344,
+              "char_end": 415,
+              "evidence_age_days": 326
+            },
+            {
+              "document_id": "theme-daimay-p1-6bd47cfbd18e6fd32eb3dfd8d62cb4a4e7d1f4262e3a1992feb8870792085ef5",
+              "page": 1,
+              "claim_status": "uncertain",
+              "char_start": 156,
+              "char_end": 215,
+              "evidence_age_days": 326
+            },
+            {
+              "document_id": "theme-daimay-p1-6bd47cfbd18e6fd32eb3dfd8d62cb4a4e7d1f4262e3a1992feb8870792085ef5",
+              "page": 1,
+              "claim_status": "negated",
+              "char_start": 415,
+              "char_end": 446,
+              "evidence_age_days": 326
+            }
+          ]
+        },
+        {
+          "ticker": "000977.SZ",
+          "relations": [
+            "uncertain"
+          ],
+          "relevance_score": 3.0403162,
+          "evidence": [
+            {
+              "document_id": "theme-inspur-p13-a6b39f072fb70dbb9f31bacf71936db3519ae96f5a0f28df19b69273c3afa0c5",
+              "page": 13,
+              "claim_status": "uncertain",
+              "char_start": 839,
+              "char_end": 866,
+              "evidence_age_days": 560
+            },
+            {
+              "document_id": "theme-inspur-p13-a6b39f072fb70dbb9f31bacf71936db3519ae96f5a0f28df19b69273c3afa0c5",
+              "page": 13,
+              "claim_status": "uncertain",
+              "char_start": 904,
+              "char_end": 1070,
+              "evidence_age_days": 560
+            }
+          ]
+        },
+        {
+          "ticker": "09880.HK",
+          "relations": [
+            "uncertain"
+          ],
+          "relevance_score": 2.32165621,
+          "evidence": [
+            {
+              "document_id": "theme-ubtech",
+              "page": "消费级智能硬件",
+              "claim_status": "uncertain",
+              "char_start": 0,
+              "char_end": 54,
+              "evidence_age_days": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "AI服务器",
+      "known_related_tickers": [
+        "000977.SZ",
+        "00992.HK"
+      ],
+      "known_positive_recall": 1.0,
+      "missing_known_positive_tickers": [],
+      "additional_matches_requiring_full_source_review": [],
+      "development_mislabelled_established": [],
+      "coverage": {
+        "input_companies": 9,
+        "visible_companies": 9,
+        "input_documents": 672,
+        "visible_unique_documents": 672,
+        "companies_with_documents": 9,
+        "indexed_passages": 6427,
+        "matched_companies": 2,
+        "returned_companies": 2,
+        "universe_without_documents": []
+      },
+      "matches": [
+        {
+          "ticker": "000977.SZ",
+          "relations": [
+            "uncertain"
+          ],
+          "relevance_score": 5.4409662,
+          "evidence": [
+            {
+              "document_id": "theme-inspur-p11-acd155396acacfc27cfa774be23db79764bdf7c747c3606bbfb2f64faf6758ad",
+              "page": 11,
+              "claim_status": "uncertain",
+              "char_start": 163,
+              "char_end": 246,
+              "evidence_age_days": 560
+            }
+          ]
+        },
+        {
+          "ticker": "00992.HK",
+          "relations": [
+            "uncertain"
+          ],
+          "relevance_score": 5.21162598,
+          "evidence": [
+            {
+              "document_id": "theme-lenovo-p10-11c0282677754349116a14c65f456e38caf4ad060cc74bebdee79cbd90e0e016",
+              "page": 10,
+              "claim_status": "uncertain",
+              "char_start": 229,
+              "char_end": 295,
+              "evidence_age_days": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fulltext_alias_cases": [
+    {
+      "canonical_query": "光模块",
+      "alias": "optical transceiver",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "002281.SZ",
+        "300308.SZ",
+        "300502.SZ"
+      ]
+    },
+    {
+      "canonical_query": "光模块",
+      "alias": "光模組",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "002281.SZ",
+        "300308.SZ",
+        "300502.SZ"
+      ]
+    },
+    {
+      "canonical_query": "机器人",
+      "alias": "robotics",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "000977.SZ",
+        "002747.SZ",
+        "09880.HK",
+        "603730.SH",
+        "688585.SH"
+      ]
+    },
+    {
+      "canonical_query": "机器人",
+      "alias": "機器人",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "000977.SZ",
+        "002747.SZ",
+        "09880.HK",
+        "603730.SH",
+        "688585.SH"
+      ]
+    },
+    {
+      "canonical_query": "AI服务器",
+      "alias": "AI servers",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "000977.SZ",
+        "00992.HK"
+      ]
+    },
+    {
+      "canonical_query": "AI服务器",
+      "alias": "ＡＩ服务器",
+      "same_company_set": true,
+      "same_relations": true,
+      "found_tickers": [
+        "000977.SZ",
+        "00992.HK"
+      ]
+    }
+  ],
+  "robustness_checks": [
+    {
+      "corpus": "selected_passages",
+      "query": "光模块",
+      "input_order_invariant": true,
+      "future_document_isolated": true,
+      "duplicate_does_not_change_ranking": true
+    },
+    {
+      "corpus": "selected_passages",
+      "query": "机器人",
+      "input_order_invariant": true,
+      "future_document_isolated": true,
+      "duplicate_does_not_change_ranking": true
+    },
+    {
+      "corpus": "selected_passages",
+      "query": "AI服务器",
+      "input_order_invariant": true,
+      "future_document_isolated": true,
+      "duplicate_does_not_change_ranking": true
+    },
+    {
+      "corpus": "full_pdf_plus_selected_websites",
+      "query": "光模块",
+      "input_order_invariant": true,
+      "future_document_isolated": true,
+      "duplicate_does_not_change_ranking": true
+    },
+    {
+      "corpus": "full_pdf_plus_selected_websites",
+      "query": "机器人",
+      "input_order_invariant": true,
+      "future_document_isolated": true,
+      "duplicate_does_not_change_ranking": true
+    },
+    {
+      "corpus": "full_pdf_plus_selected_websites",
+      "query": "AI服务器",
+      "input_order_invariant": true,
+      "future_document_isolated": true,
+      "duplicate_does_not_change_ranking": true
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Nine selected companies and three themes are development cases, not a held-out or market-wide validation universe.",
+    "Selected-passage labels describe those passages and dates, not complete current company operations.",
+    "An established-business heuristic means a direct_business label; all such labels still require human verification.",
+    "Full-PDF recall is measured against known positives only. New fulltext matches lack independent whole-document truth and are not counted as false positives.",
+    "Six aliases repeat canonical concepts and are not independent observations in aggregate metrics.",
+    "This report evaluates retrieval and evidence interpretation, not stock returns, valuation accuracy, or investment efficacy."
+  ]
+}

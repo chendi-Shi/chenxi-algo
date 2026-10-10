@@ -18,14 +18,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - name: Install the tested optional ML dependency
-        run: python -m pip install numpy==2.2.6
+      - name: Install the tested optional ML and PDF dependencies
+        run: python -m pip install numpy==2.2.6 pypdf==6.10.0
       - name: Tests, independent arithmetic, random search comparison and scale check
         run: python validation/enterprise_checks.py --companies 1000 --output validation/output/enterprise_ci.json
       - name: Reconcile frozen A-share facts
         run: python validation/enterprise_a_share.py --output validation/output/a_share_ci.json
       - name: Reconcile frozen Hong Kong facts
         run: python validation/enterprise_hk.py --output validation/output/hk_ci.json
+      - name: Validate public theme source metadata offline
+        run: python validation/validate_theme_sources.py --output validation/output/theme_sources_ci.json
+      - name: Validate curated theme retrieval and conservative business labels
+        run: python validation/validate_theme_retrieval.py --output validation/output/theme_retrieval_ci.json
+      - name: Run theme discovery and verify the export
+        run: |
+          python discover.py --query "robotics" --as-of 2026-10-10 --output output/theme-ci
+          python discover.py --verify output/theme-ci
       - name: Run a complete export
         run: python run.py --demo --as-of 2026-10-09 --ml-cleaning --search-method beam --search-market A --search-sector Consumer --output output/ci
       - name: Verify all exported files and original input hashes

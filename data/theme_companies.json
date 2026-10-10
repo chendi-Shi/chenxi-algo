@@ -1,0 +1,96 @@
+[
+  {
+    "ticker": "300308.SZ",
+    "name": "中际旭创",
+    "market": "A",
+    "sector": "Communication Equipment",
+    "scope": "technology",
+    "universe_as_of": "2026-10-10",
+    "aliases": [
+      "Zhongji InnoLight",
+      "InnoLight"
+    ]
+  },
+  {
+    "ticker": "300502.SZ",
+    "name": "新易盛",
+    "market": "A",
+    "sector": "Communication Equipment",
+    "scope": "technology",
+    "universe_as_of": "2026-10-10",
+    "aliases": [
+      "Eoptolink"
+    ]
+  },
+  {
+    "ticker": "002281.SZ",
+    "name": "光迅科技",
+    "market": "A",
+    "sector": "Communication Equipment",
+    "scope": "technology",
+    "universe_as_of": "2026-10-10",
+    "aliases": [
+      "Accelink"
+    ]
+  },
+  {
+    "ticker": "002747.SZ",
+    "name": "埃斯顿",
+    "market": "A",
+    "sector": "Industrial Robotics",
+    "scope": "manufacturing",
+    "universe_as_of": "2026-10-10",
+    "aliases": [
+      "Estun"
+    ]
+  },
+  {
+    "ticker": "09880.HK",
+    "name": "优必选",
+    "market": "HK",
+    "sector": "Industrial Robotics",
+    "scope": "manufacturing",
+    "universe_as_of": "2026-10-10",
+    "aliases": [
+      "UBTECH"
+    ]
+  },
+  {
+    "ticker": "00992.HK",
+    "name": "联想集团",
+    "market": "HK",
+    "sector": "Computing Hardware",
+    "scope": "technology",
+    "universe_as_of": "2026-10-10",
+    "aliases": [
+      "Lenovo"
+    ]
+  },
+  {
+    "ticker": "000977.SZ",
+    "name": "浪潮信息",
+    "market": "A",
+    "sector": "Computing Hardware",
+    "scope": "technology",
+    "universe_as_of": "2026-10-10",
+    "aliases": []
+  },
+  {
+    "ticker": "688585.SH",
+    "name": "上纬新材",
+    "market": "A",
+    "sector": "Advanced Materials",
+    "scope": "manufacturing",
+    "universe_as_of": "2026-10-10",
+    "aliases": []
+  },
+  {
+    "ticker": "603730.SH",
+    "name": "岱美股份",
+    "market": "A",
+    "sector": "Auto Components",
+    "scope": "manufacturing",
+    "universe_as_of": "2026-10-10",
+    "aliases": []
+  }
+]

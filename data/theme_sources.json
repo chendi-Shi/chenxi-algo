@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-10",
+  "dataset_kind": "curated_public_evidence_smoke_test",
+  "universe_note": "9 selected companies, not a full or historical A/H listed universe. Labels refer only to these selected passages and their disclosure dates; they are not comprehensive current-company labels.",
+  "evaluation_note": "Development cases are negative for established production, not negative for thematic relevance. Non-direct means no direct product evidence in the selected passage, not proof of no business. Cases are authored before retrieval execution; this tiny curated set is not a holdout or market-wide accuracy estimate.",
+  "sources": [
+    {
+      "source_id": "innolight",
+      "document_ids": [
+        "theme-innolight"
+      ],
+      "ticker": "300308.SZ",
+      "source_url": "https://www.zj-innolight.com/en/cloud_ai_infrastructure.html",
+      "source_type": "company_website",
+      "title": "Cloud & AI Infrastructure",
+      "available_at": "2026-10-10",
+      "date_basis": "observed_at",
+      "observed_at": "2026-10-10",
+      "source_sha256": "e7af71eb70e61b3ac5c1463175cc8a218895eefeafbdef1207e95e924988e026",
+      "format": "html",
+      "cache_path": "validation/raw/theme/innolight.html",
+      "bytes": 48410,
+      "summary": "公司官网列示光收发模块组合；此处只支持产品关联，不推断客户、份额或订单。",
+      "summary_basis": "analyst_paraphrase",
+      "evidence_role": "direct",
+      "page_numbering": "web_section",
+      "quote_sha256": "a07ddaebd80acca802f1be4b3150449e0417794d15b2c69607ac93c1fef16e2a",
+      "quote_page": "Cloud & AI Infrastructure",
+      "verification_status": "cached_quote_and_hash_verified",
+      "date_reference": "Publication/version availability was not independently established; only observed_at is asserted."
+    },
+    {
+      "source_id": "eoptolink",
+      "document_ids": [
+        "theme-eoptolink"
+      ],
+      "ticker": "300502.SZ",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-23/1223219348.PDF",
+      "source_type": "annual_report",
+      "title": "2024年年度报告",
+      "available_at": "2025-04-23",
+      "date_basis": "official_release",
+      "observed_at": "2026-10-10",
+      "source_sha256": "148155f6d95c86f8f77c6aa5ec7e486e97cea2e9f73c9aaa235079df94140aec",
+      "format": "pdf",
+      "cache_path": "validation/raw/theme/eoptolink_annual.pdf",
+      "bytes": 8849287,
+      "summary": "2024年报披露主营产品；只对应报告期，不证明2026年业务占比。",
+      "summary_basis": "analyst_paraphrase",
+      "evidence_role": "direct",
+      "page_numbering": "physical_pdf_1_based",
+      "quote_sha256": "7cffca35e87bc7f715f4c9e31693b686fbc6a37b8f07d6f41ca337ed470c83f5",
+      "quote_page": 11,
+      "verification_status": "cached_quote_and_hash_verified",
+      "date_reference": "Official disclosure URL contains the release date; PDF report period is not used as availability date."
+    },
+    {
+      "source_id": "accelink",
+      "document_ids": [
+        "theme-accelink"
+      ],
+      "ticker": "002281.SZ",
+      "source_url": "https://www.accelink.com/lighting_your_dreams/CloudandEnterprise.html",
+      "source_type": "company_website",
+      "title": "Cloud and Enterprise",
+      "available_at": "2026-10-10",
+      "date_basis": "observed_at",
+      "observed_at": "2026-10-10",
+      "source_sha256": "827afa16c018ba6d88e668b0fa864928c6a7c23d013d68499ef28da5eb6e13fb",
+      "format": "html",
+      "cache_path": "validation/raw/theme/accelink.html",
+      "bytes": 77776,
+      "summary": "官方产品页披露数据中心用光模块；网站原发布日期未知，采用本次观察日。",
+      "summary_basis": "analyst_paraphrase",
+      "evidence_role": "direct",
+      "page_numbering": "web_section",
+      "quote_sha256": "f040914eabf7ba61b345fe3f0cbb23873d093c9cce9b33831bc46e171c8815aa",
+      "quote_page": "Cloud and Enterprise",
+      "verification_status": "cached_quote_and_hash_verified",
+      "date_reference": "Publication/version availability was not independently established; only observed_at is asserted."
+    },
+    {
+      "source_id": "estun",
+      "document_ids": [
+        "theme-estun"
+      ],
+      "ticker": "002747.SZ",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223370517.PDF",
+      "source_type": "annual_report",
+      "title": "2024年年度报告",
+      "available_at": "2025-04-29",
+      "date_basis": "official_release",
+      "observed_at": "2026-10-10",
+      "source_sha256": "ccebb48578e1fe9b1a28e185d7fe8d3b61b0e7019a4ba903000724ce13753f35",
+      "format": "pdf",
+      "cache_path": "validation/raw/theme/estun.pdf",
+      "bytes": 5389140,
+      "summary": "年报披露自有工业机器人产品；与泛泛使用自动化设备的公司区分。",
+      "summary_basis": "analyst_paraphrase",
+      "evidence_role": "direct",
+      "page_numbering": "physical_pdf_1_based",
+      "quote_sha256": "1d7c1a8c24a5caf7d53bf90509397d03a60e8debb7e6cc4b7bbe606e325841a9",
+      "quote_page": 13,
+      "verification_status": "cached_quote_and_hash_verified",
+      "date_reference": "Official disclosure URL contains the release date; PDF report period is not used as availability date."
+    },
+    {
+      "source_id": "ubtech",
+      "document_ids": [
+        "theme-ubtech"
+      ],
+      "ticker": "09880.HK",
+      "source_url": "https://www.ubtrobot.com/cn",
+      "source_type": "company_website",
+      "title": "优必选官网：消费级智能硬件",
+      "available_at": "2026-10-10",
+      "date_basis": "observed_at",
+      "observed_at": "2026-10-10",
+      "source_sha256": "032b6d397a70a676ff2a076c966f061011bde2e1685865bf5d09851b37d56f4b",
+      "format": "html",
+      "cache_path": "validation/raw/theme/ubtech.html",
+      "bytes": 231208,
+      "summary": "官网说明机器人技术应用于其消费级产品；不据此推断工业人形机器人订单。",
+      "summary_basis": "analyst_paraphrase",
+      "evidence_role": "direct",
+      "page_numbering": "web_section",
+      "quote_sha256": "96171f8feda60d337068fbacdf01c69fd39738787dec22f524a607d98abf51cf",
+      "quote_page": "消费级智能硬件",
+      "verification_status": "cached_quote_and_hash_verified",
+      "date_reference": "Publication/version availability was not independently established; only observed_at is asserted."
+    },
+    {
+      "source_id": "lenovo",
+      "document_ids": [
+        "theme-lenovo"
+      ],
+      "ticker": "00992.HK",
+      "source_url": "https://lenovopress.lenovo.com/lp1553.pdf",
+      "source_type": "company_website",
+      "title": "Lenovo ThinkSystem portfolio: GPU Rich Servers for AI",
+      "available_at": "2026-10-10",
+      "date_basis": "observed_at",
+      "observed_at": "2026-10-10",
+      "source_sha256": "f338cde035f7168d69ac615f8fe116413411f37d369dca42ad5a692d424dbdb1",
+      "format": "pdf",
+      "cache_path": "validation/raw/theme/lenovo_ai_portfolio.pdf",
+      "bytes": 59991456,
+      "summary": "官方产品组合资料明确AI服务器；动态PDF只使用观察日期，不伪造原始发布日期。",
+      "summary_basis": "analyst_paraphrase",
+      "evidence_role": "direct",
+      "page_numbering": "physical_pdf_1_based",
+      "quote_sha256": "11730747b0b6c65f63cd8cc353d7b6eb1571206a93c9e4b39e7bf76013c27c60",
+      "quote_page": 10,
+      "verification_status": "cached_quote_and_hash_verified",
+      "date_reference": "Publication/version availability was not independently established; only observed_at is asserted."
+    },
+    {
+      "source_id": "inspur",
+      "document_ids": [
+        "theme-inspur"
+      ],
+      "ticker": "000977.SZ",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-03-29/1222950880.PDF",
+      "source_type": "annual_report",
+      "title": "2024年年度报告",
+      "available_at": "2025-03-29",
+      "date_basis": "official_release",
+      "observed_at": "2026-10-10",
+      "source_sha256": "c2f5bfe90b96425989a62dadf565b1286b7f6befb36d3e47dcb1df1e38b95429",
+      "format": "pdf",
+      "cache_path": "validation/raw/theme/inspur_annual.pdf",
+      "bytes": 5034527,
+      "summary": "年报中的产品发布陈述；不将发行人的“首个”宣传表述视为经过第三方验证的技术排名。",
+      "summary_basis": "analyst_paraphrase",
+      "evidence_role": "direct",
+      "page_numbering": "physical_pdf_1_based",
+      "quote_sha256": "efd1ffca19fbd879dd60176374641f1b82094f87754b15d5dbf71f3f343928f8",
+      "quote_page": 11,
+      "verification_status": "cached_quote_and_hash_verified",
+      "date_reference": "Official disclosure URL contains the release date; PDF report period is not used as availability date."
+    },
+    {
+      "source_id": "swancor",
+      "document_ids": [
+        "theme-swancor"
+      ],
+      "ticker": "688585.SH",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-06/1224855156.PDF",
+      "source_type": "announcement",
+      "title": "关于签订许可协议暨关联交易的公告",
+      "available_at": "2025-12-06",
+      "date_basis": "official_release",
+      "observed_at": "2026-10-10",
+      "source_sha256": "6a2a380509f8cbbf9c24a0e6e5973af34ba1ebe8c2d940424dab7be32882d880",
+      "format": "pdf",
+      "cache_path": "validation/raw/theme/swancor.pdf",
+      "bytes": 197556,
+      "summary": "该公告时点明确处于开发阶段；作为成熟机器人业务误判的反例，不能据此判断2026年后续是否发生变化。",
+      "summary_basis": "analyst_paraphrase",
+      "evidence_role": "development",
+      "page_numbering": "physical_pdf_1_based",
+      "quote_sha256": "416617ae59e87785826d41c4354d100f0f3b08d00fd0c45082f1b1aaaef179ef",
+      "quote_page": 1,
+      "verification_status": "cached_quote_and_hash_verified",
+      "date_reference": "Official disclosure URL contains the release date; PDF report period is not used as availability date."
+    },
+    {
+      "source_id": "daimay",
+      "document_ids": [
+        "theme-daimay"
+      ],
+      "ticker": "603730.SH",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-11-18/1224808933.PDF",
+      "source_type": "announcement",
+      "title": "关于对外投资设立全资子公司的公告",
+      "available_at": "2025-11-18",
+      "date_basis": "official_release",
+      "observed_at": "2026-10-10",
+      "source_sha256": "b17b494a44d85d5194fbc25aaef0a50ba8295dd57f7cded3de48ded080928dfc",
+      "format": "pdf",
+      "cache_path": "validation/raw/theme/daimay.pdf",
+      "bytes": 119088,
+      "summary": "新业务仍在技术准备期；不把设立主体、计划或经营范围当成量产业务证据。",
+      "summary_basis": "analyst_paraphrase",
+      "evidence_role": "development",
+      "page_numbering": "physical_pdf_1_based",
+      "quote_sha256": "b2faa85d88b1e64db560966d2fa2ed86a0f74053fa3b5e9ed4d12426da110440",
+      "quote_page": 4,
+      "verification_status": "cached_quote_and_hash_verified",
+      "date_reference": "Official disclosure URL contains the release date; PDF report period is not used as availability date."
+    }
+  ],
+  "evaluation_cases": [
+    {
+      "query": "光模块",
+      "direct_tickers": [
+        "300308.SZ",
+        "300502.SZ",
+        "002281.SZ"
+      ],
+      "development_tickers": [],
+      "non_direct_tickers": [
+        "002747.SZ",
+        "09880.HK",
+        "00992.HK",
+        "000977.SZ",
+        "688585.SH",
+        "603730.SH"
+      ]
+    },
+    {
+      "query": "机器人",
+      "direct_tickers": [
+        "002747.SZ",
+        "09880.HK"
+      ],
+      "development_tickers": [
+        "688585.SH",
+        "603730.SH"
+      ],
+      "non_direct_tickers": [
+        "300308.SZ",
+        "300502.SZ",
+        "002281.SZ",
+        "00992.HK",
+        "000977.SZ"
+      ]
+    },
+    {
+      "query": "AI服务器",
+      "direct_tickers": [
+        "00992.HK",
+        "000977.SZ"
+      ],
+      "development_tickers": [],
+      "non_direct_tickers": [
+        "300308.SZ",
+        "300502.SZ",
+        "002281.SZ",
+        "002747.SZ",
+        "09880.HK",
+        "688585.SH",
+        "603730.SH"
+      ]
+    }
+  ]
+}
